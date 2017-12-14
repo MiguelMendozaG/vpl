@@ -1,0 +1,52 @@
+\hypertarget{classCOctreeRearSideVoxel}{}\section{C\+Octree\+Rear\+Side\+Voxel Class Reference}
+\label{classCOctreeRearSideVoxel}\index{C\+Octree\+Rear\+Side\+Voxel@{C\+Octree\+Rear\+Side\+Voxel}}
+Inheritance diagram for C\+Octree\+Rear\+Side\+Voxel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classCOctreeRearSideVoxel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries C\+Octree\+Rear\+Side\+Voxel} (double resolution)\hypertarget{classCOctreeRearSideVoxel_a748a65035c7992eede6202ee632fdcc1}{}\label{classCOctreeRearSideVoxel_a748a65035c7992eede6202ee632fdcc1}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+octomap\+::\+Color\+Oc\+Tree\+Node\+::\+Color {\bfseries color\+Rear\+Side}\hypertarget{classCOctreeRearSideVoxel_a123be33074b8e80e0ee2305b6c543cbf}{}\label{classCOctreeRearSideVoxel_a123be33074b8e80e0ee2305b6c543cbf}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{classCOctreeRearSideVoxel_a46ea49d079922e12ea62aff9ec8cae98}{cast\+Ray\+V\+PL} (const point3d \&origin, const point3d \&directionP, point3d \&end, bool ignore\+Unknown\+Cells=false, double max\+Range=-\/1.\+0)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{C\+Octree\+Rear\+Side\+Voxel@{C\+Octree\+Rear\+Side\+Voxel}!cast\+Ray\+V\+PL@{cast\+Ray\+V\+PL}}
+\index{cast\+Ray\+V\+PL@{cast\+Ray\+V\+PL}!C\+Octree\+Rear\+Side\+Voxel@{C\+Octree\+Rear\+Side\+Voxel}}
+\subsubsection[{\texorpdfstring{cast\+Ray\+V\+P\+L(const point3d \&origin, const point3d \&direction\+P, point3d \&end, bool ignore\+Unknown\+Cells=false, double max\+Range=-\/1.\+0)}{castRayVPL(const point3d &origin, const point3d &directionP, point3d &end, bool ignoreUnknownCells=false, double maxRange=-1.0)}}]{\setlength{\rightskip}{0pt plus 5cm}int C\+Octree\+Rear\+Side\+Voxel\+::cast\+Ray\+V\+PL (
+\begin{DoxyParamCaption}
+\item[{const point3d \&}]{origin, }
+\item[{const point3d \&}]{directionP, }
+\item[{point3d \&}]{end, }
+\item[{bool}]{ignore\+Unknown\+Cells = {\ttfamily false}, }
+\item[{double}]{max\+Range = {\ttfamily -\/1.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classCOctreeRearSideVoxel_a46ea49d079922e12ea62aff9ec8cae98}{}\label{classCOctreeRearSideVoxel_a46ea49d079922e12ea62aff9ec8cae98}
+Traces a Ray in the octree and returns the type of voxel found It has been modified to return rearside voxels It does not return unknown voxels -\/-\/-\/-\/------ see Oc\+Tree\+Base\+::compute\+Ray\+Keys -\/-\/-\/-\/-\/------
+
+cast\+Ray\+V\+PL !!!!! 
+
+Reimplemented from \hyperlink{classCOctreeVPL_adefa863003c11fa51e87e9691bf860fa}{C\+Octree\+V\+PL}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+partialmodel/pmvorearsidevoxel.\+h\item 
+partialmodel/pmvorearsidevoxel.\+cpp\end{DoxyCompactItemize}

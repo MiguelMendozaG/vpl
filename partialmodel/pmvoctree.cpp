@@ -436,7 +436,8 @@ float PMVOctree::updateWithScan(std::string file_name_scan, std::string file_nam
   
   map->insertPointCloud(*scanCloud, *it_origin, maxRange);
   map->updateInnerOccupancy();
-  map->expand();
+  map->prune();
+  //map->expand();
   
   clock_t ends = clock();
   diff = (double) (ends - start) / CLOCKS_PER_SEC;

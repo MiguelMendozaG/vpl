@@ -1,0 +1,255 @@
+\hypertarget{classvpRobot}{}\section{vp\+Robot Class Reference}
+\label{classvpRobot}\index{vp\+Robot@{vp\+Robot}}
+
+
+{\ttfamily \#include $<$vprobot.\+h$>$}
+
+Inheritance diagram for vp\+Robot\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classvpRobot}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classvpRobot_a0442d8cd3c8fd883a9df619492b8835f}{init} ()
+\item 
+virtual void \hyperlink{classvpRobot_a4a234ba83e9c7155f645576775f10804}{get\+Current\+Configuration} (std\+::vector$<$ double $>$ \&q)=0
+\item 
+virtual bool \hyperlink{classvpRobot_a71bf1d8b8a81feacadf0164d080e87ce}{move\+To\+Configuration} (std\+::vector$<$ double $>$ configuration)=0
+\item 
+virtual bool \hyperlink{classvpRobot_a9c659e2e6f1eb3ed6996885dfb62b8cd}{set\+Velocities} (std\+::vector$<$ double $>$ velocities)=0
+\item 
+virtual float {\bfseries execute\+Trajectory} (std\+::vector$<$ std\+::vector$<$ double $>$ $>$ controls, double delta\+\_\+t, std\+::vector$<$ double $>$ goal\+\_\+q)=0\hypertarget{classvpRobot_a2120d527417292e9ddb87619a3446fe2}{}\label{classvpRobot_a2120d527417292e9ddb87619a3446fe2}
+
+\item 
+virtual float \hyperlink{classvpRobot_a7fa1eb51637125595e9a9c46d9b8449f}{execute\+Movement} ()=0
+\item 
+virtual void \hyperlink{classvpRobot_a92d30ca2e923a33e3fb33d5a9c0d3923}{update\+Robot\+Localization} (mrpt\+::poses\+::\+C\+Pose3D transformation)=0
+\item 
+virtual void \hyperlink{classvpRobot_a9518c5f60297d493673c96c3de1dd247}{get\+H\+T\+Mfrom\+Configuration} (Boost\+Matrix \&H\+TM, std\+::vector$<$ double $>$ q)=0
+\item 
+virtual void {\bfseries get\+Pose\+From\+Configuration} (mrpt\+::poses\+::\+C\+Pose3D \&pose, std\+::vector$<$ double $>$ q)=0\hypertarget{classvpRobot_add2ab1d988311df8723755b9cf68e5f7}{}\label{classvpRobot_add2ab1d988311df8723755b9cf68e5f7}
+
+\item 
+void \hyperlink{classvpRobot_a94cdcc0feed9a2b04eadb996320969d0}{get\+Current\+H\+TM} (Boost\+Matrix \&H\+TM)
+\item 
+void \hyperlink{classvpRobot_a31725952bb80fd0f0a313cdb2024ea7b}{get\+Current\+Pose} (mrpt\+::poses\+::\+C\+Pose3D \&pose)
+\item 
+void \hyperlink{classvpRobot_a9b94d096fe152c1b02bde3fb474b7d4a}{get\+Pose\+From\+Configuration} (std\+::vector$<$ double, std\+::allocator$<$ double $>$ $>$ \&pose, std\+::vector$<$ double, std\+::allocator$<$ double $>$ $>$ q)
+\item 
+void \hyperlink{classvpRobot_a7241b4e2d1d6140adda98735ef2d9be6}{get\+Info} (std\+::string \&inf)
+\item 
+bool \hyperlink{classvpRobot_a7ff01aeefda9d80e328fe717262721b2}{execute\+Path} ()
+\item 
+void {\bfseries set\+Config\+Folder} (std\+::string folder)\hypertarget{classvpRobot_a4a20b000e5596904b264835be5b34c2b}{}\label{classvpRobot_a4a20b000e5596904b264835be5b34c2b}
+
+\item 
+void {\bfseries set\+Data\+Folder} (std\+::string folder)\hypertarget{classvpRobot_a609cf4359072547554a7c8ff917c5a81}{}\label{classvpRobot_a609cf4359072547554a7c8ff917c5a81}
+
+\item 
+void {\bfseries set\+Lower\+State} (std\+::vector$<$ double $>$ state)\hypertarget{classvpRobot_a6495dc7d18d05f226069adf701c03b04}{}\label{classvpRobot_a6495dc7d18d05f226069adf701c03b04}
+
+\item 
+void {\bfseries set\+Upper\+State} (std\+::vector$<$ double $>$ state)\hypertarget{classvpRobot_aad26e13564425cd0d128a68d64a84c86}{}\label{classvpRobot_aad26e13564425cd0d128a68d64a84c86}
+
+\item 
+void {\bfseries set\+State\+Dim} (int dim)\hypertarget{classvpRobot_a7e00328adf33c213c0a01f2389da1642}{}\label{classvpRobot_a7e00328adf33c213c0a01f2389da1642}
+
+\item 
+void \hyperlink{classvpRobot_ae7c97559dac8703c06ec1c8ac75e0878}{get\+Random\+State} (std\+::vector$<$ double $>$ \&state)
+\item 
+int {\bfseries get\+Config\+Dimension} ()\hypertarget{classvpRobot_a651ceba7e7ac6173688170aa59318806}{}\label{classvpRobot_a651ceba7e7ac6173688170aa59318806}
+
+\item 
+int {\bfseries get\+Input\+Dim} ()\hypertarget{classvpRobot_a76e2b6096960dab7bb0dfa9611f621ca}{}\label{classvpRobot_a76e2b6096960dab7bb0dfa9611f621ca}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries path\+To\+Execute}\hypertarget{classvpRobot_a62ccc768092b809ae62f2c1a5de3ce77}{}\label{classvpRobot_a62ccc768092b809ae62f2c1a5de3ce77}
+
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries trajectory\+To\+Execute}\hypertarget{classvpRobot_ab01511035608dbae618b331627bb62a6}{}\label{classvpRobot_ab01511035608dbae618b331627bb62a6}
+
+\item 
+double {\bfseries deltaT}\hypertarget{classvpRobot_a176bd0871646d32657a719d18ad36d50}{}\label{classvpRobot_a176bd0871646d32657a719d18ad36d50}
+
+\item 
+std\+::vector$<$ double $>$ {\bfseries goal\+Config}\hypertarget{classvpRobot_a8daac27773e2babc44d295a9f2aa5d81}{}\label{classvpRobot_a8daac27773e2babc44d295a9f2aa5d81}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classvpRobot_a9dfa07bcea3214993ddcbc50b4d96dde}{configuration\+Dim}\hypertarget{classvpRobot_a9dfa07bcea3214993ddcbc50b4d96dde}{}\label{classvpRobot_a9dfa07bcea3214993ddcbc50b4d96dde}
+
+\begin{DoxyCompactList}\small\item\em Configuration size of the robot. \end{DoxyCompactList}\item 
+int \hyperlink{classvpRobot_af0367fab21b8c5b50d6e887805d85169}{state\+Dim}\hypertarget{classvpRobot_af0367fab21b8c5b50d6e887805d85169}{}\label{classvpRobot_af0367fab21b8c5b50d6e887805d85169}
+
+\begin{DoxyCompactList}\small\item\em State Dimension. \end{DoxyCompactList}\item 
+int \hyperlink{classvpRobot_abc5e62aa154f90d0556d67b4db577967}{input\+Dim}\hypertarget{classvpRobot_abc5e62aa154f90d0556d67b4db577967}{}\label{classvpRobot_abc5e62aa154f90d0556d67b4db577967}
+
+\begin{DoxyCompactList}\small\item\em input Dimension; \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ {\bfseries lower\+State}\hypertarget{classvpRobot_a616e0d486e57bd07b5b8d17ee38efcba}{}\label{classvpRobot_a616e0d486e57bd07b5b8d17ee38efcba}
+
+\item 
+std\+::vector$<$ double $>$ {\bfseries upper\+State}\hypertarget{classvpRobot_afc811f86ed4da5ce8351601f0b5f2af1}{}\label{classvpRobot_afc811f86ed4da5ce8351601f0b5f2af1}
+
+\item 
+std\+::string {\bfseries info}\hypertarget{classvpRobot_a4b3f95d0db1f1d61c89bbcb5e6606780}{}\label{classvpRobot_a4b3f95d0db1f1d61c89bbcb5e6606780}
+
+\item 
+bool {\bfseries ready}\hypertarget{classvpRobot_a9be1d7f1a992a63ba5c4b28a610b7bda}{}\label{classvpRobot_a9be1d7f1a992a63ba5c4b28a610b7bda}
+
+\item 
+bool {\bfseries verbose}\hypertarget{classvpRobot_a22c4b0445a16700c70c1a18f1f71877e}{}\label{classvpRobot_a22c4b0445a16700c70c1a18f1f71877e}
+
+\item 
+std\+::string {\bfseries config\+Folder}\hypertarget{classvpRobot_a8751530956aff9ad1872d447f0452464}{}\label{classvpRobot_a8751530956aff9ad1872d447f0452464}
+
+\item 
+std\+::string {\bfseries data\+Folder}\hypertarget{classvpRobot_a7a62d115684aab216717b67f081a8d24}{}\label{classvpRobot_a7a62d115684aab216717b67f081a8d24}
+
+\item 
+std\+::string {\bfseries config\+File}\hypertarget{classvpRobot_aa382888b244cc6958ff9ece85eb650b3}{}\label{classvpRobot_aa382888b244cc6958ff9ece85eb650b3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for the description of a robot. Units\+: mts y radians 
+
+\subsection{Member Function Documentation}
+\index{vp\+Robot@{vp\+Robot}!execute\+Movement@{execute\+Movement}}
+\index{execute\+Movement@{execute\+Movement}!vp\+Robot@{vp\+Robot}}
+\subsubsection[{\texorpdfstring{execute\+Movement()=0}{executeMovement()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual float vp\+Robot\+::execute\+Movement (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classvpRobot_a7fa1eb51637125595e9a9c46d9b8449f}{}\label{classvpRobot_a7fa1eb51637125595e9a9c46d9b8449f}
+Stored movement in trajectory or path. Trajectory of path is executed depending on the robot capabilities Requires a path and a trajectory stablished in path\+To\+Execute and trajectory\+To\+Execute 
+
+Implemented in \hyperlink{classvprFreeFlyer_a8addee690a582bc74577ad79da7f02ba}{vpr\+Free\+Flyer}.
+
+\index{vp\+Robot@{vp\+Robot}!execute\+Path@{execute\+Path}}
+\index{execute\+Path@{execute\+Path}!vp\+Robot@{vp\+Robot}}
+\subsubsection[{\texorpdfstring{execute\+Path()}{executePath()}}]{\setlength{\rightskip}{0pt plus 5cm}bool vp\+Robot\+::execute\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classvpRobot_a7ff01aeefda9d80e328fe717262721b2}{}\label{classvpRobot_a7ff01aeefda9d80e328fe717262721b2}
+Calls repeately to move\+To\+Configuration \index{vp\+Robot@{vp\+Robot}!get\+Current\+Configuration@{get\+Current\+Configuration}}
+\index{get\+Current\+Configuration@{get\+Current\+Configuration}!vp\+Robot@{vp\+Robot}}
+\subsubsection[{\texorpdfstring{get\+Current\+Configuration(std\+::vector$<$ double $>$ \&q)=0}{getCurrentConfiguration(std::vector< double > &q)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vp\+Robot\+::get\+Current\+Configuration (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ double $>$ \&}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classvpRobot_a4a234ba83e9c7155f645576775f10804}{}\label{classvpRobot_a4a234ba83e9c7155f645576775f10804}
+
+
+ \subsubsection*{Abstract functions to be implemented in derived classes for physical robot }
+
+Returns the current configuration \index{vp\+Robot@{vp\+Robot}!get\+Current\+H\+TM@{get\+Current\+H\+TM}}
+\index{get\+Current\+H\+TM@{get\+Current\+H\+TM}!vp\+Robot@{vp\+Robot}}
+\subsubsection[{\texorpdfstring{get\+Current\+H\+T\+M(\+Boost\+Matrix \&\+H\+T\+M)}{getCurrentHTM(BoostMatrix &HTM)}}]{\setlength{\rightskip}{0pt plus 5cm}void vp\+Robot\+::get\+Current\+H\+TM (
+\begin{DoxyParamCaption}
+\item[{Boost\+Matrix \&}]{H\+TM}
+\end{DoxyParamCaption}
+)}\hypertarget{classvpRobot_a94cdcc0feed9a2b04eadb996320969d0}{}\label{classvpRobot_a94cdcc0feed9a2b04eadb996320969d0}
+
+
+ \subsubsection*{--- Generic functions to all derived classes implementations -\/-\/------ }
+
+Gets the transformation matrix for the end effector of the robot. A point seen from the end effector frame reference must be multiplied by this H\+TM 
+\begin{DoxyParams}{Parameters}
+{\em H\+TM} & \mbox{[}out\mbox{]} Matrix of 4x4 \\
+\hline
+\end{DoxyParams}
+\index{vp\+Robot@{vp\+Robot}!get\+Current\+Pose@{get\+Current\+Pose}}
+\index{get\+Current\+Pose@{get\+Current\+Pose}!vp\+Robot@{vp\+Robot}}
+\subsubsection[{\texorpdfstring{get\+Current\+Pose(mrpt\+::poses\+::\+C\+Pose3\+D \&pose)}{getCurrentPose(mrpt::poses::CPose3D &pose)}}]{\setlength{\rightskip}{0pt plus 5cm}void vp\+Robot\+::get\+Current\+Pose (
+\begin{DoxyParamCaption}
+\item[{mrpt\+::poses\+::\+C\+Pose3D \&}]{pose}
+\end{DoxyParamCaption}
+)}\hypertarget{classvpRobot_a31725952bb80fd0f0a313cdb2024ea7b}{}\label{classvpRobot_a31725952bb80fd0f0a313cdb2024ea7b}
+Gets the end effector pose \index{vp\+Robot@{vp\+Robot}!get\+H\+T\+Mfrom\+Configuration@{get\+H\+T\+Mfrom\+Configuration}}
+\index{get\+H\+T\+Mfrom\+Configuration@{get\+H\+T\+Mfrom\+Configuration}!vp\+Robot@{vp\+Robot}}
+\subsubsection[{\texorpdfstring{get\+H\+T\+Mfrom\+Configuration(\+Boost\+Matrix \&\+H\+T\+M, std\+::vector$<$ double $>$ q)=0}{getHTMfromConfiguration(BoostMatrix &HTM, std::vector< double > q)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vp\+Robot\+::get\+H\+T\+Mfrom\+Configuration (
+\begin{DoxyParamCaption}
+\item[{Boost\+Matrix \&}]{H\+TM, }
+\item[{std\+::vector$<$ double $>$}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classvpRobot_a9518c5f60297d493673c96c3de1dd247}{}\label{classvpRobot_a9518c5f60297d493673c96c3de1dd247}
+
+
+ \subsubsection*{Model implementations }\index{vp\+Robot@{vp\+Robot}!get\+Info@{get\+Info}}
+\index{get\+Info@{get\+Info}!vp\+Robot@{vp\+Robot}}
+\subsubsection[{\texorpdfstring{get\+Info(std\+::string \&inf)}{getInfo(std::string &inf)}}]{\setlength{\rightskip}{0pt plus 5cm}void vp\+Robot\+::get\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{inf}
+\end{DoxyParamCaption}
+)}\hypertarget{classvpRobot_a7241b4e2d1d6140adda98735ef2d9be6}{}\label{classvpRobot_a7241b4e2d1d6140adda98735ef2d9be6}
+Returns information about the robot \index{vp\+Robot@{vp\+Robot}!get\+Pose\+From\+Configuration@{get\+Pose\+From\+Configuration}}
+\index{get\+Pose\+From\+Configuration@{get\+Pose\+From\+Configuration}!vp\+Robot@{vp\+Robot}}
+\subsubsection[{\texorpdfstring{get\+Pose\+From\+Configuration(std\+::vector$<$ double, std\+::allocator$<$ double $>$ $>$ \&pose, std\+::vector$<$ double, std\+::allocator$<$ double $>$ $>$ q)}{getPoseFromConfiguration(std::vector< double, std::allocator< double > > &pose, std::vector< double, std::allocator< double > > q)}}]{\setlength{\rightskip}{0pt plus 5cm}void vp\+Robot\+::get\+Pose\+From\+Configuration (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ double, std\+::allocator$<$ double $>$ $>$ \&}]{pose, }
+\item[{std\+::vector$<$ double, std\+::allocator$<$ double $>$ $>$}]{q}
+\end{DoxyParamCaption}
+)}\hypertarget{classvpRobot_a9b94d096fe152c1b02bde3fb474b7d4a}{}\label{classvpRobot_a9b94d096fe152c1b02bde3fb474b7d4a}
+Used for convinience Just call to get\+Pose\+From\+Configuration \index{vp\+Robot@{vp\+Robot}!get\+Random\+State@{get\+Random\+State}}
+\index{get\+Random\+State@{get\+Random\+State}!vp\+Robot@{vp\+Robot}}
+\subsubsection[{\texorpdfstring{get\+Random\+State(std\+::vector$<$ double $>$ \&state)}{getRandomState(std::vector< double > &state)}}]{\setlength{\rightskip}{0pt plus 5cm}void vp\+Robot\+::get\+Random\+State (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ double $>$ \&}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{classvpRobot_ae7c97559dac8703c06ec1c8ac75e0878}{}\label{classvpRobot_ae7c97559dac8703c06ec1c8ac75e0878}
+Gets a random state between lower and upper states \index{vp\+Robot@{vp\+Robot}!init@{init}}
+\index{init@{init}!vp\+Robot@{vp\+Robot}}
+\subsubsection[{\texorpdfstring{init()}{init()}}]{\setlength{\rightskip}{0pt plus 5cm}bool vp\+Robot\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classvpRobot_a0442d8cd3c8fd883a9df619492b8835f}{}\label{classvpRobot_a0442d8cd3c8fd883a9df619492b8835f}
+Initialices the robot, for example the comunication 
+
+Reimplemented in \hyperlink{classvprFreeFlyer_a28a63f561bd1d740977a1050f10843b1}{vpr\+Free\+Flyer}.
+
+\index{vp\+Robot@{vp\+Robot}!move\+To\+Configuration@{move\+To\+Configuration}}
+\index{move\+To\+Configuration@{move\+To\+Configuration}!vp\+Robot@{vp\+Robot}}
+\subsubsection[{\texorpdfstring{move\+To\+Configuration(std\+::vector$<$ double $>$ configuration)=0}{moveToConfiguration(std::vector< double > configuration)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool vp\+Robot\+::move\+To\+Configuration (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ double $>$}]{configuration}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classvpRobot_a71bf1d8b8a81feacadf0164d080e87ce}{}\label{classvpRobot_a71bf1d8b8a81feacadf0164d080e87ce}
+Replaces the current configuration with the given configuration There is no movement T\+O\+DO for all derived classes The robot moves to a configuration. The movement is directly. No collision is checked. The robot moves by its own planning \index{vp\+Robot@{vp\+Robot}!set\+Velocities@{set\+Velocities}}
+\index{set\+Velocities@{set\+Velocities}!vp\+Robot@{vp\+Robot}}
+\subsubsection[{\texorpdfstring{set\+Velocities(std\+::vector$<$ double $>$ velocities)=0}{setVelocities(std::vector< double > velocities)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool vp\+Robot\+::set\+Velocities (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ double $>$}]{velocities}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classvpRobot_a9c659e2e6f1eb3ed6996885dfb62b8cd}{}\label{classvpRobot_a9c659e2e6f1eb3ed6996885dfb62b8cd}
+For physical robot 
+
+Implemented in \hyperlink{classvprFreeFlyer_a9f1f0452b42a29b9cbef9cff075387ce}{vpr\+Free\+Flyer}.
+
+\index{vp\+Robot@{vp\+Robot}!update\+Robot\+Localization@{update\+Robot\+Localization}}
+\index{update\+Robot\+Localization@{update\+Robot\+Localization}!vp\+Robot@{vp\+Robot}}
+\subsubsection[{\texorpdfstring{update\+Robot\+Localization(mrpt\+::poses\+::\+C\+Pose3\+D transformation)=0}{updateRobotLocalization(mrpt::poses::CPose3D transformation)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void vp\+Robot\+::update\+Robot\+Localization (
+\begin{DoxyParamCaption}
+\item[{mrpt\+::poses\+::\+C\+Pose3D}]{transformation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classvpRobot_a92d30ca2e923a33e3fb33d5a9c0d3923}{}\label{classvpRobot_a92d30ca2e923a33e3fb33d5a9c0d3923}
+Translates the location of the robot 
+
+Implemented in \hyperlink{classvprFreeFlyer_a65e4457b0c4bb9dbf0eaf9e8cca3daa0}{vpr\+Free\+Flyer}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+viewplanning/vprobot.\+h\item 
+viewplanning/vprobot.\+cpp\end{DoxyCompactItemize}

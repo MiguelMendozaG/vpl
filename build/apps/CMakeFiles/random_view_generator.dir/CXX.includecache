@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../partialmodel/viewstructure.h
+list
+-
+vector
+-
+string
+-
+iostream
+-
+fstream
+-
+boost/numeric/ublas/matrix.hpp
+-
+boost/numeric/ublas/io.hpp
+-
+
+../partialmodel/viewsynthesis.h
+viewstructure.h
+../partialmodel/viewstructure.h
+vector
+-
+cstring
+-
+
+/home/miguelmg/repositorios/vpl/apps/test_view_generator.cpp
+viewstructure.h
+-
+viewsynthesis.h
+-
+string
+-
+

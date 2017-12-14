@@ -1,0 +1,232 @@
+\hypertarget{classReconstructor3D}{}\section{Reconstructor3D Class Reference}
+\label{classReconstructor3D}\index{Reconstructor3D@{Reconstructor3D}}
+
+
+{\ttfamily \#include $<$reconstructor3d.\+h$>$}
+
+Inheritance diagram for Reconstructor3D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classReconstructor3D}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Reconstructor3D} (\hyperlink{classRobotSensor}{Robot\+Sensor} $\ast$rs, \hyperlink{classNBVPlanner}{N\+B\+V\+Planner} $\ast$p)\hypertarget{classReconstructor3D_a6dc91fcadae64d16bf72d98072e109dc}{}\label{classReconstructor3D_a6dc91fcadae64d16bf72d98072e109dc}
+
+\item 
+virtual bool \hyperlink{classReconstructor3D_a7ac7a63de2bfa609b1b0d15cde33f139}{init} ()
+\item 
+virtual bool {\bfseries positioning} (\hyperlink{classViewStructure}{View\+Structure} v)=0\hypertarget{classReconstructor3D_a00be85ea925b48d3e5ec1e773a9c5846}{}\label{classReconstructor3D_a00be85ea925b48d3e5ec1e773a9c5846}
+
+\item 
+virtual void {\bfseries save\+Data} ()\hypertarget{classReconstructor3D_a2368a98c5421e08f91881cf2faa8689a}{}\label{classReconstructor3D_a2368a98c5421e08f91881cf2faa8689a}
+
+\item 
+virtual bool \hyperlink{classReconstructor3D_ac4433ce176af00bd57a79d67d0fc4a14}{take\+Scan} (std\+::string \&scan\+\_\+name, std\+::string \&origin\+\_\+name)
+\item 
+virtual \hyperlink{classViewStructure}{View\+Structure} {\bfseries Plan\+Next\+Best\+View} ()\hypertarget{classReconstructor3D_a70ee2a6553cc0e92e15bbf55574aa9f5}{}\label{classReconstructor3D_a70ee2a6553cc0e92e15bbf55574aa9f5}
+
+\item 
+virtual bool {\bfseries update\+Model} (std\+::string scan\+\_\+name, std\+::string origin\+\_\+name)\hypertarget{classReconstructor3D_a10279e3dd4100d1a9c334c38e2ed01c9}{}\label{classReconstructor3D_a10279e3dd4100d1a9c334c38e2ed01c9}
+
+\item 
+virtual bool {\bfseries stop\+Criteria\+Satisfied} ()\hypertarget{classReconstructor3D_aadea36c1a4989198e092b60a299f8729}{}\label{classReconstructor3D_aadea36c1a4989198e092b60a299f8729}
+
+\item 
+virtual void {\bfseries finish\+Reconstruction} ()\hypertarget{classReconstructor3D_a77464b426265ab191b87e32b0160ac52}{}\label{classReconstructor3D_a77464b426265ab191b87e32b0160ac52}
+
+\item 
+void {\bfseries solve\+Reconstruction} ()\hypertarget{classReconstructor3D_ab45520b4bd55fbd6fc222aae759b8f0c}{}\label{classReconstructor3D_ab45520b4bd55fbd6fc222aae759b8f0c}
+
+\item 
+void {\bfseries set\+N\+Generated\+Views} (int n)\hypertarget{classReconstructor3D_a56b79062b049931f767f2d6451bfab3b}{}\label{classReconstructor3D_a56b79062b049931f767f2d6451bfab3b}
+
+\item 
+void {\bfseries set\+Data\+Folder} (std\+::string folder)\hypertarget{classReconstructor3D_a5cc843ea32ec0152a059318c47728d12}{}\label{classReconstructor3D_a5cc843ea32ec0152a059318c47728d12}
+
+\item 
+void {\bfseries set\+Config\+Folder} (std\+::string folder)\hypertarget{classReconstructor3D_ad41a7a58bff926bb2162ae55f850e011}{}\label{classReconstructor3D_ad41a7a58bff926bb2162ae55f850e011}
+
+\item 
+bool {\bfseries start\+Log\+File} ()\hypertarget{classReconstructor3D_a3d69e32e5f51b48437220ce61390a993}{}\label{classReconstructor3D_a3d69e32e5f51b48437220ce61390a993}
+
+\item 
+bool {\bfseries save\+To\+Log\+File} ()\hypertarget{classReconstructor3D_a3919d24a3df7aa41da8b0d273c50b1db}{}\label{classReconstructor3D_a3919d24a3df7aa41da8b0d273c50b1db}
+
+\item 
+void {\bfseries set\+Partial\+Model} (\hyperlink{classPartialModelBase}{Partial\+Model\+Base} $\ast$pm)\hypertarget{classReconstructor3D_a35c956aaa1e0a4af2bcd0d91e7406cd1}{}\label{classReconstructor3D_a35c956aaa1e0a4af2bcd0d91e7406cd1}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries wait\+For\+User}\hypertarget{classReconstructor3D_a116e39fd7cf2c85d84f4d90726caa439}{}\label{classReconstructor3D_a116e39fd7cf2c85d84f4d90726caa439}
+
+\item 
+bool {\bfseries update\+Robot\+Localization}\hypertarget{classReconstructor3D_a1d13f9650030fe143c07bad08d7ec122}{}\label{classReconstructor3D_a1d13f9650030fe143c07bad08d7ec122}
+
+\item 
+int {\bfseries max\+Iterations}\hypertarget{classReconstructor3D_aaac001d16a46512928f90fdfa8e3ab31}{}\label{classReconstructor3D_aaac001d16a46512928f90fdfa8e3ab31}
+
+\item 
+\hyperlink{classPartialModelBase}{Partial\+Model\+Base} $\ast$ {\bfseries partial\+Model}\hypertarget{classReconstructor3D_a9d6e0bcc66b57b9854bf88fa193dd53f}{}\label{classReconstructor3D_a9d6e0bcc66b57b9854bf88fa193dd53f}
+
+\item 
+\hyperlink{classRobotSensor}{Robot\+Sensor} $\ast$ {\bfseries robot\+\_\+sensor}\hypertarget{classReconstructor3D_a04e0b53c72fb1ca3f3442d201dafe93d}{}\label{classReconstructor3D_a04e0b53c72fb1ca3f3442d201dafe93d}
+
+\item 
+\hyperlink{classNBVPlanner}{N\+B\+V\+Planner} $\ast$ {\bfseries planner}\hypertarget{classReconstructor3D_af4850cdebe3a45a5f0b10502d15f49f4}{}\label{classReconstructor3D_af4850cdebe3a45a5f0b10502d15f49f4}
+
+\item 
+std\+::string {\bfseries data\+Folder}\hypertarget{classReconstructor3D_a9dda51c8d96892f960a2156b9ebbf459}{}\label{classReconstructor3D_a9dda51c8d96892f960a2156b9ebbf459}
+
+\item 
+std\+::string {\bfseries config\+Folder}\hypertarget{classReconstructor3D_a5c130ef5c7fbb62a895211c01581065e}{}\label{classReconstructor3D_a5c130ef5c7fbb62a895211c01581065e}
+
+\item 
+std\+::string {\bfseries scan\+File\+Name}\hypertarget{classReconstructor3D_a121ef8abf670ad841e595679b4aecf0b}{}\label{classReconstructor3D_a121ef8abf670ad841e595679b4aecf0b}
+
+\item 
+std\+::string {\bfseries origin\+File\+Name}\hypertarget{classReconstructor3D_a89792f8628eda6c46cefc55c378a1357}{}\label{classReconstructor3D_a89792f8628eda6c46cefc55c378a1357}
+
+\item 
+std\+::string {\bfseries candidate\+Views\+File\+Name}\hypertarget{classReconstructor3D_aa0c2389c278bd55458ee2987f934f158}{}\label{classReconstructor3D_aa0c2389c278bd55458ee2987f934f158}
+
+\item 
+std\+::string {\bfseries rays\+File\+Name}\hypertarget{classReconstructor3D_a683bf47fbcf5e02cafaa6ed64e5c8808}{}\label{classReconstructor3D_a683bf47fbcf5e02cafaa6ed64e5c8808}
+
+\item 
+std\+::string {\bfseries goals\+File\+Name}\hypertarget{classReconstructor3D_a9d8445fd97ce76f197a83201dacb0b3b}{}\label{classReconstructor3D_a9d8445fd97ce76f197a83201dacb0b3b}
+
+\item 
+std\+::string {\bfseries reached\+Goals\+Filename}\hypertarget{classReconstructor3D_a74620d1907a23d43e11ca38f4ed2c035}{}\label{classReconstructor3D_a74620d1907a23d43e11ca38f4ed2c035}
+
+\item 
+std\+::string {\bfseries partial\+Model\+File\+Name}\hypertarget{classReconstructor3D_a986fa32b1e25e94f53f6e72395da67b8}{}\label{classReconstructor3D_a986fa32b1e25e94f53f6e72395da67b8}
+
+\item 
+std\+::string {\bfseries occupied\+Voxels\+File\+Name}\hypertarget{classReconstructor3D_a063c1b092b9d852d652b01f9c8d1b746}{}\label{classReconstructor3D_a063c1b092b9d852d652b01f9c8d1b746}
+
+\item 
+std\+::string {\bfseries unknown\+Voxels\+Filename}\hypertarget{classReconstructor3D_a175169ef3cfc0ae3e093f1c3a8878746}{}\label{classReconstructor3D_a175169ef3cfc0ae3e093f1c3a8878746}
+
+\item 
+std\+::string {\bfseries current\+Point\+Cloud\+File}\hypertarget{classReconstructor3D_a141c9795c4112380913575958f88c342}{}\label{classReconstructor3D_a141c9795c4112380913575958f88c342}
+
+\item 
+std\+::string {\bfseries current\+Origin\+File}\hypertarget{classReconstructor3D_ab93757b22b3da8436dd133d49d647ff9}{}\label{classReconstructor3D_ab93757b22b3da8436dd133d49d647ff9}
+
+\item 
+long int {\bfseries n\+\_\+views}\hypertarget{classReconstructor3D_af7694b142f1ee0188b1c210f5ad91771}{}\label{classReconstructor3D_af7694b142f1ee0188b1c210f5ad91771}
+
+\item 
+int {\bfseries iteration}\hypertarget{classReconstructor3D_ad6b3d3579381d6b919d3480dc544aa68}{}\label{classReconstructor3D_ad6b3d3579381d6b919d3480dc544aa68}
+
+\item 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \hyperlink{classReconstructor3D_aecbe4257f53cc243125a8c370265e8de}{configs}\hypertarget{classReconstructor3D_aecbe4257f53cc243125a8c370265e8de}{}\label{classReconstructor3D_aecbe4257f53cc243125a8c370265e8de}
+
+\begin{DoxyCompactList}\small\item\em config to reach N\+BV \end{DoxyCompactList}\item 
+int {\bfseries n\+\_\+subset\+\_\+to\+\_\+motion}\hypertarget{classReconstructor3D_af15e3bc3feca4c1cf3c1db6c275ab2b8}{}\label{classReconstructor3D_af15e3bc3feca4c1cf3c1db6c275ab2b8}
+
+\item 
+std\+::list$<$ \hyperlink{classViewStructure}{View\+Structure} $>$ \hyperlink{classReconstructor3D_a8afd09b3f07435ef93b11147b0d92c6f}{Plan}
+\item 
+\hyperlink{classViewStructure}{View\+Structure} \hyperlink{classReconstructor3D_a29b49aed1badf557f570f835d8683532}{current\+View}
+\item 
+bool {\bfseries initiated}\hypertarget{classReconstructor3D_a2e701750963834a8452e3a7bd75a09c0}{}\label{classReconstructor3D_a2e701750963834a8452e3a7bd75a09c0}
+
+\item 
+float \hyperlink{classReconstructor3D_a430c767504d2bdcd445929456889f8e9}{std\+\_\+utility}\hypertarget{classReconstructor3D_a430c767504d2bdcd445929456889f8e9}{}\label{classReconstructor3D_a430c767504d2bdcd445929456889f8e9}
+
+\begin{DoxyCompactList}\small\item\em stadistical variables \end{DoxyCompactList}\item 
+float {\bfseries std\+\_\+surface\+\_\+utility}\hypertarget{classReconstructor3D_a460a06b85c058fbe3b385bfc08343764}{}\label{classReconstructor3D_a460a06b85c058fbe3b385bfc08343764}
+
+\item 
+float {\bfseries std\+\_\+distance\+\_\+utility}\hypertarget{classReconstructor3D_a5cbb62afa7c49ddf3df42d095e7fdbe3}{}\label{classReconstructor3D_a5cbb62afa7c49ddf3df42d095e7fdbe3}
+
+\item 
+float {\bfseries std\+\_\+unk\+\_\+voxel}\hypertarget{classReconstructor3D_ada173c8ac6804eb9f6d1173bd5c8bd63}{}\label{classReconstructor3D_ada173c8ac6804eb9f6d1173bd5c8bd63}
+
+\item 
+float {\bfseries std\+\_\+occ\+\_\+voxel}\hypertarget{classReconstructor3D_a4a93510c0ba7633a72982362712bdf72}{}\label{classReconstructor3D_a4a93510c0ba7633a72982362712bdf72}
+
+\item 
+float {\bfseries std\+\_\+reconstruction\+\_\+percent}\hypertarget{classReconstructor3D_a66fa77805a125d4cb469965f4fa56c21}{}\label{classReconstructor3D_a66fa77805a125d4cb469965f4fa56c21}
+
+\item 
+float {\bfseries std\+\_\+dist}\hypertarget{classReconstructor3D_a62aed9bb1f6ec8d83cd10c5f849779f0}{}\label{classReconstructor3D_a62aed9bb1f6ec8d83cd10c5f849779f0}
+
+\item 
+float {\bfseries std\+\_\+accumulated\+\_\+dist}\hypertarget{classReconstructor3D_ae8820c4efbb66caeeea375f7769d9a02}{}\label{classReconstructor3D_ae8820c4efbb66caeeea375f7769d9a02}
+
+\item 
+float {\bfseries std\+\_\+update\+\_\+t}\hypertarget{classReconstructor3D_a516eb9e47ad5b4e89204454fd10bad24}{}\label{classReconstructor3D_a516eb9e47ad5b4e89204454fd10bad24}
+
+\item 
+float {\bfseries std\+\_\+registration\+\_\+t}\hypertarget{classReconstructor3D_adf488d60da9bfb679f4c3344ff584453}{}\label{classReconstructor3D_adf488d60da9bfb679f4c3344ff584453}
+
+\item 
+float {\bfseries std\+\_\+vision\+\_\+t}\hypertarget{classReconstructor3D_a167bf09ad9ab88a7db23f8ef7c14a464}{}\label{classReconstructor3D_a167bf09ad9ab88a7db23f8ef7c14a464}
+
+\item 
+float {\bfseries std\+\_\+motionplanning\+\_\+t}\hypertarget{classReconstructor3D_a85b3a120dd77a0305d9d4c97b7da4dc8}{}\label{classReconstructor3D_a85b3a120dd77a0305d9d4c97b7da4dc8}
+
+\item 
+float {\bfseries std\+\_\+positioning\+\_\+t}\hypertarget{classReconstructor3D_af6bf8a303a6f2b4f39be4739d745e131}{}\label{classReconstructor3D_af6bf8a303a6f2b4f39be4739d745e131}
+
+\item 
+float {\bfseries std\+\_\+total\+\_\+time}\hypertarget{classReconstructor3D_a9fe8bb2f80c8b4cf04dfc7037410d1fa}{}\label{classReconstructor3D_a9fe8bb2f80c8b4cf04dfc7037410d1fa}
+
+\item 
+double {\bfseries std\+\_\+unknown\+\_\+volume}\hypertarget{classReconstructor3D_a2e6015d02aea82eeea87ead03422a5f7}{}\label{classReconstructor3D_a2e6015d02aea82eeea87ead03422a5f7}
+
+\item 
+float {\bfseries std\+\_\+probability}\hypertarget{classReconstructor3D_a1b3c8533b14c30586b326bacc7f79439}{}\label{classReconstructor3D_a1b3c8533b14c30586b326bacc7f79439}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Solves a Reconstruction Problem At the indicated directory must be the following files\+: -\/p0.\+vs Initial view in \hyperlink{classViewStructure}{View\+Structure} Format 
+
+\subsection{Member Function Documentation}
+\index{Reconstructor3D@{Reconstructor3D}!init@{init}}
+\index{init@{init}!Reconstructor3D@{Reconstructor3D}}
+\subsubsection[{\texorpdfstring{init()}{init()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Reconstructor3\+D\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classReconstructor3D_a7ac7a63de2bfa609b1b0d15cde33f139}{}\label{classReconstructor3D_a7ac7a63de2bfa609b1b0d15cde33f139}
+Initialices the N\+BV problem 
+
+Reimplemented in \hyperlink{classR3DDirectPositioning_a8688c3962bf886cf99cd04ff0b0ee7a9}{R3\+D\+Direct\+Positioning}.
+
+\index{Reconstructor3D@{Reconstructor3D}!take\+Scan@{take\+Scan}}
+\index{take\+Scan@{take\+Scan}!Reconstructor3D@{Reconstructor3D}}
+\subsubsection[{\texorpdfstring{take\+Scan(std\+::string \&scan\+\_\+name, std\+::string \&origin\+\_\+name)}{takeScan(std::string &scan_name, std::string &origin_name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Reconstructor3\+D\+::take\+Scan (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{scan\+\_\+name, }
+\item[{std\+::string \&}]{origin\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classReconstructor3D_ac4433ce176af00bd57a79d67d0fc4a14}{}\label{classReconstructor3D_ac4433ce176af00bd57a79d67d0fc4a14}
+Performs a scan and returns the name of the scan file and the origin file 
+
+Reimplemented in \hyperlink{classReconstructor3DRobot_aa30cad4bf09b5d58cac1e9b751e7842b}{Reconstructor3\+D\+Robot}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Reconstructor3D@{Reconstructor3D}!current\+View@{current\+View}}
+\index{current\+View@{current\+View}!Reconstructor3D@{Reconstructor3D}}
+\subsubsection[{\texorpdfstring{current\+View}{currentView}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf View\+Structure} Reconstructor3\+D\+::current\+View\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classReconstructor3D_a29b49aed1badf557f570f835d8683532}{}\label{classReconstructor3D_a29b49aed1badf557f570f835d8683532}
+Current View \index{Reconstructor3D@{Reconstructor3D}!Plan@{Plan}}
+\index{Plan@{Plan}!Reconstructor3D@{Reconstructor3D}}
+\subsubsection[{\texorpdfstring{Plan}{Plan}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<${\bf View\+Structure}$>$ Reconstructor3\+D\+::\+Plan\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classReconstructor3D_a8afd09b3f07435ef93b11147b0d92c6f}{}\label{classReconstructor3D_a8afd09b3f07435ef93b11147b0d92c6f}
+Reconstruction Plan (series of views) P in paper 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+viewplanning/reconstructor3d.\+h\item 
+viewplanning/reconstructor3d.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,130 @@
+\hypertarget{classvpFileReader}{}\section{vp\+File\+Reader Class Reference}
+\label{classvpFileReader}\index{vp\+File\+Reader@{vp\+File\+Reader}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classvpFileReader_acb94e641bcb9efba7155f428a698fe03}{read\+Int} (std\+::string file\+\_\+name, std\+::vector$<$ int $>$ \&data)
+\item 
+{\footnotesize template$<$typename Tipo $>$ }\\bool {\bfseries read\+Single\+Value} (Tipo \&value, std\+::string file\+\_\+name)\hypertarget{classvpFileReader_afdd319189e19f90738f8597f3634a775}{}\label{classvpFileReader_afdd319189e19f90738f8597f3634a775}
+
+\item 
+{\footnotesize template$<$typename Tipo\+Dato $>$ }\\bool {\bfseries read\+M\+S\+L\+Vector} (std\+::vector$<$ Tipo\+Dato $>$ \&data, std\+::string file\+\_\+name)\hypertarget{classvpFileReader_a5d886b245c6339689edd5cdf22d2799f}{}\label{classvpFileReader_a5d886b245c6339689edd5cdf22d2799f}
+
+\item 
+{\footnotesize template$<$typename Tipo\+Dato $>$ }\\bool {\bfseries read\+M\+S\+L\+List\+Vector} (std\+::list$<$ std\+::vector$<$ Tipo\+Dato $>$ $>$ \&data, std\+::string file\+\_\+name)\hypertarget{classvpFileReader_a05c2f9d78b751ad28c0683372ca97ace}{}\label{classvpFileReader_a05c2f9d78b751ad28c0683372ca97ace}
+
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classvpFileReader_a4b4c36bae6e71cb92a7276dfeb96eabc}{save\+To\+M\+S\+L\+List\+Vector} (std\+::list$<$ std\+::vector$<$ T $>$ $>$ data, std\+::string file\+\_\+name, bool append=false)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classvpFileReader_a805ae83c003da403b40a81a9a7601a82}{save\+Vector\+Of\+Vectors} (std\+::vector$<$ std\+::vector$<$ T $>$ $>$ data, std\+::string file\+\_\+name, bool append=false)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classvpFileReader_ab02ea430b0fa4bddb69a9e394373f5e8}{save\+List\+Of\+Lists} (std\+::list$<$ std\+::list$<$ T $>$ $>$ data, std\+::string file\+\_\+name, bool append=false)
+\item 
+{\footnotesize template$<$typename Tipo\+Dato $>$ }\\bool \hyperlink{classvpFileReader_a79619141b6993f7a85fa58acbc72df25}{save\+To\+M\+S\+L\+Vector} (std\+::vector$<$ Tipo\+Dato $>$ \&data, std\+::string file\+\_\+name, bool append=false)
+\item 
+bool \hyperlink{classvpFileReader_a98aa1278b9e5796d0b7635b34114c46c}{read\+Double} (std\+::string file\+\_\+name, std\+::vector$<$ double $>$ \&data)
+\item 
+bool {\bfseries read\+Double\+Coord\+From\+P\+CD} (std\+::string file\+\_\+name, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data, std\+::string \&header)\hypertarget{classvpFileReader_a0d77b27e9e96d78453a413adf6c2d88e}{}\label{classvpFileReader_a0d77b27e9e96d78453a413adf6c2d88e}
+
+\item 
+bool \hyperlink{classvpFileReader_afc2865630555414a8982e1a9d6baae6e}{read\+Double\+Coordinates} (std\+::string file\+\_\+name, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data)
+\item 
+bool {\bfseries save\+Double\+Coordinates} (std\+::string file\+\_\+name, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data)\hypertarget{classvpFileReader_a8dd4d28deeb912e483457198ed46bf7f}{}\label{classvpFileReader_a8dd4d28deeb912e483457198ed46bf7f}
+
+\item 
+bool {\bfseries read\+Double\+Coordinates\+Coma} (std\+::string file\+\_\+name, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data)\hypertarget{classvpFileReader_af48c0938ba084751d0bc436ae4a6ee85}{}\label{classvpFileReader_af48c0938ba084751d0bc436ae4a6ee85}
+
+\item 
+bool {\bfseries read\+Double\+Coordinates\+From\+W\+RL} (std\+::string file\+\_\+name, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data)\hypertarget{classvpFileReader_adfe0b08d6430f9ed55e44fbe8b758f93}{}\label{classvpFileReader_adfe0b08d6430f9ed55e44fbe8b758f93}
+
+\item 
+bool {\bfseries save\+Double\+Coordinates\+As\+P\+CD} (std\+::string file\+\_\+name, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data)\hypertarget{classvpFileReader_a71dbfd3ba0f20f2b2225610c70b5fb88}{}\label{classvpFileReader_a71dbfd3ba0f20f2b2225610c70b5fb88}
+
+\item 
+bool {\bfseries save\+Double\+Coordinates\+As\+O\+BJ} (std\+::string file\+\_\+name, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data)\hypertarget{classvpFileReader_a297f5cd5f905245c1eab8c506f90ad71}{}\label{classvpFileReader_a297f5cd5f905245c1eab8c506f90ad71}
+
+\item 
+{\footnotesize template$<$typename Tipo\+Dato $>$ }\\bool {\bfseries save\+Vector} (std\+::vector$<$ Tipo\+Dato $>$ \&data, std\+::string file\+\_\+name, bool append=false)\hypertarget{classvpFileReader_afcefd226285021787bd622ece9015242}{}\label{classvpFileReader_afcefd226285021787bd622ece9015242}
+
+\item 
+{\footnotesize template$<$typename Tipo\+Dato $>$ }\\bool \hyperlink{classvpFileReader_ade854c4030c831c5df01220e3c4b3709}{save\+Data2\+Text} (Tipo\+Dato data, std\+::string file\+\_\+name, bool append=false, char separator= \textquotesingle{} \textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{vp\+File\+Reader@{vp\+File\+Reader}!read\+Double@{read\+Double}}
+\index{read\+Double@{read\+Double}!vp\+File\+Reader@{vp\+File\+Reader}}
+\subsubsection[{\texorpdfstring{read\+Double(std\+::string file\+\_\+name, std\+::vector$<$ double $>$ \&data)}{readDouble(std::string file_name, std::vector< double > &data)}}]{\setlength{\rightskip}{0pt plus 5cm}bool vp\+File\+Reader\+::read\+Double (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name, }
+\item[{std\+::vector$<$ double $>$ \&}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{classvpFileReader_a98aa1278b9e5796d0b7635b34114c46c}{}\label{classvpFileReader_a98aa1278b9e5796d0b7635b34114c46c}
+Reads all double numbers from a file \index{vp\+File\+Reader@{vp\+File\+Reader}!read\+Double\+Coordinates@{read\+Double\+Coordinates}}
+\index{read\+Double\+Coordinates@{read\+Double\+Coordinates}!vp\+File\+Reader@{vp\+File\+Reader}}
+\subsubsection[{\texorpdfstring{read\+Double\+Coordinates(std\+::string file\+\_\+name, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data)}{readDoubleCoordinates(std::string file_name, std::vector< std::vector< double > > &data)}}]{\setlength{\rightskip}{0pt plus 5cm}bool vp\+File\+Reader\+::read\+Double\+Coordinates (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name, }
+\item[{std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{classvpFileReader_afc2865630555414a8982e1a9d6baae6e}{}\label{classvpFileReader_afc2865630555414a8982e1a9d6baae6e}
+Reads all double coordinates. \index{vp\+File\+Reader@{vp\+File\+Reader}!read\+Int@{read\+Int}}
+\index{read\+Int@{read\+Int}!vp\+File\+Reader@{vp\+File\+Reader}}
+\subsubsection[{\texorpdfstring{read\+Int(std\+::string file\+\_\+name, std\+::vector$<$ int $>$ \&data)}{readInt(std::string file_name, std::vector< int > &data)}}]{\setlength{\rightskip}{0pt plus 5cm}bool vp\+File\+Reader\+::read\+Int (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name, }
+\item[{std\+::vector$<$ int $>$ \&}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{classvpFileReader_acb94e641bcb9efba7155f428a698fe03}{}\label{classvpFileReader_acb94e641bcb9efba7155f428a698fe03}
+Read all int number from a file \index{vp\+File\+Reader@{vp\+File\+Reader}!save\+Data2\+Text@{save\+Data2\+Text}}
+\index{save\+Data2\+Text@{save\+Data2\+Text}!vp\+File\+Reader@{vp\+File\+Reader}}
+\subsubsection[{\texorpdfstring{save\+Data2\+Text(\+Tipo\+Dato data, std\+::string file\+\_\+name, bool append=false, char separator= \textquotesingle{} \textquotesingle{})}{saveData2Text(TipoDato data, std::string file_name, bool append=false, char separator= ' ')}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Tipo\+Dato $>$ bool vp\+File\+Reader\+::save\+Data2\+Text (
+\begin{DoxyParamCaption}
+\item[{Tipo\+Dato}]{data, }
+\item[{std\+::string}]{file\+\_\+name, }
+\item[{bool}]{append = {\ttfamily false}, }
+\item[{char}]{separator = {\ttfamily \textquotesingle{}~\textquotesingle{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvpFileReader_ade854c4030c831c5df01220e3c4b3709}{}\label{classvpFileReader_ade854c4030c831c5df01220e3c4b3709}
+Saves a data to a text file, \index{vp\+File\+Reader@{vp\+File\+Reader}!save\+List\+Of\+Lists@{save\+List\+Of\+Lists}}
+\index{save\+List\+Of\+Lists@{save\+List\+Of\+Lists}!vp\+File\+Reader@{vp\+File\+Reader}}
+\subsubsection[{\texorpdfstring{save\+List\+Of\+Lists(std\+::list$<$ std\+::list$<$ T $>$ $>$ data, std\+::string file\+\_\+name, bool append=false)}{saveListOfLists(std::list< std::list< T > > data, std::string file_name, bool append=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool vp\+File\+Reader\+::save\+List\+Of\+Lists (
+\begin{DoxyParamCaption}
+\item[{std\+::list$<$ std\+::list$<$ T $>$ $>$}]{data, }
+\item[{std\+::string}]{file\+\_\+name, }
+\item[{bool}]{append = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvpFileReader_ab02ea430b0fa4bddb69a9e394373f5e8}{}\label{classvpFileReader_ab02ea430b0fa4bddb69a9e394373f5e8}
+Saves a list of lists \index{vp\+File\+Reader@{vp\+File\+Reader}!save\+To\+M\+S\+L\+List\+Vector@{save\+To\+M\+S\+L\+List\+Vector}}
+\index{save\+To\+M\+S\+L\+List\+Vector@{save\+To\+M\+S\+L\+List\+Vector}!vp\+File\+Reader@{vp\+File\+Reader}}
+\subsubsection[{\texorpdfstring{save\+To\+M\+S\+L\+List\+Vector(std\+::list$<$ std\+::vector$<$ T $>$ $>$ data, std\+::string file\+\_\+name, bool append=false)}{saveToMSLListVector(std::list< std::vector< T > > data, std::string file_name, bool append=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool vp\+File\+Reader\+::save\+To\+M\+S\+L\+List\+Vector (
+\begin{DoxyParamCaption}
+\item[{std\+::list$<$ std\+::vector$<$ T $>$ $>$}]{data, }
+\item[{std\+::string}]{file\+\_\+name, }
+\item[{bool}]{append = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvpFileReader_a4b4c36bae6e71cb92a7276dfeb96eabc}{}\label{classvpFileReader_a4b4c36bae6e71cb92a7276dfeb96eabc}
+Saves a list of T type vectors in M\+SL format \index{vp\+File\+Reader@{vp\+File\+Reader}!save\+To\+M\+S\+L\+Vector@{save\+To\+M\+S\+L\+Vector}}
+\index{save\+To\+M\+S\+L\+Vector@{save\+To\+M\+S\+L\+Vector}!vp\+File\+Reader@{vp\+File\+Reader}}
+\subsubsection[{\texorpdfstring{save\+To\+M\+S\+L\+Vector(std\+::vector$<$ Tipo\+Dato $>$ \&data, std\+::string file\+\_\+name, bool append=false)}{saveToMSLVector(std::vector< TipoDato > &data, std::string file_name, bool append=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Tipo\+Dato $>$ bool vp\+File\+Reader\+::save\+To\+M\+S\+L\+Vector (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ Tipo\+Dato $>$ \&}]{data, }
+\item[{std\+::string}]{file\+\_\+name, }
+\item[{bool}]{append = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvpFileReader_a79619141b6993f7a85fa58acbc72df25}{}\label{classvpFileReader_a79619141b6993f7a85fa58acbc72df25}
+Saves a vector in M\+SL format \index{vp\+File\+Reader@{vp\+File\+Reader}!save\+Vector\+Of\+Vectors@{save\+Vector\+Of\+Vectors}}
+\index{save\+Vector\+Of\+Vectors@{save\+Vector\+Of\+Vectors}!vp\+File\+Reader@{vp\+File\+Reader}}
+\subsubsection[{\texorpdfstring{save\+Vector\+Of\+Vectors(std\+::vector$<$ std\+::vector$<$ T $>$ $>$ data, std\+::string file\+\_\+name, bool append=false)}{saveVectorOfVectors(std::vector< std::vector< T > > data, std::string file_name, bool append=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool vp\+File\+Reader\+::save\+Vector\+Of\+Vectors (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::vector$<$ T $>$ $>$}]{data, }
+\item[{std\+::string}]{file\+\_\+name, }
+\item[{bool}]{append = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvpFileReader_a805ae83c003da403b40a81a9a7601a82}{}\label{classvpFileReader_a805ae83c003da403b40a81a9a7601a82}
+Saves a vector of vectors 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+partialmodel/vpfilereader.\+h\item 
+partialmodel/vpfilereader.\+cpp\end{DoxyCompactItemize}

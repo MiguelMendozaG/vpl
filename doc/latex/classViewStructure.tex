@@ -1,0 +1,76 @@
+\hypertarget{classViewStructure}{}\section{View\+Structure Class Reference}
+\label{classViewStructure}\index{View\+Structure@{View\+Structure}}
+
+
+{\ttfamily \#include $<$viewstructure.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries set\+Pose} (double x, double y, double z, double yaw, double pitch, double roll)\hypertarget{classViewStructure_a0b13fbbc9488923d144590e2ae3c55b4}{}\label{classViewStructure_a0b13fbbc9488923d144590e2ae3c55b4}
+
+\item 
+void {\bfseries set\+Pose} (std\+::vector$<$ double $>$ pose)\hypertarget{classViewStructure_ad3ae844f74503787846c4fcff13edc34}{}\label{classViewStructure_ad3ae844f74503787846c4fcff13edc34}
+
+\item 
+bool {\bfseries operator==} (const \hyperlink{classViewStructure}{View\+Structure} \&) const \hypertarget{classViewStructure_aca11fe4eb7ebb8b4c960a9c36bd27af0}{}\label{classViewStructure_aca11fe4eb7ebb8b4c960a9c36bd27af0}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \hyperlink{classViewStructure_a378f7e104ffc8fddd6f9033399900ef6}{w}
+\item 
+std\+::vector$<$ double $>$ \hyperlink{classViewStructure_a5c78495a797c42e810e808df7a5da7cb}{q}
+\item 
+boost\+::numeric\+::ublas\+::matrix$<$ double $>$ \hyperlink{classViewStructure_a8252f8da95421963152c504ade86aa2d}{H\+TM}\hypertarget{classViewStructure_a8252f8da95421963152c504ade86aa2d}{}\label{classViewStructure_a8252f8da95421963152c504ade86aa2d}
+
+\begin{DoxyCompactList}\small\item\em Homogeneous transformtation matrix. \end{DoxyCompactList}\item 
+int {\bfseries type}\hypertarget{classViewStructure_ab3cc96aefab06a43fb3d61be211cb932}{}\label{classViewStructure_ab3cc96aefab06a43fb3d61be211cb932}
+
+\item 
+double {\bfseries eval}\hypertarget{classViewStructure_a4e2c9f63553048233d407370e8e484b4}{}\label{classViewStructure_a4e2c9f63553048233d407370e8e484b4}
+
+\item 
+long int {\bfseries n\+\_\+occupied}\hypertarget{classViewStructure_a40996b9fb4a584407991fc118a44a318}{}\label{classViewStructure_a40996b9fb4a584407991fc118a44a318}
+
+\item 
+long int {\bfseries n\+\_\+unknown}\hypertarget{classViewStructure_a2dfd62d1a5854b273a27b006debc920e}{}\label{classViewStructure_a2dfd62d1a5854b273a27b006debc920e}
+
+\item 
+long int {\bfseries n\+\_\+occplane}\hypertarget{classViewStructure_acd99c19b17dee8872ea832d4ef36c116}{}\label{classViewStructure_acd99c19b17dee8872ea832d4ef36c116}
+
+\item 
+double {\bfseries d}\hypertarget{classViewStructure_af2302cdc43dcc8b83483201b208b7891}{}\label{classViewStructure_af2302cdc43dcc8b83483201b208b7891}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries pose\+\_\+lenght}\hypertarget{classViewStructure_a0ff5ef759282ae96eda005a57967de6d}{}\label{classViewStructure_a0ff5ef759282ae96eda005a57967de6d}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&out, \hyperlink{classViewStructure}{View\+Structure} \&view)\hypertarget{classViewStructure_a6cd2f51a9d96a96ad35fc6e61514d249}{}\label{classViewStructure_a6cd2f51a9d96a96ad35fc6e61514d249}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Robot state\+: q Sensor pose\+: w\mbox{[}x, y, z, yaw(z), pitch(y), roll(x)\mbox{]} radians homogeneous transformtation matrix of the eye in hand sensor\+: H\+TM 
+
+\subsection{Member Data Documentation}
+\index{View\+Structure@{View\+Structure}!q@{q}}
+\index{q@{q}!View\+Structure@{View\+Structure}}
+\subsubsection[{\texorpdfstring{q}{q}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ View\+Structure\+::q}\hypertarget{classViewStructure_a5c78495a797c42e810e808df7a5da7cb}{}\label{classViewStructure_a5c78495a797c42e810e808df7a5da7cb}
+Robot state or configuration It is only a storage variable for convinience but the member functions do not use it \index{View\+Structure@{View\+Structure}!w@{w}}
+\index{w@{w}!View\+Structure@{View\+Structure}}
+\subsubsection[{\texorpdfstring{w}{w}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ View\+Structure\+::w}\hypertarget{classViewStructure_a378f7e104ffc8fddd6f9033399900ef6}{}\label{classViewStructure_a378f7e104ffc8fddd6f9033399900ef6}
+Sensor pose w \mbox{[}x, y, z, yaw(z), pitch(y), roll(x)\mbox{]} accordinly to a 3D pose of M\+R\+PT 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+partialmodel/viewstructure.\+h\item 
+partialmodel/viewstructure.\+cpp\end{DoxyCompactItemize}

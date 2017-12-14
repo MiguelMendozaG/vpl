@@ -1,0 +1,4 @@
+Iter	uf	s_uf	d_uf	unk_vxl	occu_vxl	per_rec	dist	acc_dist	updt_t	reg_t	vis_t	mp_t	pos_t	total_t	unk_vol
+0	4.62428e-44	0	3.36397e-36	0	0	0	0	0	0.414265	0	0	0	0	0	0.071848
+1	4.62428e-44	0	3.36397e-36	0	0	0	0	0	0.333524	0	0	0	0	0	0.022376
+2	4.62428e-44	0	3.36397e-36	0	0	0	0	0	0.378138	0	0	0	0	0	0.016464

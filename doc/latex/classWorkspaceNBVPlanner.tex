@@ -1,0 +1,69 @@
+\hypertarget{classWorkspaceNBVPlanner}{}\section{Workspace\+N\+B\+V\+Planner Class Reference}
+\label{classWorkspaceNBVPlanner}\index{Workspace\+N\+B\+V\+Planner@{Workspace\+N\+B\+V\+Planner}}
+
+
+{\ttfamily \#include $<$workspacenbvplanner.\+h$>$}
+
+Inheritance diagram for Workspace\+N\+B\+V\+Planner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classWorkspaceNBVPlanner}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Workspace\+N\+B\+V\+Planner} (\hyperlink{classRobotSensor}{Robot\+Sensor} $\ast$rs, \hyperlink{classPartialModelBase}{Partial\+Model\+Base} $\ast$pm)\hypertarget{classWorkspaceNBVPlanner_a8b29a06fc054a2bb59314b1a8b501068}{}\label{classWorkspaceNBVPlanner_a8b29a06fc054a2bb59314b1a8b501068}
+
+\item 
+virtual bool \hyperlink{classWorkspaceNBVPlanner_ad5655e5c1c45a017d4c598fd2632ed49}{plan\+N\+BV} (\hyperlink{classViewStructure}{View\+Structure} \&v)
+\item 
+virtual bool {\bfseries init} ()\hypertarget{classWorkspaceNBVPlanner_a8fc044565494abfd67a36c4565ca507d}{}\label{classWorkspaceNBVPlanner_a8fc044565494abfd67a36c4565ca507d}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries view\+Sphere\+File\+Name}\hypertarget{classWorkspaceNBVPlanner_aff8df8d09551a89635a5f39c2089ce29}{}\label{classWorkspaceNBVPlanner_aff8df8d09551a89635a5f39c2089ce29}
+
+\item 
+std\+::string {\bfseries evaluated\+Views\+File}\hypertarget{classWorkspaceNBVPlanner_a5dd5347db8708cbd72a2bc81d26de9d7}{}\label{classWorkspaceNBVPlanner_a5dd5347db8708cbd72a2bc81d26de9d7}
+
+\item 
+\hyperlink{classViewList}{View\+List} {\bfseries candidate\+Views}\hypertarget{classWorkspaceNBVPlanner_ad96bc939d0cb7cefa707d98f51de8e76}{}\label{classWorkspaceNBVPlanner_ad96bc939d0cb7cefa707d98f51de8e76}
+
+\item 
+std\+::vector$<$ double $>$ {\bfseries object\+Center}\hypertarget{classWorkspaceNBVPlanner_ad5372c462051e5757370d1fc4682a9e6}{}\label{classWorkspaceNBVPlanner_ad5372c462051e5757370d1fc4682a9e6}
+
+\item 
+double {\bfseries radio}\hypertarget{classWorkspaceNBVPlanner_a12a867beffb670bbb574967782727564}{}\label{classWorkspaceNBVPlanner_a12a867beffb670bbb574967782727564}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Planner that computes the N\+BV as a pose (x,y,z,yaw,pitch,roll) In particular, this implemented object generates a view sphere and selects the N\+BV as the view with the highest evaluation depending on the partial model selected
+
+At initialization\+: It generates a view sphere assuming a freeflyer robot which is pointing to the x axis and z is upward The view sphere is taken as configurations of the robot, then It asks to the robot to return the end effector pose and H\+TM The list of candidate\+Views is created
+
+For N\+BV computation\+: It queries to the partial model to evaluate the pointed views 
+
+\subsection{Member Function Documentation}
+\index{Workspace\+N\+B\+V\+Planner@{Workspace\+N\+B\+V\+Planner}!plan\+N\+BV@{plan\+N\+BV}}
+\index{plan\+N\+BV@{plan\+N\+BV}!Workspace\+N\+B\+V\+Planner@{Workspace\+N\+B\+V\+Planner}}
+\subsubsection[{\texorpdfstring{plan\+N\+B\+V(\+View\+Structure \&v)}{planNBV(ViewStructure &v)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Workspace\+N\+B\+V\+Planner\+::plan\+N\+BV (
+\begin{DoxyParamCaption}
+\item[{{\bf View\+Structure} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classWorkspaceNBVPlanner_ad5655e5c1c45a017d4c598fd2632ed49}{}\label{classWorkspaceNBVPlanner_ad5655e5c1c45a017d4c598fd2632ed49}
+Main function, it computes the N\+BV 
+
+Implements \hyperlink{classNBVPlanner_a448567c9d5cec319c5df5efdb0d5479c}{N\+B\+V\+Planner}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+viewplanning/workspacenbvplanner.\+h\item 
+viewplanning/workspacenbvplanner.\+cpp\end{DoxyCompactItemize}

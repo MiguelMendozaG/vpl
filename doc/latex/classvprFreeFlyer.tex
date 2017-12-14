@@ -1,0 +1,117 @@
+\hypertarget{classvprFreeFlyer}{}\section{vpr\+Free\+Flyer Class Reference}
+\label{classvprFreeFlyer}\index{vpr\+Free\+Flyer@{vpr\+Free\+Flyer}}
+
+
+{\ttfamily \#include $<$vprfreeflyer.\+h$>$}
+
+Inheritance diagram for vpr\+Free\+Flyer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classvprFreeFlyer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries get\+Pose\+From\+Configuration} (mrpt\+::poses\+::\+C\+Pose3D \&pose, std\+::vector$<$ double $>$ q)\hypertarget{classvprFreeFlyer_ab6d24adbcd9c30b464dae8b036468394}{}\label{classvprFreeFlyer_ab6d24adbcd9c30b464dae8b036468394}
+
+\item 
+virtual void {\bfseries get\+Current\+H\+TM} (Boost\+Matrix \&H\+TM)\hypertarget{classvprFreeFlyer_ad90b7ba9c7aab39f3b27742fb3e4832d}{}\label{classvprFreeFlyer_ad90b7ba9c7aab39f3b27742fb3e4832d}
+
+\item 
+virtual void {\bfseries get\+H\+T\+Mfrom\+Configuration} (Boost\+Matrix \&H\+TM, std\+::vector$<$ double, std\+::allocator$<$ double $>$ $>$ q)\hypertarget{classvprFreeFlyer_a4ddb9bef245d3aec62cf843e29364a52}{}\label{classvprFreeFlyer_a4ddb9bef245d3aec62cf843e29364a52}
+
+\item 
+virtual bool {\bfseries move\+To\+Configuration} (std\+::vector$<$ double, std\+::allocator$<$ double $>$ $>$ configuration)\hypertarget{classvprFreeFlyer_a3363bcae45eb475c8785ff2a08f43109}{}\label{classvprFreeFlyer_a3363bcae45eb475c8785ff2a08f43109}
+
+\item 
+virtual float {\bfseries execute\+Trajectory} (std\+::vector$<$ std\+::vector$<$ double $>$ $>$ controls, double delta\+\_\+t, std\+::vector$<$ double $>$ goal\+\_\+q)\hypertarget{classvprFreeFlyer_ada428e9717d0e11e892215a4934bfa93}{}\label{classvprFreeFlyer_ada428e9717d0e11e892215a4934bfa93}
+
+\item 
+virtual float \hyperlink{classvprFreeFlyer_a8addee690a582bc74577ad79da7f02ba}{execute\+Movement} ()
+\item 
+virtual void {\bfseries get\+Current\+Configuration} (std\+::vector$<$ double, std\+::allocator$<$ double $>$ $>$ \&q)\hypertarget{classvprFreeFlyer_a17407e2a36c81f754e59ef2619b3f43d}{}\label{classvprFreeFlyer_a17407e2a36c81f754e59ef2619b3f43d}
+
+\item 
+virtual bool \hyperlink{classvprFreeFlyer_a9f1f0452b42a29b9cbef9cff075387ce}{set\+Velocities} (std\+::vector$<$ double $>$ velocities)
+\item 
+virtual bool \hyperlink{classvprFreeFlyer_a28a63f561bd1d740977a1050f10843b1}{init} ()
+\item 
+void \hyperlink{classvprFreeFlyer_af03adddc180ac01f0a3a49327bd763d1}{generate\+Pointed\+Views} (std\+::list$<$ \hyperlink{classViewStructure}{View\+Structure} $>$ \&view\+List, std\+::string points\+\_\+file, std\+::vector$<$ double $>$ object\+\_\+center, double radio)
+\item 
+virtual void \hyperlink{classvprFreeFlyer_a65e4457b0c4bb9dbf0eaf9e8cca3daa0}{update\+Robot\+Localization} (mrpt\+::poses\+::\+C\+Pose3D transformation)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A configuration is especified by x, y, z, yaw z, pitch y, roll x all robots work with mm and rads 
+
+\subsection{Member Function Documentation}
+\index{vpr\+Free\+Flyer@{vpr\+Free\+Flyer}!execute\+Movement@{execute\+Movement}}
+\index{execute\+Movement@{execute\+Movement}!vpr\+Free\+Flyer@{vpr\+Free\+Flyer}}
+\subsubsection[{\texorpdfstring{execute\+Movement()}{executeMovement()}}]{\setlength{\rightskip}{0pt plus 5cm}float vpr\+Free\+Flyer\+::execute\+Movement (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classvprFreeFlyer_a8addee690a582bc74577ad79da7f02ba}{}\label{classvprFreeFlyer_a8addee690a582bc74577ad79da7f02ba}
+Stored movement in trajectory or path. Trajectory of path is executed depending on the robot capabilities Requires a path and a trajectory stablished in path\+To\+Execute and trajectory\+To\+Execute 
+
+Implements \hyperlink{classvpRobot_a7fa1eb51637125595e9a9c46d9b8449f}{vp\+Robot}.
+
+\index{vpr\+Free\+Flyer@{vpr\+Free\+Flyer}!generate\+Pointed\+Views@{generate\+Pointed\+Views}}
+\index{generate\+Pointed\+Views@{generate\+Pointed\+Views}!vpr\+Free\+Flyer@{vpr\+Free\+Flyer}}
+\subsubsection[{\texorpdfstring{generate\+Pointed\+Views(std\+::list$<$ View\+Structure $>$ \&view\+List, std\+::string points\+\_\+file, std\+::vector$<$ double $>$ object\+\_\+center, double radio)}{generatePointedViews(std::list< ViewStructure > &viewList, std::string points_file, std::vector< double > object_center, double radio)}}]{\setlength{\rightskip}{0pt plus 5cm}void vpr\+Free\+Flyer\+::generate\+Pointed\+Views (
+\begin{DoxyParamCaption}
+\item[{std\+::list$<$ {\bf View\+Structure} $>$ \&}]{view\+List, }
+\item[{std\+::string}]{points\+\_\+file, }
+\item[{std\+::vector$<$ double $>$}]{object\+\_\+center, }
+\item[{double}]{radio}
+\end{DoxyParamCaption}
+)}\hypertarget{classvprFreeFlyer_af03adddc180ac01f0a3a49327bd763d1}{}\label{classvprFreeFlyer_af03adddc180ac01f0a3a49327bd763d1}
+Generates a set of views which point to a object 
+\begin{DoxyParams}{Parameters}
+{\em radio} & in mts \\
+\hline
+\end{DoxyParams}
+unit sphere point
+
+view sphere point \index{vpr\+Free\+Flyer@{vpr\+Free\+Flyer}!init@{init}}
+\index{init@{init}!vpr\+Free\+Flyer@{vpr\+Free\+Flyer}}
+\subsubsection[{\texorpdfstring{init()}{init()}}]{\setlength{\rightskip}{0pt plus 5cm}bool vpr\+Free\+Flyer\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classvprFreeFlyer_a28a63f561bd1d740977a1050f10843b1}{}\label{classvprFreeFlyer_a28a63f561bd1d740977a1050f10843b1}
+Initialices the robot, for example the comunication 
+
+Reimplemented from \hyperlink{classvpRobot_a0442d8cd3c8fd883a9df619492b8835f}{vp\+Robot}.
+
+\index{vpr\+Free\+Flyer@{vpr\+Free\+Flyer}!set\+Velocities@{set\+Velocities}}
+\index{set\+Velocities@{set\+Velocities}!vpr\+Free\+Flyer@{vpr\+Free\+Flyer}}
+\subsubsection[{\texorpdfstring{set\+Velocities(std\+::vector$<$ double $>$ velocities)}{setVelocities(std::vector< double > velocities)}}]{\setlength{\rightskip}{0pt plus 5cm}bool vpr\+Free\+Flyer\+::set\+Velocities (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ double $>$}]{velocities}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classvprFreeFlyer_a9f1f0452b42a29b9cbef9cff075387ce}{}\label{classvprFreeFlyer_a9f1f0452b42a29b9cbef9cff075387ce}
+For physical robot 
+
+Implements \hyperlink{classvpRobot_a9c659e2e6f1eb3ed6996885dfb62b8cd}{vp\+Robot}.
+
+\index{vpr\+Free\+Flyer@{vpr\+Free\+Flyer}!update\+Robot\+Localization@{update\+Robot\+Localization}}
+\index{update\+Robot\+Localization@{update\+Robot\+Localization}!vpr\+Free\+Flyer@{vpr\+Free\+Flyer}}
+\subsubsection[{\texorpdfstring{update\+Robot\+Localization(mrpt\+::poses\+::\+C\+Pose3\+D transformation)}{updateRobotLocalization(mrpt::poses::CPose3D transformation)}}]{\setlength{\rightskip}{0pt plus 5cm}void vpr\+Free\+Flyer\+::update\+Robot\+Localization (
+\begin{DoxyParamCaption}
+\item[{mrpt\+::poses\+::\+C\+Pose3D}]{transformation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classvprFreeFlyer_a65e4457b0c4bb9dbf0eaf9e8cca3daa0}{}\label{classvprFreeFlyer_a65e4457b0c4bb9dbf0eaf9e8cca3daa0}
+Translates the location of the robot 
+
+Implements \hyperlink{classvpRobot_a92d30ca2e923a33e3fb33d5a9c0d3923}{vp\+Robot}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+viewplanning/vprfreeflyer.\+h\item 
+viewplanning/vprfreeflyer.\+cpp\end{DoxyCompactItemize}

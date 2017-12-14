@@ -1,0 +1,114 @@
+\hypertarget{classViewSphereSynthesis}{}\section{View\+Sphere\+Synthesis Class Reference}
+\label{classViewSphereSynthesis}\index{View\+Sphere\+Synthesis@{View\+Sphere\+Synthesis}}
+Inheritance diagram for View\+Sphere\+Synthesis\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classViewSphereSynthesis}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries View\+Sphere\+Synthesis} (double r, double x, double y, double z, int level=1)\hypertarget{classViewSphereSynthesis_a840f30a912c0bf9c79b31b337561fbc4}{}\label{classViewSphereSynthesis_a840f30a912c0bf9c79b31b337561fbc4}
+
+\item 
+virtual void {\bfseries get\+Views} (\hyperlink{classViewList}{View\+List} \&views)\hypertarget{classViewSphereSynthesis_aa3d9003ac3ebe5ee344d287f2390baa1}{}\label{classViewSphereSynthesis_aa3d9003ac3ebe5ee344d287f2390baa1}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classViewSphereSynthesis_a50eae8cee2974cff4146045350f67eca}{get\+Sphere\+Positions\+By\+Tesselation} (int level, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&points)
+\item 
+void {\bfseries init\+Icosahedro} ()\hypertarget{classViewSphereSynthesis_a04931cdc9640c27bd26525e814671d46}{}\label{classViewSphereSynthesis_a04931cdc9640c27bd26525e814671d46}
+
+\item 
+void {\bfseries subdivide} ()\hypertarget{classViewSphereSynthesis_a310ae6760ebd0cc7fcbd67d0bb54ce62}{}\label{classViewSphereSynthesis_a310ae6760ebd0cc7fcbd67d0bb54ce62}
+
+\item 
+int {\bfseries midpoint\+Search} (int index\+\_\+start, int index\+\_\+end)\hypertarget{classViewSphereSynthesis_ade7009b22f617a15a6c9491c04745a27}{}\label{classViewSphereSynthesis_ade7009b22f617a15a6c9491c04745a27}
+
+\item 
+void {\bfseries copy\+Sphere} (std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&points)\hypertarget{classViewSphereSynthesis_ac50918827f0afa2f58181421508e5394}{}\label{classViewSphereSynthesis_ac50918827f0afa2f58181421508e5394}
+
+\item 
+float $\ast$$\ast$ {\bfseries m\+F\+Matrix} (int nrl, int nrh, int ncl, int nch)\hypertarget{classViewSphereSynthesis_abb1d9052489b453ac23d07fc48ff6944}{}\label{classViewSphereSynthesis_abb1d9052489b453ac23d07fc48ff6944}
+
+\item 
+void {\bfseries m\+Free\+F\+Matrix} (float $\ast$$\ast$m, int nrl, int nrh, int ncl, int nch)\hypertarget{classViewSphereSynthesis_acce1929f0ceede5231334e4e8394a017}{}\label{classViewSphereSynthesis_acce1929f0ceede5231334e4e8394a017}
+
+\item 
+void \hyperlink{classViewSphereSynthesis_a98fe600fc19d8778f5d21b458a880468}{get\+Pointed\+Views} (std\+::vector$<$ std\+::vector$<$ double $>$ $>$ points, \hyperlink{classViewList}{View\+List} \&views)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double {\bfseries radius}\hypertarget{classViewSphereSynthesis_a3beee84f46a4a0c097d79e72267ead55}{}\label{classViewSphereSynthesis_a3beee84f46a4a0c097d79e72267ead55}
+
+\item 
+double {\bfseries cx}\hypertarget{classViewSphereSynthesis_a33a1a1b8ce90866b821ff223751a132e}{}\label{classViewSphereSynthesis_a33a1a1b8ce90866b821ff223751a132e}
+
+\item 
+double {\bfseries cy}\hypertarget{classViewSphereSynthesis_a104db3286f62521e501f5367c4643153}{}\label{classViewSphereSynthesis_a104db3286f62521e501f5367c4643153}
+
+\item 
+double {\bfseries cz}\hypertarget{classViewSphereSynthesis_a05b06a7980d8d81294c4852a43601936}{}\label{classViewSphereSynthesis_a05b06a7980d8d81294c4852a43601936}
+
+\item 
+int {\bfseries tesselation\+\_\+level}\hypertarget{classViewSphereSynthesis_ab714a7f99b7b4e795a8cca8147b8abda}{}\label{classViewSphereSynthesis_ab714a7f99b7b4e795a8cca8147b8abda}
+
+\item 
+int {\bfseries n\+\_\+vertices}\hypertarget{classViewSphereSynthesis_a23cc8863a4eaadd53ef753d5e5d7ee93}{}\label{classViewSphereSynthesis_a23cc8863a4eaadd53ef753d5e5d7ee93}
+
+\item 
+int {\bfseries n\+\_\+faces}\hypertarget{classViewSphereSynthesis_a62890a53dcd8668e848c01ca8b2ca495}{}\label{classViewSphereSynthesis_a62890a53dcd8668e848c01ca8b2ca495}
+
+\item 
+int {\bfseries n\+\_\+edges}\hypertarget{classViewSphereSynthesis_a1af416e731572cf6cf8002d5e35e6c7a}{}\label{classViewSphereSynthesis_a1af416e731572cf6cf8002d5e35e6c7a}
+
+\item 
+float $\ast$ {\bfseries vertices}\hypertarget{classViewSphereSynthesis_afe1289b0c5b222b9d60cd7ab6b45264b}{}\label{classViewSphereSynthesis_afe1289b0c5b222b9d60cd7ab6b45264b}
+
+\item 
+int $\ast$ {\bfseries faces}\hypertarget{classViewSphereSynthesis_a87633500eb5be257ebee7a2130273589}{}\label{classViewSphereSynthesis_a87633500eb5be257ebee7a2130273589}
+
+\item 
+int {\bfseries edge\+\_\+run}\hypertarget{classViewSphereSynthesis_a22f4c0222e606ae9615a9499d0e3ec47}{}\label{classViewSphereSynthesis_a22f4c0222e606ae9615a9499d0e3ec47}
+
+\item 
+int $\ast$ {\bfseries start}\hypertarget{classViewSphereSynthesis_a5c6464a7ac1131c22347c958ea217bd3}{}\label{classViewSphereSynthesis_a5c6464a7ac1131c22347c958ea217bd3}
+
+\item 
+int $\ast$ {\bfseries end}\hypertarget{classViewSphereSynthesis_a48936083e43fdc7b05f22197edb81852}{}\label{classViewSphereSynthesis_a48936083e43fdc7b05f22197edb81852}
+
+\item 
+int $\ast$ {\bfseries midpoint}\hypertarget{classViewSphereSynthesis_a44f73c9767ee986d3b523b32a3ae0395}{}\label{classViewSphereSynthesis_a44f73c9767ee986d3b523b32a3ae0395}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{View\+Sphere\+Synthesis@{View\+Sphere\+Synthesis}!get\+Pointed\+Views@{get\+Pointed\+Views}}
+\index{get\+Pointed\+Views@{get\+Pointed\+Views}!View\+Sphere\+Synthesis@{View\+Sphere\+Synthesis}}
+\subsubsection[{\texorpdfstring{get\+Pointed\+Views(std\+::vector$<$ std\+::vector$<$ double $>$ $>$ points, View\+List \&views)}{getPointedViews(std::vector< std::vector< double > > points, ViewList &views)}}]{\setlength{\rightskip}{0pt plus 5cm}void View\+Sphere\+Synthesis\+::get\+Pointed\+Views (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::vector$<$ double $>$ $>$}]{points, }
+\item[{{\bf View\+List} \&}]{views}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classViewSphereSynthesis_a98fe600fc19d8778f5d21b458a880468}{}\label{classViewSphereSynthesis_a98fe600fc19d8778f5d21b458a880468}
+only works in workspace. And for freeflyer robot. unit sphere point
+
+view sphere point \index{View\+Sphere\+Synthesis@{View\+Sphere\+Synthesis}!get\+Sphere\+Positions\+By\+Tesselation@{get\+Sphere\+Positions\+By\+Tesselation}}
+\index{get\+Sphere\+Positions\+By\+Tesselation@{get\+Sphere\+Positions\+By\+Tesselation}!View\+Sphere\+Synthesis@{View\+Sphere\+Synthesis}}
+\subsubsection[{\texorpdfstring{get\+Sphere\+Positions\+By\+Tesselation(int level, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&points)}{getSpherePositionsByTesselation(int level, std::vector< std::vector< double > > &points)}}]{\setlength{\rightskip}{0pt plus 5cm}int View\+Sphere\+Synthesis\+::get\+Sphere\+Positions\+By\+Tesselation (
+\begin{DoxyParamCaption}
+\item[{int}]{level, }
+\item[{std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{points}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classViewSphereSynthesis_a50eae8cee2974cff4146045350f67eca}{}\label{classViewSphereSynthesis_a50eae8cee2974cff4146045350f67eca}
+Returns a set of points that represent a sphere of radius 1 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+partialmodel/viewsynthesis.\+h\item 
+partialmodel/viewsynthesis.\+cpp\end{DoxyCompactItemize}

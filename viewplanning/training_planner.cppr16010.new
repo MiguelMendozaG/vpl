@@ -1,0 +1,181 @@
+#include "training_planner.h"
+
+TrainingPlanner::TrainingPlanner(RobotSensor* rs, PartialModelBase* pm): WorkspaceNBVPlanner(rs, pm)
+{
+
+}
+
+bool TrainingPlanner::planNBV(ViewStructure &v)
+{
+   string acumulada(dataFolder+"/object_pts.dat");
+   for (int i=0; i<=2; i++){
+     string scan_actual("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/imagen-");
+  }
+   /*Leer la nube de puntos acumulada
+     Para cada una de las vistas, leer la imagen de Hintertoisse
+     Calcular el porcentaje de incremento
+     Regresar la que tiene un mayor incremento (con un traslape en la nube de puntos acumulada)*/
+    
+
+}
+
+bool TrainingPlanner::init()
+{
+    NBVPlanner::init();
+
+     std::cout << "\n------ WorkspaceNBVPlanner Configuration (Training Planner)------ " << std::endl;
+  
+  std::string config_file(configFolder);
+  config_file.append("/");
+  config_file.append("plannerConfig.ini");
+  
+  mrpt::utils::CConfigFile parser;
+  ASSERT_FILE_EXISTS_(config_file);
+  parser.setFileName(config_file);
+  
+  double x1,y1,z1,x2,y2,z2;
+  partialModel->getOBB(x1,y1,z1,x2,y2,z2);
+  
+  objectCenter.clear();
+  objectCenter.resize(3);
+  
+  objectCenter[0] = (x2+x1)/2;
+  objectCenter[1] = (y2+y1)/2;
+  objectCenter[2] = (z2+z1)/2;
+  std::cout << "View sphere center: [" << objectCenter[0] << ", " << objectCenter[1] << ", " << objectCenter[2] << "]" << std:: endl;
+  
+//  radio = parser.read_double("workSpacePlanner", "radius", 1);
+ // std::cout << "Sphere points radious: " << radio << std::endl;
+  
+//  viewSphereFileName.clear();
+//  viewSphereFileName = dataFolder + "/view_sphere.vs";
+  
+//  evaluatedViewsFile.clear();
+//  evaluatedViewsFile.assign( parser.read_string("workSpacePlanner", "evaluated_views", "evaluated_views.vs"));
+//  evaluatedViewsFile = dataFolder + "/" + evaluatedViewsFile;
+  
+//  int tesselation_level = parser.read_int("workSpacePlanner", "tesselationLevel", 1);
+//  std::cout << "Tesselation level: " << tesselation_level << std::endl; 
+  
+//  ViewSphereSynthesis generator(radio, objectCenter[0], objectCenter[1], objectCenter[2], tesselation_level);
+
+/*
+1. Se leen las coordenadas x,y y z de las poses de la camara  
+2. Se generan las vistas a partir de las posiciones 
+ViewSphereSynthesis sintetizador;
+sintetizador.getpointedviews(posiciones,candidateViews)
+// This step is needed because the rays depend on the sensor pose with respect of the robot
+  robotWithSensor->getViewsFromComfigurations(candidateViews);
+3.*/ 
+
+//    int count = 0, paro = 0; //paro define la posicion a extraer
+  //  double posiciones[3] = {};
+    string input("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/posicion/pose/imagen_origines.dat");
+   vpFileReader reader;
+   std::vector<std::vector<double>> posiciones;
+   reader.readDoubleCoordinates(input,posiciones);
+   vistas_dirigidas(posiciones,candidateViews);
+  
+  //generator.getViews(candidateViews); 
+  //std::cout << candidateViews.size() << " views were generated" << std::endl;
+  
+  // This step is needed because the rays depend on the sensor pose with respect of the robot
+  robotWithSensor->getViewsFromComfigurations(candidateViews);
+  
+  return true;
+
+}
+
+void TrainingPlanner::vistas_dirigidas(vector< vector< double > > points, ViewList& views)
+{
+ views.clear();
+  ViewStructure view;
+  
+  std::vector< std::vector<double> >::iterator point_it;
+  
+  /// unit sphere point
+  std::vector<double> usp(3); 
+  
+  /// view sphere point
+  std::vector<double> vsp(3);
+  
+  std::vector<double> pointing_v(3);
+  
+  std::vector<double> coordinates(6);
+  
+  double yaw, pitch, roll;
+  double norm;
+  
+  for(point_it = points.begin(); point_it != points.end(); point_it++){
+    if(point_it->size() != 3){
+      std::cout << "Error in points " << std::endl;
+      exit(0);
+    }
+    
+    usp[0] = (*point_it)[0];
+    usp[1] = (*point_it)[1];
+    usp[2] = (*point_it)[2];
+    
+    // expander el punto al radio indicado; 
+    usp[0] = radius * usp[0];
+    usp[1] = radius * usp[1];
+    usp[2] = radius * usp[2];
+        
+
+    vsp[0] = cx + usp[0];
+    vsp[1] = cy + usp[1];
+    vsp[2] = cz + usp[2];
+    
+    // calcular el vector que apunta al objeto
+    pointing_v[0] = cx - vsp[0];
+    pointing_v[1] = cy - vsp[1];
+    pointing_v[2] = cz - vsp[2];
+    
+    // calcular los angulos de rotación
+    yaw = atan2(pointing_v[1], pointing_v[0]);
+    
+    norm = sqrt( pow(pointing_v[0],2) + pow(pointing_v[1],2) + pow(pointing_v[2],2) );
+    //norm = radio;
+    pitch = asin( pointing_v[2] / norm);
+    pitch = -pitch; // I did this because the positive angles lie before the x-y plane.  
+    roll = 0;
+   
+    // determinar la configuración
+    view.w[0] = (double) vsp[0];
+    view.w[1] = (double) vsp[1];
+    view.w[2] = (double) vsp[2];
+    view.w[3] = (double) (yaw);
+    view.w[4] = (double) (pitch);
+    view.w[5] = (double) (roll);
+    
+    view.q = view.w;
+    // determinar la matriz de transformación homogenea
+    view.setPose(view.w[0], view.w[1], view.w[2], view.w[3], view.w[4], view.w[5]);
+//     mrpt::poses::CPose3D pose(view.w[0], view.w[1], view.w[2], view.w[3], view.w[4], view.w[5]);
+//     mrpt::math::CMatrixDouble44 htm_p;
+//     pose.getHomogeneousMatrix(htm_p);
+//   
+//     view.HTM(0,0) = htm_p(0,0);
+//     view.HTM(0,1) = htm_p(0,1); 
+//     view.HTM(0,2) = htm_p(0,2); 
+//     view.HTM(0,3) = htm_p(0,3);
+//     
+//     view.HTM(1,0) = htm_p(1,0); 
+//     view.HTM(1,1) = htm_p(1,1); 
+//     view.HTM(1,2) = htm_p(1,2);
+//     view.HTM(1,3) = htm_p(1,3);
+//     
+//     view.HTM(2,0) = htm_p(2,0);
+//     view.HTM(2,1) = htm_p(2,1);
+//     view.HTM(2,2) = htm_p(2,2);
+//     view.HTM(2,3) = htm_p(2,3);
+//     
+//     view.HTM(3,0) = htm_p(3,0);
+//     view.HTM(3,1) = htm_p(3,1);
+//     view.HTM(3,2) = htm_p(3,2);
+//     view.HTM(3,3) = htm_p(3,3);
+    
+    views.push_back(view);
+  }
+}
+

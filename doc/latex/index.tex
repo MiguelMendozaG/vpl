@@ -1,0 +1,95 @@
+\begin{quote}
+Consejo Nacional de Ciencia y Tecnología (C\+O\+N\+A\+CyT) \end{quote}
+
+
+\begin{quote}
+Instituto Nacional de Astrofísica Óptica y Electrónica (I\+N\+A\+OE). \end{quote}
+
+
+\begin{quote}
+Centro de Innovación y Desarrollo Tecnológico (I\+P\+N-\/\+C\+I\+D\+E\+T\+EC). \end{quote}
+
+
+V\+P\+L(\+The acronym of view planning library) provides a platform to develop view planning algorithms and perform comparisons quickly. V\+PL is written in C++ and it is based on a set of well known libraries\+: octomap and M\+R\+PT. V\+PL provides the data structures to represent the space, provides visibility algorithms, implements several view planning algorithms reported in the literature and provides flexibility to link with range sensor simulators and motion planning algorithms. V\+PL was developed by \href{https://jivasquez.wordpress.com}{\tt J. Irving Vasquez-\/\+Gomez} under New B\+SD license.
+
+V\+PL is composed of two main modules\+: Partial\+Model and View\+Planning. Partial\+Model stores the information about object that is being reconstructed and provides a set of functions to handle visibility for next best view calculation. View\+Planning provides planning algorithms to achieve an automated reconstruction. Additional modules are included but they can be ommited during compilation\+: rangesimulator and nbvs planning.
+
+
+
+More information is in our \href{https://jivasquez.files.wordpress.com/2017/05/vas_vpl_towards.pdf}{\tt V\+PL paper} currently under development.
+
+If your are using V\+PL in an academy work please cite (so far)\+:
+
+Vasquez-\/\+Gomez, J. I., Sucar, L. E., \& Murrieta-\/\+Cid, R. (2017). View/state planning for three-\/dimensional object reconstruction under uncertainty. Autonomous Robots, 41(1), 89-\/109.
+
+
+\begin{DoxyCode}
+1 @article\{vasquez2017view,
+2   title=\{View/state planning for three-dimensional object reconstruction under uncertainty\},
+3   author=\{Vasquez-Gomez, J Irving and Sucar, L Enrique and Murrieta-Cid, Rafael\},
+4   journal=\{Autonomous Robots\},
+5   volume=\{41\},
+6   number=\{1\},
+7   pages=\{89--109\},
+8   year=\{2017\},
+9   publisher=\{Springer\}
+10 \}
+\end{DoxyCode}
+ If you are having troubles with V\+PL, please drop me a mail\+: 
+
+\subsubsection*{Requirements}
+
+Before installing V\+PL you need to install the following libraries\+:
+\begin{DoxyItemize}
+\item boost 
+\begin{DoxyCode}
+1 sudo apt get install libboost-all-dev
+\end{DoxyCode}
+
+\item \href{https://octomap.github.io/>}{\tt octomap} 
+\begin{DoxyCode}
+1 git clone https://github.com/OctoMap/octomap.git
+\end{DoxyCode}
+
+\item \href{http://www.mrpt.org/>}{\tt M\+R\+PT} I installed it from Ubuntu P\+PA
+\end{DoxyItemize}
+
+\subsubsection*{Installation}
+
+
+\begin{DoxyEnumerate}
+\item Download and install \href{https://octomap.github.io/>}{\tt octomap} and \href{http://www.mrpt.org/>}{\tt M\+R\+PT}. M\+R\+PT was installed from source not P\+PA
+\item Clone this repo to your machine 
+\begin{DoxyCode}
+1 git clone https://github.com/irvingvasquez/vpl
+\end{DoxyCode}
+
+\item Configure the C\+Make\+Lists.\+txt at top file
+\item Compile the library. Move to the V\+PL top folder and run\+: 
+\begin{DoxyCode}
+1 mkdir build
+2 cd build 
+3 cmake ..
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+\subsubsection*{Full V\+PL installation}
+
+we recommend that V\+PL will be installed in the same folder that the required libraries\+:
+
+
+\begin{DoxyItemize}
+\item octomap-\/devel
+\end{DoxyItemize}
+
+To compile the library move to the V\+PL top folder and run\+:
+
+
+\begin{DoxyCode}
+1 cd VPL
+2 mkdir build
+3 cd build    
+4 cmake ..
+\end{DoxyCode}
+ {\ttfamily Note\+:if you are using your custom folder hierarchy you should modify the C\+Make\+Lists.\+txt in order to match the folders} 

@@ -1,0 +1,56 @@
+\hypertarget{classPMVOctreeIG}{}\section{P\+M\+V\+Octree\+IG Class Reference}
+\label{classPMVOctreeIG}\index{P\+M\+V\+Octree\+IG@{P\+M\+V\+Octree\+IG}}
+
+
+{\ttfamily \#include $<$pmvoctreeig.\+h$>$}
+
+Inheritance diagram for P\+M\+V\+Octree\+IG\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classPMVOctreeIG}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int {\bfseries evaluate\+View} (\hyperlink{classViewStructure}{View\+Structure} \&v)\hypertarget{classPMVOctreeIG_a065d48a94b4343325d08bb55ffc0d332}{}\label{classPMVOctreeIG_a065d48a94b4343325d08bb55ffc0d332}
+
+\item 
+virtual float {\bfseries update\+With\+Scan} (std\+::string file\+\_\+name\+\_\+scan, std\+::string file\+\_\+name\+\_\+origin)\hypertarget{classPMVOctreeIG_ae5f60e009d2c0f71115e583dcdafdd96}{}\label{classPMVOctreeIG_ae5f60e009d2c0f71115e583dcdafdd96}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classPMVOctreeIG_a752fb0c18f988c4d8a0653ce8b850a44}{ray\+Tracing\+H\+T\+M\+IG} (boost\+::numeric\+::ublas\+::matrix$<$ double $>$ m, \hyperlink{classEvaluationResult}{Evaluation\+Result} \&result)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Partial Model based on a probabilistic octree Frustum Information Gain Reported in\+: I\+R\+O\+S17 submitted
+
+Initialization\+:
+\begin{DoxyItemize}
+\item Set config folder
+\item Set data folder
+\item init()
+\item \hyperlink{classPMVOctree_aea21d58041a90e416e35b1e30d8e4f2f}{read\+Rays()};
+\item set utility function 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\index{P\+M\+V\+Octree\+IG@{P\+M\+V\+Octree\+IG}!ray\+Tracing\+H\+T\+M\+IG@{ray\+Tracing\+H\+T\+M\+IG}}
+\index{ray\+Tracing\+H\+T\+M\+IG@{ray\+Tracing\+H\+T\+M\+IG}!P\+M\+V\+Octree\+IG@{P\+M\+V\+Octree\+IG}}
+\subsubsection[{\texorpdfstring{ray\+Tracing\+H\+T\+M\+I\+G(boost\+::numeric\+::ublas\+::matrix$<$ double $>$ m, Evaluation\+Result \&result)}{rayTracingHTMIG(boost::numeric::ublas::matrix< double > m, EvaluationResult &result)}}]{\setlength{\rightskip}{0pt plus 5cm}double P\+M\+V\+Octree\+I\+G\+::ray\+Tracing\+H\+T\+M\+IG (
+\begin{DoxyParamCaption}
+\item[{boost\+::numeric\+::ublas\+::matrix$<$ double $>$}]{m, }
+\item[{{\bf Evaluation\+Result} \&}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classPMVOctreeIG_a752fb0c18f988c4d8a0653ce8b850a44}{}\label{classPMVOctreeIG_a752fb0c18f988c4d8a0653ce8b850a44}
+The ray is rotated and traslated by the rotation matrix 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+partialmodel/pmvoctreeig.\+h\item 
+partialmodel/pmvoctreeig.\+cpp\end{DoxyCompactItemize}

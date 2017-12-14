@@ -1,0 +1,166 @@
+\hypertarget{classPMVolumetric}{}\section{P\+M\+Volumetric Class Reference}
+\label{classPMVolumetric}\index{P\+M\+Volumetric@{P\+M\+Volumetric}}
+
+
+{\ttfamily \#include $<$pmvolumetric.\+h$>$}
+
+Inheritance diagram for P\+M\+Volumetric\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.097378cm]{classPMVolumetric}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classPMVolumetric_a6995737fe93356953555dc298f3fc2f9}{stop\+Criteria\+Reached} ()
+\item 
+virtual bool {\bfseries init} ()\hypertarget{classPMVolumetric_a429e9e6f82c5ef158b4732ae9252faaa}{}\label{classPMVolumetric_a429e9e6f82c5ef158b4732ae9252faaa}
+
+\item 
+virtual bool \hyperlink{classPMVolumetric_a1d5d45ef61e7741f322711e8396cd7ac}{collision\+Free} (float x, float y, float z)
+\item 
+virtual void {\bfseries save\+Evaluations} ()\hypertarget{classPMVolumetric_ad267f345bb318517b760d7fb7cfefcc1}{}\label{classPMVolumetric_ad267f345bb318517b760d7fb7cfefcc1}
+
+\item 
+void \hyperlink{classPMVolumetric_a8ca19a4a30b6a4991314b032cde35265}{set\+Minimun\+Number\+Of\+Unmark\+Voxels} (int n)
+\item 
+virtual bool {\bfseries save\+Visible\+Unknown} (std\+::string file\+\_\+name\+\_\+vertex, std\+::string file\+\_\+name\+\_\+normal)=0\hypertarget{classPMVolumetric_aede738844f4e5ccc30aece6358263160}{}\label{classPMVolumetric_aede738844f4e5ccc30aece6358263160}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classPMVolumetric_a2eb41f090c07341c0667fd2cb760722a}{get\+Voxel\+Vertices} (point3d\+\_\+list \&vertices, const point3d center, const double resolution)
+\item 
+void \hyperlink{classPMVolumetric_a9aedd06e356c9fe46e6287a3b2361669}{get\+Triangles\+Of\+Voxel} (\hyperlink{classvpTriangleList}{vp\+Triangle\+List} \&tris, const point3d center, const double resolution)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ point3d $>$ {\bfseries touched\+\_\+voxels}\hypertarget{classPMVolumetric_a930aea947f9855b6a11beea7766a4ed6}{}\label{classPMVolumetric_a930aea947f9855b6a11beea7766a4ed6}
+
+\item 
+octomap\+::point3d \hyperlink{classPMVolumetric_ab7340711e6ce41fc6b8e6f78ae7d69c4}{Object\+B\+Bx\+Min}\hypertarget{classPMVolumetric_ab7340711e6ce41fc6b8e6f78ae7d69c4}{}\label{classPMVolumetric_ab7340711e6ce41fc6b8e6f78ae7d69c4}
+
+\begin{DoxyCompactList}\small\item\em Object Bounding Box. \end{DoxyCompactList}\item 
+octomap\+::point3d \hyperlink{classPMVolumetric_aac9569cd27f3327d16712ed0f1b88c93}{Object\+B\+Bx\+Max}\hypertarget{classPMVolumetric_aac9569cd27f3327d16712ed0f1b88c93}{}\label{classPMVolumetric_aac9569cd27f3327d16712ed0f1b88c93}
+
+\begin{DoxyCompactList}\small\item\em Object Bounding Box. \end{DoxyCompactList}\item 
+octomap\+::point3d \hyperlink{classPMVolumetric_a64090a48fe74f0280993d207806ab368}{Scene\+B\+Bx\+Min}\hypertarget{classPMVolumetric_a64090a48fe74f0280993d207806ab368}{}\label{classPMVolumetric_a64090a48fe74f0280993d207806ab368}
+
+\begin{DoxyCompactList}\small\item\em Scene Bounding Box. \end{DoxyCompactList}\item 
+octomap\+::point3d \hyperlink{classPMVolumetric_ac33a421b9bc0138bf3f498b2693815fb}{Scene\+B\+Bx\+Max}\hypertarget{classPMVolumetric_ac33a421b9bc0138bf3f498b2693815fb}{}\label{classPMVolumetric_ac33a421b9bc0138bf3f498b2693815fb}
+
+\begin{DoxyCompactList}\small\item\em Object Bounding Box. \end{DoxyCompactList}\item 
+double {\bfseries max\+Range}\hypertarget{classPMVolumetric_a052a168a384cfbecbf6a5715f2154b34}{}\label{classPMVolumetric_a052a168a384cfbecbf6a5715f2154b34}
+
+\item 
+float \hyperlink{classPMVolumetric_a964eeed54985873d2735dcf2380127a1}{voxel\+Resolution}\hypertarget{classPMVolumetric_a964eeed54985873d2735dcf2380127a1}{}\label{classPMVolumetric_a964eeed54985873d2735dcf2380127a1}
+
+\begin{DoxyCompactList}\small\item\em resolution of the voxel \end{DoxyCompactList}\item 
+bool \hyperlink{classPMVolumetric_a2e29abf9993484d2bbbcd4bebb88bb5b}{free\+Space}\hypertarget{classPMVolumetric_a2e29abf9993484d2bbbcd4bebb88bb5b}{}\label{classPMVolumetric_a2e29abf9993484d2bbbcd4bebb88bb5b}
+
+\begin{DoxyCompactList}\small\item\em specifies is there is a free space \end{DoxyCompactList}\item 
+float \hyperlink{classPMVolumetric_aeb6f8ce9035c1c8b69f520477e8ab600}{weight}\hypertarget{classPMVolumetric_aeb6f8ce9035c1c8b69f520477e8ab600}{}\label{classPMVolumetric_aeb6f8ce9035c1c8b69f520477e8ab600}
+
+\begin{DoxyCompactList}\small\item\em weight for selection either exploration or surface. \end{DoxyCompactList}\item 
+float \hyperlink{classPMVolumetric_a4686f6c4059450e2121d7a44aeb8b3d0}{x\+\_\+free\+\_\+1}\hypertarget{classPMVolumetric_a4686f6c4059450e2121d7a44aeb8b3d0}{}\label{classPMVolumetric_a4686f6c4059450e2121d7a44aeb8b3d0}
+
+\begin{DoxyCompactList}\small\item\em Free space variables. \end{DoxyCompactList}\item 
+float {\bfseries y\+\_\+free\+\_\+1}\hypertarget{classPMVolumetric_a34013864d3c62a900cbffe47e4b3f7ea}{}\label{classPMVolumetric_a34013864d3c62a900cbffe47e4b3f7ea}
+
+\item 
+float {\bfseries z\+\_\+free\+\_\+1}\hypertarget{classPMVolumetric_a7a33808dfb5502146199f40baa5d7971}{}\label{classPMVolumetric_a7a33808dfb5502146199f40baa5d7971}
+
+\item 
+float {\bfseries x\+\_\+free\+\_\+2}\hypertarget{classPMVolumetric_a885951c2ae3460208a4c2bbd4dbd5f21}{}\label{classPMVolumetric_a885951c2ae3460208a4c2bbd4dbd5f21}
+
+\item 
+float {\bfseries y\+\_\+free\+\_\+2}\hypertarget{classPMVolumetric_acff18696bf72b370be1581cab638149e}{}\label{classPMVolumetric_acff18696bf72b370be1581cab638149e}
+
+\item 
+float {\bfseries z\+\_\+free\+\_\+2}\hypertarget{classPMVolumetric_a180652dad0bcc762e6b1f32eaae366f3}{}\label{classPMVolumetric_a180652dad0bcc762e6b1f32eaae366f3}
+
+\item 
+float \hyperlink{classPMVolumetric_abc325af8fdaf1500864e9ee60262d775}{collision\+Gap}\hypertarget{classPMVolumetric_abc325af8fdaf1500864e9ee60262d775}{}\label{classPMVolumetric_abc325af8fdaf1500864e9ee60262d775}
+
+\begin{DoxyCompactList}\small\item\em low collition cheking \end{DoxyCompactList}\item 
+int \hyperlink{classPMVolumetric_aa5b2eec9334daa96bb23677c28b7642a}{min\+Unknown}
+\item 
+int {\bfseries min\+Overlap}\hypertarget{classPMVolumetric_aba67bf40df276a9a35cf5fbb4868d7fe}{}\label{classPMVolumetric_aba67bf40df276a9a35cf5fbb4868d7fe}
+
+\item 
+bool {\bfseries there\+Is\+Unmark\+Voxels\+In\+N\+BV}\hypertarget{classPMVolumetric_a38188f142b169375df1df9601b5eb43b}{}\label{classPMVolumetric_a38188f142b169375df1df9601b5eb43b}
+
+\item 
+bool {\bfseries new\+Information\+Acquired}\hypertarget{classPMVolumetric_a552872963d57adcef3fbdddb59b1581e}{}\label{classPMVolumetric_a552872963d57adcef3fbdddb59b1581e}
+
+\item 
+bool {\bfseries stop\+Criteria}\hypertarget{classPMVolumetric_a92ce6ac7149fdc24b38dc4ceb50a8cc8}{}\label{classPMVolumetric_a92ce6ac7149fdc24b38dc4ceb50a8cc8}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents the object by dividing the space into cells. Each cell is called voxel. There are several types of voxels. 
+
+\subsection{Member Function Documentation}
+\index{P\+M\+Volumetric@{P\+M\+Volumetric}!collision\+Free@{collision\+Free}}
+\index{collision\+Free@{collision\+Free}!P\+M\+Volumetric@{P\+M\+Volumetric}}
+\subsubsection[{\texorpdfstring{collision\+Free(float x, float y, float z)}{collisionFree(float x, float y, float z)}}]{\setlength{\rightskip}{0pt plus 5cm}bool P\+M\+Volumetric\+::collision\+Free (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPMVolumetric_a1d5d45ef61e7741f322711e8396cd7ac}{}\label{classPMVolumetric_a1d5d45ef61e7741f322711e8396cd7ac}
+Checks if a point is in collition parameters in mts \index{P\+M\+Volumetric@{P\+M\+Volumetric}!get\+Triangles\+Of\+Voxel@{get\+Triangles\+Of\+Voxel}}
+\index{get\+Triangles\+Of\+Voxel@{get\+Triangles\+Of\+Voxel}!P\+M\+Volumetric@{P\+M\+Volumetric}}
+\subsubsection[{\texorpdfstring{get\+Triangles\+Of\+Voxel(vp\+Triangle\+List \&tris, const point3d center, const double resolution)}{getTrianglesOfVoxel(vpTriangleList &tris, const point3d center, const double resolution)}}]{\setlength{\rightskip}{0pt plus 5cm}void P\+M\+Volumetric\+::get\+Triangles\+Of\+Voxel (
+\begin{DoxyParamCaption}
+\item[{{\bf vp\+Triangle\+List} \&}]{tris, }
+\item[{const point3d}]{center, }
+\item[{const double}]{resolution}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classPMVolumetric_a9aedd06e356c9fe46e6287a3b2361669}{}\label{classPMVolumetric_a9aedd06e356c9fe46e6287a3b2361669}
+Returns the lisf of triangles from a voxel \index{P\+M\+Volumetric@{P\+M\+Volumetric}!get\+Voxel\+Vertices@{get\+Voxel\+Vertices}}
+\index{get\+Voxel\+Vertices@{get\+Voxel\+Vertices}!P\+M\+Volumetric@{P\+M\+Volumetric}}
+\subsubsection[{\texorpdfstring{get\+Voxel\+Vertices(point3d\+\_\+list \&vertices, const point3d center, const double resolution)}{getVoxelVertices(point3d_list &vertices, const point3d center, const double resolution)}}]{\setlength{\rightskip}{0pt plus 5cm}void P\+M\+Volumetric\+::get\+Voxel\+Vertices (
+\begin{DoxyParamCaption}
+\item[{point3d\+\_\+list \&}]{vertices, }
+\item[{const point3d}]{center, }
+\item[{const double}]{resolution}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classPMVolumetric_a2eb41f090c07341c0667fd2cb760722a}{}\label{classPMVolumetric_a2eb41f090c07341c0667fd2cb760722a}
+Returns the list of eight vertices. \index{P\+M\+Volumetric@{P\+M\+Volumetric}!set\+Minimun\+Number\+Of\+Unmark\+Voxels@{set\+Minimun\+Number\+Of\+Unmark\+Voxels}}
+\index{set\+Minimun\+Number\+Of\+Unmark\+Voxels@{set\+Minimun\+Number\+Of\+Unmark\+Voxels}!P\+M\+Volumetric@{P\+M\+Volumetric}}
+\subsubsection[{\texorpdfstring{set\+Minimun\+Number\+Of\+Unmark\+Voxels(int n)}{setMinimunNumberOfUnmarkVoxels(int n)}}]{\setlength{\rightskip}{0pt plus 5cm}void P\+M\+Volumetric\+::set\+Minimun\+Number\+Of\+Unmark\+Voxels (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classPMVolumetric_a8ca19a4a30b6a4991314b032cde35265}{}\label{classPMVolumetric_a8ca19a4a30b6a4991314b032cde35265}
+If the number of unmark voxels is lesst than n then the stop criteria is reached \index{P\+M\+Volumetric@{P\+M\+Volumetric}!stop\+Criteria\+Reached@{stop\+Criteria\+Reached}}
+\index{stop\+Criteria\+Reached@{stop\+Criteria\+Reached}!P\+M\+Volumetric@{P\+M\+Volumetric}}
+\subsubsection[{\texorpdfstring{stop\+Criteria\+Reached()}{stopCriteriaReached()}}]{\setlength{\rightskip}{0pt plus 5cm}bool P\+M\+Volumetric\+::stop\+Criteria\+Reached (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPMVolumetric_a6995737fe93356953555dc298f3fc2f9}{}\label{classPMVolumetric_a6995737fe93356953555dc298f3fc2f9}
+Paints in blue occupied voxels that are inside the object capsule 
+
+Implements \hyperlink{classPartialModelBase}{Partial\+Model\+Base}.
+
+
+
+\subsection{Member Data Documentation}
+\index{P\+M\+Volumetric@{P\+M\+Volumetric}!min\+Unknown@{min\+Unknown}}
+\index{min\+Unknown@{min\+Unknown}!P\+M\+Volumetric@{P\+M\+Volumetric}}
+\subsubsection[{\texorpdfstring{min\+Unknown}{minUnknown}}]{\setlength{\rightskip}{0pt plus 5cm}int P\+M\+Volumetric\+::min\+Unknown\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classPMVolumetric_aa5b2eec9334daa96bb23677c28b7642a}{}\label{classPMVolumetric_aa5b2eec9334daa96bb23677c28b7642a}
+Stop criteria threshold Minimun number of unmark voxels for the next bext view 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+partialmodel/pmvolumetric.\+h\item 
+partialmodel/pmvolumetric.\+cpp\end{DoxyCompactItemize}

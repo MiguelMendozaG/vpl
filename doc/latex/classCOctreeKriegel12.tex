@@ -1,0 +1,48 @@
+\hypertarget{classCOctreeKriegel12}{}\section{C\+Octree\+Kriegel12 Class Reference}
+\label{classCOctreeKriegel12}\index{C\+Octree\+Kriegel12@{C\+Octree\+Kriegel12}}
+
+
+{\ttfamily \#include $<$pmvoctreeigkriegel12.\+h$>$}
+
+Inheritance diagram for C\+Octree\+Kriegel12\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classCOctreeKriegel12}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries C\+Octree\+Kriegel12} (double resolution)\hypertarget{classCOctreeKriegel12_a5869334baea8686aff6f87df14676d07}{}\label{classCOctreeKriegel12_a5869334baea8686aff6f87df14676d07}
+
+\item 
+virtual double \hyperlink{classCOctreeKriegel12_aa900e135c79350675fb0b6a9ab5e3c02}{cast\+Ray\+IG} (const point3d \&origin, const point3d \&directionP, point3d \&end, bool ignore\+Unknown\+Cells=false, double max\+Range=-\/1.\+0)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation status\+: ok Testing status\+: ok 
+
+\subsection{Member Function Documentation}
+\index{C\+Octree\+Kriegel12@{C\+Octree\+Kriegel12}!cast\+Ray\+IG@{cast\+Ray\+IG}}
+\index{cast\+Ray\+IG@{cast\+Ray\+IG}!C\+Octree\+Kriegel12@{C\+Octree\+Kriegel12}}
+\subsubsection[{\texorpdfstring{cast\+Ray\+I\+G(const point3d \&origin, const point3d \&direction\+P, point3d \&end, bool ignore\+Unknown\+Cells=false, double max\+Range=-\/1.\+0)}{castRayIG(const point3d &origin, const point3d &directionP, point3d &end, bool ignoreUnknownCells=false, double maxRange=-1.0)}}]{\setlength{\rightskip}{0pt plus 5cm}double C\+Octree\+Kriegel12\+::cast\+Ray\+IG (
+\begin{DoxyParamCaption}
+\item[{const point3d \&}]{origin, }
+\item[{const point3d \&}]{directionP, }
+\item[{point3d \&}]{end, }
+\item[{bool}]{ignore\+Unknown\+Cells = {\ttfamily false}, }
+\item[{double}]{max\+Range = {\ttfamily -\/1.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classCOctreeKriegel12_aa900e135c79350675fb0b6a9ab5e3c02}{}\label{classCOctreeKriegel12_aa900e135c79350675fb0b6a9ab5e3c02}
+Traces a Ray and returns the information gain of a ray. Integrates even for already touched voxels. Kriegel 12 cast\+Ray Information Gain !!!!! 
+
+Reimplemented from \hyperlink{classCOctreeVPL_a3a13d4e2bf90156a0bcc672feb2d521f}{C\+Octree\+V\+PL}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+partialmodel/pmvoctreeigkriegel12.\+h\item 
+partialmodel/pmvoctreeigkriegel12.\+cpp\end{DoxyCompactItemize}

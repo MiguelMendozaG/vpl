@@ -26,6 +26,8 @@ if(BUILD_PARTIAL_MODEL)
   add_executable(update_partial_model test_update_partial_model.cpp ${SRC_ALL})
   target_link_libraries(update_partial_model  ${LIB_PARTIAL_MODEL} ${LIBS_OCTOMAP})
   
+  add_executable(training_main training_main.cpp ${SRC_ALL})
+  target_link_libraries(training_main  ${LIB_PARTIAL_MODEL} ${LIBS_OCTOMAP})
   
   
   if(BUILD_VIEW_PLANNING)
@@ -48,14 +50,17 @@ if(BUILD_PARTIAL_MODEL)
       link_directories(${VPL_SOURCE_DIR}/lib)
       set(LIBS_RANGE_SIMULATOR RangeSimulator)
       
-      add_executable(test_rangesimulator test_rangesimulator.cpp)
-      target_link_libraries(test_rangesimulator ${LIB_PARTIAL_MODEL} ${LIBS_RANGE_SIMULATOR} ${LIBS_OCTOMAP} ${LIBS_VIEW_PLANNING})
+      #add_executable(test_rangesimulator test_rangesimulator.cpp)
+      #target_link_libraries(test_rangesimulator ${LIB_PARTIAL_MODEL} ${LIBS_RANGE_SIMULATOR} ${LIBS_OCTOMAP} ${LIBS_VIEW_PLANNING})
       
-      add_executable(test_freeflyer test_freeflyer.cpp)
-      target_link_libraries(test_freeflyer ${CORE_LIBS} ${LIBS_RANGE_SIMULATOR})
+      #add_executable(test_freeflyer test_freeflyer.cpp)
+      #target_link_libraries(test_freeflyer ${CORE_LIBS} ${LIBS_RANGE_SIMULATOR})
       
       add_executable(test_freeflyer_vasquez09 test_freeflyer_vasquez09.cpp)
       target_link_libraries(test_freeflyer_vasquez09 ${CORE_LIBS} ${LIBS_RANGE_SIMULATOR})
+      
+      add_executable(test_trainer test_trainer.cpp)
+      target_link_libraries(test_trainer ${CORE_LIBS} ${LIBS_RANGE_SIMULATOR})
       
     endif()
   endif()

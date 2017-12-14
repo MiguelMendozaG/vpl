@@ -1,0 +1,246 @@
+\hypertarget{classRobotSensor}{}\section{Robot\+Sensor Class Reference}
+\label{classRobotSensor}\index{Robot\+Sensor@{Robot\+Sensor}}
+
+
+{\ttfamily \#include $<$robotsensor.\+h$>$}
+
+Inheritance diagram for Robot\+Sensor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRobotSensor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Robot\+Sensor} (\hyperlink{classvpRobot}{vp\+Robot} $\ast$r, \hyperlink{classRangeSensor}{Range\+Sensor} $\ast$s)\hypertarget{classRobotSensor_a47be104f6ee7b01bd71641c4ab263073}{}\label{classRobotSensor_a47be104f6ee7b01bd71641c4ab263073}
+
+\item 
+virtual long int \hyperlink{classRobotSensor_a76298deca29d80b6543f628f10060bec}{perform\+Scan} ()
+\item 
+virtual bool {\bfseries init} ()\hypertarget{classRobotSensor_a45bcf4e2911626b8327f29f9bae5de0e}{}\label{classRobotSensor_a45bcf4e2911626b8327f29f9bae5de0e}
+
+\item 
+void {\bfseries set\+Config\+Folder} (std\+::string folder)\hypertarget{classRobotSensor_ab528a4acf62f820cd55e2cf149380889}{}\label{classRobotSensor_ab528a4acf62f820cd55e2cf149380889}
+
+\item 
+void {\bfseries set\+Data\+Folder} (std\+::string folder)\hypertarget{classRobotSensor_a44fad2d17f516e7cc0e9933dca33fde6}{}\label{classRobotSensor_a44fad2d17f516e7cc0e9933dca33fde6}
+
+\item 
+void {\bfseries get\+H\+T\+Mfrom\+Robot} (Boost\+Matrix \&htm\+Robot)\hypertarget{classRobotSensor_a23c00e9c0038943271cf9131daf2099d}{}\label{classRobotSensor_a23c00e9c0038943271cf9131daf2099d}
+
+\item 
+void {\bfseries set\+Sensor} (\hyperlink{classRangeSensor}{Range\+Sensor} $\ast$rs)\hypertarget{classRobotSensor_a16703c2dbce8fb189ebadc54302bfd30}{}\label{classRobotSensor_a16703c2dbce8fb189ebadc54302bfd30}
+
+\item 
+void \hyperlink{classRobotSensor_ac2095d4f543f88f36cf704414334a2ba}{set\+Sensor\+Pose} (double x, double y, double z, double yaw, double pitch, double roll)
+\item 
+bool \hyperlink{classRobotSensor_ac832fdd6f319aa6118cf1b3bcbc08394}{save\+Last\+Point\+Cloud} (std\+::string \&file\+\_\+name, double factor)
+\item 
+bool \hyperlink{classRobotSensor_a05d2aa70583b6a0a87de4f4ab85a64cd}{save\+Last\+Point\+Cloud\+Mts} (std\+::string \&file\+\_\+name)
+\item 
+bool \hyperlink{classRobotSensor_a03db6a7ccd4accf68f7ae6b28674196a}{save\+Sensor\+Trajectory} (std\+::string \&file\+\_\+name, double factor)
+\item 
+bool {\bfseries save\+Sensor\+Trajectory\+Mts} (std\+::string \&file\+\_\+name)\hypertarget{classRobotSensor_a5c5e66676a327bcaf318d761a9204ca9}{}\label{classRobotSensor_a5c5e66676a327bcaf318d761a9204ca9}
+
+\item 
+void {\bfseries get\+H\+T\+Mfrom\+Sensor} (Boost\+Matrix \&htm\+Sensor)\hypertarget{classRobotSensor_a6b05b86155accadb8dd797eaa6d9ed0c}{}\label{classRobotSensor_a6b05b86155accadb8dd797eaa6d9ed0c}
+
+\item 
+void \hyperlink{classRobotSensor_a8d03fa5829bcbfcd9e65461da3a3e88d}{get\+Views\+From\+Comfigurations} (std\+::list$<$ \hyperlink{classViewStructure}{View\+Structure} $>$ \&views)
+\item 
+void \hyperlink{classRobotSensor_aaadde4cfbe409e2e307916ffe750a64a}{get\+Views\+From\+Comfigurations} (std\+::list$<$ \hyperlink{classViewStructure}{View\+Structure} $>$ \&views, std\+::list$<$ std\+::vector$<$ double $>$ $>$ configurations)
+\item 
+void \hyperlink{classRobotSensor_a2ba12e8c33f6811634305ee892c2a237}{get\+Random\+State} (std\+::vector$<$ double $>$ \&state)
+\item 
+void \hyperlink{classRobotSensor_ae7b1b9acbc27b88a365e8a927355e08e}{get\+View\+From\+State} (\hyperlink{classViewStructure}{View\+Structure} \&view, const std\+::vector$<$ double $>$ state)
+\item 
+bool {\bfseries move\+To\+Configuration} (std\+::vector$<$ double $>$ configuration)\hypertarget{classRobotSensor_ab6fd30a1c23f1ed147eb9597297ae515}{}\label{classRobotSensor_ab6fd30a1c23f1ed147eb9597297ae515}
+
+\item 
+bool {\bfseries set\+Path\+To\+Execute} (std\+::vector$<$ std\+::vector$<$ double $>$ $>$ path)\hypertarget{classRobotSensor_a4c5f272ecc68c91880826298857a5457}{}\label{classRobotSensor_a4c5f272ecc68c91880826298857a5457}
+
+\item 
+bool {\bfseries set\+Trajectory} (std\+::vector$<$ std\+::vector$<$ double $>$ $>$ trajectory, double delta\+\_\+t)\hypertarget{classRobotSensor_a3c0cef902dea177c28e32a9f505f493f}{}\label{classRobotSensor_a3c0cef902dea177c28e32a9f505f493f}
+
+\item 
+bool {\bfseries set\+Goal\+Configuration} (std\+::vector$<$ double $>$ goal\+\_\+q)\hypertarget{classRobotSensor_a639eb18da8934854b3bbb2c468c029ba}{}\label{classRobotSensor_a639eb18da8934854b3bbb2c468c029ba}
+
+\item 
+float {\bfseries execute\+Movement} ()\hypertarget{classRobotSensor_af91b4528c7f490ba9236056f4fb9cfd3}{}\label{classRobotSensor_af91b4528c7f490ba9236056f4fb9cfd3}
+
+\item 
+void {\bfseries get\+Current\+Configuration} (std\+::vector$<$ double $>$ \&configuration)\hypertarget{classRobotSensor_a4b7a23f169416d68ca709305bab109c9}{}\label{classRobotSensor_a4b7a23f169416d68ca709305bab109c9}
+
+\item 
+bool \hyperlink{classRobotSensor_a8cfdb150fb9a8add2df06009c258e139}{update\+Robot\+Localization} (mrpt\+::poses\+::\+C\+Pose3D transformation)\hypertarget{classRobotSensor_a8cfdb150fb9a8add2df06009c258e139}{}\label{classRobotSensor_a8cfdb150fb9a8add2df06009c258e139}
+
+\begin{DoxyCompactList}\small\item\em updates the configuration of the robot with a transformation. Usually this trasnformation is obtained by the Registration process. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classRobotSensor_a8e1c363f54f6e5a00499b93fd245a3da}{auto\+Occlusion} (std\+::vector$<$ double $>$ q)
+\item 
+virtual bool \hyperlink{classRobotSensor_a720b3046a49b028d07090c1c79cd0a96}{points\+To\+The\+Robot} (\hyperlink{classViewStructure}{View\+Structure} view, std\+::vector$<$ double $>$ q)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries convert\+Points\+To\+Robot\+Reference} (std\+::vector$<$ mrpt\+::poses\+::\+C\+Point3D $>$ \&points, std\+::vector$<$ mrpt\+::poses\+::\+C\+Point3D $>$ \&result)\hypertarget{classRobotSensor_a5c36e17b54e0f4c06cd3b47e8976c924}{}\label{classRobotSensor_a5c36e17b54e0f4c06cd3b47e8976c924}
+
+\item 
+void {\bfseries add\+Points\+To\+Point\+Cloud} (std\+::vector$<$ mrpt\+::poses\+::\+C\+Point3D $>$ \&points, std\+::vector$<$ mrpt\+::poses\+::\+C\+Point3D $>$ \&origins, bool clear=true)\hypertarget{classRobotSensor_a317e3af77772a792ac4672f0461d2da8}{}\label{classRobotSensor_a317e3af77772a792ac4672f0461d2da8}
+
+\item 
+double {\bfseries dot\+Product} (mrpt\+::poses\+::\+C\+Point3D a, mrpt\+::poses\+::\+C\+Point3D b)\hypertarget{classRobotSensor_a548c1dd9588bad4f1a3d8a4aa96c7fbe}{}\label{classRobotSensor_a548c1dd9588bad4f1a3d8a4aa96c7fbe}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRangeSensor}{Range\+Sensor} $\ast$ {\bfseries sensor}\hypertarget{classRobotSensor_ac00737b26fc36d09497491988f6575e8}{}\label{classRobotSensor_ac00737b26fc36d09497491988f6575e8}
+
+\item 
+\hyperlink{classvpRobot}{vp\+Robot} $\ast$ {\bfseries robot}\hypertarget{classRobotSensor_ab416376e6423bb05d0d938eda2875b83}{}\label{classRobotSensor_ab416376e6423bb05d0d938eda2875b83}
+
+\item 
+std\+::string {\bfseries config\+Folder}\hypertarget{classRobotSensor_a3014b0bc086158cdbe1aca964f291b9a}{}\label{classRobotSensor_a3014b0bc086158cdbe1aca964f291b9a}
+
+\item 
+std\+::string {\bfseries data\+Folder}\hypertarget{classRobotSensor_a7c4a87715cac0b18bc7281cd3b0fa2fe}{}\label{classRobotSensor_a7c4a87715cac0b18bc7281cd3b0fa2fe}
+
+\item 
+std\+::vector$<$ double $>$ \hyperlink{classRobotSensor_a7e9d4be5f206d56109fc2e3c34e2aac2}{sensor\+Pose}
+\item 
+mrpt\+::poses\+::\+C\+Pose3D \hyperlink{classRobotSensor_a88bbdab74a1836ca367bcb344c4ca241}{Sensor\+Pose}
+\item 
+std\+::list$<$ mrpt\+::poses\+::\+C\+Point3D $>$ \hyperlink{classRobotSensor_a06d39a90daef29d623424b3608e0ee7b}{point\+Cloud}
+\item 
+uint32\+\_\+t \hyperlink{classRobotSensor_ae111af80a4feac4eb9ce0fbf740777c2}{point\+Cloud\+Id\+Counter}
+\item 
+std\+::list$<$ mrpt\+::poses\+::\+C\+Point3D $>$ \hyperlink{classRobotSensor_a47898d707a343c7530018493c87f3320}{Sensor\+Trajectory}
+\item 
+bool {\bfseries sensor\+Ready}\hypertarget{classRobotSensor_acaa1d9e26d7c609dc8374f1d1e474435}{}\label{classRobotSensor_acaa1d9e26d7c609dc8374f1d1e474435}
+
+\item 
+bool {\bfseries robot\+Ready}\hypertarget{classRobotSensor_a52448933140efcd8f8565ab02712fab4}{}\label{classRobotSensor_a52448933140efcd8f8565ab02712fab4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase base that represents a robot with a range sensor mounted on it. With this we can perform scans and save them to the Robot coordinate reference. Requires a robot and a sensor 
+
+\subsection{Member Function Documentation}
+\index{Robot\+Sensor@{Robot\+Sensor}!auto\+Occlusion@{auto\+Occlusion}}
+\index{auto\+Occlusion@{auto\+Occlusion}!Robot\+Sensor@{Robot\+Sensor}}
+\subsubsection[{\texorpdfstring{auto\+Occlusion(std\+::vector$<$ double $>$ q)}{autoOcclusion(std::vector< double > q)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\+Sensor\+::auto\+Occlusion (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ double $>$}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classRobotSensor_a8e1c363f54f6e5a00499b93fd245a3da}{}\label{classRobotSensor_a8e1c363f54f6e5a00499b93fd245a3da}
+verificar si el rayo director del sensor intersecta con el robot en determinada configuración \index{Robot\+Sensor@{Robot\+Sensor}!get\+Random\+State@{get\+Random\+State}}
+\index{get\+Random\+State@{get\+Random\+State}!Robot\+Sensor@{Robot\+Sensor}}
+\subsubsection[{\texorpdfstring{get\+Random\+State(std\+::vector$<$ double $>$ \&state)}{getRandomState(std::vector< double > &state)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+Sensor\+::get\+Random\+State (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ double $>$ \&}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotSensor_a2ba12e8c33f6811634305ee892c2a237}{}\label{classRobotSensor_a2ba12e8c33f6811634305ee892c2a237}
+Gets a random state between lower and upper states \index{Robot\+Sensor@{Robot\+Sensor}!get\+View\+From\+State@{get\+View\+From\+State}}
+\index{get\+View\+From\+State@{get\+View\+From\+State}!Robot\+Sensor@{Robot\+Sensor}}
+\subsubsection[{\texorpdfstring{get\+View\+From\+State(\+View\+Structure \&view, const std\+::vector$<$ double $>$ state)}{getViewFromState(ViewStructure &view, const std::vector< double > state)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+Sensor\+::get\+View\+From\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf View\+Structure} \&}]{view, }
+\item[{const std\+::vector$<$ double $>$}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotSensor_ae7b1b9acbc27b88a365e8a927355e08e}{}\label{classRobotSensor_ae7b1b9acbc27b88a365e8a927355e08e}
+Gets a View structure from a state \index{Robot\+Sensor@{Robot\+Sensor}!get\+Views\+From\+Comfigurations@{get\+Views\+From\+Comfigurations}}
+\index{get\+Views\+From\+Comfigurations@{get\+Views\+From\+Comfigurations}!Robot\+Sensor@{Robot\+Sensor}}
+\subsubsection[{\texorpdfstring{get\+Views\+From\+Comfigurations(std\+::list$<$ View\+Structure $>$ \&views)}{getViewsFromComfigurations(std::list< ViewStructure > &views)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+Sensor\+::get\+Views\+From\+Comfigurations (
+\begin{DoxyParamCaption}
+\item[{std\+::list$<$ {\bf View\+Structure} $>$ \&}]{views}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotSensor_a8d03fa5829bcbfcd9e65461da3a3e88d}{}\label{classRobotSensor_a8d03fa5829bcbfcd9e65461da3a3e88d}
+N\+O\+TE\+: this is only a patch!!!! Receives a set of configurations in views format. Only the vector q is taken into account. Returns the same set of views but with H\+TM filled. You can also use a get\+Views\+From\+Comfigurations \index{Robot\+Sensor@{Robot\+Sensor}!get\+Views\+From\+Comfigurations@{get\+Views\+From\+Comfigurations}}
+\index{get\+Views\+From\+Comfigurations@{get\+Views\+From\+Comfigurations}!Robot\+Sensor@{Robot\+Sensor}}
+\subsubsection[{\texorpdfstring{get\+Views\+From\+Comfigurations(std\+::list$<$ View\+Structure $>$ \&views, std\+::list$<$ std\+::vector$<$ double $>$ $>$ configurations)}{getViewsFromComfigurations(std::list< ViewStructure > &views, std::list< std::vector< double > > configurations)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+Sensor\+::get\+Views\+From\+Comfigurations (
+\begin{DoxyParamCaption}
+\item[{std\+::list$<$ {\bf View\+Structure} $>$ \&}]{views, }
+\item[{std\+::list$<$ std\+::vector$<$ double $>$ $>$}]{configurations}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotSensor_aaadde4cfbe409e2e307916ffe750a64a}{}\label{classRobotSensor_aaadde4cfbe409e2e307916ffe750a64a}
+Receives a set of configurations and returns a set of views. A view include besides the configuration, the Homogenous Transformation Matrix in Workspace \index{Robot\+Sensor@{Robot\+Sensor}!perform\+Scan@{perform\+Scan}}
+\index{perform\+Scan@{perform\+Scan}!Robot\+Sensor@{Robot\+Sensor}}
+\subsubsection[{\texorpdfstring{perform\+Scan()}{performScan()}}]{\setlength{\rightskip}{0pt plus 5cm}long int Robot\+Sensor\+::perform\+Scan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classRobotSensor_a76298deca29d80b6543f628f10060bec}{}\label{classRobotSensor_a76298deca29d80b6543f628f10060bec}
+Performs a scan at current position 
+
+Reimplemented in \hyperlink{classRobSenNoTransformation_a1fe9d3c79ea7e29892c58792b1fa05d8}{Rob\+Sen\+No\+Transformation}.
+
+\index{Robot\+Sensor@{Robot\+Sensor}!points\+To\+The\+Robot@{points\+To\+The\+Robot}}
+\index{points\+To\+The\+Robot@{points\+To\+The\+Robot}!Robot\+Sensor@{Robot\+Sensor}}
+\subsubsection[{\texorpdfstring{points\+To\+The\+Robot(\+View\+Structure view, std\+::vector$<$ double $>$ q)}{pointsToTheRobot(ViewStructure view, std::vector< double > q)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\+Sensor\+::points\+To\+The\+Robot (
+\begin{DoxyParamCaption}
+\item[{{\bf View\+Structure}}]{view, }
+\item[{std\+::vector$<$ double $>$}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classRobotSensor_a720b3046a49b028d07090c1c79cd0a96}{}\label{classRobotSensor_a720b3046a49b028d07090c1c79cd0a96}
+Esto debería hacerse tomando en cuenta la forma del robot Sin embargo por tiempo de implementación solo se verifica si intersecta una esfera que representa el robot\index{Robot\+Sensor@{Robot\+Sensor}!save\+Last\+Point\+Cloud@{save\+Last\+Point\+Cloud}}
+\index{save\+Last\+Point\+Cloud@{save\+Last\+Point\+Cloud}!Robot\+Sensor@{Robot\+Sensor}}
+\subsubsection[{\texorpdfstring{save\+Last\+Point\+Cloud(std\+::string \&file\+\_\+name, double factor)}{saveLastPointCloud(std::string &file_name, double factor)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\+Sensor\+::save\+Last\+Point\+Cloud (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{file\+\_\+name, }
+\item[{double}]{factor}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotSensor_ac832fdd6f319aa6118cf1b3bcbc08394}{}\label{classRobotSensor_ac832fdd6f319aa6118cf1b3bcbc08394}
+Saves the last point cloud. Adds the folder and the extension. \index{Robot\+Sensor@{Robot\+Sensor}!save\+Last\+Point\+Cloud\+Mts@{save\+Last\+Point\+Cloud\+Mts}}
+\index{save\+Last\+Point\+Cloud\+Mts@{save\+Last\+Point\+Cloud\+Mts}!Robot\+Sensor@{Robot\+Sensor}}
+\subsubsection[{\texorpdfstring{save\+Last\+Point\+Cloud\+Mts(std\+::string \&file\+\_\+name)}{saveLastPointCloudMts(std::string &file_name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\+Sensor\+::save\+Last\+Point\+Cloud\+Mts (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotSensor_a05d2aa70583b6a0a87de4f4ab85a64cd}{}\label{classRobotSensor_a05d2aa70583b6a0a87de4f4ab85a64cd}
+Saves the last point cloud in a raw text file (mts). The file will have the name \char`\"{}scan\+\_\+\mbox{[}number\+\_\+of\+\_\+scan\mbox{]}.\+dat\char`\"{} and it will be saved at the folder specified by problem Adress. \index{Robot\+Sensor@{Robot\+Sensor}!save\+Sensor\+Trajectory@{save\+Sensor\+Trajectory}}
+\index{save\+Sensor\+Trajectory@{save\+Sensor\+Trajectory}!Robot\+Sensor@{Robot\+Sensor}}
+\subsubsection[{\texorpdfstring{save\+Sensor\+Trajectory(std\+::string \&file\+\_\+name, double factor)}{saveSensorTrajectory(std::string &file_name, double factor)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\+Sensor\+::save\+Sensor\+Trajectory (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{file\+\_\+name, }
+\item[{double}]{factor}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotSensor_a03db6a7ccd4accf68f7ae6b28674196a}{}\label{classRobotSensor_a03db6a7ccd4accf68f7ae6b28674196a}
+Saves the origins of the scans. Adds the folder and extension automaticly. \index{Robot\+Sensor@{Robot\+Sensor}!set\+Sensor\+Pose@{set\+Sensor\+Pose}}
+\index{set\+Sensor\+Pose@{set\+Sensor\+Pose}!Robot\+Sensor@{Robot\+Sensor}}
+\subsubsection[{\texorpdfstring{set\+Sensor\+Pose(double x, double y, double z, double yaw, double pitch, double roll)}{setSensorPose(double x, double y, double z, double yaw, double pitch, double roll)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+Sensor\+::set\+Sensor\+Pose (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{double}]{yaw, }
+\item[{double}]{pitch, }
+\item[{double}]{roll}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotSensor_ac2095d4f543f88f36cf704414334a2ba}{}\label{classRobotSensor_ac2095d4f543f88f36cf704414334a2ba}
+I\+M\+P\+O\+R\+T\+A\+NT\+: yaw is rotation over Z pitch is a rotation over Y roll is a rotation over X radians 
+
+\subsection{Member Data Documentation}
+\index{Robot\+Sensor@{Robot\+Sensor}!point\+Cloud@{point\+Cloud}}
+\index{point\+Cloud@{point\+Cloud}!Robot\+Sensor@{Robot\+Sensor}}
+\subsubsection[{\texorpdfstring{point\+Cloud}{pointCloud}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$mrpt\+::poses\+::\+C\+Point3D$>$ Robot\+Sensor\+::point\+Cloud\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classRobotSensor_a06d39a90daef29d623424b3608e0ee7b}{}\label{classRobotSensor_a06d39a90daef29d623424b3608e0ee7b}
+The last captured point cloud. \index{Robot\+Sensor@{Robot\+Sensor}!point\+Cloud\+Id\+Counter@{point\+Cloud\+Id\+Counter}}
+\index{point\+Cloud\+Id\+Counter@{point\+Cloud\+Id\+Counter}!Robot\+Sensor@{Robot\+Sensor}}
+\subsubsection[{\texorpdfstring{point\+Cloud\+Id\+Counter}{pointCloudIdCounter}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Robot\+Sensor\+::point\+Cloud\+Id\+Counter\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classRobotSensor_ae111af80a4feac4eb9ce0fbf740777c2}{}\label{classRobotSensor_ae111af80a4feac4eb9ce0fbf740777c2}
+Counter for the captured point clouds. \index{Robot\+Sensor@{Robot\+Sensor}!sensor\+Pose@{sensor\+Pose}}
+\index{sensor\+Pose@{sensor\+Pose}!Robot\+Sensor@{Robot\+Sensor}}
+\subsubsection[{\texorpdfstring{sensor\+Pose}{sensorPose}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Robot\+Sensor\+::sensor\+Pose\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classRobotSensor_a7e9d4be5f206d56109fc2e3c34e2aac2}{}\label{classRobotSensor_a7e9d4be5f206d56109fc2e3c34e2aac2}
+I\+M\+P\+O\+R\+T\+A\+NT\+: yaw is rotation over Z pitch is a rotation over Y roll is a rotation over X \index{Robot\+Sensor@{Robot\+Sensor}!Sensor\+Pose@{Sensor\+Pose}}
+\index{Sensor\+Pose@{Sensor\+Pose}!Robot\+Sensor@{Robot\+Sensor}}
+\subsubsection[{\texorpdfstring{Sensor\+Pose}{SensorPose}}]{\setlength{\rightskip}{0pt plus 5cm}mrpt\+::poses\+::\+C\+Pose3D Robot\+Sensor\+::\+Sensor\+Pose\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classRobotSensor_a88bbdab74a1836ca367bcb344c4ca241}{}\label{classRobotSensor_a88bbdab74a1836ca367bcb344c4ca241}
+Sensor pose respect to the Robot \index{Robot\+Sensor@{Robot\+Sensor}!Sensor\+Trajectory@{Sensor\+Trajectory}}
+\index{Sensor\+Trajectory@{Sensor\+Trajectory}!Robot\+Sensor@{Robot\+Sensor}}
+\subsubsection[{\texorpdfstring{Sensor\+Trajectory}{SensorTrajectory}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$mrpt\+::poses\+::\+C\+Point3D$>$ Robot\+Sensor\+::\+Sensor\+Trajectory\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classRobotSensor_a47898d707a343c7530018493c87f3320}{}\label{classRobotSensor_a47898d707a343c7530018493c87f3320}
+Trajectory of the sensor (if there was a sweeping) or origin in cases of a 3D sensor 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+viewplanning/robotsensor.\+h\item 
+viewplanning/robotsensor.\+cpp\end{DoxyCompactItemize}

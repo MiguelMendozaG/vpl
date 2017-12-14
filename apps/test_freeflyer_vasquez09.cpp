@@ -68,6 +68,7 @@ int main(int argc, char **argv) {
     
     
     // --------------- NBV Planner ------------
+    //NBVPlanner *planner = new TrainingPlanner(rs, partial_model);
     NBVPlanner *planner = new WorkspaceNBVPlanner(rs, partial_model);
     planner->setConfigFolder(config_folder);
     planner->setDataFolder(data_folder);

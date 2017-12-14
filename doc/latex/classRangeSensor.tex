@@ -1,0 +1,121 @@
+\hypertarget{classRangeSensor}{}\section{Range\+Sensor Class Reference}
+\label{classRangeSensor}\index{Range\+Sensor@{Range\+Sensor}}
+
+
+{\ttfamily \#include $<$rangesensor.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool {\bfseries init} ()\hypertarget{classRangeSensor_a0fa9437a62cec4c93ea3f74472d67d3c}{}\label{classRangeSensor_a0fa9437a62cec4c93ea3f74472d67d3c}
+
+\item 
+virtual long int \hyperlink{classRangeSensor_a41e0ee652ab717ed803271f944f229d2}{get\+Points} (std\+::vector$<$ mrpt\+::poses\+::\+C\+Point3D $>$ \&points)=0
+\item 
+virtual void \hyperlink{classRangeSensor_a3c66f28c18e3fe8ffba809a8d9d83f62}{get\+Rays} (std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&rays)
+\item 
+bool {\bfseries save\+Rays} (std\+::string filename)\hypertarget{classRangeSensor_a0bdf89af52158d28f030523254509dbe}{}\label{classRangeSensor_a0bdf89af52158d28f030523254509dbe}
+
+\item 
+virtual long int \hyperlink{classRangeSensor_a29bca03aff4a2392ab34ded51d74ab92}{get\+Rays\+For\+Resolution} (std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&rays, double resolution, double distance)
+\item 
+bool \hyperlink{classRangeSensor_a9d8589690833d9294092449b8daf5ce7}{save\+Rays\+For\+Resolution} (std\+::string filename, double resolution, double distance)
+\item 
+void \hyperlink{classRangeSensor_afdccf7af7a35e9d83fbb5f0dbab1019d}{get\+Info} (std\+::string \&txt)
+\item 
+void {\bfseries set\+Config\+Folder} (std\+::string folder)\hypertarget{classRangeSensor_a61c318a0c38450e8c89b0aeeccee350d}{}\label{classRangeSensor_a61c318a0c38450e8c89b0aeeccee350d}
+
+\item 
+void {\bfseries set\+Data\+Folder} (std\+::string folder)\hypertarget{classRangeSensor_a116cb7188af13268484e4f7aee1d33de}{}\label{classRangeSensor_a116cb7188af13268484e4f7aee1d33de}
+
+\item 
+void {\bfseries get\+Director\+Ray} (std\+::vector$<$ double $>$ \&ray)\hypertarget{classRangeSensor_adfba7fd830d21af871359b959d1ac44d}{}\label{classRangeSensor_adfba7fd830d21af871359b959d1ac44d}
+
+\item 
+void {\bfseries set\+Current\+View} (\hyperlink{classViewStructure}{View\+Structure} v)\hypertarget{classRangeSensor_a4955219c175c9ba2da8a0cb743bb703f}{}\label{classRangeSensor_a4955219c175c9ba2da8a0cb743bb703f}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double {\bfseries h\+\_\+aperture}\hypertarget{classRangeSensor_a333835abaf69fe389a6c4003a05025e9}{}\label{classRangeSensor_a333835abaf69fe389a6c4003a05025e9}
+
+\item 
+double {\bfseries v\+\_\+aperture}\hypertarget{classRangeSensor_a8a611c5adff94034e5d057cbfbd9b06e}{}\label{classRangeSensor_a8a611c5adff94034e5d057cbfbd9b06e}
+
+\item 
+int {\bfseries h\+\_\+points}\hypertarget{classRangeSensor_aa4bd70ed9a9ed097b0f1e0a1b63f7710}{}\label{classRangeSensor_aa4bd70ed9a9ed097b0f1e0a1b63f7710}
+
+\item 
+int {\bfseries v\+\_\+points}\hypertarget{classRangeSensor_ae41a872ce9c80fe142e03a245dd7e11b}{}\label{classRangeSensor_ae41a872ce9c80fe142e03a245dd7e11b}
+
+\item 
+std\+::string {\bfseries info}\hypertarget{classRangeSensor_a48ddb91baf886a7f69a23be2e24961d8}{}\label{classRangeSensor_a48ddb91baf886a7f69a23be2e24961d8}
+
+\item 
+bool {\bfseries ready}\hypertarget{classRangeSensor_a39b6258b5c2ea3cc92f64e85f2731fab}{}\label{classRangeSensor_a39b6258b5c2ea3cc92f64e85f2731fab}
+
+\item 
+std\+::string {\bfseries config\+Folder}\hypertarget{classRangeSensor_af275904c340a557cf90e623468deea8e}{}\label{classRangeSensor_af275904c340a557cf90e623468deea8e}
+
+\item 
+std\+::string {\bfseries data\+Folder}\hypertarget{classRangeSensor_a1c28d60485ff932cb00b838c27761918}{}\label{classRangeSensor_a1c28d60485ff932cb00b838c27761918}
+
+\item 
+std\+::vector$<$ double $>$ {\bfseries director\+\_\+ray}\hypertarget{classRangeSensor_a0a58e87804d43700b307eb7346be352c}{}\label{classRangeSensor_a0a58e87804d43700b307eb7346be352c}
+
+\item 
+\hyperlink{classViewStructure}{View\+Structure} \hyperlink{classRangeSensor_a35c0f1409284433393081ff9b048766d}{current\+View}\hypertarget{classRangeSensor_a35c0f1409284433393081ff9b048766d}{}\label{classRangeSensor_a35c0f1409284433393081ff9b048766d}
+
+\begin{DoxyCompactList}\small\item\em Only required for simulated sensors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines a Range Sensor. It abstracs the communication with the device. Returns a set of poins in the 3D space as a read. All units must be in mts and rads; 
+
+\subsection{Member Function Documentation}
+\index{Range\+Sensor@{Range\+Sensor}!get\+Info@{get\+Info}}
+\index{get\+Info@{get\+Info}!Range\+Sensor@{Range\+Sensor}}
+\subsubsection[{\texorpdfstring{get\+Info(std\+::string \&txt)}{getInfo(std::string &txt)}}]{\setlength{\rightskip}{0pt plus 5cm}void Range\+Sensor\+::get\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{txt}
+\end{DoxyParamCaption}
+)}\hypertarget{classRangeSensor_afdccf7af7a35e9d83fbb5f0dbab1019d}{}\label{classRangeSensor_afdccf7af7a35e9d83fbb5f0dbab1019d}
+Returns information about the sensor \index{Range\+Sensor@{Range\+Sensor}!get\+Points@{get\+Points}}
+\index{get\+Points@{get\+Points}!Range\+Sensor@{Range\+Sensor}}
+\subsubsection[{\texorpdfstring{get\+Points(std\+::vector$<$ mrpt\+::poses\+::\+C\+Point3\+D $>$ \&points)=0}{getPoints(std::vector< mrpt::poses::CPoint3D > &points)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual long int Range\+Sensor\+::get\+Points (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ mrpt\+::poses\+::\+C\+Point3D $>$ \&}]{points}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classRangeSensor_a41e0ee652ab717ed803271f944f229d2}{}\label{classRangeSensor_a41e0ee652ab717ed803271f944f229d2}
+Reads the sensor and get 3D points in mm \index{Range\+Sensor@{Range\+Sensor}!get\+Rays@{get\+Rays}}
+\index{get\+Rays@{get\+Rays}!Range\+Sensor@{Range\+Sensor}}
+\subsubsection[{\texorpdfstring{get\+Rays(std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&rays)}{getRays(std::vector< std::vector< double > > &rays)}}]{\setlength{\rightskip}{0pt plus 5cm}void Range\+Sensor\+::get\+Rays (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{rays}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classRangeSensor_a3c66f28c18e3fe8ffba809a8d9d83f62}{}\label{classRangeSensor_a3c66f28c18e3fe8ffba809a8d9d83f62}
+Returns the set of rays which define the sensor \index{Range\+Sensor@{Range\+Sensor}!get\+Rays\+For\+Resolution@{get\+Rays\+For\+Resolution}}
+\index{get\+Rays\+For\+Resolution@{get\+Rays\+For\+Resolution}!Range\+Sensor@{Range\+Sensor}}
+\subsubsection[{\texorpdfstring{get\+Rays\+For\+Resolution(std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&rays, double resolution, double distance)}{getRaysForResolution(std::vector< std::vector< double > > &rays, double resolution, double distance)}}]{\setlength{\rightskip}{0pt plus 5cm}long int Range\+Sensor\+::get\+Rays\+For\+Resolution (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{rays, }
+\item[{double}]{resolution, }
+\item[{double}]{distance}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classRangeSensor_a29bca03aff4a2392ab34ded51d74ab92}{}\label{classRangeSensor_a29bca03aff4a2392ab34ded51d74ab92}
+Computes a set of minimun rays for the voxel resolution especified resolution must have the same units than distance \index{Range\+Sensor@{Range\+Sensor}!save\+Rays\+For\+Resolution@{save\+Rays\+For\+Resolution}}
+\index{save\+Rays\+For\+Resolution@{save\+Rays\+For\+Resolution}!Range\+Sensor@{Range\+Sensor}}
+\subsubsection[{\texorpdfstring{save\+Rays\+For\+Resolution(std\+::string filename, double resolution, double distance)}{saveRaysForResolution(std::string filename, double resolution, double distance)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Range\+Sensor\+::save\+Rays\+For\+Resolution (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{filename, }
+\item[{double}]{resolution, }
+\item[{double}]{distance}
+\end{DoxyParamCaption}
+)}\hypertarget{classRangeSensor_a9d8589690833d9294092449b8daf5ce7}{}\label{classRangeSensor_a9d8589690833d9294092449b8daf5ce7}
+Saves a \char`\"{}ideal\char`\"{} subset of rays depending on the resolution of the octree and the distance from the sensor resolution must have the same units than distance 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+viewplanning/rangesensor.\+h\item 
+viewplanning/rangesensor.\+cpp\end{DoxyCompactItemize}

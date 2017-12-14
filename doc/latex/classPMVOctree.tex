@@ -1,0 +1,236 @@
+\hypertarget{classPMVOctree}{}\section{P\+M\+V\+Octree Class Reference}
+\label{classPMVOctree}\index{P\+M\+V\+Octree@{P\+M\+V\+Octree}}
+
+
+{\ttfamily \#include $<$pmvoctree.\+h$>$}
+
+Inheritance diagram for P\+M\+V\+Octree\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.097378cm]{classPMVOctree}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual float {\bfseries update\+With\+Scan} (std\+::string file\+\_\+name\+\_\+scan, std\+::string file\+\_\+name\+\_\+origin)\hypertarget{classPMVOctree_ae7dcde3f6d0186b480e4c466dc838069}{}\label{classPMVOctree_ae7dcde3f6d0186b480e4c466dc838069}
+
+\item 
+virtual bool {\bfseries save\+Partial\+Model} (std\+::string file\+\_\+name)\hypertarget{classPMVOctree_a9d43e80dbe4b31d2c8867d6044f89315}{}\label{classPMVOctree_a9d43e80dbe4b31d2c8867d6044f89315}
+
+\item 
+virtual bool {\bfseries load\+Partial\+Model} (std\+::string file\+\_\+name)\hypertarget{classPMVOctree_a05ea11ddb9ef9dc2f42bb3e12421178d}{}\label{classPMVOctree_a05ea11ddb9ef9dc2f42bb3e12421178d}
+
+\item 
+virtual int \hyperlink{classPMVOctree_a2f35ea94079904f2e336776cec14b234}{evaluate\+View} (\hyperlink{classViewStructure}{View\+Structure} \&v)
+\item 
+virtual long int \hyperlink{classPMVOctree_aea21d58041a90e416e35b1e30d8e4f2f}{read\+Rays} (std\+::string file\+\_\+address)
+\item 
+long int \hyperlink{classPMVOctree_ab94a5f29d9bab3fdf4b29211d7e8e2ed}{paint\+Voxels} (\hyperlink{classCOctreeVPL}{C\+Octree\+V\+PL} $\ast$octree)
+\item 
+long int \hyperlink{classPMVOctree_a6069af536fca552725d2c35b73f87329}{paint\+Voxels} ()
+\item 
+virtual bool {\bfseries init} ()\hypertarget{classPMVOctree_a0d9ee4ea4405227380ff8d2702194e65}{}\label{classPMVOctree_a0d9ee4ea4405227380ff8d2702194e65}
+
+\item 
+void \hyperlink{classPMVOctree_a12f82c34c03613a96023416be4f19016}{insert\+Free\+Space} (double x1, double y1, double z1, double x2, double y2, double z2)
+\item 
+virtual void \hyperlink{classPMVOctree_a774f55223acf795f52d3f73c8c9471cc}{save\+Object\+As\+RawT} (std\+::string file\+\_\+name)
+\item 
+virtual void \hyperlink{classPMVOctree_aca1c65f5363719f37247f80286a6154f}{save\+Object\+As\+Obst} (std\+::string file\+\_\+name)
+\item 
+virtual bool \hyperlink{classPMVOctree_aeafe9d9017283183e9d45824e2ef9c8a}{save\+Unknown\+Volume\+As\+Obst} (std\+::string file\+\_\+name)
+\item 
+virtual bool \hyperlink{classPMVOctree_a2d9c6839bb00a6c93129e34e1215fb9b}{save\+Unknown\+Volume\+As\+RawT} (std\+::string file\+\_\+name)
+\item 
+virtual bool {\bfseries save\+Visible\+Unknown} (std\+::string file\+\_\+name\+\_\+vertex, std\+::string file\+\_\+name\+\_\+normal)\hypertarget{classPMVOctree_a4bdf27fbd5933360a4dce4a45c1ff1a5}{}\label{classPMVOctree_a4bdf27fbd5933360a4dce4a45c1ff1a5}
+
+\item 
+virtual bool {\bfseries save\+Frontier\+Unknown} (std\+::string file\+\_\+name\+\_\+vertex, std\+::string file\+\_\+name\+\_\+normal)\hypertarget{classPMVOctree_ae311223977861d14ac9bc97f77194448}{}\label{classPMVOctree_ae311223977861d14ac9bc97f77194448}
+
+\item 
+virtual bool \hyperlink{classPMVOctree_a4a6e07836f0258cd32d5bcb89867ae03}{save\+Obstacle} (std\+::string file\+\_\+name)
+\item 
+virtual void {\bfseries get\+Occupied\+Triangles} (\hyperlink{classvpTriangleList}{vp\+Triangle\+List} \&tris)\hypertarget{classPMVOctree_a963e41d16ae7a3b37baf64e1c309e35f}{}\label{classPMVOctree_a963e41d16ae7a3b37baf64e1c309e35f}
+
+\item 
+virtual void {\bfseries get\+Unknown\+Triangles} (\hyperlink{classvpTriangleList}{vp\+Triangle\+List} \&tris)\hypertarget{classPMVOctree_a1e9af592a9b42e7330c34faa7fec748a}{}\label{classPMVOctree_a1e9af592a9b42e7330c34faa7fec748a}
+
+\item 
+virtual double \hyperlink{classPMVOctree_a55c27c46a523772761512e1f139802ba}{get\+Unknown\+Volume} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classPMVOctree_a7f3ca384e40ac57446ec20d9acbefa92}{ray\+Tracing\+H\+TM} (boost\+::numeric\+::ublas\+::matrix$<$ double $>$ m, \hyperlink{classEvaluationResult}{Evaluation\+Result} \&result)
+\item 
+virtual bool {\bfseries registration\+Constraint} (\hyperlink{classEvaluationResult}{Evaluation\+Result} r)\hypertarget{classPMVOctree_a5fb49eeca15fa16a47d6568b592ae76d}{}\label{classPMVOctree_a5fb49eeca15fa16a47d6568b592ae76d}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCOctreeVPL}{C\+Octree\+V\+PL} $\ast$ \hyperlink{classPMVOctree_a922c0a5e617d067b2088372fdab2d9dd}{map}\hypertarget{classPMVOctree_a922c0a5e617d067b2088372fdab2d9dd}{}\label{classPMVOctree_a922c0a5e617d067b2088372fdab2d9dd}
+
+\begin{DoxyCompactList}\small\item\em Octree representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Partial Model based on a probabilistic octree Reported in\+: Vasquez-\/\+Gomez, J. I., Sucar, L. E., \& Murrieta-\/\+Cid, R. (2017). View/state planning for three-\/dimensional object reconstruction under uncertainty. Autonomous Robots, 41(1), 89-\/109.
+
+Initialization\+:
+\begin{DoxyItemize}
+\item Set config folder
+\item Set data folder
+\item init()
+\item \hyperlink{classPMVOctree_aea21d58041a90e416e35b1e30d8e4f2f}{read\+Rays()};
+\item set utility function 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\index{P\+M\+V\+Octree@{P\+M\+V\+Octree}!evaluate\+View@{evaluate\+View}}
+\index{evaluate\+View@{evaluate\+View}!P\+M\+V\+Octree@{P\+M\+V\+Octree}}
+\subsubsection[{\texorpdfstring{evaluate\+View(\+View\+Structure \&v)}{evaluateView(ViewStructure &v)}}]{\setlength{\rightskip}{0pt plus 5cm}int P\+M\+V\+Octree\+::evaluate\+View (
+\begin{DoxyParamCaption}
+\item[{{\bf View\+Structure} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPMVOctree_a2f35ea94079904f2e336776cec14b234}{}\label{classPMVOctree_a2f35ea94079904f2e336776cec14b234}
+Evaluate the result of the raytracing 
+
+Implements \hyperlink{classPartialModelBase}{Partial\+Model\+Base}.
+
+
+
+Reimplemented in \hyperlink{classPMVORearSideVoxel_abfbe9be1007d7d7fe7434031c1d96ad1}{P\+M\+V\+O\+Rear\+Side\+Voxel}, and \hyperlink{classPMVOctreeVasquez09_accb4475c4387147aed552e9dc1172377}{P\+M\+V\+Octree\+Vasquez09}.
+
+\index{P\+M\+V\+Octree@{P\+M\+V\+Octree}!get\+Unknown\+Volume@{get\+Unknown\+Volume}}
+\index{get\+Unknown\+Volume@{get\+Unknown\+Volume}!P\+M\+V\+Octree@{P\+M\+V\+Octree}}
+\subsubsection[{\texorpdfstring{get\+Unknown\+Volume()}{getUnknownVolume()}}]{\setlength{\rightskip}{0pt plus 5cm}double P\+M\+V\+Octree\+::get\+Unknown\+Volume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPMVOctree_a55c27c46a523772761512e1f139802ba}{}\label{classPMVOctree_a55c27c46a523772761512e1f139802ba}
+Returns an aproximation of the unknown volume; 
+
+Implements \hyperlink{classPartialModelBase_a3dc1ffa43084246c6a79b5763025dc73}{Partial\+Model\+Base}.
+
+\index{P\+M\+V\+Octree@{P\+M\+V\+Octree}!insert\+Free\+Space@{insert\+Free\+Space}}
+\index{insert\+Free\+Space@{insert\+Free\+Space}!P\+M\+V\+Octree@{P\+M\+V\+Octree}}
+\subsubsection[{\texorpdfstring{insert\+Free\+Space(double x1, double y1, double z1, double x2, double y2, double z2)}{insertFreeSpace(double x1, double y1, double z1, double x2, double y2, double z2)}}]{\setlength{\rightskip}{0pt plus 5cm}void P\+M\+V\+Octree\+::insert\+Free\+Space (
+\begin{DoxyParamCaption}
+\item[{double}]{x1, }
+\item[{double}]{y1, }
+\item[{double}]{z1, }
+\item[{double}]{x2, }
+\item[{double}]{y2, }
+\item[{double}]{z2}
+\end{DoxyParamCaption}
+)}\hypertarget{classPMVOctree_a12f82c34c03613a96023416be4f19016}{}\label{classPMVOctree_a12f82c34c03613a96023416be4f19016}
+Inserts a cube of free space given by two xtreme points \index{P\+M\+V\+Octree@{P\+M\+V\+Octree}!paint\+Voxels@{paint\+Voxels}}
+\index{paint\+Voxels@{paint\+Voxels}!P\+M\+V\+Octree@{P\+M\+V\+Octree}}
+\subsubsection[{\texorpdfstring{paint\+Voxels(\+C\+Octree\+V\+P\+L $\ast$octree)}{paintVoxels(COctreeVPL *octree)}}]{\setlength{\rightskip}{0pt plus 5cm}long int P\+M\+V\+Octree\+::paint\+Voxels (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+Octree\+V\+PL} $\ast$}]{octree}
+\end{DoxyParamCaption}
+)}\hypertarget{classPMVOctree_ab94a5f29d9bab3fdf4b29211d7e8e2ed}{}\label{classPMVOctree_ab94a5f29d9bab3fdf4b29211d7e8e2ed}
+Paints in blue occupied voxels that are inside the object capsule. Paints in orange unknown voxels \index{P\+M\+V\+Octree@{P\+M\+V\+Octree}!paint\+Voxels@{paint\+Voxels}}
+\index{paint\+Voxels@{paint\+Voxels}!P\+M\+V\+Octree@{P\+M\+V\+Octree}}
+\subsubsection[{\texorpdfstring{paint\+Voxels()}{paintVoxels()}}]{\setlength{\rightskip}{0pt plus 5cm}long int P\+M\+V\+Octree\+::paint\+Voxels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classPMVOctree_a6069af536fca552725d2c35b73f87329}{}\label{classPMVOctree_a6069af536fca552725d2c35b73f87329}
+Paints in blue occupied voxels that are inside the object capsule. Paints in orange unknown voxels \index{P\+M\+V\+Octree@{P\+M\+V\+Octree}!ray\+Tracing\+H\+TM@{ray\+Tracing\+H\+TM}}
+\index{ray\+Tracing\+H\+TM@{ray\+Tracing\+H\+TM}!P\+M\+V\+Octree@{P\+M\+V\+Octree}}
+\subsubsection[{\texorpdfstring{ray\+Tracing\+H\+T\+M(boost\+::numeric\+::ublas\+::matrix$<$ double $>$ m, Evaluation\+Result \&result)}{rayTracingHTM(boost::numeric::ublas::matrix< double > m, EvaluationResult &result)}}]{\setlength{\rightskip}{0pt plus 5cm}bool P\+M\+V\+Octree\+::ray\+Tracing\+H\+TM (
+\begin{DoxyParamCaption}
+\item[{boost\+::numeric\+::ublas\+::matrix$<$ double $>$}]{m, }
+\item[{{\bf Evaluation\+Result} \&}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classPMVOctree_a7f3ca384e40ac57446ec20d9acbefa92}{}\label{classPMVOctree_a7f3ca384e40ac57446ec20d9acbefa92}
+Performs a ray tracing to gather how much voxels ware touched. It uses the translation of the H\+TM like origin of the ray tracing. Returns false if the origin is not free. 
+\begin{DoxyParams}{Parameters}
+{\em m} & \mbox{[}in\mbox{]} Homogenous transformation matrix. It will be applied to the sensor model \\
+\hline
+{\em n\+\_\+occupied} & \mbox{[}out\mbox{]} \\
+\hline
+{\em n\+\_\+unknown} & \mbox{[}out\mbox{]} \\
+\hline
+\end{DoxyParams}
+The ray is rotated and traslated by the rotation matrix 
+
+Reimplemented in \hyperlink{classPMVORearSideVoxel_afd9b08599913cf32cbc315cb210f4924}{P\+M\+V\+O\+Rear\+Side\+Voxel}, and \hyperlink{classPMVOctreeVolume_a4c4a6581a0c693feab63de557861390d}{P\+M\+V\+Octree\+Volume}.
+
+\index{P\+M\+V\+Octree@{P\+M\+V\+Octree}!read\+Rays@{read\+Rays}}
+\index{read\+Rays@{read\+Rays}!P\+M\+V\+Octree@{P\+M\+V\+Octree}}
+\subsubsection[{\texorpdfstring{read\+Rays(std\+::string file\+\_\+address)}{readRays(std::string file_address)}}]{\setlength{\rightskip}{0pt plus 5cm}long int P\+M\+V\+Octree\+::read\+Rays (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+address}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPMVOctree_aea21d58041a90e416e35b1e30d8e4f2f}{}\label{classPMVOctree_aea21d58041a90e416e35b1e30d8e4f2f}
+Reads the rays (directions) thought by the sensor They are stored at rays with the notation \mbox{[}x, y, z, 1\mbox{]}$^\wedge$T The 1 is added to perform matrix multiplications by a H\+TM 
+
+Implements \hyperlink{classPartialModelBase_a645f1e68e3e29419522c3ef10ee05d05}{Partial\+Model\+Base}.
+
+\index{P\+M\+V\+Octree@{P\+M\+V\+Octree}!save\+Object\+As\+Obst@{save\+Object\+As\+Obst}}
+\index{save\+Object\+As\+Obst@{save\+Object\+As\+Obst}!P\+M\+V\+Octree@{P\+M\+V\+Octree}}
+\subsubsection[{\texorpdfstring{save\+Object\+As\+Obst(std\+::string file\+\_\+name)}{saveObjectAsObst(std::string file_name)}}]{\setlength{\rightskip}{0pt plus 5cm}void P\+M\+V\+Octree\+::save\+Object\+As\+Obst (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPMVOctree_aca1c65f5363719f37247f80286a6154f}{}\label{classPMVOctree_aca1c65f5363719f37247f80286a6154f}
+Saves the occupied and uknown voxels inside the object bouding box as a list of triangles. 
+
+Implements \hyperlink{classPartialModelBase_a994da889db902ef5948d9db48609d00b}{Partial\+Model\+Base}.
+
+\index{P\+M\+V\+Octree@{P\+M\+V\+Octree}!save\+Object\+As\+RawT@{save\+Object\+As\+RawT}}
+\index{save\+Object\+As\+RawT@{save\+Object\+As\+RawT}!P\+M\+V\+Octree@{P\+M\+V\+Octree}}
+\subsubsection[{\texorpdfstring{save\+Object\+As\+Raw\+T(std\+::string file\+\_\+name)}{saveObjectAsRawT(std::string file_name)}}]{\setlength{\rightskip}{0pt plus 5cm}void P\+M\+V\+Octree\+::save\+Object\+As\+RawT (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPMVOctree_a774f55223acf795f52d3f73c8c9471cc}{}\label{classPMVOctree_a774f55223acf795f52d3f73c8c9471cc}
+Saves the occupied and uknown voxels inside the object bouding box as a list of triangles. 
+
+Implements \hyperlink{classPartialModelBase_a193634a1ffbc43b60164dae988204d9e}{Partial\+Model\+Base}.
+
+\index{P\+M\+V\+Octree@{P\+M\+V\+Octree}!save\+Obstacle@{save\+Obstacle}}
+\index{save\+Obstacle@{save\+Obstacle}!P\+M\+V\+Octree@{P\+M\+V\+Octree}}
+\subsubsection[{\texorpdfstring{save\+Obstacle(std\+::string file\+\_\+name)}{saveObstacle(std::string file_name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool P\+M\+V\+Octree\+::save\+Obstacle (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPMVOctree_a4a6e07836f0258cd32d5bcb89867ae03}{}\label{classPMVOctree_a4a6e07836f0258cd32d5bcb89867ae03}
+Saves the occupied and unknown voxels as Obs 
+
+Implements \hyperlink{classPartialModelBase_ab41193a2a697dcf0d7d416cb35836458}{Partial\+Model\+Base}.
+
+\index{P\+M\+V\+Octree@{P\+M\+V\+Octree}!save\+Unknown\+Volume\+As\+Obst@{save\+Unknown\+Volume\+As\+Obst}}
+\index{save\+Unknown\+Volume\+As\+Obst@{save\+Unknown\+Volume\+As\+Obst}!P\+M\+V\+Octree@{P\+M\+V\+Octree}}
+\subsubsection[{\texorpdfstring{save\+Unknown\+Volume\+As\+Obst(std\+::string file\+\_\+name)}{saveUnknownVolumeAsObst(std::string file_name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool P\+M\+V\+Octree\+::save\+Unknown\+Volume\+As\+Obst (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPMVOctree_aeafe9d9017283183e9d45824e2ef9c8a}{}\label{classPMVOctree_aeafe9d9017283183e9d45824e2ef9c8a}
+used for motion planning 
+
+Implements \hyperlink{classPartialModelBase_a6b5f29ca5354d246ec08af21f764552e}{Partial\+Model\+Base}.
+
+\index{P\+M\+V\+Octree@{P\+M\+V\+Octree}!save\+Unknown\+Volume\+As\+RawT@{save\+Unknown\+Volume\+As\+RawT}}
+\index{save\+Unknown\+Volume\+As\+RawT@{save\+Unknown\+Volume\+As\+RawT}!P\+M\+V\+Octree@{P\+M\+V\+Octree}}
+\subsubsection[{\texorpdfstring{save\+Unknown\+Volume\+As\+Raw\+T(std\+::string file\+\_\+name)}{saveUnknownVolumeAsRawT(std::string file_name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool P\+M\+V\+Octree\+::save\+Unknown\+Volume\+As\+RawT (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPMVOctree_a2d9c6839bb00a6c93129e34e1215fb9b}{}\label{classPMVOctree_a2d9c6839bb00a6c93129e34e1215fb9b}
+Saves the unknown voxels inside the object bouding box as a list of triangles. 
+
+Implements \hyperlink{classPartialModelBase_a2f0c03925d1afc098dede157d0876ee3}{Partial\+Model\+Base}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+partialmodel/pmvoctree.\+h\item 
+partialmodel/pmvoctree.\+cpp\end{DoxyCompactItemize}

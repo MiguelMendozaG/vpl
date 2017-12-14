@@ -1,0 +1,170 @@
+\hypertarget{classCOctreeVPL}{}\section{C\+Octree\+V\+PL Class Reference}
+\label{classCOctreeVPL}\index{C\+Octree\+V\+PL@{C\+Octree\+V\+PL}}
+Inheritance diagram for C\+Octree\+V\+PL\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classCOctreeVPL}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries C\+Octree\+V\+PL} (double resolution)\hypertarget{classCOctreeVPL_a0149d4dd0aa97ad6c3bfe2ce5e52ae21}{}\label{classCOctreeVPL_a0149d4dd0aa97ad6c3bfe2ce5e52ae21}
+
+\item 
+virtual int \hyperlink{classCOctreeVPL_a8a57fc5e3499b794409ed83919260f99}{cast\+Ray\+V\+P\+L\+Hierarchical} (const point3d \&origin, const point3d \&directionP, point3d \&end, bool ignore\+Unknown\+Cells=false, double max\+Range=-\/1.\+0, int at\+Deepth=0)
+\item 
+virtual int \hyperlink{classCOctreeVPL_adefa863003c11fa51e87e9691bf860fa}{cast\+Ray\+V\+PL} (const point3d \&origin, const point3d \&directionP, point3d \&end, bool ignore\+Unknown\+Cells=false, double max\+Range=-\/1.\+0)
+\item 
+virtual double \hyperlink{classCOctreeVPL_a3a13d4e2bf90156a0bcc672feb2d521f}{cast\+Ray\+IG} (const point3d \&origin, const point3d \&directionP, point3d \&end, bool ignore\+Unknown\+Cells=false, double max\+Range=-\/1.\+0)
+\item 
+void \hyperlink{classCOctreeVPL_ac5612fe03561c785f3520b1c9f50177f}{clean\+Touched\+Voxels} ()
+\item 
+void {\bfseries set\+Unknown\+Thres} (double prob)\hypertarget{classCOctreeVPL_ab12c86b71ae63d2ce5ac9ecedb7bc852}{}\label{classCOctreeVPL_ab12c86b71ae63d2ce5ac9ecedb7bc852}
+
+\item 
+bool \hyperlink{classCOctreeVPL_aa708cc6dfe630232cbbf57401c90e37a}{is\+Node\+Unknown} (const Oc\+Tree\+Node $\ast$occupancy\+Node) const \hypertarget{classCOctreeVPL_aa708cc6dfe630232cbbf57401c90e37a}{}\label{classCOctreeVPL_aa708cc6dfe630232cbbf57401c90e37a}
+
+\begin{DoxyCompactList}\small\item\em queries whether a node is occupied according to the tree\textquotesingle{}s parameter for \char`\"{}occupancy\char`\"{} \end{DoxyCompactList}\item 
+bool \hyperlink{classCOctreeVPL_aac395e0f6092b287e4bf81c96b6f03ec}{is\+Node\+Unknown} (const Oc\+Tree\+Node \&occupancy\+Node) const \hypertarget{classCOctreeVPL_aac395e0f6092b287e4bf81c96b6f03ec}{}\label{classCOctreeVPL_aac395e0f6092b287e4bf81c96b6f03ec}
+
+\begin{DoxyCompactList}\small\item\em queries whether a node is occupied according to the tree\textquotesingle{}s parameter for \char`\"{}occupancy\char`\"{} \end{DoxyCompactList}\item 
+bool \hyperlink{classCOctreeVPL_a7860fba1bc74082821400b77042e665c}{is\+Node\+Free} (const Oc\+Tree\+Node $\ast$occupancy\+Node) const \hypertarget{classCOctreeVPL_a7860fba1bc74082821400b77042e665c}{}\label{classCOctreeVPL_a7860fba1bc74082821400b77042e665c}
+
+\begin{DoxyCompactList}\small\item\em queries whether a node is occupied according to the tree\textquotesingle{}s parameter for \char`\"{}occupancy\char`\"{} \end{DoxyCompactList}\item 
+bool {\bfseries is\+Adjacent\+To\+Free} (point3d point)\hypertarget{classCOctreeVPL_a7b15d06126f1033098558703d7b6aa61}{}\label{classCOctreeVPL_a7b15d06126f1033098558703d7b6aa61}
+
+\item 
+bool {\bfseries is\+Adjacent\+To\+Occupied} (point3d point)\hypertarget{classCOctreeVPL_abed99cc7f1dd56a9af7ab8a093e1115a}{}\label{classCOctreeVPL_abed99cc7f1dd56a9af7ab8a093e1115a}
+
+\item 
+void \hyperlink{classCOctreeVPL_aa4af367169533315e24760fd9ccbc0ea}{get\+Unknown\+Centers\+All} (point3d\+\_\+list \&node\+\_\+centers)
+\item 
+void \hyperlink{classCOctreeVPL_a0fbfbebbd0fb49f80159c4dc6f028401}{get\+Unknown\+Voxels} (point3d\+\_\+list \&node\+\_\+centers, std\+::vector$<$ double $>$ \&sizes)
+\item 
+void \hyperlink{classCOctreeVPL_abc10ca1c6e7119fe22430034bebf22f7}{get\+Visible\+Unknown\+Voxels} (point3d\+\_\+list \&node\+\_\+centers, point3d\+\_\+list \&voxel\+\_\+normals)
+\item 
+void \hyperlink{classCOctreeVPL_a08bd4856960a12a49078a451e20efb87}{get\+Frontier\+Unknown\+Voxels} (point3d\+\_\+list \&node\+\_\+centers, point3d\+\_\+list \&voxel\+\_\+normals)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+octomap\+::\+Color\+Oc\+Tree\+Node\+::\+Color {\bfseries color\+Touched\+Unknown}\hypertarget{classCOctreeVPL_a31d135d73813983ae78bf2b1763058ba}{}\label{classCOctreeVPL_a31d135d73813983ae78bf2b1763058ba}
+
+\item 
+octomap\+::\+Color\+Oc\+Tree\+Node\+::\+Color {\bfseries color\+Unknown}\hypertarget{classCOctreeVPL_afec2c69ea1c4c294a0b19d0d688cb95d}{}\label{classCOctreeVPL_afec2c69ea1c4c294a0b19d0d688cb95d}
+
+\item 
+octomap\+::\+Color\+Oc\+Tree\+Node\+::\+Color {\bfseries color\+Touched\+Occupied}\hypertarget{classCOctreeVPL_a9b80505c176da643abab260d36b0a8ca}{}\label{classCOctreeVPL_a9b80505c176da643abab260d36b0a8ca}
+
+\item 
+octomap\+::\+Color\+Oc\+Tree\+Node\+::\+Color {\bfseries color\+Occupied}\hypertarget{classCOctreeVPL_a9e4a135bf33774a080eee50a082c74ac}{}\label{classCOctreeVPL_a9e4a135bf33774a080eee50a082c74ac}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries unk\+\_\+prob\+\_\+thres\+\_\+log}\hypertarget{classCOctreeVPL_a1a2ec1493d8aa21c38210a0d7cb03956}{}\label{classCOctreeVPL_a1a2ec1493d8aa21c38210a0d7cb03956}
+
+\item 
+std\+::list$<$ Color\+Oc\+Tree\+Node $\ast$ $>$ {\bfseries touched\+Nodes}\hypertarget{classCOctreeVPL_ab4c73046dc8c049c8133fddffb93e09d}{}\label{classCOctreeVPL_ab4c73046dc8c049c8133fddffb93e09d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{C\+Octree\+V\+PL@{C\+Octree\+V\+PL}!cast\+Ray\+IG@{cast\+Ray\+IG}}
+\index{cast\+Ray\+IG@{cast\+Ray\+IG}!C\+Octree\+V\+PL@{C\+Octree\+V\+PL}}
+\subsubsection[{\texorpdfstring{cast\+Ray\+I\+G(const point3d \&origin, const point3d \&direction\+P, point3d \&end, bool ignore\+Unknown\+Cells=false, double max\+Range=-\/1.\+0)}{castRayIG(const point3d &origin, const point3d &directionP, point3d &end, bool ignoreUnknownCells=false, double maxRange=-1.0)}}]{\setlength{\rightskip}{0pt plus 5cm}double C\+Octree\+V\+P\+L\+::cast\+Ray\+IG (
+\begin{DoxyParamCaption}
+\item[{const point3d \&}]{origin, }
+\item[{const point3d \&}]{directionP, }
+\item[{point3d \&}]{end, }
+\item[{bool}]{ignore\+Unknown\+Cells = {\ttfamily false}, }
+\item[{double}]{max\+Range = {\ttfamily -\/1.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classCOctreeVPL_a3a13d4e2bf90156a0bcc672feb2d521f}{}\label{classCOctreeVPL_a3a13d4e2bf90156a0bcc672feb2d521f}
+Traces a Ray and returns the information gain of a ray. Avoids the integration of already touched voxels. Vasquez 17 and Vasquez 14. cast\+Ray Information Gain !!!!! 
+
+Reimplemented in \hyperlink{classCOctreeKriegel12_aa900e135c79350675fb0b6a9ab5e3c02}{C\+Octree\+Kriegel12}.
+
+\index{C\+Octree\+V\+PL@{C\+Octree\+V\+PL}!cast\+Ray\+V\+PL@{cast\+Ray\+V\+PL}}
+\index{cast\+Ray\+V\+PL@{cast\+Ray\+V\+PL}!C\+Octree\+V\+PL@{C\+Octree\+V\+PL}}
+\subsubsection[{\texorpdfstring{cast\+Ray\+V\+P\+L(const point3d \&origin, const point3d \&direction\+P, point3d \&end, bool ignore\+Unknown\+Cells=false, double max\+Range=-\/1.\+0)}{castRayVPL(const point3d &origin, const point3d &directionP, point3d &end, bool ignoreUnknownCells=false, double maxRange=-1.0)}}]{\setlength{\rightskip}{0pt plus 5cm}int C\+Octree\+V\+P\+L\+::cast\+Ray\+V\+PL (
+\begin{DoxyParamCaption}
+\item[{const point3d \&}]{origin, }
+\item[{const point3d \&}]{directionP, }
+\item[{point3d \&}]{end, }
+\item[{bool}]{ignore\+Unknown\+Cells = {\ttfamily false}, }
+\item[{double}]{max\+Range = {\ttfamily -\/1.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classCOctreeVPL_adefa863003c11fa51e87e9691bf860fa}{}\label{classCOctreeVPL_adefa863003c11fa51e87e9691bf860fa}
+Traces a Ray in the octree and returns the type of voxel found -\/-\/-\/-\/------ see Oc\+Tree\+Base\+::compute\+Ray\+Keys -\/-\/-\/-\/-\/------
+
+cast\+Ray\+V\+PL !!!!! 
+
+Reimplemented in \hyperlink{classCOctreeRearSideVoxel_a46ea49d079922e12ea62aff9ec8cae98}{C\+Octree\+Rear\+Side\+Voxel}.
+
+\index{C\+Octree\+V\+PL@{C\+Octree\+V\+PL}!cast\+Ray\+V\+P\+L\+Hierarchical@{cast\+Ray\+V\+P\+L\+Hierarchical}}
+\index{cast\+Ray\+V\+P\+L\+Hierarchical@{cast\+Ray\+V\+P\+L\+Hierarchical}!C\+Octree\+V\+PL@{C\+Octree\+V\+PL}}
+\subsubsection[{\texorpdfstring{cast\+Ray\+V\+P\+L\+Hierarchical(const point3d \&origin, const point3d \&direction\+P, point3d \&end, bool ignore\+Unknown\+Cells=false, double max\+Range=-\/1.\+0, int at\+Deepth=0)}{castRayVPLHierarchical(const point3d &origin, const point3d &directionP, point3d &end, bool ignoreUnknownCells=false, double maxRange=-1.0, int atDeepth=0)}}]{\setlength{\rightskip}{0pt plus 5cm}int C\+Octree\+V\+P\+L\+::cast\+Ray\+V\+P\+L\+Hierarchical (
+\begin{DoxyParamCaption}
+\item[{const point3d \&}]{origin, }
+\item[{const point3d \&}]{directionP, }
+\item[{point3d \&}]{end, }
+\item[{bool}]{ignore\+Unknown\+Cells = {\ttfamily false}, }
+\item[{double}]{max\+Range = {\ttfamily -\/1.0}, }
+\item[{int}]{at\+Deepth = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classCOctreeVPL_a8a57fc5e3499b794409ed83919260f99}{}\label{classCOctreeVPL_a8a57fc5e3499b794409ed83919260f99}
+Cast a ray for hierarchical ray tracing Traces a ray at a given octree depth This particular implementation paints the spanned voxels 
+\begin{DoxyParams}{Parameters}
+{\em end} & Return the last point \\
+\hline
+\end{DoxyParams}
+Initialization phase -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------
+
+determinar la direccion \index{C\+Octree\+V\+PL@{C\+Octree\+V\+PL}!clean\+Touched\+Voxels@{clean\+Touched\+Voxels}}
+\index{clean\+Touched\+Voxels@{clean\+Touched\+Voxels}!C\+Octree\+V\+PL@{C\+Octree\+V\+PL}}
+\subsubsection[{\texorpdfstring{clean\+Touched\+Voxels()}{cleanTouchedVoxels()}}]{\setlength{\rightskip}{0pt plus 5cm}void C\+Octree\+V\+P\+L\+::clean\+Touched\+Voxels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classCOctreeVPL_ac5612fe03561c785f3520b1c9f50177f}{}\label{classCOctreeVPL_ac5612fe03561c785f3520b1c9f50177f}
+This should be used after a ray tracing \index{C\+Octree\+V\+PL@{C\+Octree\+V\+PL}!get\+Frontier\+Unknown\+Voxels@{get\+Frontier\+Unknown\+Voxels}}
+\index{get\+Frontier\+Unknown\+Voxels@{get\+Frontier\+Unknown\+Voxels}!C\+Octree\+V\+PL@{C\+Octree\+V\+PL}}
+\subsubsection[{\texorpdfstring{get\+Frontier\+Unknown\+Voxels(point3d\+\_\+list \&node\+\_\+centers, point3d\+\_\+list \&voxel\+\_\+normals)}{getFrontierUnknownVoxels(point3d_list &node_centers, point3d_list &voxel_normals)}}]{\setlength{\rightskip}{0pt plus 5cm}void C\+Octree\+V\+P\+L\+::get\+Frontier\+Unknown\+Voxels (
+\begin{DoxyParamCaption}
+\item[{point3d\+\_\+list \&}]{node\+\_\+centers, }
+\item[{point3d\+\_\+list \&}]{voxel\+\_\+normals}
+\end{DoxyParamCaption}
+)}\hypertarget{classCOctreeVPL_a08bd4856960a12a49078a451e20efb87}{}\label{classCOctreeVPL_a08bd4856960a12a49078a451e20efb87}
+A frontier unknown voxel is a unknown voxel that is 6-\/adjacent to a free voxel and to a occupied voxel \index{C\+Octree\+V\+PL@{C\+Octree\+V\+PL}!get\+Unknown\+Centers\+All@{get\+Unknown\+Centers\+All}}
+\index{get\+Unknown\+Centers\+All@{get\+Unknown\+Centers\+All}!C\+Octree\+V\+PL@{C\+Octree\+V\+PL}}
+\subsubsection[{\texorpdfstring{get\+Unknown\+Centers\+All(point3d\+\_\+list \&node\+\_\+centers)}{getUnknownCentersAll(point3d_list &node_centers)}}]{\setlength{\rightskip}{0pt plus 5cm}void C\+Octree\+V\+P\+L\+::get\+Unknown\+Centers\+All (
+\begin{DoxyParamCaption}
+\item[{point3d\+\_\+list \&}]{node\+\_\+centers}
+\end{DoxyParamCaption}
+)}\hypertarget{classCOctreeVPL_aa4af367169533315e24760fd9ccbc0ea}{}\label{classCOctreeVPL_aa4af367169533315e24760fd9ccbc0ea}
+Returns centers of all Uknown voxels, here all voxels that are inside the unknown probability range are used, plus leafs that do N\+OT exist (but could) in the set bounding box Upper and lower bounding points must be set before using this function \index{C\+Octree\+V\+PL@{C\+Octree\+V\+PL}!get\+Unknown\+Voxels@{get\+Unknown\+Voxels}}
+\index{get\+Unknown\+Voxels@{get\+Unknown\+Voxels}!C\+Octree\+V\+PL@{C\+Octree\+V\+PL}}
+\subsubsection[{\texorpdfstring{get\+Unknown\+Voxels(point3d\+\_\+list \&node\+\_\+centers, std\+::vector$<$ double $>$ \&sizes)}{getUnknownVoxels(point3d_list &node_centers, std::vector< double > &sizes)}}]{\setlength{\rightskip}{0pt plus 5cm}void C\+Octree\+V\+P\+L\+::get\+Unknown\+Voxels (
+\begin{DoxyParamCaption}
+\item[{point3d\+\_\+list \&}]{node\+\_\+centers, }
+\item[{std\+::vector$<$ double $>$ \&}]{sizes}
+\end{DoxyParamCaption}
+)}\hypertarget{classCOctreeVPL_a0fbfbebbd0fb49f80159c4dc6f028401}{}\label{classCOctreeVPL_a0fbfbebbd0fb49f80159c4dc6f028401}
+Returns centers of all Uknown voxels, here all voxels that are inside the unknown probability range are used, plus leafs that do N\+OT exist (but could) in the set bounding box Upper and lower bounding points must be set before using this function \index{C\+Octree\+V\+PL@{C\+Octree\+V\+PL}!get\+Visible\+Unknown\+Voxels@{get\+Visible\+Unknown\+Voxels}}
+\index{get\+Visible\+Unknown\+Voxels@{get\+Visible\+Unknown\+Voxels}!C\+Octree\+V\+PL@{C\+Octree\+V\+PL}}
+\subsubsection[{\texorpdfstring{get\+Visible\+Unknown\+Voxels(point3d\+\_\+list \&node\+\_\+centers, point3d\+\_\+list \&voxel\+\_\+normals)}{getVisibleUnknownVoxels(point3d_list &node_centers, point3d_list &voxel_normals)}}]{\setlength{\rightskip}{0pt plus 5cm}void C\+Octree\+V\+P\+L\+::get\+Visible\+Unknown\+Voxels (
+\begin{DoxyParamCaption}
+\item[{point3d\+\_\+list \&}]{node\+\_\+centers, }
+\item[{point3d\+\_\+list \&}]{voxel\+\_\+normals}
+\end{DoxyParamCaption}
+)}\hypertarget{classCOctreeVPL_abc10ca1c6e7119fe22430034bebf22f7}{}\label{classCOctreeVPL_abc10ca1c6e7119fe22430034bebf22f7}
+a visible unknown voxel is a unknown voxel that is 6-\/adjacent to a free voxel status\+: revised 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+partialmodel/coctreevpl.\+h\item 
+partialmodel/coctreevpl.\+cpp\end{DoxyCompactItemize}

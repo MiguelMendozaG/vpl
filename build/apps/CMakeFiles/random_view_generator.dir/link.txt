@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++14 -g   CMakeFiles/random_view_generator.dir/test_view_generator.cpp.o  -o random_view_generator  -L/home/miguelmg/octomap/octomap-devel/lib  -L/home/miguelmg/repositorios/vpl/lib -rdynamic ../../lib/libPartialModel.so -loctomap -loctomath -Wl,-rpath,/home/miguelmg/octomap/octomap-devel/lib:/home/miguelmg/repositorios/vpl/lib 

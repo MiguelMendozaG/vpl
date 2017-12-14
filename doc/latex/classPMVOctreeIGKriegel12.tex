@@ -1,0 +1,61 @@
+\hypertarget{classPMVOctreeIGKriegel12}{}\section{P\+M\+V\+Octree\+I\+G\+Kriegel12 Class Reference}
+\label{classPMVOctreeIGKriegel12}\index{P\+M\+V\+Octree\+I\+G\+Kriegel12@{P\+M\+V\+Octree\+I\+G\+Kriegel12}}
+
+
+{\ttfamily \#include $<$pmvoctreeigkriegel12.\+h$>$}
+
+Inheritance diagram for P\+M\+V\+Octree\+I\+G\+Kriegel12\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classPMVOctreeIGKriegel12}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool {\bfseries init} ()\hypertarget{classPMVOctreeIGKriegel12_af7acc855c6276f22fe7c8736cfd2ed82}{}\label{classPMVOctreeIGKriegel12_af7acc855c6276f22fe7c8736cfd2ed82}
+
+\item 
+virtual int {\bfseries evaluate\+View} (\hyperlink{classViewStructure}{View\+Structure} \&v)\hypertarget{classPMVOctreeIGKriegel12_a8744c422b2a9b11859560aa98e8d2f7d}{}\label{classPMVOctreeIGKriegel12_a8744c422b2a9b11859560aa98e8d2f7d}
+
+\item 
+virtual float {\bfseries update\+With\+Scan} (std\+::string file\+\_\+name\+\_\+scan, std\+::string file\+\_\+name\+\_\+origin)\hypertarget{classPMVOctreeIGKriegel12_aa8720c9fedbfab494aa8cb21848c6b54}{}\label{classPMVOctreeIGKriegel12_aa8720c9fedbfab494aa8cb21848c6b54}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classPMVOctreeIGKriegel12_a9020231b50f8520fea577e41c5d0a44c}{ray\+Tracing\+H\+T\+M\+I\+G\+Kriegel} (boost\+::numeric\+::ublas\+::matrix$<$ double $>$ m, \hyperlink{classEvaluationResult}{Evaluation\+Result} \&result)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Partial Model based on a probabilistic octree Reported in\+: Kriegel 12
+
+Initialization\+:
+\begin{DoxyItemize}
+\item Set config folder
+\item Set data folder
+\item init()
+\item \hyperlink{classPMVOctree_aea21d58041a90e416e35b1e30d8e4f2f}{read\+Rays()};
+\item set utility function
+\end{DoxyItemize}
+
+Implementation status\+: ok Testing status\+: n/a 
+
+\subsection{Member Function Documentation}
+\index{P\+M\+V\+Octree\+I\+G\+Kriegel12@{P\+M\+V\+Octree\+I\+G\+Kriegel12}!ray\+Tracing\+H\+T\+M\+I\+G\+Kriegel@{ray\+Tracing\+H\+T\+M\+I\+G\+Kriegel}}
+\index{ray\+Tracing\+H\+T\+M\+I\+G\+Kriegel@{ray\+Tracing\+H\+T\+M\+I\+G\+Kriegel}!P\+M\+V\+Octree\+I\+G\+Kriegel12@{P\+M\+V\+Octree\+I\+G\+Kriegel12}}
+\subsubsection[{\texorpdfstring{ray\+Tracing\+H\+T\+M\+I\+G\+Kriegel(boost\+::numeric\+::ublas\+::matrix$<$ double $>$ m, Evaluation\+Result \&result)}{rayTracingHTMIGKriegel(boost::numeric::ublas::matrix< double > m, EvaluationResult &result)}}]{\setlength{\rightskip}{0pt plus 5cm}double P\+M\+V\+Octree\+I\+G\+Kriegel12\+::ray\+Tracing\+H\+T\+M\+I\+G\+Kriegel (
+\begin{DoxyParamCaption}
+\item[{boost\+::numeric\+::ublas\+::matrix$<$ double $>$}]{m, }
+\item[{{\bf Evaluation\+Result} \&}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classPMVOctreeIGKriegel12_a9020231b50f8520fea577e41c5d0a44c}{}\label{classPMVOctreeIGKriegel12_a9020231b50f8520fea577e41c5d0a44c}
+The ray is rotated and traslated by the rotation matrix 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+partialmodel/pmvoctreeigkriegel12.\+h\item 
+partialmodel/pmvoctreeigkriegel12.\+cpp\end{DoxyCompactItemize}

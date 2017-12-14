@@ -1,0 +1,44 @@
+\hypertarget{classPMVOctreeVolume}{}\section{P\+M\+V\+Octree\+Volume Class Reference}
+\label{classPMVOctreeVolume}\index{P\+M\+V\+Octree\+Volume@{P\+M\+V\+Octree\+Volume}}
+Inheritance diagram for P\+M\+V\+Octree\+Volume\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classPMVOctreeVolume}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classPMVOctreeVolume_a4c4a6581a0c693feab63de557861390d}{ray\+Tracing\+H\+TM} (boost\+::numeric\+::ublas\+::matrix$<$ double $>$ m, \hyperlink{classEvaluationResult}{Evaluation\+Result} \&result)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{P\+M\+V\+Octree\+Volume@{P\+M\+V\+Octree\+Volume}!ray\+Tracing\+H\+TM@{ray\+Tracing\+H\+TM}}
+\index{ray\+Tracing\+H\+TM@{ray\+Tracing\+H\+TM}!P\+M\+V\+Octree\+Volume@{P\+M\+V\+Octree\+Volume}}
+\subsubsection[{\texorpdfstring{ray\+Tracing\+H\+T\+M(boost\+::numeric\+::ublas\+::matrix$<$ double $>$ m, Evaluation\+Result \&result)}{rayTracingHTM(boost::numeric::ublas::matrix< double > m, EvaluationResult &result)}}]{\setlength{\rightskip}{0pt plus 5cm}bool P\+M\+V\+Octree\+Volume\+::ray\+Tracing\+H\+TM (
+\begin{DoxyParamCaption}
+\item[{boost\+::numeric\+::ublas\+::matrix$<$ double $>$}]{m, }
+\item[{{\bf Evaluation\+Result} \&}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classPMVOctreeVolume_a4c4a6581a0c693feab63de557861390d}{}\label{classPMVOctreeVolume_a4c4a6581a0c693feab63de557861390d}
+Performs a ray tracing to gather how much voxels ware touched. It uses the translation of the H\+TM like origin of the ray tracing. Returns false if the origin is not free. 
+\begin{DoxyParams}{Parameters}
+{\em m} & \mbox{[}in\mbox{]} Homogenous transformation matrix. It will be applied to the sensor model \\
+\hline
+{\em n\+\_\+occupied} & \mbox{[}out\mbox{]} \\
+\hline
+{\em n\+\_\+unknown} & \mbox{[}out\mbox{]} \\
+\hline
+\end{DoxyParams}
+The ray is rotated and traslated by the rotation matrix 
+
+Reimplemented from \hyperlink{classPMVOctree_a7f3ca384e40ac57446ec20d9acbefa92}{P\+M\+V\+Octree}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+partialmodel/pmvoctreevolume.\+h\item 
+partialmodel/pmvoctreevolume.\+cpp\end{DoxyCompactItemize}

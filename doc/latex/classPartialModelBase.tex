@@ -1,0 +1,434 @@
+\hypertarget{classPartialModelBase}{}\section{Partial\+Model\+Base Class Reference}
+\label{classPartialModelBase}\index{Partial\+Model\+Base@{Partial\+Model\+Base}}
+
+
+{\ttfamily \#include $<$partialmodelbase.\+h$>$}
+
+Inheritance diagram for Partial\+Model\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.097378cm]{classPartialModelBase}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual float {\bfseries update\+With\+Scan} (std\+::string file\+\_\+name\+\_\+scan, std\+::string file\+\_\+name\+\_\+origin)=0\hypertarget{classPartialModelBase_a7071062d9a064fbc4bc62451db9390e3}{}\label{classPartialModelBase_a7071062d9a064fbc4bc62451db9390e3}
+
+\item 
+virtual void {\bfseries evaluate\+Candidate\+Views} ()\hypertarget{classPartialModelBase_ad7bc3e7e78b330b960de7ea36bc0dbff}{}\label{classPartialModelBase_ad7bc3e7e78b330b960de7ea36bc0dbff}
+
+\item 
+void {\bfseries evaluate\+Candidate\+Views} (\hyperlink{classViewList}{View\+List} \&views)\hypertarget{classPartialModelBase_a84680a7a9806e6816c29585a39109696}{}\label{classPartialModelBase_a84680a7a9806e6816c29585a39109696}
+
+\item 
+virtual int {\bfseries evaluate\+View} (\hyperlink{classViewStructure}{View\+Structure} \&v)=0\hypertarget{classPartialModelBase_a4f5c7099d776cefb4c67fc89613e5cac}{}\label{classPartialModelBase_a4f5c7099d776cefb4c67fc89613e5cac}
+
+\item 
+virtual bool {\bfseries stop\+Criteria\+Reached} ()=0\hypertarget{classPartialModelBase_aee7942b3450482f70d2b281ab26c6336}{}\label{classPartialModelBase_aee7942b3450482f70d2b281ab26c6336}
+
+\item 
+virtual bool {\bfseries save\+Partial\+Model} (std\+::string file\+\_\+name)=0\hypertarget{classPartialModelBase_a1586ba365b880e7e3241fba1168b58cd}{}\label{classPartialModelBase_a1586ba365b880e7e3241fba1168b58cd}
+
+\item 
+virtual bool {\bfseries load\+Partial\+Model} (std\+::string file\+\_\+name)=0\hypertarget{classPartialModelBase_a543970b4e4066f26be64b41f3c4738be}{}\label{classPartialModelBase_a543970b4e4066f26be64b41f3c4738be}
+
+\item 
+virtual double \hyperlink{classPartialModelBase_a3dc1ffa43084246c6a79b5763025dc73}{get\+Unknown\+Volume} ()=0
+\item 
+virtual long int \hyperlink{classPartialModelBase_a645f1e68e3e29419522c3ef10ee05d05}{read\+Rays} (std\+::string file\+\_\+address)=0
+\item 
+virtual bool {\bfseries init} ()\hypertarget{classPartialModelBase_a6c031ab6c30539668c840d440d5a5513}{}\label{classPartialModelBase_a6c031ab6c30539668c840d440d5a5513}
+
+\item 
+bool \hyperlink{classPartialModelBase_a270503fb56c16b85f36c71f633513452}{save\+Evaluated\+Views} (std\+::string file\+\_\+name)
+\item 
+bool \hyperlink{classPartialModelBase_a3552efe44c5a12299c7462e35d9fd75e}{read\+Candidate\+Views} (std\+::string file\+\_\+name)
+\item 
+bool \hyperlink{classPartialModelBase_aa76eab3ce386966f7f65069c44f8f895}{save\+Only\+N\+Views} (int n, std\+::string file\+\_\+name)
+\item 
+void \hyperlink{classPartialModelBase_a745fab1e7b26b3a8f1efed66d69ef41a}{sort\+Candidate\+Views} ()
+\item 
+void \hyperlink{classPartialModelBase_a7dee7d3e7bb81092fa7f74709fb4996f}{set\+Object\+Capsule} (double x1, double y1, double z1, double x2, double y2, double z2)
+\item 
+void \hyperlink{classPartialModelBase_ac848bd32ebc54d49c9a8adb0d25e31ec}{set\+Scene} (double x1, double y1, double z1, double x2, double y2, double z2)
+\item 
+void {\bfseries set\+Config\+Folder} (std\+::string folder)\hypertarget{classPartialModelBase_a2b43f5a70a4c3ca94ee5c8939717b6ac}{}\label{classPartialModelBase_a2b43f5a70a4c3ca94ee5c8939717b6ac}
+
+\item 
+void {\bfseries set\+Data\+Folder} (std\+::string folder)\hypertarget{classPartialModelBase_a5a19a9366db46a1dfa95c8b2a9e1e8d3}{}\label{classPartialModelBase_a5a19a9366db46a1dfa95c8b2a9e1e8d3}
+
+\item 
+virtual void {\bfseries save\+Evaluations} ()=0\hypertarget{classPartialModelBase_a9cdef7a86e8c039520937eee049686a0}{}\label{classPartialModelBase_a9cdef7a86e8c039520937eee049686a0}
+
+\item 
+virtual void \hyperlink{classPartialModelBase_a193634a1ffbc43b60164dae988204d9e}{save\+Object\+As\+RawT} (std\+::string file\+\_\+name)=0
+\item 
+virtual void \hyperlink{classPartialModelBase_a994da889db902ef5948d9db48609d00b}{save\+Object\+As\+Obst} (std\+::string file\+\_\+name)=0
+\item 
+virtual bool \hyperlink{classPartialModelBase_a6b5f29ca5354d246ec08af21f764552e}{save\+Unknown\+Volume\+As\+Obst} (std\+::string file\+\_\+name)=0
+\item 
+virtual bool \hyperlink{classPartialModelBase_a2f0c03925d1afc098dede157d0876ee3}{save\+Unknown\+Volume\+As\+RawT} (std\+::string file\+\_\+name)=0
+\item 
+virtual bool \hyperlink{classPartialModelBase_ab41193a2a697dcf0d7d416cb35836458}{save\+Obstacle} (std\+::string file\+\_\+name)=0
+\item 
+virtual bool {\bfseries save\+Visible\+Unknown} (std\+::string file\+\_\+name\+\_\+vertex, std\+::string file\+\_\+name\+\_\+normal)=0\hypertarget{classPartialModelBase_a5304bbb21ba2a3bda34c300cfa628d36}{}\label{classPartialModelBase_a5304bbb21ba2a3bda34c300cfa628d36}
+
+\item 
+virtual bool {\bfseries save\+Frontier\+Unknown} (std\+::string file\+\_\+name\+\_\+vertex, std\+::string file\+\_\+name\+\_\+normal)=0\hypertarget{classPartialModelBase_a5f71113c57da42c730929af0eb6d59ba}{}\label{classPartialModelBase_a5f71113c57da42c730929af0eb6d59ba}
+
+\item 
+virtual void {\bfseries get\+Occupied\+Triangles} (\hyperlink{classvpTriangleList}{vp\+Triangle\+List} \&tris)=0\hypertarget{classPartialModelBase_af66511a5e5679937fd4b393fb11a49ed}{}\label{classPartialModelBase_af66511a5e5679937fd4b393fb11a49ed}
+
+\item 
+virtual void {\bfseries get\+Unknown\+Triangles} (\hyperlink{classvpTriangleList}{vp\+Triangle\+List} \&tris)=0\hypertarget{classPartialModelBase_a4dc17a79b5713384c08561bc74b416c0}{}\label{classPartialModelBase_a4dc17a79b5713384c08561bc74b416c0}
+
+\item 
+void \hyperlink{classPartialModelBase_a60fa44bbde343902f8adfce270b27b87}{get\+O\+BB} (double \&x1, double \&y1, double \&z1, double \&x2, double \&y2, double \&z2)
+\item 
+bool {\bfseries poits\+To\+The\+Object} (\hyperlink{classViewStructure}{View\+Structure} \&v)\hypertarget{classPartialModelBase_af0c4f683c0d35469b366d91c5851022a}{}\label{classPartialModelBase_af0c4f683c0d35469b366d91c5851022a}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classPartialModelBase_a7baf1e6dfaaf4891b6ac03cbafc7e4d2}{object\+\_\+points\+\_\+filename}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries points\+To\+A\+Sphere} (\hyperlink{classViewStructure}{View\+Structure} \&v, double center\+\_\+x, double center\+\_\+y, double center\+\_\+z, double radius)\hypertarget{classPartialModelBase_a926130c2455fb010d50bccc0850494a6}{}\label{classPartialModelBase_a926130c2455fb010d50bccc0850494a6}
+
+\item 
+bool \hyperlink{classPartialModelBase_a6f91d65d4a984f3b1ccdd1ac5abfd070}{is\+In\+D\+OV} (octomap\+::point3d origin, octomap\+::point3d point)
+\item 
+bool \hyperlink{classPartialModelBase_a7336ed5fc1bf4d2e0849d35e0e1070c5}{is\+In\+Capsule} (octomap\+::point3d point)
+\item 
+bool {\bfseries is\+In\+Scene} (octomap\+::point3d point)\hypertarget{classPartialModelBase_a1b8dc9293182a3524ba9288c949b4943}{}\label{classPartialModelBase_a1b8dc9293182a3524ba9288c949b4943}
+
+\item 
+virtual bool \hyperlink{classPartialModelBase_a3e8464488605e9f5ef17a3e641b29429}{registration\+Low\+Constraint} (long int n\+\_\+occupied)
+\item 
+bool \hyperlink{classPartialModelBase_a7516301463e716f3d5f086315844ca86}{read\+Point\+Cloud\+From\+D\+AT} (std\+::string file\+\_\+name, octomap\+::\+Pointcloud \&cloud)
+\item 
+void {\bfseries compute\+Ray\+From\+Origin\+To\+Point} (double x, double y, double z, double \&i, double \&j, double \&k)\hypertarget{classPartialModelBase_ad5563edf4a7860474e3a8420f60d4379}{}\label{classPartialModelBase_ad5563edf4a7860474e3a8420f60d4379}
+
+\item 
+void {\bfseries compute\+Ray\+From\+Point\+To\+Point} (Boost\+Matrix pointA, Boost\+Matrix pointB, double \&i, double \&j, double \&k)\hypertarget{classPartialModelBase_a922dac8a6cf6799d41d4dabc79695664}{}\label{classPartialModelBase_a922dac8a6cf6799d41d4dabc79695664}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Pointcloud \hyperlink{classPartialModelBase_aea17bd2912ce2a10534aebc7b9cb1bd0}{object\+Point\+Cloud}\hypertarget{classPartialModelBase_aea17bd2912ce2a10534aebc7b9cb1bd0}{}\label{classPartialModelBase_aea17bd2912ce2a10534aebc7b9cb1bd0}
+
+\begin{DoxyCompactList}\small\item\em Object accumulated point cloud. \end{DoxyCompactList}\item 
+point3d {\bfseries object\+Sphere\+Center}\hypertarget{classPartialModelBase_ad10f278864d170acb63b67554b6fda85}{}\label{classPartialModelBase_ad10f278864d170acb63b67554b6fda85}
+
+\item 
+double {\bfseries object\+Sphere\+Radius}\hypertarget{classPartialModelBase_a934a90b49dc60e614af6c13d2d9a9f49}{}\label{classPartialModelBase_a934a90b49dc60e614af6c13d2d9a9f49}
+
+\item 
+double {\bfseries obj\+Radius2}\hypertarget{classPartialModelBase_ad14118b3b5ec4db4566e3cb9d3f04224}{}\label{classPartialModelBase_ad14118b3b5ec4db4566e3cb9d3f04224}
+
+\item 
+point3d {\bfseries director\+Ray}\hypertarget{classPartialModelBase_add9d606ad4e0594a735a7518723a9bf7}{}\label{classPartialModelBase_add9d606ad4e0594a735a7518723a9bf7}
+
+\item 
+std\+::string {\bfseries config\+Folder}\hypertarget{classPartialModelBase_abfdf8b46f92cb63d21f145b8a3ca3622}{}\label{classPartialModelBase_abfdf8b46f92cb63d21f145b8a3ca3622}
+
+\item 
+std\+::string {\bfseries data\+Folder}\hypertarget{classPartialModelBase_ab386d7dc3aae6b0f28ecd94753db7c5e}{}\label{classPartialModelBase_ab386d7dc3aae6b0f28ecd94753db7c5e}
+
+\item 
+std\+::string {\bfseries evaluations\+File}\hypertarget{classPartialModelBase_a9ed9f1cb0c2633bde39c9382d63cce2e}{}\label{classPartialModelBase_a9ed9f1cb0c2633bde39c9382d63cce2e}
+
+\item 
+std\+::list$<$ \hyperlink{classViewStructure}{View\+Structure} $>$ \hyperlink{classPartialModelBase_a7c84f416786411a279a644f3b539dd24}{candidate\+Views}\hypertarget{classPartialModelBase_a7c84f416786411a279a644f3b539dd24}{}\label{classPartialModelBase_a7c84f416786411a279a644f3b539dd24}
+
+\begin{DoxyCompactList}\small\item\em robot bounding box size \end{DoxyCompactList}\item 
+std\+::vector$<$ boost\+::numeric\+::ublas\+::matrix$<$ double $>$ $>$ \hyperlink{classPartialModelBase_a9f828d5662769fd3d2e12bb66869d8e0}{rays}\hypertarget{classPartialModelBase_a9f828d5662769fd3d2e12bb66869d8e0}{}\label{classPartialModelBase_a9f828d5662769fd3d2e12bb66869d8e0}
+
+\begin{DoxyCompactList}\small\item\em Sensor information. \end{DoxyCompactList}\item 
+float {\bfseries min\+D\+OV}\hypertarget{classPartialModelBase_a14572c1fd31a4b984425f4785e68cbd9}{}\label{classPartialModelBase_a14572c1fd31a4b984425f4785e68cbd9}
+
+\item 
+float {\bfseries max\+D\+OV}\hypertarget{classPartialModelBase_a98eb201c10a22f768bc672b852c51173}{}\label{classPartialModelBase_a98eb201c10a22f768bc672b852c51173}
+
+\item 
+octomap\+::point3d $\ast$ {\bfseries scan\+Origin}\hypertarget{classPartialModelBase_a0f62337f2c63f3cf0913fcdb693ed1f9}{}\label{classPartialModelBase_a0f62337f2c63f3cf0913fcdb693ed1f9}
+
+\item 
+octomap\+::\+Pointcloud $\ast$ {\bfseries scan\+Cloud\+Origins}\hypertarget{classPartialModelBase_a52a612dfbbb16623f73fc722482637fc}{}\label{classPartialModelBase_a52a612dfbbb16623f73fc722482637fc}
+
+\item 
+octomap\+::\+Pointcloud $\ast$ {\bfseries scan\+Cloud}\hypertarget{classPartialModelBase_ad875d0091299e6a34f560383c810f005}{}\label{classPartialModelBase_ad875d0091299e6a34f560383c810f005}
+
+\item 
+double {\bfseries x\+\_\+cap\+\_\+1}\hypertarget{classPartialModelBase_acdd1cb2ec1dfc006f723e644d8f40149}{}\label{classPartialModelBase_acdd1cb2ec1dfc006f723e644d8f40149}
+
+\item 
+double {\bfseries y\+\_\+cap\+\_\+1}\hypertarget{classPartialModelBase_a9ec7d874eb7afa3d68aa0c46169e7ac9}{}\label{classPartialModelBase_a9ec7d874eb7afa3d68aa0c46169e7ac9}
+
+\item 
+double {\bfseries z\+\_\+cap\+\_\+1}\hypertarget{classPartialModelBase_a6730cb1fb154111f294e0cef8c5dc860}{}\label{classPartialModelBase_a6730cb1fb154111f294e0cef8c5dc860}
+
+\item 
+double {\bfseries x\+\_\+cap\+\_\+2}\hypertarget{classPartialModelBase_a8e7c27b5410445e49dff1870753beb2f}{}\label{classPartialModelBase_a8e7c27b5410445e49dff1870753beb2f}
+
+\item 
+double {\bfseries y\+\_\+cap\+\_\+2}\hypertarget{classPartialModelBase_af7b7da12e2b088fc7907fc7db1f5d98c}{}\label{classPartialModelBase_af7b7da12e2b088fc7907fc7db1f5d98c}
+
+\item 
+double {\bfseries z\+\_\+cap\+\_\+2}\hypertarget{classPartialModelBase_ad479cd235e8b13b9bf925908e276966d}{}\label{classPartialModelBase_ad479cd235e8b13b9bf925908e276966d}
+
+\item 
+double {\bfseries x\+\_\+sce\+\_\+1}\hypertarget{classPartialModelBase_a0291836f6dcd1f18a7d1b2bef753b922}{}\label{classPartialModelBase_a0291836f6dcd1f18a7d1b2bef753b922}
+
+\item 
+double {\bfseries y\+\_\+sce\+\_\+1}\hypertarget{classPartialModelBase_aa2a79a2e1da86543a9782e8d80b160b3}{}\label{classPartialModelBase_aa2a79a2e1da86543a9782e8d80b160b3}
+
+\item 
+double {\bfseries z\+\_\+sce\+\_\+1}\hypertarget{classPartialModelBase_ab043215cf48ee20f93695ae1d3921a8a}{}\label{classPartialModelBase_ab043215cf48ee20f93695ae1d3921a8a}
+
+\item 
+double {\bfseries x\+\_\+sce\+\_\+2}\hypertarget{classPartialModelBase_a5bcb3bc6046b68051d899ef81468883b}{}\label{classPartialModelBase_a5bcb3bc6046b68051d899ef81468883b}
+
+\item 
+double {\bfseries y\+\_\+sce\+\_\+2}\hypertarget{classPartialModelBase_a3cea92c5b6975a1301e4eee9d2df49b4}{}\label{classPartialModelBase_a3cea92c5b6975a1301e4eee9d2df49b4}
+
+\item 
+double {\bfseries z\+\_\+sce\+\_\+2}\hypertarget{classPartialModelBase_ab26f245842a19cdab8d4870b4ac82c2d}{}\label{classPartialModelBase_ab26f245842a19cdab8d4870b4ac82c2d}
+
+\item 
+double {\bfseries object\+Resolution}\hypertarget{classPartialModelBase_a92013313bd02b16e61aba3bf9f760b22}{}\label{classPartialModelBase_a92013313bd02b16e61aba3bf9f760b22}
+
+\item 
+octomap\+::\+Color\+Oc\+Tree\+Node\+::\+Color {\bfseries color\+Touched\+Unkmark}\hypertarget{classPartialModelBase_a6833d636183943316502be017daba2b3}{}\label{classPartialModelBase_a6833d636183943316502be017daba2b3}
+
+\item 
+octomap\+::\+Color\+Oc\+Tree\+Node\+::\+Color {\bfseries color\+Unmark}\hypertarget{classPartialModelBase_a2591b8750489f9f2b1b898711388bf32}{}\label{classPartialModelBase_a2591b8750489f9f2b1b898711388bf32}
+
+\item 
+octomap\+::\+Color\+Oc\+Tree\+Node\+::\+Color {\bfseries color\+Touched\+Occupied}\hypertarget{classPartialModelBase_a3544535ffa1c7fae434735c97e9147a6}{}\label{classPartialModelBase_a3544535ffa1c7fae434735c97e9147a6}
+
+\item 
+octomap\+::\+Color\+Oc\+Tree\+Node\+::\+Color {\bfseries color\+Occupied}\hypertarget{classPartialModelBase_a4bfcfdc604af2c2196612edb5d19bfdb}{}\label{classPartialModelBase_a4bfcfdc604af2c2196612edb5d19bfdb}
+
+\item 
+octomap\+::\+Color\+Oc\+Tree\+Node\+::\+Color {\bfseries color\+Origin}\hypertarget{classPartialModelBase_a05d28173631115d6fb29390584417d49}{}\label{classPartialModelBase_a05d28173631115d6fb29390584417d49}
+
+\item 
+octomap\+::\+Color\+Oc\+Tree\+Node\+::\+Color {\bfseries color\+Red}\hypertarget{classPartialModelBase_ae0780d9053f3d00fe343a30dffc70a11}{}\label{classPartialModelBase_ae0780d9053f3d00fe343a30dffc70a11}
+
+\item 
+octomap\+::\+Color\+Oc\+Tree\+Node\+::\+Color {\bfseries color\+Blue}\hypertarget{classPartialModelBase_aecb8c1bc3914c487ec812edcd7cd68cc}{}\label{classPartialModelBase_aecb8c1bc3914c487ec812edcd7cd68cc}
+
+\item 
+octomap\+::\+Color\+Oc\+Tree\+Node\+::\+Color {\bfseries color\+Yellow}\hypertarget{classPartialModelBase_aa77bffd7d1e4506533729ccc372eac9c}{}\label{classPartialModelBase_aa77bffd7d1e4506533729ccc372eac9c}
+
+\item 
+octomap\+::\+Color\+Oc\+Tree\+Node\+::\+Color {\bfseries color\+Cian}\hypertarget{classPartialModelBase_aac246df24988f086ac4487776909d9dc}{}\label{classPartialModelBase_aac246df24988f086ac4487776909d9dc}
+
+\item 
+octomap\+::\+Color\+Oc\+Tree\+Node\+::\+Color {\bfseries color\+Orange}\hypertarget{classPartialModelBase_a375a51e6ba3936efdadefbfc4b3b32b6}{}\label{classPartialModelBase_a375a51e6ba3936efdadefbfc4b3b32b6}
+
+\item 
+octomap\+::\+Color\+Oc\+Tree\+Node\+::\+Color {\bfseries color\+Gray}\hypertarget{classPartialModelBase_adbc17e437fd8bf007bdc919fd84e062a}{}\label{classPartialModelBase_adbc17e437fd8bf007bdc919fd84e062a}
+
+\item 
+std\+::vector$<$ long int $>$ \hyperlink{classPartialModelBase_aca8f3d799a7a13add83d4d71c218aaf6}{unknown\+Voxels\+In\+O\+B\+Bx}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The partial model stores information about the scene and provides functions that are needed to evaluate a candidate sensor view. This class implements the base for a partial model, several functions related with the partial model are provided, for example update with a point cloud. This implementation stores a set of candidate views and can assign a evaluation to each candidate view according to a certain metric. Derived classes will implement the evaluations. This class implements the evaluation of the candidate views and the model update. Units\+: meters and rads 
+
+\subsection{Member Function Documentation}
+\index{Partial\+Model\+Base@{Partial\+Model\+Base}!get\+O\+BB@{get\+O\+BB}}
+\index{get\+O\+BB@{get\+O\+BB}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{get\+O\+B\+B(double \&x1, double \&y1, double \&z1, double \&x2, double \&y2, double \&z2)}{getOBB(double &x1, double &y1, double &z1, double &x2, double &y2, double &z2)}}]{\setlength{\rightskip}{0pt plus 5cm}void Partial\+Model\+Base\+::get\+O\+BB (
+\begin{DoxyParamCaption}
+\item[{double \&}]{x1, }
+\item[{double \&}]{y1, }
+\item[{double \&}]{z1, }
+\item[{double \&}]{x2, }
+\item[{double \&}]{y2, }
+\item[{double \&}]{z2}
+\end{DoxyParamCaption}
+)}\hypertarget{classPartialModelBase_a60fa44bbde343902f8adfce270b27b87}{}\label{classPartialModelBase_a60fa44bbde343902f8adfce270b27b87}
+Gets the object bounding box parameters \index{Partial\+Model\+Base@{Partial\+Model\+Base}!get\+Unknown\+Volume@{get\+Unknown\+Volume}}
+\index{get\+Unknown\+Volume@{get\+Unknown\+Volume}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{get\+Unknown\+Volume()=0}{getUnknownVolume()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double Partial\+Model\+Base\+::get\+Unknown\+Volume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classPartialModelBase_a3dc1ffa43084246c6a79b5763025dc73}{}\label{classPartialModelBase_a3dc1ffa43084246c6a79b5763025dc73}
+Returns an aproximation of the unknown volume; 
+
+Implemented in \hyperlink{classPMVOctree_a55c27c46a523772761512e1f139802ba}{P\+M\+V\+Octree}.
+
+\index{Partial\+Model\+Base@{Partial\+Model\+Base}!is\+In\+Capsule@{is\+In\+Capsule}}
+\index{is\+In\+Capsule@{is\+In\+Capsule}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{is\+In\+Capsule(octomap\+::point3d point)}{isInCapsule(octomap::point3d point)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Partial\+Model\+Base\+::is\+In\+Capsule (
+\begin{DoxyParamCaption}
+\item[{octomap\+::point3d}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classPartialModelBase_a7336ed5fc1bf4d2e0849d35e0e1070c5}{}\label{classPartialModelBase_a7336ed5fc1bf4d2e0849d35e0e1070c5}
+Checks if a point is inside the object capsule \index{Partial\+Model\+Base@{Partial\+Model\+Base}!is\+In\+D\+OV@{is\+In\+D\+OV}}
+\index{is\+In\+D\+OV@{is\+In\+D\+OV}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{is\+In\+D\+O\+V(octomap\+::point3d origin, octomap\+::point3d point)}{isInDOV(octomap::point3d origin, octomap::point3d point)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Partial\+Model\+Base\+::is\+In\+D\+OV (
+\begin{DoxyParamCaption}
+\item[{octomap\+::point3d}]{origin, }
+\item[{octomap\+::point3d}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classPartialModelBase_a6f91d65d4a984f3b1ccdd1ac5abfd070}{}\label{classPartialModelBase_a6f91d65d4a984f3b1ccdd1ac5abfd070}
+Checks if a hit point is inside the depth of view \index{Partial\+Model\+Base@{Partial\+Model\+Base}!read\+Candidate\+Views@{read\+Candidate\+Views}}
+\index{read\+Candidate\+Views@{read\+Candidate\+Views}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{read\+Candidate\+Views(std\+::string file\+\_\+name)}{readCandidateViews(std::string file_name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Partial\+Model\+Base\+::read\+Candidate\+Views (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{classPartialModelBase_a3552efe44c5a12299c7462e35d9fd75e}{}\label{classPartialModelBase_a3552efe44c5a12299c7462e35d9fd75e}
+Reads candidate views from a given file \index{Partial\+Model\+Base@{Partial\+Model\+Base}!read\+Point\+Cloud\+From\+D\+AT@{read\+Point\+Cloud\+From\+D\+AT}}
+\index{read\+Point\+Cloud\+From\+D\+AT@{read\+Point\+Cloud\+From\+D\+AT}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{read\+Point\+Cloud\+From\+D\+A\+T(std\+::string file\+\_\+name, octomap\+::\+Pointcloud \&cloud)}{readPointCloudFromDAT(std::string file_name, octomap::Pointcloud &cloud)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Partial\+Model\+Base\+::read\+Point\+Cloud\+From\+D\+AT (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name, }
+\item[{octomap\+::\+Pointcloud \&}]{cloud}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classPartialModelBase_a7516301463e716f3d5f086315844ca86}{}\label{classPartialModelBase_a7516301463e716f3d5f086315844ca86}
+Reads a scan The file is an A\+S\+C\+II Format with plain data \index{Partial\+Model\+Base@{Partial\+Model\+Base}!read\+Rays@{read\+Rays}}
+\index{read\+Rays@{read\+Rays}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{read\+Rays(std\+::string file\+\_\+address)=0}{readRays(std::string file_address)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual long int Partial\+Model\+Base\+::read\+Rays (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+address}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classPartialModelBase_a645f1e68e3e29419522c3ef10ee05d05}{}\label{classPartialModelBase_a645f1e68e3e29419522c3ef10ee05d05}
+Reads the rays (directions) thought by the sensor They are stored at rays with the notation \mbox{[}x, y, z, 1\mbox{]}$^\wedge$T The 1 is added to perform matrix multiplications by a H\+TM 
+
+Implemented in \hyperlink{classPMVOctree_aea21d58041a90e416e35b1e30d8e4f2f}{P\+M\+V\+Octree}.
+
+\index{Partial\+Model\+Base@{Partial\+Model\+Base}!registration\+Low\+Constraint@{registration\+Low\+Constraint}}
+\index{registration\+Low\+Constraint@{registration\+Low\+Constraint}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{registration\+Low\+Constraint(long int n\+\_\+occupied)}{registrationLowConstraint(long int n_occupied)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Partial\+Model\+Base\+::registration\+Low\+Constraint (
+\begin{DoxyParamCaption}
+\item[{long int}]{n\+\_\+occupied}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classPartialModelBase_a3e8464488605e9f5ef17a3e641b29429}{}\label{classPartialModelBase_a3e8464488605e9f5ef17a3e641b29429}
+Registration contraints \index{Partial\+Model\+Base@{Partial\+Model\+Base}!save\+Evaluated\+Views@{save\+Evaluated\+Views}}
+\index{save\+Evaluated\+Views@{save\+Evaluated\+Views}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{save\+Evaluated\+Views(std\+::string file\+\_\+name)}{saveEvaluatedViews(std::string file_name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Partial\+Model\+Base\+::save\+Evaluated\+Views (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{classPartialModelBase_a270503fb56c16b85f36c71f633513452}{}\label{classPartialModelBase_a270503fb56c16b85f36c71f633513452}
+Saves the evaluated views, H\+TM is saved in meters (how was readed) \index{Partial\+Model\+Base@{Partial\+Model\+Base}!save\+Object\+As\+Obst@{save\+Object\+As\+Obst}}
+\index{save\+Object\+As\+Obst@{save\+Object\+As\+Obst}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{save\+Object\+As\+Obst(std\+::string file\+\_\+name)=0}{saveObjectAsObst(std::string file_name)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Partial\+Model\+Base\+::save\+Object\+As\+Obst (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classPartialModelBase_a994da889db902ef5948d9db48609d00b}{}\label{classPartialModelBase_a994da889db902ef5948d9db48609d00b}
+Saves the occupied and uknown voxels inside the object bouding box as a list of triangles. 
+
+Implemented in \hyperlink{classPMVOctree_aca1c65f5363719f37247f80286a6154f}{P\+M\+V\+Octree}.
+
+\index{Partial\+Model\+Base@{Partial\+Model\+Base}!save\+Object\+As\+RawT@{save\+Object\+As\+RawT}}
+\index{save\+Object\+As\+RawT@{save\+Object\+As\+RawT}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{save\+Object\+As\+Raw\+T(std\+::string file\+\_\+name)=0}{saveObjectAsRawT(std::string file_name)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Partial\+Model\+Base\+::save\+Object\+As\+RawT (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classPartialModelBase_a193634a1ffbc43b60164dae988204d9e}{}\label{classPartialModelBase_a193634a1ffbc43b60164dae988204d9e}
+Saves the occupied and uknown voxels inside the object bouding box as a list of triangles. 
+
+Implemented in \hyperlink{classPMVOctree_a774f55223acf795f52d3f73c8c9471cc}{P\+M\+V\+Octree}.
+
+\index{Partial\+Model\+Base@{Partial\+Model\+Base}!save\+Obstacle@{save\+Obstacle}}
+\index{save\+Obstacle@{save\+Obstacle}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{save\+Obstacle(std\+::string file\+\_\+name)=0}{saveObstacle(std::string file_name)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Partial\+Model\+Base\+::save\+Obstacle (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classPartialModelBase_ab41193a2a697dcf0d7d416cb35836458}{}\label{classPartialModelBase_ab41193a2a697dcf0d7d416cb35836458}
+Saves the occupied and unknown voxels as Obs (M\+SL format) 
+
+Implemented in \hyperlink{classPMVOctree_a4a6e07836f0258cd32d5bcb89867ae03}{P\+M\+V\+Octree}.
+
+\index{Partial\+Model\+Base@{Partial\+Model\+Base}!save\+Only\+N\+Views@{save\+Only\+N\+Views}}
+\index{save\+Only\+N\+Views@{save\+Only\+N\+Views}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{save\+Only\+N\+Views(int n, std\+::string file\+\_\+name)}{saveOnlyNViews(int n, std::string file_name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Partial\+Model\+Base\+::save\+Only\+N\+Views (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{std\+::string}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{classPartialModelBase_aa76eab3ce386966f7f65069c44f8f895}{}\label{classPartialModelBase_aa76eab3ce386966f7f65069c44f8f895}
+selects only the n early candidate views rest is deleted TM is saved in meters (how was readed) \index{Partial\+Model\+Base@{Partial\+Model\+Base}!save\+Unknown\+Volume\+As\+Obst@{save\+Unknown\+Volume\+As\+Obst}}
+\index{save\+Unknown\+Volume\+As\+Obst@{save\+Unknown\+Volume\+As\+Obst}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{save\+Unknown\+Volume\+As\+Obst(std\+::string file\+\_\+name)=0}{saveUnknownVolumeAsObst(std::string file_name)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Partial\+Model\+Base\+::save\+Unknown\+Volume\+As\+Obst (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classPartialModelBase_a6b5f29ca5354d246ec08af21f764552e}{}\label{classPartialModelBase_a6b5f29ca5354d246ec08af21f764552e}
+used for motion planning 
+
+Implemented in \hyperlink{classPMVOctree_aeafe9d9017283183e9d45824e2ef9c8a}{P\+M\+V\+Octree}.
+
+\index{Partial\+Model\+Base@{Partial\+Model\+Base}!save\+Unknown\+Volume\+As\+RawT@{save\+Unknown\+Volume\+As\+RawT}}
+\index{save\+Unknown\+Volume\+As\+RawT@{save\+Unknown\+Volume\+As\+RawT}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{save\+Unknown\+Volume\+As\+Raw\+T(std\+::string file\+\_\+name)=0}{saveUnknownVolumeAsRawT(std::string file_name)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Partial\+Model\+Base\+::save\+Unknown\+Volume\+As\+RawT (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classPartialModelBase_a2f0c03925d1afc098dede157d0876ee3}{}\label{classPartialModelBase_a2f0c03925d1afc098dede157d0876ee3}
+Saves the unknown voxels inside the object bouding box as a list of triangles. 
+
+Implemented in \hyperlink{classPMVOctree_a2d9c6839bb00a6c93129e34e1215fb9b}{P\+M\+V\+Octree}.
+
+\index{Partial\+Model\+Base@{Partial\+Model\+Base}!set\+Object\+Capsule@{set\+Object\+Capsule}}
+\index{set\+Object\+Capsule@{set\+Object\+Capsule}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{set\+Object\+Capsule(double x1, double y1, double z1, double x2, double y2, double z2)}{setObjectCapsule(double x1, double y1, double z1, double x2, double y2, double z2)}}]{\setlength{\rightskip}{0pt plus 5cm}void Partial\+Model\+Base\+::set\+Object\+Capsule (
+\begin{DoxyParamCaption}
+\item[{double}]{x1, }
+\item[{double}]{y1, }
+\item[{double}]{z1, }
+\item[{double}]{x2, }
+\item[{double}]{y2, }
+\item[{double}]{z2}
+\end{DoxyParamCaption}
+)}\hypertarget{classPartialModelBase_a7dee7d3e7bb81092fa7f74709fb4996f}{}\label{classPartialModelBase_a7dee7d3e7bb81092fa7f74709fb4996f}
+Establishes the limits for the capsule where the object is. \index{Partial\+Model\+Base@{Partial\+Model\+Base}!set\+Scene@{set\+Scene}}
+\index{set\+Scene@{set\+Scene}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{set\+Scene(double x1, double y1, double z1, double x2, double y2, double z2)}{setScene(double x1, double y1, double z1, double x2, double y2, double z2)}}]{\setlength{\rightskip}{0pt plus 5cm}void Partial\+Model\+Base\+::set\+Scene (
+\begin{DoxyParamCaption}
+\item[{double}]{x1, }
+\item[{double}]{y1, }
+\item[{double}]{z1, }
+\item[{double}]{x2, }
+\item[{double}]{y2, }
+\item[{double}]{z2}
+\end{DoxyParamCaption}
+)}\hypertarget{classPartialModelBase_ac848bd32ebc54d49c9a8adb0d25e31ec}{}\label{classPartialModelBase_ac848bd32ebc54d49c9a8adb0d25e31ec}
+Establishes the limits for the Reconstruction Scene. \index{Partial\+Model\+Base@{Partial\+Model\+Base}!sort\+Candidate\+Views@{sort\+Candidate\+Views}}
+\index{sort\+Candidate\+Views@{sort\+Candidate\+Views}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{sort\+Candidate\+Views()}{sortCandidateViews()}}]{\setlength{\rightskip}{0pt plus 5cm}void Partial\+Model\+Base\+::sort\+Candidate\+Views (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classPartialModelBase_a745fab1e7b26b3a8f1efed66d69ef41a}{}\label{classPartialModelBase_a745fab1e7b26b3a8f1efed66d69ef41a}
+Orders the views according to their evaluation From high to low 
+
+\subsection{Member Data Documentation}
+\index{Partial\+Model\+Base@{Partial\+Model\+Base}!object\+\_\+points\+\_\+filename@{object\+\_\+points\+\_\+filename}}
+\index{object\+\_\+points\+\_\+filename@{object\+\_\+points\+\_\+filename}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{object\+\_\+points\+\_\+filename}{object_points_filename}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Partial\+Model\+Base\+::object\+\_\+points\+\_\+filename}\hypertarget{classPartialModelBase_a7baf1e6dfaaf4891b6ac03cbafc7e4d2}{}\label{classPartialModelBase_a7baf1e6dfaaf4891b6ac03cbafc7e4d2}
+Accumulated points from the reconstructions \index{Partial\+Model\+Base@{Partial\+Model\+Base}!unknown\+Voxels\+In\+O\+B\+Bx@{unknown\+Voxels\+In\+O\+B\+Bx}}
+\index{unknown\+Voxels\+In\+O\+B\+Bx@{unknown\+Voxels\+In\+O\+B\+Bx}!Partial\+Model\+Base@{Partial\+Model\+Base}}
+\subsubsection[{\texorpdfstring{unknown\+Voxels\+In\+O\+B\+Bx}{unknownVoxelsInOBBx}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$long int$>$ Partial\+Model\+Base\+::unknown\+Voxels\+In\+O\+B\+Bx\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classPartialModelBase_aca8f3d799a7a13add83d4d71c218aaf6}{}\label{classPartialModelBase_aca8f3d799a7a13add83d4d71c218aaf6}
+Stadistical variables. Used for compare reconstructions\+: 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+partialmodel/partialmodelbase.\+h\item 
+partialmodel/partialmodelbase.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,57 @@
+\hypertarget{classPMVORearSideVoxel}{}\section{P\+M\+V\+O\+Rear\+Side\+Voxel Class Reference}
+\label{classPMVORearSideVoxel}\index{P\+M\+V\+O\+Rear\+Side\+Voxel@{P\+M\+V\+O\+Rear\+Side\+Voxel}}
+Inheritance diagram for P\+M\+V\+O\+Rear\+Side\+Voxel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classPMVORearSideVoxel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{classPMVORearSideVoxel_abfbe9be1007d7d7fe7434031c1d96ad1}{evaluate\+View} (\hyperlink{classViewStructure}{View\+Structure} \&v)
+\item 
+virtual bool {\bfseries init} ()\hypertarget{classPMVORearSideVoxel_a4ca7c445000eca5a6adffb697144883f}{}\label{classPMVORearSideVoxel_a4ca7c445000eca5a6adffb697144883f}
+
+\item 
+virtual float {\bfseries update\+With\+Scan} (std\+::\+\_\+\+\_\+cxx11\+::string file\+\_\+name\+\_\+scan, std\+::\+\_\+\+\_\+cxx11\+::string file\+\_\+name\+\_\+origin)\hypertarget{classPMVORearSideVoxel_a38a6f20a57c209e87f74f5b4859271f7}{}\label{classPMVORearSideVoxel_a38a6f20a57c209e87f74f5b4859271f7}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classPMVORearSideVoxel_afd9b08599913cf32cbc315cb210f4924}{ray\+Tracing\+H\+TM} (boost\+::numeric\+::ublas\+::matrix$<$ double $>$ m, \hyperlink{classEvaluationResult}{Evaluation\+Result} \&result)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{P\+M\+V\+O\+Rear\+Side\+Voxel@{P\+M\+V\+O\+Rear\+Side\+Voxel}!evaluate\+View@{evaluate\+View}}
+\index{evaluate\+View@{evaluate\+View}!P\+M\+V\+O\+Rear\+Side\+Voxel@{P\+M\+V\+O\+Rear\+Side\+Voxel}}
+\subsubsection[{\texorpdfstring{evaluate\+View(\+View\+Structure \&v)}{evaluateView(ViewStructure &v)}}]{\setlength{\rightskip}{0pt plus 5cm}int P\+M\+V\+O\+Rear\+Side\+Voxel\+::evaluate\+View (
+\begin{DoxyParamCaption}
+\item[{{\bf View\+Structure} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPMVORearSideVoxel_abfbe9be1007d7d7fe7434031c1d96ad1}{}\label{classPMVORearSideVoxel_abfbe9be1007d7d7fe7434031c1d96ad1}
+Evaluate the result of the raytracing 
+
+Reimplemented from \hyperlink{classPMVOctree_a2f35ea94079904f2e336776cec14b234}{P\+M\+V\+Octree}.
+
+\index{P\+M\+V\+O\+Rear\+Side\+Voxel@{P\+M\+V\+O\+Rear\+Side\+Voxel}!ray\+Tracing\+H\+TM@{ray\+Tracing\+H\+TM}}
+\index{ray\+Tracing\+H\+TM@{ray\+Tracing\+H\+TM}!P\+M\+V\+O\+Rear\+Side\+Voxel@{P\+M\+V\+O\+Rear\+Side\+Voxel}}
+\subsubsection[{\texorpdfstring{ray\+Tracing\+H\+T\+M(boost\+::numeric\+::ublas\+::matrix$<$ double $>$ m, Evaluation\+Result \&result)}{rayTracingHTM(boost::numeric::ublas::matrix< double > m, EvaluationResult &result)}}]{\setlength{\rightskip}{0pt plus 5cm}bool P\+M\+V\+O\+Rear\+Side\+Voxel\+::ray\+Tracing\+H\+TM (
+\begin{DoxyParamCaption}
+\item[{boost\+::numeric\+::ublas\+::matrix$<$ double $>$}]{m, }
+\item[{{\bf Evaluation\+Result} \&}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classPMVORearSideVoxel_afd9b08599913cf32cbc315cb210f4924}{}\label{classPMVORearSideVoxel_afd9b08599913cf32cbc315cb210f4924}
+Gathers rearside voxels Rear\+Side voxels are returned in result.\+unknown voxels The ray is rotated and traslated by the rotation matrix 
+
+Reimplemented from \hyperlink{classPMVOctree_a7f3ca384e40ac57446ec20d9acbefa92}{P\+M\+V\+Octree}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+partialmodel/pmvorearsidevoxel.\+h\item 
+partialmodel/pmvorearsidevoxel.\+cpp\end{DoxyCompactItemize}

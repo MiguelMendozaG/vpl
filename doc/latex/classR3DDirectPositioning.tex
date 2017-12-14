@@ -1,0 +1,69 @@
+\hypertarget{classR3DDirectPositioning}{}\section{R3\+D\+Direct\+Positioning Class Reference}
+\label{classR3DDirectPositioning}\index{R3\+D\+Direct\+Positioning@{R3\+D\+Direct\+Positioning}}
+Inheritance diagram for R3\+D\+Direct\+Positioning\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classR3DDirectPositioning}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries R3\+D\+Direct\+Positioning} (\hyperlink{classRobotSensor}{Robot\+Sensor} $\ast$rs, \hyperlink{classNBVPlanner}{N\+B\+V\+Planner} $\ast$p)\hypertarget{classR3DDirectPositioning_a9f070cad93a8f6e814e8cd9eea43dffb}{}\label{classR3DDirectPositioning_a9f070cad93a8f6e814e8cd9eea43dffb}
+
+\item 
+virtual bool {\bfseries positioning} (\hyperlink{classViewStructure}{View\+Structure} v)\hypertarget{classR3DDirectPositioning_ac0d2abf3990d2af285c0e608b55d2843}{}\label{classR3DDirectPositioning_ac0d2abf3990d2af285c0e608b55d2843}
+
+\item 
+virtual bool {\bfseries update\+Model} (std\+::string scan\+\_\+name, std\+::string origin\+\_\+name)\hypertarget{classR3DDirectPositioning_a09b8d4ae2f3a3d1360590dac43fcc72e}{}\label{classR3DDirectPositioning_a09b8d4ae2f3a3d1360590dac43fcc72e}
+
+\item 
+virtual bool \hyperlink{classR3DDirectPositioning_a8688c3962bf886cf99cd04ff0b0ee7a9}{init} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classR3DDirectPositioning_a328fd507b2d871268e8d3534e0cc94af}{ref\+\_\+obj\+\_\+pts\+\_\+fn}
+\item 
+std\+::string \hyperlink{classR3DDirectPositioning_a156083c077bff5fa575d1f436108d85d}{tar\+\_\+pts\+\_\+fn}
+\item 
+std\+::string \hyperlink{classR3DDirectPositioning_a5b0188ce75a41eb131151b87d5838222}{reconstruction\+\_\+perc\+\_\+fn}
+\item 
+double \hyperlink{classR3DDirectPositioning_a1649f58b4c24dca72b16e8e76e53180a}{gap\+\_\+points}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{R3\+D\+Direct\+Positioning@{R3\+D\+Direct\+Positioning}!init@{init}}
+\index{init@{init}!R3\+D\+Direct\+Positioning@{R3\+D\+Direct\+Positioning}}
+\subsubsection[{\texorpdfstring{init()}{init()}}]{\setlength{\rightskip}{0pt plus 5cm}bool R3\+D\+Direct\+Positioning\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classR3DDirectPositioning_a8688c3962bf886cf99cd04ff0b0ee7a9}{}\label{classR3DDirectPositioning_a8688c3962bf886cf99cd04ff0b0ee7a9}
+Initialices the N\+BV problem 
+
+Reimplemented from \hyperlink{classReconstructor3D_a7ac7a63de2bfa609b1b0d15cde33f139}{Reconstructor3D}.
+
+
+
+\subsection{Member Data Documentation}
+\index{R3\+D\+Direct\+Positioning@{R3\+D\+Direct\+Positioning}!gap\+\_\+points@{gap\+\_\+points}}
+\index{gap\+\_\+points@{gap\+\_\+points}!R3\+D\+Direct\+Positioning@{R3\+D\+Direct\+Positioning}}
+\subsubsection[{\texorpdfstring{gap\+\_\+points}{gap_points}}]{\setlength{\rightskip}{0pt plus 5cm}double R3\+D\+Direct\+Positioning\+::gap\+\_\+points}\hypertarget{classR3DDirectPositioning_a1649f58b4c24dca72b16e8e76e53180a}{}\label{classR3DDirectPositioning_a1649f58b4c24dca72b16e8e76e53180a}
+gap for determinig if two points match. Recosntruction percentage calculation \index{R3\+D\+Direct\+Positioning@{R3\+D\+Direct\+Positioning}!reconstruction\+\_\+perc\+\_\+fn@{reconstruction\+\_\+perc\+\_\+fn}}
+\index{reconstruction\+\_\+perc\+\_\+fn@{reconstruction\+\_\+perc\+\_\+fn}!R3\+D\+Direct\+Positioning@{R3\+D\+Direct\+Positioning}}
+\subsubsection[{\texorpdfstring{reconstruction\+\_\+perc\+\_\+fn}{reconstruction_perc_fn}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string R3\+D\+Direct\+Positioning\+::reconstruction\+\_\+perc\+\_\+fn}\hypertarget{classR3DDirectPositioning_a5b0188ce75a41eb131151b87d5838222}{}\label{classR3DDirectPositioning_a5b0188ce75a41eb131151b87d5838222}
+Reconstruction percentage filename \index{R3\+D\+Direct\+Positioning@{R3\+D\+Direct\+Positioning}!ref\+\_\+obj\+\_\+pts\+\_\+fn@{ref\+\_\+obj\+\_\+pts\+\_\+fn}}
+\index{ref\+\_\+obj\+\_\+pts\+\_\+fn@{ref\+\_\+obj\+\_\+pts\+\_\+fn}!R3\+D\+Direct\+Positioning@{R3\+D\+Direct\+Positioning}}
+\subsubsection[{\texorpdfstring{ref\+\_\+obj\+\_\+pts\+\_\+fn}{ref_obj_pts_fn}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string R3\+D\+Direct\+Positioning\+::ref\+\_\+obj\+\_\+pts\+\_\+fn}\hypertarget{classR3DDirectPositioning_a328fd507b2d871268e8d3534e0cc94af}{}\label{classR3DDirectPositioning_a328fd507b2d871268e8d3534e0cc94af}
+Reference object points filename. The points are used to compare the percentage of reconstruction \index{R3\+D\+Direct\+Positioning@{R3\+D\+Direct\+Positioning}!tar\+\_\+pts\+\_\+fn@{tar\+\_\+pts\+\_\+fn}}
+\index{tar\+\_\+pts\+\_\+fn@{tar\+\_\+pts\+\_\+fn}!R3\+D\+Direct\+Positioning@{R3\+D\+Direct\+Positioning}}
+\subsubsection[{\texorpdfstring{tar\+\_\+pts\+\_\+fn}{tar_pts_fn}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string R3\+D\+Direct\+Positioning\+::tar\+\_\+pts\+\_\+fn}\hypertarget{classR3DDirectPositioning_a156083c077bff5fa575d1f436108d85d}{}\label{classR3DDirectPositioning_a156083c077bff5fa575d1f436108d85d}
+Target points filename (Accumulated points from the reconstruction). The points are used to compare the percentage of reconstruction 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+viewplanning/r3ddirectpositioning.\+h\item 
+viewplanning/r3ddirectpositioning.\+cpp\end{DoxyCompactItemize}

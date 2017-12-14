@@ -1,0 +1,61 @@
+\hypertarget{classReconstructor3DRobot}{}\section{Reconstructor3\+D\+Robot Class Reference}
+\label{classReconstructor3DRobot}\index{Reconstructor3\+D\+Robot@{Reconstructor3\+D\+Robot}}
+Inheritance diagram for Reconstructor3\+D\+Robot\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classReconstructor3DRobot}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Reconstructor3\+D\+Robot} (\hyperlink{classRobotSensor}{Robot\+Sensor} $\ast$rs, \hyperlink{classNBVPlanner}{N\+B\+V\+Planner} $\ast$p)\hypertarget{classReconstructor3DRobot_ab55aad2f90ffbb721ea928966097599b}{}\label{classReconstructor3DRobot_ab55aad2f90ffbb721ea928966097599b}
+
+\item 
+virtual bool {\bfseries positioning} (\hyperlink{classViewStructure}{View\+Structure} v)\hypertarget{classReconstructor3DRobot_ade439094908d055af59c03d604649f02}{}\label{classReconstructor3DRobot_ade439094908d055af59c03d604649f02}
+
+\item 
+virtual bool \hyperlink{classReconstructor3DRobot_aa30cad4bf09b5d58cac1e9b751e7842b}{take\+Scan} (std\+::string \&scan\+\_\+name, std\+::string \&origin\+\_\+name)
+\item 
+virtual bool \hyperlink{classReconstructor3DRobot_abd43d6ee1bb11d843db1d39b7498b1fc}{update\+Model} (std\+::string scan\+\_\+name, std\+::string origin\+\_\+name)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{Reconstructor3\+D\+Robot@{Reconstructor3\+D\+Robot}!take\+Scan@{take\+Scan}}
+\index{take\+Scan@{take\+Scan}!Reconstructor3\+D\+Robot@{Reconstructor3\+D\+Robot}}
+\subsubsection[{\texorpdfstring{take\+Scan(std\+::string \&scan\+\_\+name, std\+::string \&origin\+\_\+name)}{takeScan(std::string &scan_name, std::string &origin_name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Reconstructor3\+D\+Robot\+::take\+Scan (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{scan\+\_\+name, }
+\item[{std\+::string \&}]{origin\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classReconstructor3DRobot_aa30cad4bf09b5d58cac1e9b751e7842b}{}\label{classReconstructor3DRobot_aa30cad4bf09b5d58cac1e9b751e7842b}
+Performs a scan and returns the name of the scan file and the origin file 
+
+Reimplemented from \hyperlink{classReconstructor3D_ac4433ce176af00bd57a79d67d0fc4a14}{Reconstructor3D}.
+
+\index{Reconstructor3\+D\+Robot@{Reconstructor3\+D\+Robot}!update\+Model@{update\+Model}}
+\index{update\+Model@{update\+Model}!Reconstructor3\+D\+Robot@{Reconstructor3\+D\+Robot}}
+\subsubsection[{\texorpdfstring{update\+Model(std\+::string scan\+\_\+name, std\+::string origin\+\_\+name)}{updateModel(std::string scan_name, std::string origin_name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Reconstructor3\+D\+Robot\+::update\+Model (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{scan\+\_\+name, }
+\item[{std\+::string}]{origin\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classReconstructor3DRobot_abd43d6ee1bb11d843db1d39b7498b1fc}{}\label{classReconstructor3DRobot_abd43d6ee1bb11d843db1d39b7498b1fc}
+convert to P\+CD the initial map
+
+Register the initial map
+
+replace accumulated points
+
+Transform the position of the robot given the computed registration matrix 
+
+Reimplemented from \hyperlink{classReconstructor3D}{Reconstructor3D}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+viewplanning/r3ddirectpositioning.\+h\item 
+viewplanning/r3ddirectpositioning.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,148 @@
+\hypertarget{classNBVPlanner}{}\section{N\+B\+V\+Planner Class Reference}
+\label{classNBVPlanner}\index{N\+B\+V\+Planner@{N\+B\+V\+Planner}}
+
+
+{\ttfamily \#include $<$nbvplanner.\+h$>$}
+
+Inheritance diagram for N\+B\+V\+Planner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classNBVPlanner}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries N\+B\+V\+Planner} (\hyperlink{classRobotSensor}{Robot\+Sensor} $\ast$rs, \hyperlink{classPartialModelBase}{Partial\+Model\+Base} $\ast$pm)\hypertarget{classNBVPlanner_afeaf82f7d6ee61346e796e26cd4730bb}{}\label{classNBVPlanner_afeaf82f7d6ee61346e796e26cd4730bb}
+
+\item 
+virtual bool {\bfseries init} ()\hypertarget{classNBVPlanner_aee188426e3324afa0875c7b030370d73}{}\label{classNBVPlanner_aee188426e3324afa0875c7b030370d73}
+
+\item 
+void {\bfseries get\+Solution\+Controls} (std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&controls, double \&delta\+\_\+t)\hypertarget{classNBVPlanner_a674fb1af1257cd3ce5aa0508f5c53ff0}{}\label{classNBVPlanner_a674fb1af1257cd3ce5aa0508f5c53ff0}
+
+\item 
+void {\bfseries get\+Solution\+Path} (std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&path)\hypertarget{classNBVPlanner_a68515cd88fcadd94e51c625be381ff75}{}\label{classNBVPlanner_a68515cd88fcadd94e51c625be381ff75}
+
+\item 
+void {\bfseries set\+Config\+Folder} (std\+::string folder)\hypertarget{classNBVPlanner_a8c8809f55beee71c693c3da15fc92b33}{}\label{classNBVPlanner_a8c8809f55beee71c693c3da15fc92b33}
+
+\item 
+void {\bfseries set\+Data\+Folder} (std\+::string folder)\hypertarget{classNBVPlanner_abaf6c50fd3e63cdab95703d73aeb13fe}{}\label{classNBVPlanner_abaf6c50fd3e63cdab95703d73aeb13fe}
+
+\item 
+virtual float \hyperlink{classNBVPlanner_a97e09f3acac040f3bd1bfc990fc1fce4}{update\+With\+Poin\+Cloud} (std\+::string pc\+\_\+file, std\+::string origin\+\_\+file)
+\item 
+virtual bool \hyperlink{classNBVPlanner_a448567c9d5cec319c5df5efdb0d5479c}{plan\+N\+BV} (\hyperlink{classViewStructure}{View\+Structure} \&v)=0
+\item 
+virtual bool {\bfseries save\+Partial\+Model} (std\+::string file\+\_\+name)\hypertarget{classNBVPlanner_a452136c3c1637976cbf2996d6006e27a}{}\label{classNBVPlanner_a452136c3c1637976cbf2996d6006e27a}
+
+\item 
+void {\bfseries finish\+Planning} ()\hypertarget{classNBVPlanner_a4cf0672ba39ae9dc42e64230d744a4bd}{}\label{classNBVPlanner_a4cf0672ba39ae9dc42e64230d744a4bd}
+
+\item 
+bool \hyperlink{classNBVPlanner_abf09392a8294aa537c7adda5f302d2e7}{save\+Planner\+Data} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classNBVPlanner_afa873ac12ea806f933b96d2ffc71b49e}{std\+\_\+v\+\_\+time}\hypertarget{classNBVPlanner_afa873ac12ea806f933b96d2ffc71b49e}{}\label{classNBVPlanner_afa873ac12ea806f933b96d2ffc71b49e}
+
+\begin{DoxyCompactList}\small\item\em statistical variables \end{DoxyCompactList}\item 
+float {\bfseries std\+\_\+mp\+\_\+time}\hypertarget{classNBVPlanner_ae785f31f58caa631c1cbce54598d427a}{}\label{classNBVPlanner_ae785f31f58caa631c1cbce54598d427a}
+
+\item 
+float {\bfseries std\+\_\+distance}\hypertarget{classNBVPlanner_a2e71279cedd2afb6553ac253308e1a6b}{}\label{classNBVPlanner_a2e71279cedd2afb6553ac253308e1a6b}
+
+\item 
+float {\bfseries std\+\_\+accu\+\_\+distance}\hypertarget{classNBVPlanner_af3eb12dbbf9c649bb8d8795640b9f358}{}\label{classNBVPlanner_af3eb12dbbf9c649bb8d8795640b9f358}
+
+\item 
+float {\bfseries std\+\_\+utility}\hypertarget{classNBVPlanner_a3d310ebb2eb5b172be1313d89f011b7c}{}\label{classNBVPlanner_a3d310ebb2eb5b172be1313d89f011b7c}
+
+\item 
+float {\bfseries std\+\_\+surface\+\_\+uf}\hypertarget{classNBVPlanner_a4741a474d0f13a079dc4e65263dba746}{}\label{classNBVPlanner_a4741a474d0f13a079dc4e65263dba746}
+
+\item 
+float {\bfseries std\+\_\+distance\+\_\+uf}\hypertarget{classNBVPlanner_a523a5928df4a3cdd7dc0f408d6712c2b}{}\label{classNBVPlanner_a523a5928df4a3cdd7dc0f408d6712c2b}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRobotSensor}{Robot\+Sensor} $\ast$ {\bfseries robot\+With\+Sensor}\hypertarget{classNBVPlanner_a6fec8a79d56dc35f51905ce2abeff0c6}{}\label{classNBVPlanner_a6fec8a79d56dc35f51905ce2abeff0c6}
+
+\item 
+\hyperlink{classPartialModelBase}{Partial\+Model\+Base} $\ast$ {\bfseries partial\+Model}\hypertarget{classNBVPlanner_a4e0ce42f393fed4546eee0249c71c7d4}{}\label{classNBVPlanner_a4e0ce42f393fed4546eee0249c71c7d4}
+
+\item 
+\hyperlink{classViewStructure}{View\+Structure} {\bfseries N\+BV}\hypertarget{classNBVPlanner_ac985d89444c084511403e5f5378dc125}{}\label{classNBVPlanner_ac985d89444c084511403e5f5378dc125}
+
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries solution\+Controls}\hypertarget{classNBVPlanner_acebd542969897418dbdd03bd41e38dac}{}\label{classNBVPlanner_acebd542969897418dbdd03bd41e38dac}
+
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries solution\+Path}\hypertarget{classNBVPlanner_acdc8f98e9d26646edec5c23fe391e980}{}\label{classNBVPlanner_acdc8f98e9d26646edec5c23fe391e980}
+
+\item 
+double {\bfseries planner\+DeltaT}\hypertarget{classNBVPlanner_a1ad75582b63a705ef2014ef6e6f550a2}{}\label{classNBVPlanner_a1ad75582b63a705ef2014ef6e6f550a2}
+
+\item 
+long int {\bfseries rrt\+Nodes}\hypertarget{classNBVPlanner_a824b421ac2e61a6f4636890198007f76}{}\label{classNBVPlanner_a824b421ac2e61a6f4636890198007f76}
+
+\item 
+std\+::string {\bfseries config\+Folder}\hypertarget{classNBVPlanner_a0d891b635bf4857e4a8cf6553d492b4b}{}\label{classNBVPlanner_a0d891b635bf4857e4a8cf6553d492b4b}
+
+\item 
+std\+::string {\bfseries data\+Folder}\hypertarget{classNBVPlanner_a12861032ba435a8bf036eaa9ca59584a}{}\label{classNBVPlanner_a12861032ba435a8bf036eaa9ca59584a}
+
+\item 
+std\+::vector$<$ float $>$ \hyperlink{classNBVPlanner_a00c0db5c287885f94ef0c21d79a4df4a}{vision\+Times}\hypertarget{classNBVPlanner_a00c0db5c287885f94ef0c21d79a4df4a}{}\label{classNBVPlanner_a00c0db5c287885f94ef0c21d79a4df4a}
+
+\begin{DoxyCompactList}\small\item\em statistical variables \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ {\bfseries motion\+P\+Times}\hypertarget{classNBVPlanner_aa4bca56e281856c30e4b251d5dd69235}{}\label{classNBVPlanner_aa4bca56e281856c30e4b251d5dd69235}
+
+\item 
+std\+::vector$<$ double $>$ {\bfseries distances\+\_\+per\+\_\+it}\hypertarget{classNBVPlanner_aca3c5b4b9beabea33f8a58e5306aa5ee}{}\label{classNBVPlanner_aca3c5b4b9beabea33f8a58e5306aa5ee}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Planner base class 
+
+\subsection{Member Function Documentation}
+\index{N\+B\+V\+Planner@{N\+B\+V\+Planner}!plan\+N\+BV@{plan\+N\+BV}}
+\index{plan\+N\+BV@{plan\+N\+BV}!N\+B\+V\+Planner@{N\+B\+V\+Planner}}
+\subsubsection[{\texorpdfstring{plan\+N\+B\+V(\+View\+Structure \&v)=0}{planNBV(ViewStructure &v)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool N\+B\+V\+Planner\+::plan\+N\+BV (
+\begin{DoxyParamCaption}
+\item[{{\bf View\+Structure} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classNBVPlanner_a448567c9d5cec319c5df5efdb0d5479c}{}\label{classNBVPlanner_a448567c9d5cec319c5df5efdb0d5479c}
+Main function, it computes the N\+BV 
+
+Implemented in \hyperlink{classWorkspaceNBVPlanner_ad5655e5c1c45a017d4c598fd2632ed49}{Workspace\+N\+B\+V\+Planner}.
+
+\index{N\+B\+V\+Planner@{N\+B\+V\+Planner}!save\+Planner\+Data@{save\+Planner\+Data}}
+\index{save\+Planner\+Data@{save\+Planner\+Data}!N\+B\+V\+Planner@{N\+B\+V\+Planner}}
+\subsubsection[{\texorpdfstring{save\+Planner\+Data()}{savePlannerData()}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+B\+V\+Planner\+::save\+Planner\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNBVPlanner_abf09392a8294aa537c7adda5f302d2e7}{}\label{classNBVPlanner_abf09392a8294aa537c7adda5f302d2e7}
+Guardar datos del R\+R\+T\+N\+BV
+
+Save Obstacle information \index{N\+B\+V\+Planner@{N\+B\+V\+Planner}!update\+With\+Poin\+Cloud@{update\+With\+Poin\+Cloud}}
+\index{update\+With\+Poin\+Cloud@{update\+With\+Poin\+Cloud}!N\+B\+V\+Planner@{N\+B\+V\+Planner}}
+\subsubsection[{\texorpdfstring{update\+With\+Poin\+Cloud(std\+::string pc\+\_\+file, std\+::string origin\+\_\+file)}{updateWithPoinCloud(std::string pc_file, std::string origin_file)}}]{\setlength{\rightskip}{0pt plus 5cm}float N\+B\+V\+Planner\+::update\+With\+Poin\+Cloud (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{pc\+\_\+file, }
+\item[{std\+::string}]{origin\+\_\+file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classNBVPlanner_a97e09f3acac040f3bd1bfc990fc1fce4}{}\label{classNBVPlanner_a97e09f3acac040f3bd1bfc990fc1fce4}
+The planner updates its internal representation for example octree 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+viewplanning/nbvplanner.\+h\item 
+viewplanning/nbvplanner.\+cpp\end{DoxyCompactItemize}
