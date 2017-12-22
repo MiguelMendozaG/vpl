@@ -58,13 +58,11 @@ viewplanning/CMakeFiles/ViewPlanning.dir/nbvplanner.cpp.o
  /usr/include/eigen3/Eigen/src/Core/ArrayBase.h
  /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h
  /usr/include/eigen3/Eigen/src/Core/Assign.h
- /usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h
  /usr/include/eigen3/Eigen/src/Core/Assign_MKL.h
  /usr/include/eigen3/Eigen/src/Core/BandMatrix.h
  /usr/include/eigen3/Eigen/src/Core/Block.h
  /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h
  /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h
- /usr/include/eigen3/Eigen/src/Core/CoreEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/CoreIterators.h
  /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h
  /usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h
@@ -83,7 +81,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/nbvplanner.cpp.o
  /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h
  /usr/include/eigen3/Eigen/src/Core/IO.h
- /usr/include/eigen3/Eigen/src/Core/Inverse.h
  /usr/include/eigen3/Eigen/src/Core/Map.h
  /usr/include/eigen3/Eigen/src/Core/MapBase.h
  /usr/include/eigen3/Eigen/src/Core/MathFunctions.h
@@ -94,8 +91,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/nbvplanner.cpp.o
  /usr/include/eigen3/Eigen/src/Core/NumTraits.h
  /usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h
  /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h
- /usr/include/eigen3/Eigen/src/Core/Product.h
- /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/Random.h
  /usr/include/eigen3/Eigen/src/Core/Redux.h
  /usr/include/eigen3/Eigen/src/Core/Ref.h
@@ -105,10 +100,7 @@ viewplanning/CMakeFiles/ViewPlanning.dir/nbvplanner.cpp.o
  /usr/include/eigen3/Eigen/src/Core/Select.h
  /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h
  /usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h
- /usr/include/eigen3/Eigen/src/Core/Solve.h
  /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h
- /usr/include/eigen3/Eigen/src/Core/SolverBase.h
- /usr/include/eigen3/Eigen/src/Core/SpecialFunctions.h
  /usr/include/eigen3/Eigen/src/Core/StableNorm.h
  /usr/include/eigen3/Eigen/src/Core/Stride.h
  /usr/include/eigen3/Eigen/src/Core/Swap.h
@@ -118,28 +110,14 @@ viewplanning/CMakeFiles/ViewPlanning.dir/nbvplanner.cpp.o
  /usr/include/eigen3/Eigen/src/Core/VectorBlock.h
  /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h
  /usr/include/eigen3/Eigen/src/Core/Visitor.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h
- /usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/StlFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
@@ -212,7 +190,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/nbvplanner.cpp.o
  /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h
  /usr/include/eigen3/Eigen/src/LU/Determinant.h
  /usr/include/eigen3/Eigen/src/LU/FullPivLU.h
- /usr/include/eigen3/Eigen/src/LU/InverseImpl.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU_MKL.h
  /usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h
@@ -221,10 +198,8 @@ viewplanning/CMakeFiles/ViewPlanning.dir/nbvplanner.cpp.o
  /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdDeque.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
@@ -476,13 +451,11 @@ viewplanning/CMakeFiles/ViewPlanning.dir/r3ddirectpositioning.cpp.o
  /usr/include/eigen3/Eigen/src/Core/ArrayBase.h
  /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h
  /usr/include/eigen3/Eigen/src/Core/Assign.h
- /usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h
  /usr/include/eigen3/Eigen/src/Core/Assign_MKL.h
  /usr/include/eigen3/Eigen/src/Core/BandMatrix.h
  /usr/include/eigen3/Eigen/src/Core/Block.h
  /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h
  /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h
- /usr/include/eigen3/Eigen/src/Core/CoreEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/CoreIterators.h
  /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h
  /usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h
@@ -501,7 +474,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/r3ddirectpositioning.cpp.o
  /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h
  /usr/include/eigen3/Eigen/src/Core/IO.h
- /usr/include/eigen3/Eigen/src/Core/Inverse.h
  /usr/include/eigen3/Eigen/src/Core/Map.h
  /usr/include/eigen3/Eigen/src/Core/MapBase.h
  /usr/include/eigen3/Eigen/src/Core/MathFunctions.h
@@ -512,8 +484,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/r3ddirectpositioning.cpp.o
  /usr/include/eigen3/Eigen/src/Core/NumTraits.h
  /usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h
  /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h
- /usr/include/eigen3/Eigen/src/Core/Product.h
- /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/Random.h
  /usr/include/eigen3/Eigen/src/Core/Redux.h
  /usr/include/eigen3/Eigen/src/Core/Ref.h
@@ -523,10 +493,7 @@ viewplanning/CMakeFiles/ViewPlanning.dir/r3ddirectpositioning.cpp.o
  /usr/include/eigen3/Eigen/src/Core/Select.h
  /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h
  /usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h
- /usr/include/eigen3/Eigen/src/Core/Solve.h
  /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h
- /usr/include/eigen3/Eigen/src/Core/SolverBase.h
- /usr/include/eigen3/Eigen/src/Core/SpecialFunctions.h
  /usr/include/eigen3/Eigen/src/Core/StableNorm.h
  /usr/include/eigen3/Eigen/src/Core/Stride.h
  /usr/include/eigen3/Eigen/src/Core/Swap.h
@@ -536,28 +503,14 @@ viewplanning/CMakeFiles/ViewPlanning.dir/r3ddirectpositioning.cpp.o
  /usr/include/eigen3/Eigen/src/Core/VectorBlock.h
  /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h
  /usr/include/eigen3/Eigen/src/Core/Visitor.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h
- /usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/StlFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
@@ -630,7 +583,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/r3ddirectpositioning.cpp.o
  /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h
  /usr/include/eigen3/Eigen/src/LU/Determinant.h
  /usr/include/eigen3/Eigen/src/LU/FullPivLU.h
- /usr/include/eigen3/Eigen/src/LU/InverseImpl.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU_MKL.h
  /usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h
@@ -639,10 +591,8 @@ viewplanning/CMakeFiles/ViewPlanning.dir/r3ddirectpositioning.cpp.o
  /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdDeque.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
@@ -868,13 +818,11 @@ viewplanning/CMakeFiles/ViewPlanning.dir/rangesensor.cpp.o
  /usr/include/eigen3/Eigen/src/Core/ArrayBase.h
  /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h
  /usr/include/eigen3/Eigen/src/Core/Assign.h
- /usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h
  /usr/include/eigen3/Eigen/src/Core/Assign_MKL.h
  /usr/include/eigen3/Eigen/src/Core/BandMatrix.h
  /usr/include/eigen3/Eigen/src/Core/Block.h
  /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h
  /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h
- /usr/include/eigen3/Eigen/src/Core/CoreEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/CoreIterators.h
  /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h
  /usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h
@@ -893,7 +841,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/rangesensor.cpp.o
  /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h
  /usr/include/eigen3/Eigen/src/Core/IO.h
- /usr/include/eigen3/Eigen/src/Core/Inverse.h
  /usr/include/eigen3/Eigen/src/Core/Map.h
  /usr/include/eigen3/Eigen/src/Core/MapBase.h
  /usr/include/eigen3/Eigen/src/Core/MathFunctions.h
@@ -904,8 +851,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/rangesensor.cpp.o
  /usr/include/eigen3/Eigen/src/Core/NumTraits.h
  /usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h
  /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h
- /usr/include/eigen3/Eigen/src/Core/Product.h
- /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/Random.h
  /usr/include/eigen3/Eigen/src/Core/Redux.h
  /usr/include/eigen3/Eigen/src/Core/Ref.h
@@ -915,10 +860,7 @@ viewplanning/CMakeFiles/ViewPlanning.dir/rangesensor.cpp.o
  /usr/include/eigen3/Eigen/src/Core/Select.h
  /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h
  /usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h
- /usr/include/eigen3/Eigen/src/Core/Solve.h
  /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h
- /usr/include/eigen3/Eigen/src/Core/SolverBase.h
- /usr/include/eigen3/Eigen/src/Core/SpecialFunctions.h
  /usr/include/eigen3/Eigen/src/Core/StableNorm.h
  /usr/include/eigen3/Eigen/src/Core/Stride.h
  /usr/include/eigen3/Eigen/src/Core/Swap.h
@@ -928,28 +870,14 @@ viewplanning/CMakeFiles/ViewPlanning.dir/rangesensor.cpp.o
  /usr/include/eigen3/Eigen/src/Core/VectorBlock.h
  /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h
  /usr/include/eigen3/Eigen/src/Core/Visitor.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h
- /usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/StlFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
@@ -1022,7 +950,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/rangesensor.cpp.o
  /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h
  /usr/include/eigen3/Eigen/src/LU/Determinant.h
  /usr/include/eigen3/Eigen/src/LU/FullPivLU.h
- /usr/include/eigen3/Eigen/src/LU/InverseImpl.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU_MKL.h
  /usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h
@@ -1031,10 +958,8 @@ viewplanning/CMakeFiles/ViewPlanning.dir/rangesensor.cpp.o
  /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdDeque.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
@@ -1242,13 +1167,11 @@ viewplanning/CMakeFiles/ViewPlanning.dir/reconstructor3d.cpp.o
  /usr/include/eigen3/Eigen/src/Core/ArrayBase.h
  /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h
  /usr/include/eigen3/Eigen/src/Core/Assign.h
- /usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h
  /usr/include/eigen3/Eigen/src/Core/Assign_MKL.h
  /usr/include/eigen3/Eigen/src/Core/BandMatrix.h
  /usr/include/eigen3/Eigen/src/Core/Block.h
  /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h
  /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h
- /usr/include/eigen3/Eigen/src/Core/CoreEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/CoreIterators.h
  /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h
  /usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h
@@ -1267,7 +1190,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/reconstructor3d.cpp.o
  /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h
  /usr/include/eigen3/Eigen/src/Core/IO.h
- /usr/include/eigen3/Eigen/src/Core/Inverse.h
  /usr/include/eigen3/Eigen/src/Core/Map.h
  /usr/include/eigen3/Eigen/src/Core/MapBase.h
  /usr/include/eigen3/Eigen/src/Core/MathFunctions.h
@@ -1278,8 +1200,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/reconstructor3d.cpp.o
  /usr/include/eigen3/Eigen/src/Core/NumTraits.h
  /usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h
  /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h
- /usr/include/eigen3/Eigen/src/Core/Product.h
- /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/Random.h
  /usr/include/eigen3/Eigen/src/Core/Redux.h
  /usr/include/eigen3/Eigen/src/Core/Ref.h
@@ -1289,10 +1209,7 @@ viewplanning/CMakeFiles/ViewPlanning.dir/reconstructor3d.cpp.o
  /usr/include/eigen3/Eigen/src/Core/Select.h
  /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h
  /usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h
- /usr/include/eigen3/Eigen/src/Core/Solve.h
  /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h
- /usr/include/eigen3/Eigen/src/Core/SolverBase.h
- /usr/include/eigen3/Eigen/src/Core/SpecialFunctions.h
  /usr/include/eigen3/Eigen/src/Core/StableNorm.h
  /usr/include/eigen3/Eigen/src/Core/Stride.h
  /usr/include/eigen3/Eigen/src/Core/Swap.h
@@ -1302,28 +1219,14 @@ viewplanning/CMakeFiles/ViewPlanning.dir/reconstructor3d.cpp.o
  /usr/include/eigen3/Eigen/src/Core/VectorBlock.h
  /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h
  /usr/include/eigen3/Eigen/src/Core/Visitor.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h
- /usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/StlFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
@@ -1396,7 +1299,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/reconstructor3d.cpp.o
  /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h
  /usr/include/eigen3/Eigen/src/LU/Determinant.h
  /usr/include/eigen3/Eigen/src/LU/FullPivLU.h
- /usr/include/eigen3/Eigen/src/LU/InverseImpl.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU_MKL.h
  /usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h
@@ -1405,10 +1307,8 @@ viewplanning/CMakeFiles/ViewPlanning.dir/reconstructor3d.cpp.o
  /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdDeque.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
@@ -1638,13 +1538,11 @@ viewplanning/CMakeFiles/ViewPlanning.dir/robotsensor.cpp.o
  /usr/include/eigen3/Eigen/src/Core/ArrayBase.h
  /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h
  /usr/include/eigen3/Eigen/src/Core/Assign.h
- /usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h
  /usr/include/eigen3/Eigen/src/Core/Assign_MKL.h
  /usr/include/eigen3/Eigen/src/Core/BandMatrix.h
  /usr/include/eigen3/Eigen/src/Core/Block.h
  /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h
  /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h
- /usr/include/eigen3/Eigen/src/Core/CoreEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/CoreIterators.h
  /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h
  /usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h
@@ -1663,7 +1561,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/robotsensor.cpp.o
  /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h
  /usr/include/eigen3/Eigen/src/Core/IO.h
- /usr/include/eigen3/Eigen/src/Core/Inverse.h
  /usr/include/eigen3/Eigen/src/Core/Map.h
  /usr/include/eigen3/Eigen/src/Core/MapBase.h
  /usr/include/eigen3/Eigen/src/Core/MathFunctions.h
@@ -1674,8 +1571,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/robotsensor.cpp.o
  /usr/include/eigen3/Eigen/src/Core/NumTraits.h
  /usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h
  /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h
- /usr/include/eigen3/Eigen/src/Core/Product.h
- /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/Random.h
  /usr/include/eigen3/Eigen/src/Core/Redux.h
  /usr/include/eigen3/Eigen/src/Core/Ref.h
@@ -1685,10 +1580,7 @@ viewplanning/CMakeFiles/ViewPlanning.dir/robotsensor.cpp.o
  /usr/include/eigen3/Eigen/src/Core/Select.h
  /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h
  /usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h
- /usr/include/eigen3/Eigen/src/Core/Solve.h
  /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h
- /usr/include/eigen3/Eigen/src/Core/SolverBase.h
- /usr/include/eigen3/Eigen/src/Core/SpecialFunctions.h
  /usr/include/eigen3/Eigen/src/Core/StableNorm.h
  /usr/include/eigen3/Eigen/src/Core/Stride.h
  /usr/include/eigen3/Eigen/src/Core/Swap.h
@@ -1698,28 +1590,14 @@ viewplanning/CMakeFiles/ViewPlanning.dir/robotsensor.cpp.o
  /usr/include/eigen3/Eigen/src/Core/VectorBlock.h
  /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h
  /usr/include/eigen3/Eigen/src/Core/Visitor.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h
- /usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/StlFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
@@ -1792,7 +1670,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/robotsensor.cpp.o
  /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h
  /usr/include/eigen3/Eigen/src/LU/Determinant.h
  /usr/include/eigen3/Eigen/src/LU/FullPivLU.h
- /usr/include/eigen3/Eigen/src/LU/InverseImpl.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU_MKL.h
  /usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h
@@ -1801,10 +1678,8 @@ viewplanning/CMakeFiles/ViewPlanning.dir/robotsensor.cpp.o
  /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdDeque.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
@@ -2035,13 +1910,11 @@ viewplanning/CMakeFiles/ViewPlanning.dir/robsennotransformation.cpp.o
  /usr/include/eigen3/Eigen/src/Core/ArrayBase.h
  /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h
  /usr/include/eigen3/Eigen/src/Core/Assign.h
- /usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h
  /usr/include/eigen3/Eigen/src/Core/Assign_MKL.h
  /usr/include/eigen3/Eigen/src/Core/BandMatrix.h
  /usr/include/eigen3/Eigen/src/Core/Block.h
  /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h
  /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h
- /usr/include/eigen3/Eigen/src/Core/CoreEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/CoreIterators.h
  /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h
  /usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h
@@ -2060,7 +1933,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/robsennotransformation.cpp.o
  /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h
  /usr/include/eigen3/Eigen/src/Core/IO.h
- /usr/include/eigen3/Eigen/src/Core/Inverse.h
  /usr/include/eigen3/Eigen/src/Core/Map.h
  /usr/include/eigen3/Eigen/src/Core/MapBase.h
  /usr/include/eigen3/Eigen/src/Core/MathFunctions.h
@@ -2071,8 +1943,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/robsennotransformation.cpp.o
  /usr/include/eigen3/Eigen/src/Core/NumTraits.h
  /usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h
  /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h
- /usr/include/eigen3/Eigen/src/Core/Product.h
- /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/Random.h
  /usr/include/eigen3/Eigen/src/Core/Redux.h
  /usr/include/eigen3/Eigen/src/Core/Ref.h
@@ -2082,10 +1952,7 @@ viewplanning/CMakeFiles/ViewPlanning.dir/robsennotransformation.cpp.o
  /usr/include/eigen3/Eigen/src/Core/Select.h
  /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h
  /usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h
- /usr/include/eigen3/Eigen/src/Core/Solve.h
  /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h
- /usr/include/eigen3/Eigen/src/Core/SolverBase.h
- /usr/include/eigen3/Eigen/src/Core/SpecialFunctions.h
  /usr/include/eigen3/Eigen/src/Core/StableNorm.h
  /usr/include/eigen3/Eigen/src/Core/Stride.h
  /usr/include/eigen3/Eigen/src/Core/Swap.h
@@ -2095,28 +1962,14 @@ viewplanning/CMakeFiles/ViewPlanning.dir/robsennotransformation.cpp.o
  /usr/include/eigen3/Eigen/src/Core/VectorBlock.h
  /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h
  /usr/include/eigen3/Eigen/src/Core/Visitor.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h
- /usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/StlFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
@@ -2189,7 +2042,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/robsennotransformation.cpp.o
  /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h
  /usr/include/eigen3/Eigen/src/LU/Determinant.h
  /usr/include/eigen3/Eigen/src/LU/FullPivLU.h
- /usr/include/eigen3/Eigen/src/LU/InverseImpl.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU_MKL.h
  /usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h
@@ -2198,10 +2050,8 @@ viewplanning/CMakeFiles/ViewPlanning.dir/robsennotransformation.cpp.o
  /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdDeque.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
@@ -2454,13 +2304,11 @@ viewplanning/CMakeFiles/ViewPlanning.dir/training_planner.cpp.o
  /usr/include/eigen3/Eigen/src/Core/ArrayBase.h
  /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h
  /usr/include/eigen3/Eigen/src/Core/Assign.h
- /usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h
  /usr/include/eigen3/Eigen/src/Core/Assign_MKL.h
  /usr/include/eigen3/Eigen/src/Core/BandMatrix.h
  /usr/include/eigen3/Eigen/src/Core/Block.h
  /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h
  /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h
- /usr/include/eigen3/Eigen/src/Core/CoreEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/CoreIterators.h
  /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h
  /usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h
@@ -2479,7 +2327,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/training_planner.cpp.o
  /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h
  /usr/include/eigen3/Eigen/src/Core/IO.h
- /usr/include/eigen3/Eigen/src/Core/Inverse.h
  /usr/include/eigen3/Eigen/src/Core/Map.h
  /usr/include/eigen3/Eigen/src/Core/MapBase.h
  /usr/include/eigen3/Eigen/src/Core/MathFunctions.h
@@ -2490,8 +2337,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/training_planner.cpp.o
  /usr/include/eigen3/Eigen/src/Core/NumTraits.h
  /usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h
  /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h
- /usr/include/eigen3/Eigen/src/Core/Product.h
- /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/Random.h
  /usr/include/eigen3/Eigen/src/Core/Redux.h
  /usr/include/eigen3/Eigen/src/Core/Ref.h
@@ -2501,10 +2346,7 @@ viewplanning/CMakeFiles/ViewPlanning.dir/training_planner.cpp.o
  /usr/include/eigen3/Eigen/src/Core/Select.h
  /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h
  /usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h
- /usr/include/eigen3/Eigen/src/Core/Solve.h
  /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h
- /usr/include/eigen3/Eigen/src/Core/SolverBase.h
- /usr/include/eigen3/Eigen/src/Core/SpecialFunctions.h
  /usr/include/eigen3/Eigen/src/Core/StableNorm.h
  /usr/include/eigen3/Eigen/src/Core/Stride.h
  /usr/include/eigen3/Eigen/src/Core/Swap.h
@@ -2514,28 +2356,14 @@ viewplanning/CMakeFiles/ViewPlanning.dir/training_planner.cpp.o
  /usr/include/eigen3/Eigen/src/Core/VectorBlock.h
  /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h
  /usr/include/eigen3/Eigen/src/Core/Visitor.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h
- /usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/StlFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
@@ -2608,7 +2436,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/training_planner.cpp.o
  /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h
  /usr/include/eigen3/Eigen/src/LU/Determinant.h
  /usr/include/eigen3/Eigen/src/LU/FullPivLU.h
- /usr/include/eigen3/Eigen/src/LU/InverseImpl.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU_MKL.h
  /usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h
@@ -2617,10 +2444,8 @@ viewplanning/CMakeFiles/ViewPlanning.dir/training_planner.cpp.o
  /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdDeque.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
@@ -2853,13 +2678,11 @@ viewplanning/CMakeFiles/ViewPlanning.dir/vprfreeflyer.cpp.o
  /usr/include/eigen3/Eigen/src/Core/ArrayBase.h
  /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h
  /usr/include/eigen3/Eigen/src/Core/Assign.h
- /usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h
  /usr/include/eigen3/Eigen/src/Core/Assign_MKL.h
  /usr/include/eigen3/Eigen/src/Core/BandMatrix.h
  /usr/include/eigen3/Eigen/src/Core/Block.h
  /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h
  /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h
- /usr/include/eigen3/Eigen/src/Core/CoreEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/CoreIterators.h
  /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h
  /usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h
@@ -2878,7 +2701,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/vprfreeflyer.cpp.o
  /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h
  /usr/include/eigen3/Eigen/src/Core/IO.h
- /usr/include/eigen3/Eigen/src/Core/Inverse.h
  /usr/include/eigen3/Eigen/src/Core/Map.h
  /usr/include/eigen3/Eigen/src/Core/MapBase.h
  /usr/include/eigen3/Eigen/src/Core/MathFunctions.h
@@ -2889,8 +2711,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/vprfreeflyer.cpp.o
  /usr/include/eigen3/Eigen/src/Core/NumTraits.h
  /usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h
  /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h
- /usr/include/eigen3/Eigen/src/Core/Product.h
- /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/Random.h
  /usr/include/eigen3/Eigen/src/Core/Redux.h
  /usr/include/eigen3/Eigen/src/Core/Ref.h
@@ -2900,10 +2720,7 @@ viewplanning/CMakeFiles/ViewPlanning.dir/vprfreeflyer.cpp.o
  /usr/include/eigen3/Eigen/src/Core/Select.h
  /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h
  /usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h
- /usr/include/eigen3/Eigen/src/Core/Solve.h
  /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h
- /usr/include/eigen3/Eigen/src/Core/SolverBase.h
- /usr/include/eigen3/Eigen/src/Core/SpecialFunctions.h
  /usr/include/eigen3/Eigen/src/Core/StableNorm.h
  /usr/include/eigen3/Eigen/src/Core/Stride.h
  /usr/include/eigen3/Eigen/src/Core/Swap.h
@@ -2913,28 +2730,14 @@ viewplanning/CMakeFiles/ViewPlanning.dir/vprfreeflyer.cpp.o
  /usr/include/eigen3/Eigen/src/Core/VectorBlock.h
  /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h
  /usr/include/eigen3/Eigen/src/Core/Visitor.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h
- /usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/StlFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
@@ -3007,7 +2810,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/vprfreeflyer.cpp.o
  /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h
  /usr/include/eigen3/Eigen/src/LU/Determinant.h
  /usr/include/eigen3/Eigen/src/LU/FullPivLU.h
- /usr/include/eigen3/Eigen/src/LU/InverseImpl.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU_MKL.h
  /usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h
@@ -3016,10 +2818,8 @@ viewplanning/CMakeFiles/ViewPlanning.dir/vprfreeflyer.cpp.o
  /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdDeque.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
@@ -3202,13 +3002,11 @@ viewplanning/CMakeFiles/ViewPlanning.dir/vprobot.cpp.o
  /usr/include/eigen3/Eigen/src/Core/ArrayBase.h
  /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h
  /usr/include/eigen3/Eigen/src/Core/Assign.h
- /usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h
  /usr/include/eigen3/Eigen/src/Core/Assign_MKL.h
  /usr/include/eigen3/Eigen/src/Core/BandMatrix.h
  /usr/include/eigen3/Eigen/src/Core/Block.h
  /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h
  /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h
- /usr/include/eigen3/Eigen/src/Core/CoreEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/CoreIterators.h
  /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h
  /usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h
@@ -3227,7 +3025,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/vprobot.cpp.o
  /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h
  /usr/include/eigen3/Eigen/src/Core/IO.h
- /usr/include/eigen3/Eigen/src/Core/Inverse.h
  /usr/include/eigen3/Eigen/src/Core/Map.h
  /usr/include/eigen3/Eigen/src/Core/MapBase.h
  /usr/include/eigen3/Eigen/src/Core/MathFunctions.h
@@ -3238,8 +3035,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/vprobot.cpp.o
  /usr/include/eigen3/Eigen/src/Core/NumTraits.h
  /usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h
  /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h
- /usr/include/eigen3/Eigen/src/Core/Product.h
- /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/Random.h
  /usr/include/eigen3/Eigen/src/Core/Redux.h
  /usr/include/eigen3/Eigen/src/Core/Ref.h
@@ -3249,10 +3044,7 @@ viewplanning/CMakeFiles/ViewPlanning.dir/vprobot.cpp.o
  /usr/include/eigen3/Eigen/src/Core/Select.h
  /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h
  /usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h
- /usr/include/eigen3/Eigen/src/Core/Solve.h
  /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h
- /usr/include/eigen3/Eigen/src/Core/SolverBase.h
- /usr/include/eigen3/Eigen/src/Core/SpecialFunctions.h
  /usr/include/eigen3/Eigen/src/Core/StableNorm.h
  /usr/include/eigen3/Eigen/src/Core/Stride.h
  /usr/include/eigen3/Eigen/src/Core/Swap.h
@@ -3262,28 +3054,14 @@ viewplanning/CMakeFiles/ViewPlanning.dir/vprobot.cpp.o
  /usr/include/eigen3/Eigen/src/Core/VectorBlock.h
  /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h
  /usr/include/eigen3/Eigen/src/Core/Visitor.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h
- /usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/StlFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
@@ -3356,7 +3134,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/vprobot.cpp.o
  /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h
  /usr/include/eigen3/Eigen/src/LU/Determinant.h
  /usr/include/eigen3/Eigen/src/LU/FullPivLU.h
- /usr/include/eigen3/Eigen/src/LU/InverseImpl.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU_MKL.h
  /usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h
@@ -3365,10 +3142,8 @@ viewplanning/CMakeFiles/ViewPlanning.dir/vprobot.cpp.o
  /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdDeque.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
@@ -3538,13 +3313,11 @@ viewplanning/CMakeFiles/ViewPlanning.dir/workspacenbvplanner.cpp.o
  /usr/include/eigen3/Eigen/src/Core/ArrayBase.h
  /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h
  /usr/include/eigen3/Eigen/src/Core/Assign.h
- /usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h
  /usr/include/eigen3/Eigen/src/Core/Assign_MKL.h
  /usr/include/eigen3/Eigen/src/Core/BandMatrix.h
  /usr/include/eigen3/Eigen/src/Core/Block.h
  /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h
  /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h
- /usr/include/eigen3/Eigen/src/Core/CoreEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/CoreIterators.h
  /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h
  /usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h
@@ -3563,7 +3336,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/workspacenbvplanner.cpp.o
  /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h
  /usr/include/eigen3/Eigen/src/Core/IO.h
- /usr/include/eigen3/Eigen/src/Core/Inverse.h
  /usr/include/eigen3/Eigen/src/Core/Map.h
  /usr/include/eigen3/Eigen/src/Core/MapBase.h
  /usr/include/eigen3/Eigen/src/Core/MathFunctions.h
@@ -3574,8 +3346,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/workspacenbvplanner.cpp.o
  /usr/include/eigen3/Eigen/src/Core/NumTraits.h
  /usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h
  /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h
- /usr/include/eigen3/Eigen/src/Core/Product.h
- /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h
  /usr/include/eigen3/Eigen/src/Core/Random.h
  /usr/include/eigen3/Eigen/src/Core/Redux.h
  /usr/include/eigen3/Eigen/src/Core/Ref.h
@@ -3585,10 +3355,7 @@ viewplanning/CMakeFiles/ViewPlanning.dir/workspacenbvplanner.cpp.o
  /usr/include/eigen3/Eigen/src/Core/Select.h
  /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h
  /usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h
- /usr/include/eigen3/Eigen/src/Core/Solve.h
  /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h
- /usr/include/eigen3/Eigen/src/Core/SolverBase.h
- /usr/include/eigen3/Eigen/src/Core/SpecialFunctions.h
  /usr/include/eigen3/Eigen/src/Core/StableNorm.h
  /usr/include/eigen3/Eigen/src/Core/Stride.h
  /usr/include/eigen3/Eigen/src/Core/Swap.h
@@ -3598,28 +3365,14 @@ viewplanning/CMakeFiles/ViewPlanning.dir/workspacenbvplanner.cpp.o
  /usr/include/eigen3/Eigen/src/Core/VectorBlock.h
  /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h
  /usr/include/eigen3/Eigen/src/Core/Visitor.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/MathFunctions.h
- /usr/include/eigen3/Eigen/src/Core/arch/CUDA/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h
- /usr/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h
  /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h
- /usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h
- /usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/StlFunctors.h
- /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
@@ -3692,7 +3445,6 @@ viewplanning/CMakeFiles/ViewPlanning.dir/workspacenbvplanner.cpp.o
  /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h
  /usr/include/eigen3/Eigen/src/LU/Determinant.h
  /usr/include/eigen3/Eigen/src/LU/FullPivLU.h
- /usr/include/eigen3/Eigen/src/LU/InverseImpl.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU_MKL.h
  /usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h
@@ -3701,10 +3453,8 @@ viewplanning/CMakeFiles/ViewPlanning.dir/workspacenbvplanner.cpp.o
  /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
- /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdDeque.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h

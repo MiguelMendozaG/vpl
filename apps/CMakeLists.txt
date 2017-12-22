@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 2.8)
 
 project(apps)
 
@@ -6,6 +6,12 @@ project(apps)
 include_directories(${OCTOMAP_INCLUDE_PATH})
 link_directories(${OCTOMAP_LIB_PATH})
 set(LIBS_OCTOMAP octomap octomath)
+
+#-----------------PCL-----------------------
+find_package(PCL 1.2 REQUIRED)
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
 
 
 if(BUILD_PARTIAL_MODEL)
@@ -27,7 +33,7 @@ if(BUILD_PARTIAL_MODEL)
   target_link_libraries(update_partial_model  ${LIB_PARTIAL_MODEL} ${LIBS_OCTOMAP})
   
   add_executable(training_main training_main.cpp ${SRC_ALL})
-  target_link_libraries(training_main  ${LIB_PARTIAL_MODEL} ${LIBS_OCTOMAP})
+  target_link_libraries(training_main ${PCL_LIBRARIES} ${LIB_PARTIAL_MODEL} ${LIBS_OCTOMAP})
   
   
   if(BUILD_VIEW_PLANNING)
@@ -49,6 +55,7 @@ if(BUILD_PARTIAL_MODEL)
       include_directories(${VPL_SOURCE_DIR}/rangesimulator)
       link_directories(${VPL_SOURCE_DIR}/lib)
       set(LIBS_RANGE_SIMULATOR RangeSimulator)
+      
       
       #add_executable(test_rangesimulator test_rangesimulator.cpp)
       #target_link_libraries(test_rangesimulator ${LIB_PARTIAL_MODEL} ${LIBS_RANGE_SIMULATOR} ${LIBS_OCTOMAP} ${LIBS_VIEW_PLANNING})

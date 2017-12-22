@@ -1140,8 +1140,6 @@ iostream
 
 /usr/include/eigen3/Eigen/src/Core/Assign.h
 
-/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h
-
 /usr/include/eigen3/Eigen/src/Core/Assign_MKL.h
 
 /usr/include/eigen3/Eigen/src/Core/BandMatrix.h
@@ -1151,8 +1149,6 @@ iostream
 /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h
 
 /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h
-
-/usr/include/eigen3/Eigen/src/Core/CoreEvaluators.h
 
 /usr/include/eigen3/Eigen/src/Core/CoreIterators.h
 
@@ -1192,8 +1188,6 @@ iostream
 
 /usr/include/eigen3/Eigen/src/Core/IO.h
 
-/usr/include/eigen3/Eigen/src/Core/Inverse.h
-
 /usr/include/eigen3/Eigen/src/Core/Map.h
 
 /usr/include/eigen3/Eigen/src/Core/MapBase.h
@@ -1222,10 +1216,6 @@ iostream
 
 /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h
 
-/usr/include/eigen3/Eigen/src/Core/Product.h
-
-/usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h
-
 /usr/include/eigen3/Eigen/src/Core/Random.h
 
 /usr/include/eigen3/Eigen/src/Core/Redux.h
@@ -1244,13 +1234,7 @@ iostream
 
 /usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h
 
-/usr/include/eigen3/Eigen/src/Core/Solve.h
-
 /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h
-
-/usr/include/eigen3/Eigen/src/Core/SolverBase.h
-
-/usr/include/eigen3/Eigen/src/Core/SpecialFunctions.h
 
 /usr/include/eigen3/Eigen/src/Core/StableNorm.h
 
@@ -1270,29 +1254,13 @@ iostream
 
 /usr/include/eigen3/Eigen/src/Core/Visitor.h
 
-/usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h
-
-/usr/include/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h
-
-/usr/include/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h
-
-/usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h
-
 /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/Complex.h
 
-/usr/include/eigen3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
-
 /usr/include/eigen3/Eigen/src/Core/arch/AltiVec/PacketMath.h
-
-/usr/include/eigen3/Eigen/src/Core/arch/CUDA/MathFunctions.h
-
-/usr/include/eigen3/Eigen/src/Core/arch/CUDA/PacketMath.h
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h
 
 /usr/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h
-
-/usr/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h
 
 /usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h
 
@@ -1301,18 +1269,6 @@ iostream
 /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h
 
 /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h
-
-/usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h
-
-/usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h
-
-/usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h
-
-/usr/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h
-
-/usr/include/eigen3/Eigen/src/Core/functors/StlFunctors.h
-
-/usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h
 
 /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
 
@@ -1496,8 +1452,6 @@ Eigen/src/Core/util/MKL_support.h
 
 /usr/include/eigen3/Eigen/src/LU/FullPivLU.h
 
-/usr/include/eigen3/Eigen/src/LU/InverseImpl.h
-
 /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
 
 /usr/include/eigen3/Eigen/src/LU/PartialPivLU_MKL.h
@@ -1520,15 +1474,11 @@ Eigen/src/Core/util/MKL_support.h
 ../Core/util/MKL_support.h
 /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h
 
-/usr/include/eigen3/Eigen/src/SVD/BDCSVD.h
-
 /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h
 
 /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
 Eigen/src/Core/util/MKL_support.h
 /usr/include/eigen3/Eigen/src/SVD/Eigen/src/Core/util/MKL_support.h
-
-/usr/include/eigen3/Eigen/src/SVD/SVDBase.h
 
 /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
 
