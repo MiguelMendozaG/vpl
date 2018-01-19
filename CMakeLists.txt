@@ -21,6 +21,7 @@ set(BUILD_NBVS false)
 set(OCTOMAP_LIB_PATH /home/miguelmg/octomap/octomap-devel/lib)
 set(OCTOMAP_INCLUDE_PATH /home/miguelmg/octomap/octomap-devel/octomap/include)
 
+#add_subdirectory(pcl)
 
 if(BUILD_PARTIAL_MODEL)
   add_subdirectory(partialmodel)

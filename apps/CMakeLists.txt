@@ -8,10 +8,12 @@ link_directories(${OCTOMAP_LIB_PATH})
 set(LIBS_OCTOMAP octomap octomath)
 
 #-----------------PCL-----------------------
-find_package(PCL 1.2 REQUIRED)
+find_package(PCL 1.8 REQUIRED)
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
+
+#-----------pcl-narf-----------
 
 
 if(BUILD_PARTIAL_MODEL)

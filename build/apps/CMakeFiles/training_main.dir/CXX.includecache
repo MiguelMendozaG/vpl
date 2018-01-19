@@ -577,6 +577,8 @@ training_planner.h
 -
 iostream
 -
+boost/thread/thread.hpp
+-
 pcl/io/pcd_io.h
 -
 pcl/point_types.h
