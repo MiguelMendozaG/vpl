@@ -238,10 +238,12 @@ int main(int argc, char **argv) {
   */
  
   
-  
   for (int img = 0; img <= 1312; img+=5){
     
-    int indice = 0, t = 1;
+    std::cout << "\n -------New Image img:" << img <<endl;
+    
+    int indice = img;
+    int t = 1;
     double max_increment = 0;
     int max_intertoise = 0; 
     double cov_t = 0, cov_tmas1 = 0;
@@ -336,7 +338,7 @@ int main(int argc, char **argv) {
       std::stringstream tt;
       std::stringstream tt_octo;
       ss << indice;
-      tt << t;
+      tt << (t-1);
       tt_octo << (t-1);
       
       std::cout << "\n\nVista " << img << " Posicionamiento " << t << endl;
@@ -403,6 +405,7 @@ int main(int argc, char **argv) {
 	std::stringstream jj;
 	jj << j;
 	std::cout << "\n\t\t\tVista " << img << " Planificación # " << t <<" Comparando imagen #" << j << endl;
+	std::cout << "\n\t\t\t Covertura " << cov_t << endl;
 
 	pos_actual = direccion_modelo + jj.str() + extension;
 	reader.readDoubleCoordinates(pos_actual,posible_z);
@@ -413,6 +416,7 @@ int main(int argc, char **argv) {
 	  std::cout << "\n\t\t\tVista " << img << " Planificación # " << t <<" Traslape > 50% #" << j << endl;
 	  
 	  NARF_points = narf_correspondence(posible_z,nube_acumulada, gap, img, t);
+	  std::cout<< "\n\t\t\t Narf points " << NARF_points << endl;
 	  if (NARF_points){ // si hay tres o mas narf points en el traslape, permite evaluar aumneto de covertura
 	    std::cout << "\t\t\t Mas de 3 NARF points" << endl;
 	    std::cout << "\t\t\t Incremeno max actual = " << max_increment << "\t en img " << max_intertoise << endl;
@@ -445,7 +449,7 @@ int main(int argc, char **argv) {
       vector < vector <double>> pose_;
       vector < vector <double>> orn_;
       std:stringstream indice_pose;
-      indice_pose << indice;
+      indice_pose << max_intertoise;
       pos_actual = direccion_posicion + indice_pose.str() + extension;
       reader.readDoubleCoordinates(pos_actual, pose_);
       pos_actual = direccion_orientacion + indice_pose.str() + extension;
