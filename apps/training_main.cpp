@@ -87,6 +87,77 @@ double compareClouds(std::vector< std::vector< double > > a, std::vector< std::v
   
 }
 
+void filtro_voxeles2(std::vector< std::vector< double > > nube_filtrada, int img){
+  std::cout << "\n\t\t Cloud filter " << endl;
+    std::stringstream indice_img;
+  indice_img << img;
+   pcl::PointCloud<pcl::PointXYZ>::Ptr nube_filtrada_pcl (new pcl::PointCloud<pcl::PointXYZ>);
+   nube_filtrada_pcl->width = nube_filtrada.size();
+   nube_filtrada_pcl->height = 1;
+   nube_filtrada_pcl->is_dense = false;
+   nube_filtrada_pcl->resize(nube_filtrada_pcl->width * nube_filtrada_pcl->height);
+   long int m = 0;
+   for (size_t i = 0; i < nube_filtrada.size(); i++){
+     nube_filtrada_pcl->points[i].x = nube_filtrada[m][0];     
+     nube_filtrada_pcl->points[i].y = nube_filtrada[m][1];
+     nube_filtrada_pcl->points[i].z = nube_filtrada[m][2];
+     m++;
+  }
+  pcl::io::savePCDFile(dir_nbv_i + indice_img.str() + "/nube_model_denso/nube_densa_pcl.xyz", *nube_filtrada_pcl);
+  
+  //Se abre archivo nube_escasa en PCL
+  ////////////////////
+  pcl::PCLPointCloud2::Ptr cloud (new pcl::PCLPointCloud2 ());
+  pcl::PCLPointCloud2::Ptr cloud_filtered (new pcl::PCLPointCloud2 ());
+
+  // Fill in the cloud data
+  pcl::PCDReader reader_pcl;
+  // Replace the path below with the path where you saved your file
+  reader_pcl.read (dir_nbv_i + indice_img.str() +"/nube_model_denso/nube_densa_pcl.xyz", *cloud); // Remember to download the file first!
+
+  std::cerr << "PointCloud before filtering: " << cloud->width * cloud->height 
+       << " data points (" << pcl::getFieldsList (*cloud) << ").";
+
+  // Create the filtering object
+  pcl::VoxelGrid<pcl::PCLPointCloud2> sor;
+  sor.setInputCloud (cloud);
+  sor.setLeafSize (0.0008f, 0.0008f, 0.0008f);
+  sor.filter (*cloud_filtered);
+
+  std::cerr << "PointCloud after filtering: " << cloud_filtered->width * cloud_filtered->height 
+       << " data points (" << pcl::getFieldsList (*cloud_filtered) << ").";
+
+  pcl::PCDWriter writer;
+  writer.write (dir_nbv_i + indice_img.str() +"/nube_model_denso/nube_escasa_pcl.xyz", *cloud_filtered, Eigen::Vector4f::Zero (), Eigen::Quaternionf::Identity (), false);
+  ////////////////////
+
+  std::string ID;
+  int cuenta =0;
+  ID = "WIDTH "; //id of the line we want to delete
+    //ifstream read("infos.txt");
+    std::ifstream read_f(dir_nbv_i + indice_img.str() + "/nube_model_denso/nube_escasa_pcl.xyz");
+    //ofstream write("tmp.txt"); 
+    std::ofstream write(dir_nbv_i + indice_img.str() + "/nube_model_denso/nube_escasa_pcl_sin_cabecera.xyz");
+    if (read_f.is_open()) {
+       std::string line;
+       while (getline(read_f, line)) {
+	 if (cuenta >10)
+	   write << line + "\n";
+	 //cout << line << endl;
+          //if (line.find(ID) != std::string::npos)
+             //write << line;
+	 cuenta++;
+       }
+    } else {
+       std::cerr << "Error: coudn't open file\n";
+       /* additional handle */
+    }
+
+    read_f.close();
+    write.close();
+  
+}
+
 void filtro_voxeles(int img){
   std::stringstream points;
   std::stringstream indice_img;
@@ -238,7 +309,7 @@ int main(int argc, char **argv) {
   */
  
   
-  for (int img = 0; img <= 1312; img+=5){
+  for (int img = 15; img <= 1312; img+=5){
     
     std::cout << "\n -------New Image img:" << img <<endl;
     
@@ -376,7 +447,8 @@ int main(int argc, char **argv) {
       pos_actual_nubes = data_nubes_denso + extension_xyz;
       reader.saveDoubleCoordinates(pos_actual_nubes, nube_acumulada); //guarda nube de puntos para proceder a filtrar
       ////-------filtro de voxeles
-      filtro_voxeles(img);
+      filtro_voxeles2(nube_acumulada, img);
+      //filtro_voxeles(img);
       /////----- fin filtro de voxeles
       nube_acumulada.clear();
       pos_actual = direccion_nube_filtrada;
