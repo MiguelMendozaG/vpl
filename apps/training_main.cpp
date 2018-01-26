@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <vp.h>
 #include <rssraytracingoctree.h>
 #include <pmvoctreevasquez09.h>
@@ -9,11 +10,29 @@
 #include <pcl/point_types.h>
 #include <pcl/filters/voxel_grid.h>
 
+typedef pcl::PointXYZ PointType;
 
 std::string dir_nbv_i("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/nbv_i/");
 std::string dir_nbv_narf ("/home/miguelmg/Documents/CIDETEC/'semestre 2'/'vision 3d'/proyecto/'6d pose'/hinterstoisser/nubes/nbv_i/");
-
-typedef pcl::PointXYZ PointType;
+std::string nube_mod_den("/nube_model_denso");
+std::string nub("/nubes");
+//std::string oct("/octomap");
+std::string oct_acum("/octomap_acumulado");
+std::string pos("/poses");
+std::string dir_traslape("/traslape");
+std::string carpeta_narf("/NARF_point_cloud");
+std::string num_poses("/num_pose");
+std::string orn_pos ("/pose_orientacion");
+std::string acumulada("/home/miguelmg/repositorios/vpl/data_example/FreeFlyer/object_pts.dat");
+std::string direccion("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/absolutas/plano_con_modelo/imagen-");
+std::string direccion_posicion("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/posicion/pose/imagen_origin_");
+std::string direccion_orientacion("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/posicion/orientaciones/imagen-ori-");
+std::string direccion_plano("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/absolutas/planos/imagen-");
+std::string direccion_modelo("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/absolutas/modelo/imagen-");
+std::string dir_mono("/home/miguelmg/repositorios/vpl/data_example/FreeFlyer/config/mono.dat");
+std::string extension(".dat");
+std::string extension_xyz(".xyz");
+std::string ext_oct(".ot");
 
 
 double compareClouds(std::vector< std::vector< double > > a, std::vector< std::vector< double > > reference,  double gap, bool voxel_filter, int img, int iteracion)
@@ -267,6 +286,7 @@ bool narf_correspondence( std::vector< std::vector< double > > posible_z, std::v
   std::cout << " Cloud of narf points saved " << endl;
   //std::cin.get();
   pcl::io::loadPCDFile(dir_nbv_i + "narf_points.pcd", *cloud_of_narfs);
+  //std::remove(dir_nbv_i + "narf_points.pcd");
   if (cloud_of_narfs->points.size() >= 3) // si existen al menos 3 narf points en el traslape, entonces regresa uno
     return 1;
   else // si hay menos de 3 puntos narfs en el traslape entonces regresa cero
@@ -309,7 +329,7 @@ int main(int argc, char **argv) {
   */
  
   
-  for (int img = 15; img <= 1312; img+=5){
+  for (int img = 235; img <= 1312; img+=5){
     
     std::cout << "\n -------New Image img:" << img <<endl;
     
@@ -327,15 +347,15 @@ int main(int argc, char **argv) {
     std::ostringstream oss;
     oss << img;
     std::string indice_img = oss.str();
-    std::string nube_mod_den("/nube_model_denso");
-    std::string nub("/nubes");
-    std::string oct("/octomap");
-    std::string oct_acum("/octomap_acumulado");
-    std::string pos("/poses");
-    std::string dir_traslape("/traslape");
-    std::string carpeta_narf("/NARF_point_cloud");
-    std::string num_poses("/num_pose");
-    std::string orn_pos ("/pose_orientacion");
+//     std::string nube_mod_den("/nube_model_denso");
+//     std::string nub("/nubes");
+     std::string oct("/octomap");
+//     std::string oct_acum("/octomap_acumulado");
+//     std::string pos("/poses");
+//     std::string dir_traslape("/traslape");
+//     std::string carpeta_narf("/NARF_point_cloud");
+//     std::string num_poses("/num_pose");
+//     std::string orn_pos ("/pose_orientacion");
     
     //indice_img << img;
     vpFileReader reader;
@@ -353,12 +373,12 @@ int main(int argc, char **argv) {
     mkdir((dir_nbv_i + indice_img + carpeta_narf).c_str(), S_IRWXU);
 
     
-    std::string acumulada("/home/miguelmg/repositorios/vpl/data_example/FreeFlyer/object_pts.dat");
-    std::string direccion("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/absolutas/plano_con_modelo/imagen-");
-    std::string direccion_posicion("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/posicion/pose/imagen_origin_");
-    std::string direccion_orientacion("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/posicion/orientaciones/imagen-ori-");
-    std::string direccion_plano("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/absolutas/planos/imagen-");
-    std::string direccion_modelo("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/absolutas/modelo/imagen-");
+//     std::string acumulada("/home/miguelmg/repositorios/vpl/data_example/FreeFlyer/object_pts.dat");
+//     std::string direccion("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/absolutas/plano_con_modelo/imagen-");
+//     std::string direccion_posicion("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/posicion/pose/imagen_origin_");
+//     std::string direccion_orientacion("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/posicion/orientaciones/imagen-ori-");
+//     std::string direccion_plano("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/absolutas/planos/imagen-");
+//     std::string direccion_modelo("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/absolutas/modelo/imagen-");
     std::string direccion_nube_filtrada(dir_nbv_i + indice_img +"/nube_model_denso/nube_escasa_pcl_sin_cabecera.xyz");
     std::string data_octomap(dir_nbv_i + indice_img + "/octomap/octomap_");
     std::string data_octomap_acum(dir_nbv_i + indice_img + "/octomap_acumulado/octomap_");
@@ -366,10 +386,10 @@ int main(int argc, char **argv) {
     std::string data_orn_poses(dir_nbv_i + indice_img + "/poses/pose_orientacion/pose_nbv");
     std::string data_nubes(dir_nbv_i + indice_img + "/nubes/nube_nbv");
     std::string data_nubes_denso (dir_nbv_i + indice_img + "/nube_model_denso/nube_nbv_aux");
-    std::string dir_mono("/home/miguelmg/repositorios/vpl/data_example/FreeFlyer/config/mono.dat");
-    std::string extension(".dat");
-    std::string extension_xyz(".xyz");
-    std::string ext_oct(".ot");
+//     std::string dir_mono("/home/miguelmg/repositorios/vpl/data_example/FreeFlyer/config/mono.dat");
+//     std::string extension(".dat");
+//     std::string extension_xyz(".xyz");
+//     std::string ext_oct(".ot");
     std::string pos_actual;
     std::string pos_actual_aux;
     std::string scan_actual;
@@ -387,7 +407,16 @@ int main(int argc, char **argv) {
     vector< vector<double> > posible_z;
     bool NARF_points = 0;
     
-    nube_acumulada.clear();
+//     nube_acumulada.clear();
+//     z_t.clear();
+//     plano_t.clear();
+//     modelo_t.clear();
+//     nube_acumulada_aux.clear();
+//     posible_acumulada.clear();
+//     p.clear();
+//     mono.clear();
+//     posible_z.clear();
+    
     
     reader.readDoubleCoordinates(dir_mono,mono);
     
@@ -490,7 +519,6 @@ int main(int argc, char **argv) {
 	  NARF_points = narf_correspondence(posible_z,nube_acumulada, gap, img, t);
 	  std::cout<< "\n\t\t\t Narf points " << NARF_points << endl;
 	  if (NARF_points){ // si hay tres o mas narf points en el traslape, permite evaluar aumneto de covertura
-	    std::cout << "\t\t\t Mas de 3 NARF points" << endl;
 	    std::cout << "\t\t\t Incremeno max actual = " << max_increment << "\t en img " << max_intertoise << endl;
 	    posible_acumulada.clear();
 	    posible_acumulada.insert(posible_acumulada.end(),nube_acumulada.begin(),nube_acumulada.end());
@@ -534,6 +562,24 @@ int main(int argc, char **argv) {
       delete partial_model;
       //delete partial_model_2;
     }
+    //delete partial_model;
+    delete partial_model_2;/*
+    delete nube_acumulada;
+    delete nube_acumulada_aux;
+    delete posible_z;
+    delete z_t;
+    delete plano_t;
+    delete modelo_t;
+    */
+    nube_acumulada.clear();
+    z_t.clear();
+    plano_t.clear();
+    modelo_t.clear();
+    nube_acumulada_aux.clear();
+    posible_acumulada.clear();
+    p.clear();
+    mono.clear();
+    posible_z.clear();
   }
   return 0;
 }

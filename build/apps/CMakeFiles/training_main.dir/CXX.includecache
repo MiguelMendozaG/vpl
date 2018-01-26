@@ -567,6 +567,8 @@ math.h
 -
 
 /home/miguelmg/repositorios/vpl/apps/training_main.cpp
+stdio.h
+-
 vp.h
 -
 rssraytracingoctree.h
