@@ -12,8 +12,12 @@
 
 typedef pcl::PointXYZ PointType;
 
-std::string dir_nbv_i("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/nbv_i/");
+std::string my_direction("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes");
 std::string dir_nbv_narf ("/home/miguelmg/Documents/CIDETEC/'semestre 2'/'vision 3d'/proyecto/'6d pose'/hinterstoisser/nubes/nbv_i/");
+std::string dir_mono("/home/miguelmg/repositorios/vpl/data_example/FreeFlyer/config/mono.dat");
+
+std::string dir_nbv_i( my_direction + "/nbv_i/");
+
 std::string nube_mod_den("/nube_model_denso");
 std::string nub("/nubes");
 //std::string oct("/octomap");
@@ -23,13 +27,12 @@ std::string dir_traslape("/traslape");
 std::string carpeta_narf("/NARF_point_cloud");
 std::string num_poses("/num_pose");
 std::string orn_pos ("/pose_orientacion");
-std::string acumulada("/home/miguelmg/repositorios/vpl/data_example/FreeFlyer/object_pts.dat");
-std::string direccion("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/absolutas/plano_con_modelo/imagen-");
-std::string direccion_posicion("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/posicion/pose/imagen_origin_");
-std::string direccion_orientacion("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/posicion/orientaciones/imagen-ori-");
-std::string direccion_plano("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/absolutas/planos/imagen-");
-std::string direccion_modelo("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/absolutas/modelo/imagen-");
-std::string dir_mono("/home/miguelmg/repositorios/vpl/data_example/FreeFlyer/config/mono.dat");
+//std::string acumulada("/home/miguelmg/repositorios/vpl/data_example/FreeFlyer/object_pts.dat");
+std::string direccion(my_direction + "/absolutas/plano_con_modelo/imagen-");
+std::string direccion_posicion(my_direction + "/posicion/pose/imagen_origin_");
+std::string direccion_orientacion(my_direction + "/posicion/orientaciones/imagen-ori-");
+std::string direccion_plano(my_direction + "/absolutas/planos/imagen-");
+std::string direccion_modelo(my_direction + "/absolutas/modelo/imagen-");
 std::string extension(".dat");
 std::string extension_xyz(".xyz");
 std::string ext_oct(".ot");
@@ -102,6 +105,8 @@ double compareClouds(std::vector< std::vector< double > > a, std::vector< std::v
    double percentage = (correspondences / (double) reference.size()) * 100 ;
    std::cout << "%" << percentage << std::endl;
    
+   a.clear();
+   reference.clear();
    return percentage;
   
 }
@@ -174,86 +179,8 @@ void filtro_voxeles2(std::vector< std::vector< double > > nube_filtrada, int img
 
     read_f.close();
     write.close();
+    nube_filtrada.clear();
   
-}
-
-void filtro_voxeles(int img){
-  std::stringstream points;
-  std::stringstream indice_img;
-  indice_img << img;
-  string data_nubes_denso (dir_nbv_i + indice_img.str() + "/nube_model_denso/nube_nbv_aux.xyz");
-  string data_nubes_denso_salida (dir_nbv_i + indice_img.str() + "/nube_model_denso/nube_nbv_aux_salida.xyz");
-  string pos_nube;
-  string info("FIELDS x y z\nSIZE 4 4 4\nTYPE F F F\nCOUNT 1 1 1");
-  string info_total;
-  long int tam = 0;
-  vector< vector<double> > pcl_nube;
-  //Genera datos de cabecera de acuerdo al formato de la libreria pcl
-  vpFileReader reader;
-  reader.readDoubleCoordinates(data_nubes_denso, pcl_nube);
-  tam = pcl_nube.size();
-  points << tam;
-  info_total = "# .PCD v0.7 - Point Cloud Data file format\n" + info + "\nWIDTH " + points.str() + "\nHEIGHT 1" + "\nPOINTS " + points.str() + "\nDATA ascii\n";
-  //Guarda en archivo datos_cabecera.xyz los datos de cabecera para abrir en PCL
-  std::ofstream cabecera;
-  cabecera.open (dir_nbv_i + indice_img.str() + "/nube_model_denso/datos_cabecera.xyz");
-  cabecera << info_total;
-  cabecera.close();
-  //abre archivos datos_cabecera.xyz y nube_nbv_aux.xyz y los junta en un solo archivo
-  std::ifstream cabecera_comb (dir_nbv_i + indice_img.str() +"/nube_model_denso/datos_cabecera.xyz");  
-  std::ifstream coord_comb (dir_nbv_i + indice_img.str() +"/nube_model_denso/nube_nbv_aux.xyz");
-  std::ofstream combinado_filro_voxeles (dir_nbv_i + indice_img.str() + "/nube_model_denso/nube_densa_pcl.xyz");
-  combinado_filro_voxeles << cabecera_comb.rdbuf() << coord_comb.rdbuf();
-  //Se abre archivo nube_escasa en PCL
-  ////////////////////
-  pcl::PCLPointCloud2::Ptr cloud (new pcl::PCLPointCloud2 ());
-  pcl::PCLPointCloud2::Ptr cloud_filtered (new pcl::PCLPointCloud2 ());
-
-  // Fill in the cloud data
-  pcl::PCDReader reader_pcl;
-  // Replace the path below with the path where you saved your file
-  reader_pcl.read (dir_nbv_i + indice_img.str() +"/nube_model_denso/nube_densa_pcl.xyz", *cloud); // Remember to download the file first!
-
-  std::cerr << "PointCloud before filtering: " << cloud->width * cloud->height 
-       << " data points (" << pcl::getFieldsList (*cloud) << ").";
-
-  // Create the filtering object
-  pcl::VoxelGrid<pcl::PCLPointCloud2> sor;
-  sor.setInputCloud (cloud);
-  sor.setLeafSize (0.0008f, 0.0008f, 0.0008f);
-  sor.filter (*cloud_filtered);
-
-  std::cerr << "PointCloud after filtering: " << cloud_filtered->width * cloud_filtered->height 
-       << " data points (" << pcl::getFieldsList (*cloud_filtered) << ").";
-
-  pcl::PCDWriter writer;
-  writer.write (dir_nbv_i + indice_img.str() +"/nube_model_denso/nube_escasa_pcl.xyz", *cloud_filtered, Eigen::Vector4f::Zero (), Eigen::Quaternionf::Identity (), false);
-  ////////////////////
-
-  std::string ID;
-  int cuenta =0;
-  ID = "WIDTH "; //id of the line we want to delete
-    //ifstream read("infos.txt");
-    std::ifstream read_f(dir_nbv_i + indice_img.str() + "/nube_model_denso/nube_escasa_pcl.xyz");
-    //ofstream write("tmp.txt"); 
-    std::ofstream write(dir_nbv_i + indice_img.str() + "/nube_model_denso/nube_escasa_pcl_sin_cabecera.xyz");
-    if (read_f.is_open()) {
-       std::string line;
-       while (getline(read_f, line)) {
-	 if (cuenta >10)
-	   write << line + "\n";
-	 //cout << line << endl;
-          //if (line.find(ID) != std::string::npos)
-             //write << line;
-	 cuenta++;
-       }
-    } else {
-       std::cerr << "Error: coudn't open file\n";
-       /* additional handle */
-    }
-
-    read_f.close();
-    write.close();
 }
 
 bool narf_correspondence( std::vector< std::vector< double > > posible_z, std::vector< std::vector< double > > acumulada, double gap, int img, int iteracion){
@@ -287,6 +214,8 @@ bool narf_correspondence( std::vector< std::vector< double > > posible_z, std::v
   //std::cin.get();
   pcl::io::loadPCDFile(dir_nbv_i + "narf_points.pcd", *cloud_of_narfs);
   //std::remove(dir_nbv_i + "narf_points.pcd");
+  posible_z.clear();
+  acumulada.clear();
   if (cloud_of_narfs->points.size() >= 3) // si existen al menos 3 narf points en el traslape, entonces regresa uno
     return 1;
   else // si hay menos de 3 puntos narfs en el traslape entonces regresa cero
@@ -329,7 +258,7 @@ int main(int argc, char **argv) {
   */
  
   
-  for (int img = 235; img <= 1312; img+=5){
+  for (int img = 320; img <= 1312; img+=5){
     
     std::cout << "\n -------New Image img:" << img <<endl;
     
@@ -560,6 +489,8 @@ int main(int argc, char **argv) {
       
       t++;
       delete partial_model;
+      pose_.clear();
+      orn_.clear();
       //delete partial_model_2;
     }
     //delete partial_model;
