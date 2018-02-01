@@ -91,13 +91,11 @@ double compareClouds(std::vector< std::vector< double > > a, std::vector< std::v
     std::stringstream iter;
     iter << iteracion;
     
-    string dir_traslape (dir_nbv_i + indice_img.str() + "/traslape/traslape");
-    string dir_traslape_ext (".pcd");
+    //string dir_traslape (dir_nbv_i + indice_img.str() + "/traslape/traslape");
+    //string dir_traslape_ext (".pcd");
     
-    string pos_traslape = dir_traslape + iter.str() + dir_traslape_ext;
+    string pos_traslape = dir_nbv_i + "traslape.pcd" ;
    pcl::io::savePCDFile(pos_traslape, *narf_cloud);
-   std::cout << " archivo narf guardado " << endl;
-   //std::cin.get();
       
   }
    
@@ -167,9 +165,6 @@ void filtro_voxeles2(std::vector< std::vector< double > > nube_filtrada, int img
        while (getline(read_f, line)) {
 	 if (cuenta >10)
 	   write << line + "\n";
-	 //cout << line << endl;
-          //if (line.find(ID) != std::string::npos)
-             //write << line;
 	 cuenta++;
        }
     } else {
@@ -183,8 +178,27 @@ void filtro_voxeles2(std::vector< std::vector< double > > nube_filtrada, int img
   
 }
 
+void save_chosen_narfs(int img, int iteracion){
+  std::cout << "\n\t\t Saving NARF cloud" << endl;
+  std::stringstream indice_img;
+  indice_img << img;
+  std::stringstream iter;
+  iter << (iteracion-1);
+  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_of_narfs (new pcl::PointCloud<pcl::PointXYZ>);
+  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_of_traslape (new pcl::PointCloud<pcl::PointXYZ>);
+  //std::string lectura_narf("./icp_narf_one_file_output " + dir_nbv_narf + indice_img.str() + "/traslape/traslape" + iter.str() + ".pcd" + " -m");
+  pcl::io::loadPCDFile(dir_nbv_i + "narf_points.pcd", *cloud_of_narfs);
+  pcl::io::loadPCDFile(dir_nbv_i + "traslape.pcd", *cloud_of_traslape);
+  
+  pcl::io::savePCDFile(dir_nbv_i + indice_img.str() +"/NARF_point_cloud/narf_cloud" + iter.str() + ".pcd", *cloud_of_narfs );
+  pcl::io::savePCDFile(dir_nbv_i + indice_img.str() +"/traslape/traslape_" + iter.str() + ".pcd", *cloud_of_traslape);
+  
+  
+}
+
+
 bool narf_correspondence( std::vector< std::vector< double > > posible_z, std::vector< std::vector< double > > acumulada, double gap, int img, int iteracion){
-  std::cout << "\n\n\t\t NARF Points de posible z" << endl;
+  //std::cout << "\n\n\t\t NARF Points de posible z" << endl;
   std::stringstream indice_img;
   indice_img << img;
   std::stringstream iter;
@@ -208,7 +222,12 @@ bool narf_correspondence( std::vector< std::vector< double > > posible_z, std::v
 
   //// Extraer los Narf points de traslape
 //   std::cin.get();
-  std::string lectura_narf("./icp_narf_one_file_output " + dir_nbv_narf + indice_img.str() + "/traslape/traslape" + iter.str() + ".pcd" + " -m"); 
+  //std::string lectura_narf("./icp_narf_one_file_output " + dir_nbv_narf + indice_img.str() + "/traslape/traslape" + iter.str() + ".pcd" + " -m");
+  std::string lectura_narf("./icp_narf_one_file_output " + dir_nbv_narf + "/traslape.pcd" + " -m"); 
+  std::cout<< "\n\n\t Printing if processo is available..." << endl;
+  if (system(NULL)) puts ("ok");
+  else exit (EXIT_FAILURE);
+  std::cout << "Executing command for NARF poits.."  << endl;
   system( (lectura_narf).c_str());
   std::cout << " Cloud of narf points saved " << endl;
   //std::cin.get();
@@ -257,8 +276,20 @@ int main(int argc, char **argv) {
   rays_file.append("/data/sensor_rays.dat");
   */
  
+  float alphaOcc = 0.2, alphaUnk = 0.8;
   
-  for (int img = 320; img <= 1312; img+=5){
+    PartialModelBase *partial_model = new PMVOctreeVasquez09(alphaOcc, alphaUnk);
+      partial_model->setConfigFolder(config_folder);
+      partial_model->setDataFolder(data_folder);
+      partial_model->init();
+      
+    
+    PartialModelBase *partial_model_2 = new PMVOctreeVasquez09(alphaOcc, alphaUnk);
+    partial_model_2->setConfigFolder(config_folder);
+    partial_model_2->setDataFolder(data_folder);
+    partial_model_2->init();
+      
+  for (int img = 640; img <= 1312; img+=5){
     
     std::cout << "\n -------New Image img:" << img <<endl;
     
@@ -270,23 +301,13 @@ int main(int argc, char **argv) {
     double increment = 0;
     double gap = 0.005;
     double traslape = 0;
-  
-    //std::stringstream indice_img;
-    //indice_img << img;
+
     std::ostringstream oss;
     oss << img;
     std::string indice_img = oss.str();
-//     std::string nube_mod_den("/nube_model_denso");
-//     std::string nub("/nubes");
+
      std::string oct("/octomap");
-//     std::string oct_acum("/octomap_acumulado");
-//     std::string pos("/poses");
-//     std::string dir_traslape("/traslape");
-//     std::string carpeta_narf("/NARF_point_cloud");
-//     std::string num_poses("/num_pose");
-//     std::string orn_pos ("/pose_orientacion");
-    
-    //indice_img << img;
+
     vpFileReader reader;
     string img_dir_actual(dir_nbv_i + indice_img);
 
@@ -301,13 +322,6 @@ int main(int argc, char **argv) {
     mkdir((dir_nbv_i + indice_img + dir_traslape).c_str(), S_IRWXU);
     mkdir((dir_nbv_i + indice_img + carpeta_narf).c_str(), S_IRWXU);
 
-    
-//     std::string acumulada("/home/miguelmg/repositorios/vpl/data_example/FreeFlyer/object_pts.dat");
-//     std::string direccion("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/absolutas/plano_con_modelo/imagen-");
-//     std::string direccion_posicion("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/posicion/pose/imagen_origin_");
-//     std::string direccion_orientacion("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/posicion/orientaciones/imagen-ori-");
-//     std::string direccion_plano("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/absolutas/planos/imagen-");
-//     std::string direccion_modelo("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/absolutas/modelo/imagen-");
     std::string direccion_nube_filtrada(dir_nbv_i + indice_img +"/nube_model_denso/nube_escasa_pcl_sin_cabecera.xyz");
     std::string data_octomap(dir_nbv_i + indice_img + "/octomap/octomap_");
     std::string data_octomap_acum(dir_nbv_i + indice_img + "/octomap_acumulado/octomap_");
@@ -315,10 +329,7 @@ int main(int argc, char **argv) {
     std::string data_orn_poses(dir_nbv_i + indice_img + "/poses/pose_orientacion/pose_nbv");
     std::string data_nubes(dir_nbv_i + indice_img + "/nubes/nube_nbv");
     std::string data_nubes_denso (dir_nbv_i + indice_img + "/nube_model_denso/nube_nbv_aux");
-//     std::string dir_mono("/home/miguelmg/repositorios/vpl/data_example/FreeFlyer/config/mono.dat");
-//     std::string extension(".dat");
-//     std::string extension_xyz(".xyz");
-//     std::string ext_oct(".ot");
+
     std::string pos_actual;
     std::string pos_actual_aux;
     std::string scan_actual;
@@ -335,33 +346,16 @@ int main(int argc, char **argv) {
     vector< vector<double> > mono;
     vector< vector<double> > posible_z;
     bool NARF_points = 0;
-    
-//     nube_acumulada.clear();
-//     z_t.clear();
-//     plano_t.clear();
-//     modelo_t.clear();
-//     nube_acumulada_aux.clear();
-//     posible_acumulada.clear();
-//     p.clear();
-//     mono.clear();
-//     posible_z.clear();
+
     
     
     reader.readDoubleCoordinates(dir_mono,mono);
     
     
-    float alphaOcc = 0.2, alphaUnk = 0.8;
-    PartialModelBase *partial_model_2 = new PMVOctreeVasquez09(alphaOcc, alphaUnk);
-    partial_model_2->setConfigFolder(config_folder);
-    partial_model_2->setDataFolder(data_folder);
     partial_model_2->init();
 
     while (cov_t < 90){
-      //float alphaOcc = 0.2, alphaUnk = 0.8;
-      PartialModelBase *partial_model = new PMVOctreeVasquez09(alphaOcc, alphaUnk);
-      partial_model->setConfigFolder(config_folder);
-      partial_model->setDataFolder(data_folder);
-      partial_model->init();
+    partial_model->init();
      
       std::stringstream ss;
       std::stringstream tt;
@@ -406,7 +400,6 @@ int main(int argc, char **argv) {
       reader.saveDoubleCoordinates(pos_actual_nubes, nube_acumulada); //guarda nube de puntos para proceder a filtrar
       ////-------filtro de voxeles
       filtro_voxeles2(nube_acumulada, img);
-      //filtro_voxeles(img);
       /////----- fin filtro de voxeles
       nube_acumulada.clear();
       pos_actual = direccion_nube_filtrada;
@@ -446,7 +439,6 @@ int main(int argc, char **argv) {
 	  std::cout << "\n\t\t\tVista " << img << " Planificación # " << t <<" Traslape > 50% #" << j << endl;
 	  
 	  NARF_points = narf_correspondence(posible_z,nube_acumulada, gap, img, t);
-	  std::cout<< "\n\t\t\t Narf points " << NARF_points << endl;
 	  if (NARF_points){ // si hay tres o mas narf points en el traslape, permite evaluar aumneto de covertura
 	    std::cout << "\t\t\t Incremeno max actual = " << max_increment << "\t en img " << max_intertoise << endl;
 	    posible_acumulada.clear();
@@ -458,16 +450,13 @@ int main(int argc, char **argv) {
 	    if (increment > max_increment)
 	    {
 	      std::cout << "\n\tencontré que la imagen " << j << " incrementa en " << increment << " porciento " << endl; 
+	      save_chosen_narfs(img, t);
 	      max_intertoise = j;
 	      max_increment = increment;      
 	    }
 	  }
 	}
       }
-      //// guarda nube de puntos de narfs de ultimo traslape
-      pcl::PointCloud<pcl::PointXYZ>::Ptr final_narf (new pcl::PointCloud<pcl::PointXYZ>);
-      pcl::io::loadPCDFile(dir_nbv_i + "narf_points.pcd",*final_narf); //primero se guarda en final_narf
-      pcl::io::savePCDFile(dir_nbv_i + oss.str() + "/NARF_point_cloud/narf_cloud" + tt.str() + ".pcd", *final_narf);
       
       indice = max_intertoise;
       ///guarda el numero de la posicion que mas incrementó
@@ -488,20 +477,9 @@ int main(int argc, char **argv) {
       reader.saveDoubleCoordinates(pos_actual, pose_);
       
       t++;
-      delete partial_model;
       pose_.clear();
       orn_.clear();
-      //delete partial_model_2;
     }
-    //delete partial_model;
-    delete partial_model_2;/*
-    delete nube_acumulada;
-    delete nube_acumulada_aux;
-    delete posible_z;
-    delete z_t;
-    delete plano_t;
-    delete modelo_t;
-    */
     nube_acumulada.clear();
     z_t.clear();
     plano_t.clear();
@@ -512,5 +490,7 @@ int main(int argc, char **argv) {
     mono.clear();
     posible_z.clear();
   }
+  delete partial_model_2;
+  delete partial_model;
   return 0;
 }
