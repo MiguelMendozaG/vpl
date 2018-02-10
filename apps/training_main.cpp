@@ -12,7 +12,7 @@
 
 typedef pcl::PointXYZ PointType;
 
-std::string my_direction("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes");
+std::string my_direction("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/"); //dirección donde se va a guardar el dataset
 std::string dir_nbv_narf ("/home/miguelmg/Documents/CIDETEC/'semestre 2'/'vision 3d'/proyecto/'6d pose'/hinterstoisser/nubes/nbv_i/");
 std::string dir_mono("/home/miguelmg/repositorios/vpl/data_example/FreeFlyer/config/mono.dat");
 
@@ -289,7 +289,7 @@ int main(int argc, char **argv) {
     partial_model_2->setDataFolder(data_folder);
     partial_model_2->init();
       
-  for (int img = 640; img <= 1312; img+=5){
+  for (int img = 1220; img <= 1312; img+=5){
     
     std::cout << "\n -------New Image img:" << img <<endl;
     
