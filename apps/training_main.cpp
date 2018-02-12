@@ -289,7 +289,7 @@ int main(int argc, char **argv) {
     partial_model_2->setDataFolder(data_folder);
     partial_model_2->init();
       
-  for (int img = 1220; img <= 1312; img+=5){
+  for (int img = 1310; img <= 1312; img+=5){
     
     std::cout << "\n -------New Image img:" << img <<endl;
     

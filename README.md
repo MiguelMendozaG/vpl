@@ -66,6 +66,7 @@ mkdir build
 cd build 
 cmake ..
 ```
+5. File '''cloud_generation.py''' generates the point clouds needed in vpl files.
 
 
 ### Full VPL installation
