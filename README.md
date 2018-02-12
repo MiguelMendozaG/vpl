@@ -34,6 +34,12 @@ Vasquez-Gomez, J. I., Sucar, L. E., & Murrieta-Cid, R. (2017). View/state planni
 If you are having troubles with VPL, please drop me a mail: 
 ![VPL Examples](https://jivasquez.files.wordpress.com/2017/05/ivasquez_mail.png)
 
+### Pre-processing the input files
+
+File ```cloud_generation.py``` generates the point clouds needed in vpl files.
+
+In folder ```input_dataset_folder``` the folder where Hintertoisser dataset files are stored is indicated.
+And ```output_dataset_folder``` indicates the location where we will save the output point clouds.
 
 ### Requirements
 
@@ -66,7 +72,6 @@ mkdir build
 cd build 
 cmake ..
 ```
-5. File '''cloud_generation.py''' generates the point clouds needed in vpl files.
 
 
 ### Full VPL installation
