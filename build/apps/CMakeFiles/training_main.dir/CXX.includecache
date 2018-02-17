@@ -587,6 +587,8 @@ pcl/point_types.h
 -
 pcl/filters/voxel_grid.h
 -
+pcl/correspondence.h
+-
 
 /usr/include/eigen3/Eigen/Cholesky
 Core

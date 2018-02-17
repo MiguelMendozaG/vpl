@@ -10,3 +10,6 @@ add_definitions(${PCL_DEFINITIONS})
 
 add_executable (icp_narf icp_narg.cpp)
 target_link_libraries (icp_narf ${PCL_LIBRARIES})
+
+add_executable(icp_narf_one_file_output icp_narf_one_file_output.cpp)
+target_link_libraries (icp_narf_one_file_output ${PCL_LIBRARIES})

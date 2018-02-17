@@ -1,0 +1,73 @@
+\hypertarget{classTrainingPlanner}{}\section{Training\+Planner Class Reference}
+\label{classTrainingPlanner}\index{Training\+Planner@{Training\+Planner}}
+Inheritance diagram for Training\+Planner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classTrainingPlanner}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Training\+Planner} (\hyperlink{classRobotSensor}{Robot\+Sensor} $\ast$rs, \hyperlink{classPartialModelBase}{Partial\+Model\+Base} $\ast$pm)\hypertarget{classTrainingPlanner_a13661b6d725724922f92e92b0fa90ad7}{}\label{classTrainingPlanner_a13661b6d725724922f92e92b0fa90ad7}
+
+\item 
+virtual bool \hyperlink{classTrainingPlanner_a9c82d194af01b8edf4d34a34e36c4c8c}{plan\+N\+BV} (\hyperlink{classViewStructure}{View\+Structure} \&v)
+\item 
+virtual bool {\bfseries init} ()\hypertarget{classTrainingPlanner_a91db3bbe0754d25516b7cece39c16bb7}{}\label{classTrainingPlanner_a91db3bbe0754d25516b7cece39c16bb7}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classTrainingPlanner_a9e7e795c15199a3fd508de2c28b6e995}{vistas\+\_\+dirigidas} (std\+::vector$<$ std\+::vector$<$ double $>$ $>$ points, \hyperlink{classViewList}{View\+List} \&views)
+\item 
+double {\bfseries compare\+Clouds} (std\+::vector$<$ std\+::vector$<$ double $>$ $>$ a, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ reference, double gap)\hypertarget{classTrainingPlanner_a7b9e54357833ef501fbf03fbfd9bc74d}{}\label{classTrainingPlanner_a7b9e54357833ef501fbf03fbfd9bc74d}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries radius}\hypertarget{classTrainingPlanner_a67490badff9dd63fb461329fd9360bd4}{}\label{classTrainingPlanner_a67490badff9dd63fb461329fd9360bd4}
+
+\item 
+float {\bfseries cx}\hypertarget{classTrainingPlanner_aeb435a67ef9c8feda460069053276ba3}{}\label{classTrainingPlanner_aeb435a67ef9c8feda460069053276ba3}
+
+\item 
+float {\bfseries cy}\hypertarget{classTrainingPlanner_acaeb5a968ee0642d241d25f1f759ba01}{}\label{classTrainingPlanner_acaeb5a968ee0642d241d25f1f759ba01}
+
+\item 
+float {\bfseries cz}\hypertarget{classTrainingPlanner_a2404f648135f293517d96097cb735886}{}\label{classTrainingPlanner_a2404f648135f293517d96097cb735886}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{Training\+Planner@{Training\+Planner}!plan\+N\+BV@{plan\+N\+BV}}
+\index{plan\+N\+BV@{plan\+N\+BV}!Training\+Planner@{Training\+Planner}}
+\subsubsection[{\texorpdfstring{plan\+N\+B\+V(\+View\+Structure \&v)}{planNBV(ViewStructure &v)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Training\+Planner\+::plan\+N\+BV (
+\begin{DoxyParamCaption}
+\item[{{\bf View\+Structure} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classTrainingPlanner_a9c82d194af01b8edf4d34a34e36c4c8c}{}\label{classTrainingPlanner_a9c82d194af01b8edf4d34a34e36c4c8c}
+Main function, it computes the N\+BV 
+
+Reimplemented from \hyperlink{classWorkspaceNBVPlanner_ad5655e5c1c45a017d4c598fd2632ed49}{Workspace\+N\+B\+V\+Planner}.
+
+\index{Training\+Planner@{Training\+Planner}!vistas\+\_\+dirigidas@{vistas\+\_\+dirigidas}}
+\index{vistas\+\_\+dirigidas@{vistas\+\_\+dirigidas}!Training\+Planner@{Training\+Planner}}
+\subsubsection[{\texorpdfstring{vistas\+\_\+dirigidas(std\+::vector$<$ std\+::vector$<$ double $>$ $>$ points, View\+List \&views)}{vistas_dirigidas(std::vector< std::vector< double > > points, ViewList &views)}}]{\setlength{\rightskip}{0pt plus 5cm}void Training\+Planner\+::vistas\+\_\+dirigidas (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::vector$<$ double $>$ $>$}]{points, }
+\item[{{\bf View\+List} \&}]{views}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classTrainingPlanner_a9e7e795c15199a3fd508de2c28b6e995}{}\label{classTrainingPlanner_a9e7e795c15199a3fd508de2c28b6e995}
+unit sphere point
+
+view sphere point 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+viewplanning/training\+\_\+planner.\+h\item 
+viewplanning/training\+\_\+planner.\+cpp\end{DoxyCompactItemize}

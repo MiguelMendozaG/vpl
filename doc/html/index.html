@@ -98,6 +98,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;@article{vasquez2017view,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  title={View/state planning for three-dimensional object reconstruction under uncertainty},</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  author={Vasquez-Gomez, J Irving and Sucar, L Enrique and Murrieta-Cid, Rafael},</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  journal={Autonomous Robots},</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  volume={41},</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  number={1},</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  pages={89--109},</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  year={2017},</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  publisher={Springer}</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div></div><!-- fragment --><p> If you are having troubles with VPL, please drop me a mail: </p><div class="image">
 <img src="https://jivasquez.files.wordpress.com/2017/05/ivasquez_mail.png"  alt="VPL Examples"/>
 </div>
+<h3>Pre-processing the input files</h3>
+<ul>
+<li>File <code>cloud_generation.py</code> (inside pre-processing folder) generates the point clouds needed in vpl files. In folder <code>input_dataset_folder</code> the folder where Hintertoisser dataset files are stored is indicated. And <code>output_dataset_folder</code> indicates the location where we will save the output point clouds.</li>
+<li>File <code>scaling.py</code> scales the input point cloud of the ground truth model.</li>
+</ul>
 <h3>Requirements</h3>
 <p>Before installing VPL you need to install the following libraries:</p><ul>
 <li>boost <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;sudo apt get install libboost-all-dev</div></div><!-- fragment --></li>
@@ -121,7 +126,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 8 2017 12:22:05 for VPL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 15 2018 17:07:46 for VPL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

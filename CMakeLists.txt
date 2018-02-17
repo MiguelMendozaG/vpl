@@ -17,6 +17,9 @@ set(BUILD_APPS true)
 # View/state planning It requires additional libraries, I recommend to put this as false (under development)
 set(BUILD_NBVS false)
 
+#pcl libraries
+add_subdirectory(pcl)
+
 # Configure the path to the octomap library
 set(OCTOMAP_LIB_PATH /home/miguelmg/octomap/octomap-devel/lib)
 set(OCTOMAP_INCLUDE_PATH /home/miguelmg/octomap/octomap-devel/octomap/include)

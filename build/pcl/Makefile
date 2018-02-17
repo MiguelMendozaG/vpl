@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+pcl/CMakeFiles/icp_narf_one_file_output.dir/rule:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/icp_narf_one_file_output.dir/rule
+.PHONY : pcl/CMakeFiles/icp_narf_one_file_output.dir/rule
+
+# Convenience name for target.
+icp_narf_one_file_output: pcl/CMakeFiles/icp_narf_one_file_output.dir/rule
+
+.PHONY : icp_narf_one_file_output
+
+# fast build rule for target.
+icp_narf_one_file_output/fast:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f pcl/CMakeFiles/icp_narf_one_file_output.dir/build.make pcl/CMakeFiles/icp_narf_one_file_output.dir/build
+.PHONY : icp_narf_one_file_output/fast
+
+# Convenience name for target.
 pcl/CMakeFiles/icp_narf.dir/rule:
 	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/icp_narf.dir/rule
 .PHONY : pcl/CMakeFiles/icp_narf.dir/rule
@@ -124,6 +139,33 @@ icp_narf: pcl/CMakeFiles/icp_narf.dir/rule
 icp_narf/fast:
 	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f pcl/CMakeFiles/icp_narf.dir/build.make pcl/CMakeFiles/icp_narf.dir/build
 .PHONY : icp_narf/fast
+
+icp_narf_one_file_output.o: icp_narf_one_file_output.cpp.o
+
+.PHONY : icp_narf_one_file_output.o
+
+# target to build an object file
+icp_narf_one_file_output.cpp.o:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f pcl/CMakeFiles/icp_narf_one_file_output.dir/build.make pcl/CMakeFiles/icp_narf_one_file_output.dir/icp_narf_one_file_output.cpp.o
+.PHONY : icp_narf_one_file_output.cpp.o
+
+icp_narf_one_file_output.i: icp_narf_one_file_output.cpp.i
+
+.PHONY : icp_narf_one_file_output.i
+
+# target to preprocess a source file
+icp_narf_one_file_output.cpp.i:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f pcl/CMakeFiles/icp_narf_one_file_output.dir/build.make pcl/CMakeFiles/icp_narf_one_file_output.dir/icp_narf_one_file_output.cpp.i
+.PHONY : icp_narf_one_file_output.cpp.i
+
+icp_narf_one_file_output.s: icp_narf_one_file_output.cpp.s
+
+.PHONY : icp_narf_one_file_output.s
+
+# target to generate assembly for a file
+icp_narf_one_file_output.cpp.s:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f pcl/CMakeFiles/icp_narf_one_file_output.dir/build.make pcl/CMakeFiles/icp_narf_one_file_output.dir/icp_narf_one_file_output.cpp.s
+.PHONY : icp_narf_one_file_output.cpp.s
 
 icp_narg.o: icp_narg.cpp.o
 
@@ -160,7 +202,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... icp_narf_one_file_output"
 	@echo "... icp_narf"
+	@echo "... icp_narf_one_file_output.o"
+	@echo "... icp_narf_one_file_output.i"
+	@echo "... icp_narf_one_file_output.s"
 	@echo "... icp_narg.o"
 	@echo "... icp_narg.i"
 	@echo "... icp_narg.s"

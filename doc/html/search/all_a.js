@@ -4,7 +4,7 @@ var searchData=
   ['partialmodelbase',['PartialModelBase',['../classPartialModelBase.html',1,'']]],
   ['performscan',['performScan',['../classRobotSensor.html#a76298deca29d80b6543f628f10060bec',1,'RobotSensor::performScan()'],['../classRobSenNoTransformation.html#a1fe9d3c79ea7e29892c58792b1fa05d8',1,'RobSenNoTransformation::performScan()']]],
   ['plan',['Plan',['../classReconstructor3D.html#a8afd09b3f07435ef93b11147b0d92c6f',1,'Reconstructor3D']]],
-  ['plannbv',['planNBV',['../classNBVPlanner.html#a448567c9d5cec319c5df5efdb0d5479c',1,'NBVPlanner::planNBV()'],['../classWorkspaceNBVPlanner.html#ad5655e5c1c45a017d4c598fd2632ed49',1,'WorkspaceNBVPlanner::planNBV()']]],
+  ['plannbv',['planNBV',['../classNBVPlanner.html#a448567c9d5cec319c5df5efdb0d5479c',1,'NBVPlanner::planNBV()'],['../classTrainingPlanner.html#a9c82d194af01b8edf4d34a34e36c4c8c',1,'TrainingPlanner::planNBV()'],['../classWorkspaceNBVPlanner.html#ad5655e5c1c45a017d4c598fd2632ed49',1,'WorkspaceNBVPlanner::planNBV()']]],
   ['pmvoctree',['PMVOctree',['../classPMVOctree.html',1,'']]],
   ['pmvoctreeig',['PMVOctreeIG',['../classPMVOctreeIG.html',1,'']]],
   ['pmvoctreeigkriegel12',['PMVOctreeIGKriegel12',['../classPMVOctreeIGKriegel12.html',1,'']]],

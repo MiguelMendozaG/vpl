@@ -60,6 +60,100 @@ CMAKE_SOURCE_DIR = /home/miguelmg/repositorios/vpl
 CMAKE_BINARY_DIR = /home/miguelmg/repositorios/vpl/build
 
 #=============================================================================
+# Directory level rules for directory pcl
+
+# Convenience name for "all" pass in the directory.
+pcl/all: pcl/CMakeFiles/icp_narf_one_file_output.dir/all
+pcl/all: pcl/CMakeFiles/icp_narf.dir/all
+
+.PHONY : pcl/all
+
+# Convenience name for "clean" pass in the directory.
+pcl/clean: pcl/CMakeFiles/icp_narf_one_file_output.dir/clean
+pcl/clean: pcl/CMakeFiles/icp_narf.dir/clean
+
+.PHONY : pcl/clean
+
+# Convenience name for "preinstall" pass in the directory.
+pcl/preinstall:
+
+.PHONY : pcl/preinstall
+
+#=============================================================================
+# Target rules for target pcl/CMakeFiles/icp_narf_one_file_output.dir
+
+# All Build rule for target.
+pcl/CMakeFiles/icp_narf_one_file_output.dir/all:
+	$(MAKE) -f pcl/CMakeFiles/icp_narf_one_file_output.dir/build.make pcl/CMakeFiles/icp_narf_one_file_output.dir/depend
+	$(MAKE) -f pcl/CMakeFiles/icp_narf_one_file_output.dir/build.make pcl/CMakeFiles/icp_narf_one_file_output.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=37,38 "Built target icp_narf_one_file_output"
+.PHONY : pcl/CMakeFiles/icp_narf_one_file_output.dir/all
+
+# Include target in all.
+all: pcl/CMakeFiles/icp_narf_one_file_output.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+pcl/CMakeFiles/icp_narf_one_file_output.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguelmg/repositorios/vpl/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/icp_narf_one_file_output.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguelmg/repositorios/vpl/build/CMakeFiles 0
+.PHONY : pcl/CMakeFiles/icp_narf_one_file_output.dir/rule
+
+# Convenience name for target.
+icp_narf_one_file_output: pcl/CMakeFiles/icp_narf_one_file_output.dir/rule
+
+.PHONY : icp_narf_one_file_output
+
+# clean rule for target.
+pcl/CMakeFiles/icp_narf_one_file_output.dir/clean:
+	$(MAKE) -f pcl/CMakeFiles/icp_narf_one_file_output.dir/build.make pcl/CMakeFiles/icp_narf_one_file_output.dir/clean
+.PHONY : pcl/CMakeFiles/icp_narf_one_file_output.dir/clean
+
+# clean rule for target.
+clean: pcl/CMakeFiles/icp_narf_one_file_output.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target pcl/CMakeFiles/icp_narf.dir
+
+# All Build rule for target.
+pcl/CMakeFiles/icp_narf.dir/all:
+	$(MAKE) -f pcl/CMakeFiles/icp_narf.dir/build.make pcl/CMakeFiles/icp_narf.dir/depend
+	$(MAKE) -f pcl/CMakeFiles/icp_narf.dir/build.make pcl/CMakeFiles/icp_narf.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=35,36 "Built target icp_narf"
+.PHONY : pcl/CMakeFiles/icp_narf.dir/all
+
+# Include target in all.
+all: pcl/CMakeFiles/icp_narf.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+pcl/CMakeFiles/icp_narf.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguelmg/repositorios/vpl/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 pcl/CMakeFiles/icp_narf.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguelmg/repositorios/vpl/build/CMakeFiles 0
+.PHONY : pcl/CMakeFiles/icp_narf.dir/rule
+
+# Convenience name for target.
+icp_narf: pcl/CMakeFiles/icp_narf.dir/rule
+
+.PHONY : icp_narf
+
+# clean rule for target.
+pcl/CMakeFiles/icp_narf.dir/clean:
+	$(MAKE) -f pcl/CMakeFiles/icp_narf.dir/build.make pcl/CMakeFiles/icp_narf.dir/clean
+.PHONY : pcl/CMakeFiles/icp_narf.dir/clean
+
+# clean rule for target.
+clean: pcl/CMakeFiles/icp_narf.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory partialmodel
 
 # Convenience name for "all" pass in the directory.
@@ -261,7 +355,7 @@ apps/CMakeFiles/test_trainer.dir/all: viewplanning/CMakeFiles/ViewPlanning.dir/a
 apps/CMakeFiles/test_trainer.dir/all: rangesimulator/CMakeFiles/RangeSimulator.dir/all
 	$(MAKE) -f apps/CMakeFiles/test_trainer.dir/build.make apps/CMakeFiles/test_trainer.dir/depend
 	$(MAKE) -f apps/CMakeFiles/test_trainer.dir/build.make apps/CMakeFiles/test_trainer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=39,40 "Built target test_trainer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=43,44 "Built target test_trainer"
 .PHONY : apps/CMakeFiles/test_trainer.dir/all
 
 # Include target in all.
@@ -298,7 +392,7 @@ clean: apps/CMakeFiles/test_trainer.dir/clean
 apps/CMakeFiles/update_partial_model.dir/all: partialmodel/CMakeFiles/PartialModel.dir/all
 	$(MAKE) -f apps/CMakeFiles/update_partial_model.dir/build.make apps/CMakeFiles/update_partial_model.dir/depend
 	$(MAKE) -f apps/CMakeFiles/update_partial_model.dir/build.make apps/CMakeFiles/update_partial_model.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=43,44 "Built target update_partial_model"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=47,48 "Built target update_partial_model"
 .PHONY : apps/CMakeFiles/update_partial_model.dir/all
 
 # Include target in all.
@@ -335,7 +429,7 @@ clean: apps/CMakeFiles/update_partial_model.dir/clean
 apps/CMakeFiles/view_sphere_generator.dir/all: partialmodel/CMakeFiles/PartialModel.dir/all
 	$(MAKE) -f apps/CMakeFiles/view_sphere_generator.dir/build.make apps/CMakeFiles/view_sphere_generator.dir/depend
 	$(MAKE) -f apps/CMakeFiles/view_sphere_generator.dir/build.make apps/CMakeFiles/view_sphere_generator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=45,46 "Built target view_sphere_generator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=49,50 "Built target view_sphere_generator"
 .PHONY : apps/CMakeFiles/view_sphere_generator.dir/all
 
 # Include target in all.
@@ -374,7 +468,7 @@ apps/CMakeFiles/test_freeflyer_vasquez09.dir/all: viewplanning/CMakeFiles/ViewPl
 apps/CMakeFiles/test_freeflyer_vasquez09.dir/all: rangesimulator/CMakeFiles/RangeSimulator.dir/all
 	$(MAKE) -f apps/CMakeFiles/test_freeflyer_vasquez09.dir/build.make apps/CMakeFiles/test_freeflyer_vasquez09.dir/depend
 	$(MAKE) -f apps/CMakeFiles/test_freeflyer_vasquez09.dir/build.make apps/CMakeFiles/test_freeflyer_vasquez09.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=37,38 "Built target test_freeflyer_vasquez09"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=41,42 "Built target test_freeflyer_vasquez09"
 .PHONY : apps/CMakeFiles/test_freeflyer_vasquez09.dir/all
 
 # Include target in all.
@@ -411,7 +505,7 @@ clean: apps/CMakeFiles/test_freeflyer_vasquez09.dir/clean
 apps/CMakeFiles/random_view_generator.dir/all: partialmodel/CMakeFiles/PartialModel.dir/all
 	$(MAKE) -f apps/CMakeFiles/random_view_generator.dir/build.make apps/CMakeFiles/random_view_generator.dir/depend
 	$(MAKE) -f apps/CMakeFiles/random_view_generator.dir/build.make apps/CMakeFiles/random_view_generator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=35,36 "Built target random_view_generator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=39,40 "Built target random_view_generator"
 .PHONY : apps/CMakeFiles/random_view_generator.dir/all
 
 # Include target in all.
@@ -448,7 +542,7 @@ clean: apps/CMakeFiles/random_view_generator.dir/clean
 apps/CMakeFiles/training_main.dir/all: partialmodel/CMakeFiles/PartialModel.dir/all
 	$(MAKE) -f apps/CMakeFiles/training_main.dir/build.make apps/CMakeFiles/training_main.dir/depend
 	$(MAKE) -f apps/CMakeFiles/training_main.dir/build.make apps/CMakeFiles/training_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=41,42 "Built target training_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=45,46 "Built target training_main"
 .PHONY : apps/CMakeFiles/training_main.dir/all
 
 # Include target in all.

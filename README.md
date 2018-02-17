@@ -36,10 +36,11 @@ If you are having troubles with VPL, please drop me a mail:
 
 ### Pre-processing the input files
 
-File ```cloud_generation.py``` (inside pre-processing folder) generates the point clouds needed in vpl files.
-
+- File ```cloud_generation.py``` (inside pre-processing folder) generates the point clouds needed in vpl files.
 In folder ```input_dataset_folder``` the folder where Hintertoisser dataset files are stored is indicated.
 And ```output_dataset_folder``` indicates the location where we will save the output point clouds.
+
+- File ```scaling.py``` scales the input point cloud of the ground truth model. 
 
 ### Requirements
 

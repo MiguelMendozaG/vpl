@@ -7,8 +7,6 @@
 #IncludeRegexTransform: 
 
 /home/miguelmg/repositorios/vpl/pcl/icp_narg.cpp
-stdio.h
--
 iostream
 -
 boost/thread/thread.hpp

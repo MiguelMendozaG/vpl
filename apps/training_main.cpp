@@ -9,33 +9,63 @@
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
 #include <pcl/filters/voxel_grid.h>
+#include <pcl/correspondence.h>
 
 typedef pcl::PointXYZ PointType;
 
-std::string my_direction("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/"); //dirección donde se va a guardar el dataset
-std::string dir_nbv_narf ("/home/miguelmg/Documents/CIDETEC/'semestre 2'/'vision 3d'/proyecto/'6d pose'/hinterstoisser/nubes/nbv_i/");
-std::string dir_mono("/home/miguelmg/repositorios/vpl/data_example/FreeFlyer/config/mono.dat");
+int jumps= 5;
+std::vector< std::vector< std::vector <double> > >  all_z;
+std::vector< std::vector< std::vector <double> > >  backgrounds;
 
-std::string dir_nbv_i( my_direction + "/nbv_i/");
 
-std::string nube_mod_den("/nube_model_denso");
-std::string nub("/nubes");
-//std::string oct("/octomap");
-std::string oct_acum("/octomap_acumulado");
+std::string my_direction("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/modelo2/"); //location of the input dataset folder
+std::string my_direction_spaces("/home/miguelmg/Documents/CIDETEC/'semestre 2'/'vision 3d'/proyecto/'6d pose'/hinterstoisser/nubes/modelo2/nbv/"); //location of the input dataset folder
+std::string dir_nbv_narf ("/home/miguelmg/Documents/CIDETEC/'semestre 2'/'vision 3d'/proyecto/'6d pose'/hinterstoisser/nubes/modelo2/nbv/"); //in case your folder names contains space, you must specify it and add /nbv/ (e.g. ~/../'my foder'/nbv/)
+std::string dir_mono("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/ground_truth_models/model2.xyz"); //ground truth point cloud location
+
+std::string dir_nbv_i( my_direction + "nbv/");
+
+std::string nube_mod_den("/dense_cloud"); // nube_model_denso
+std::string nub("/clouds");  // nubes
+std::string oct_acum("/accumulated_octomap"); // octomap_acumulado
 std::string pos("/poses");
-std::string dir_traslape("/traslape");
-std::string carpeta_narf("/NARF_point_cloud");
+std::string dir_traslape("/overlapping_region"); //traslape
+std::string carpeta_narf("/NARF_point_cloud"); 
 std::string num_poses("/num_pose");
-std::string orn_pos ("/pose_orientacion");
-//std::string acumulada("/home/miguelmg/repositorios/vpl/data_example/FreeFlyer/object_pts.dat");
-std::string direccion(my_direction + "/absolutas/plano_con_modelo/imagen-");
-std::string direccion_posicion(my_direction + "/posicion/pose/imagen_origin_");
-std::string direccion_orientacion(my_direction + "/posicion/orientaciones/imagen-ori-");
-std::string direccion_plano(my_direction + "/absolutas/planos/imagen-");
-std::string direccion_modelo(my_direction + "/absolutas/modelo/imagen-");
+std::string orn_pos ("/pose_orientation"); //pose_orientacion
+std::string direccion(my_direction + "absolute/model_background/imagen-");
+std::string direccion_posicion(my_direction + "position/pose/imagen_origin_");
+std::string direccion_orientacion(my_direction + "position/orientation/imagen-ori-");
+std::string direccion_plano(my_direction + "absolute/background_filtered/imagen-");
+std::string direccion_modelo(my_direction + "absolute/model/imagen-");
+std::string direccion_read_all_z (my_direction + "absolute/model/");
+std::string direccion_read_background (my_direction + "absolute/background_filtered/");
 std::string extension(".dat");
 std::string extension_xyz(".xyz");
 std::string ext_oct(".ot");
+
+
+void read_all_z(std::string input_folder, bool which_cloud){
+  std::vector< std::vector<double> > pcl_raw;
+  pcl::PCDReader reader_pcl;
+
+  vpFileReader reader;
+
+  for(int i = 0; i<1312; i+=jumps){
+    std::stringstream indice_img;
+    indice_img << i;
+    std::string folder_pcl (input_folder + "imagen-" +  indice_img.str() + ".xyz");
+    std::cout  << "\n Imagen " << i << endl;
+
+    
+    reader.readDoubleCoordinates(folder_pcl, pcl_raw);
+    if (which_cloud == 0)
+      all_z.push_back(pcl_raw);
+    else
+      backgrounds.push_back(pcl_raw);
+  }
+  //std::cout << "\n pcl raw" << all_z[0][0][0] << endl;
+}
 
 
 double compareClouds(std::vector< std::vector< double > > a, std::vector< std::vector< double > > reference,  double gap, bool voxel_filter, int img, int iteracion)
@@ -69,32 +99,29 @@ double compareClouds(std::vector< std::vector< double > > a, std::vector< std::v
      narf_cloud->is_dense = false;
      narf_cloud->points.resize(narf_cloud->width * narf_cloud->height);
      for(int i = 0 ; i < reference.size();i++){
-     for(int j= 0; j< a.size(); j++)
-     {
-       if( fabs(reference[i][0] - a[j][0]) < gap ){
-	  if( fabs(reference[i][1] - a[j][1]) < gap ){
-	   if( fabs(reference[i][2] - a[j][2]) < gap ){
-	      //std::cout << " Guardando imagen traslape " << endl;
-	      narf_cloud->points[correspondences_cloud].x = a[j][0];
-	      narf_cloud->points[correspondences_cloud].y = a[j][1];
-	      narf_cloud->points[correspondences_cloud].z = a[j][2];
-	     correspondences_cloud ++;
-	     break;
-	   }
+      for(int j= 0; j< a.size(); j++)
+	{
+	  if( fabs(reference[i][0] - a[j][0]) < gap ){
+	      if( fabs(reference[i][1] - a[j][1]) < gap ){
+	      if( fabs(reference[i][2] - a[j][2]) < gap ){
+		  //std::cout << " Guardando imagen traslape " << endl;
+		  narf_cloud->points[correspondences_cloud].x = a[j][0];
+		  narf_cloud->points[correspondences_cloud].y = a[j][1];
+		  narf_cloud->points[correspondences_cloud].z = a[j][2];
+		correspondences_cloud ++;
+		break;
+	      }
+	      }
 	  }
-       }
-     }
+	}
    }
    //// se guarda la nube de puntos en un archivo .pcd
    std::stringstream indice_img;
-    indice_img << img;
-    std::stringstream iter;
-    iter << iteracion;
+   indice_img << img;
+   std::stringstream iter;
+   iter << iteracion;
     
-    //string dir_traslape (dir_nbv_i + indice_img.str() + "/traslape/traslape");
-    //string dir_traslape_ext (".pcd");
-    
-    string pos_traslape = dir_nbv_i + "traslape.pcd" ;
+   std::string pos_traslape = dir_nbv_i + "traslape.pcd" ;
    pcl::io::savePCDFile(pos_traslape, *narf_cloud);
       
   }
@@ -125,7 +152,7 @@ void filtro_voxeles2(std::vector< std::vector< double > > nube_filtrada, int img
      nube_filtrada_pcl->points[i].z = nube_filtrada[m][2];
      m++;
   }
-  pcl::io::savePCDFile(dir_nbv_i + indice_img.str() + "/nube_model_denso/nube_densa_pcl.xyz", *nube_filtrada_pcl);
+  pcl::io::savePCDFile(dir_nbv_i + indice_img.str() + nube_mod_den +"/nube_densa_pcl.xyz", *nube_filtrada_pcl);
   
   //Se abre archivo nube_escasa en PCL
   ////////////////////
@@ -135,7 +162,7 @@ void filtro_voxeles2(std::vector< std::vector< double > > nube_filtrada, int img
   // Fill in the cloud data
   pcl::PCDReader reader_pcl;
   // Replace the path below with the path where you saved your file
-  reader_pcl.read (dir_nbv_i + indice_img.str() +"/nube_model_denso/nube_densa_pcl.xyz", *cloud); // Remember to download the file first!
+  reader_pcl.read (dir_nbv_i + indice_img.str() + nube_mod_den +"/nube_densa_pcl.xyz", *cloud); // Remember to download the file first!
 
   std::cerr << "PointCloud before filtering: " << cloud->width * cloud->height 
        << " data points (" << pcl::getFieldsList (*cloud) << ").";
@@ -150,16 +177,16 @@ void filtro_voxeles2(std::vector< std::vector< double > > nube_filtrada, int img
        << " data points (" << pcl::getFieldsList (*cloud_filtered) << ").";
 
   pcl::PCDWriter writer;
-  writer.write (dir_nbv_i + indice_img.str() +"/nube_model_denso/nube_escasa_pcl.xyz", *cloud_filtered, Eigen::Vector4f::Zero (), Eigen::Quaternionf::Identity (), false);
+  writer.write (dir_nbv_i + indice_img.str() + nube_mod_den +"/nube_escasa_pcl.xyz", *cloud_filtered, Eigen::Vector4f::Zero (), Eigen::Quaternionf::Identity (), false);
   ////////////////////
 
   std::string ID;
   int cuenta =0;
   ID = "WIDTH "; //id of the line we want to delete
     //ifstream read("infos.txt");
-    std::ifstream read_f(dir_nbv_i + indice_img.str() + "/nube_model_denso/nube_escasa_pcl.xyz");
+    std::ifstream read_f(dir_nbv_i + indice_img.str() + nube_mod_den +"/nube_escasa_pcl.xyz");
     //ofstream write("tmp.txt"); 
-    std::ofstream write(dir_nbv_i + indice_img.str() + "/nube_model_denso/nube_escasa_pcl_sin_cabecera.xyz");
+    std::ofstream write(dir_nbv_i + indice_img.str() + nube_mod_den +"/nube_escasa_pcl_sin_cabecera.xyz");
     if (read_f.is_open()) {
        std::string line;
        while (getline(read_f, line)) {
@@ -191,14 +218,13 @@ void save_chosen_narfs(int img, int iteracion){
   pcl::io::loadPCDFile(dir_nbv_i + "traslape.pcd", *cloud_of_traslape);
   
   pcl::io::savePCDFile(dir_nbv_i + indice_img.str() +"/NARF_point_cloud/narf_cloud" + iter.str() + ".pcd", *cloud_of_narfs );
-  pcl::io::savePCDFile(dir_nbv_i + indice_img.str() +"/traslape/traslape_" + iter.str() + ".pcd", *cloud_of_traslape);
+  pcl::io::savePCDFile(dir_nbv_i + indice_img.str() + dir_traslape + "/traslape_" + iter.str() + ".pcd", *cloud_of_traslape);
   
   
 }
 
 
 bool narf_correspondence( std::vector< std::vector< double > > posible_z, std::vector< std::vector< double > > acumulada, double gap, int img, int iteracion){
-  //std::cout << "\n\n\t\t NARF Points de posible z" << endl;
   std::stringstream indice_img;
   indice_img << img;
   std::stringstream iter;
@@ -221,9 +247,7 @@ bool narf_correspondence( std::vector< std::vector< double > > posible_z, std::v
   std::cout << " posible z guardado " << endl;
 
   //// Extraer los Narf points de traslape
-//   std::cin.get();
-  //std::string lectura_narf("./icp_narf_one_file_output " + dir_nbv_narf + indice_img.str() + "/traslape/traslape" + iter.str() + ".pcd" + " -m");
-  std::string lectura_narf("./icp_narf_one_file_output " + dir_nbv_narf + "/traslape.pcd" + " -m"); 
+  std::string lectura_narf("./icp_narf_one_file_output " + dir_nbv_narf + "traslape.pcd" + " -m " + "-out " + my_direction_spaces); //./executable input_point_cloud_dir -m -out output_narf_point_cloud_folder 
   std::cout<< "\n\n\t Printing if processo is available..." << endl;
   if (system(NULL)) puts ("ok");
   else exit (EXIT_FAILURE);
@@ -232,7 +256,7 @@ bool narf_correspondence( std::vector< std::vector< double > > posible_z, std::v
   std::cout << " Cloud of narf points saved " << endl;
   //std::cin.get();
   pcl::io::loadPCDFile(dir_nbv_i + "narf_points.pcd", *cloud_of_narfs);
-  //std::remove(dir_nbv_i + "narf_points.pcd");
+
   posible_z.clear();
   acumulada.clear();
   if (cloud_of_narfs->points.size() >= 3) // si existen al menos 3 narf points en el traslape, entonces regresa uno
@@ -288,12 +312,20 @@ int main(int argc, char **argv) {
     partial_model_2->setConfigFolder(config_folder);
     partial_model_2->setDataFolder(data_folder);
     partial_model_2->init();
+    
+     vpFileReader reader;
       
-  for (int img = 1310; img <= 1312; img+=5){
+    read_all_z(direccion_read_all_z, 0);
+    read_all_z(direccion_read_background, 1);
+    std::cout << "\n all_z 0 " << backgrounds[0][0][0] << endl;
+    std::cin.get();
+      
+  for (int img = 0; img <= 1312; img+=jumps){
     
     std::cout << "\n -------New Image img:" << img <<endl;
     
     int indice = img;
+    int indice_2 = img;
     int t = 1;
     double max_increment = 0;
     int max_intertoise = 0; 
@@ -322,13 +354,13 @@ int main(int argc, char **argv) {
     mkdir((dir_nbv_i + indice_img + dir_traslape).c_str(), S_IRWXU);
     mkdir((dir_nbv_i + indice_img + carpeta_narf).c_str(), S_IRWXU);
 
-    std::string direccion_nube_filtrada(dir_nbv_i + indice_img +"/nube_model_denso/nube_escasa_pcl_sin_cabecera.xyz");
-    std::string data_octomap(dir_nbv_i + indice_img + "/octomap/octomap_");
-    std::string data_octomap_acum(dir_nbv_i + indice_img + "/octomap_acumulado/octomap_");
-    std::string data_num_poses(dir_nbv_i + indice_img + "/poses/num_pose/pose_nbv");
-    std::string data_orn_poses(dir_nbv_i + indice_img + "/poses/pose_orientacion/pose_nbv");
-    std::string data_nubes(dir_nbv_i + indice_img + "/nubes/nube_nbv");
-    std::string data_nubes_denso (dir_nbv_i + indice_img + "/nube_model_denso/nube_nbv_aux");
+    std::string direccion_nube_filtrada(dir_nbv_i + indice_img + nube_mod_den +"/nube_escasa_pcl_sin_cabecera.xyz");
+    std::string data_octomap(dir_nbv_i + indice_img + oct +"/octomap_");
+    std::string data_octomap_acum(dir_nbv_i + indice_img + oct_acum +"/octomap_");
+    std::string data_num_poses(dir_nbv_i + indice_img + pos +"/num_pose/pose_nbv");
+    std::string data_orn_poses(dir_nbv_i + indice_img + pos +"/pose_orientacion/pose_nbv");
+    std::string data_nubes(dir_nbv_i + indice_img + nub +"/nube_nbv");
+    std::string data_nubes_denso (dir_nbv_i + indice_img + nube_mod_den +"/nube_nbv_aux");
 
     std::string pos_actual;
     std::string pos_actual_aux;
@@ -373,24 +405,28 @@ int main(int argc, char **argv) {
       
       std::cout << "\n\nVista " << img << " Percepcion " << t << endl;
       //percepcion  (z)
-      scan_actual = direccion + ss.str() + extension; //obtiene modelo con plano de la percepcion actual
-      reader.readDoubleCoordinates(scan_actual,z_t);
+      scan_actual = direccion + ss.str() + extension_xyz; //obtiene modelo con plano de la percepcion actual
+      //reader.readDoubleCoordinates(scan_actual,z_t);
       
-      scan_plano_t = direccion_plano + ss.str() + extension; //obtiene nube de puntos solamente del plano de la percepcion actual
-      reader.readDoubleCoordinates(scan_plano_t,plano_t);
       
-      scan_modelo_t = direccion_modelo + ss.str() + extension; //obtiene nube de puntos solamente del modelo de la percepcion actual
-      reader.readDoubleCoordinates(scan_modelo_t,modelo_t);
+      scan_plano_t = direccion_plano + ss.str() + extension_xyz; //obtiene nube de puntos solamente del plano de la percepcion actual
+      //reader.readDoubleCoordinates(scan_plano_t,plano_t);
+      plano_t = backgrounds[indice_2];
+      
+      scan_modelo_t = direccion_modelo + ss.str() + extension_xyz; //obtiene nube de puntos solamente del modelo de la percepcion actual
+      //reader.readDoubleCoordinates(scan_modelo_t,modelo_t);
+      modelo_t = all_z[indice_2];
+      
       
       
       std::cout << "\n\nVista " << img << " Update" << t << endl;
       //update (M(z,t))
       
-      partial_model->updateWithScan(scan_actual, pos_actual); //genera octomap de la nube de puntos de la percepcion actual
+      //partial_model->updateWithScan(scan_actual, pos_actual); //genera octomap de la nube de puntos de la percepcion actual
       std::cout << "\t\t\t Archivo pose " << pos_actual << endl;
       std::cout << "\t\t\t Archivo scan actual " << scan_actual << endl;
       pos_actual = data_octomap + tt_octo.str() + ext_oct;
-      partial_model->savePartialModel(pos_actual);
+      //partial_model->savePartialModel(pos_actual);
       std::cout << "\n\tOctomap # " << t << "guardado"<< endl;
       
       
@@ -413,9 +449,9 @@ int main(int argc, char **argv) {
       reader.saveDoubleCoordinates(pos_actual_nubes, nube_acumulada_aux); //guarda nube de puntos acumulada incluyendo plano
       std::cout << "\n\tnube acumulada #"<< t << " guardada" << endl;
       //partial_model_2->updateWithScan(pos_actual_nubes, pos_actual_aux);
-      partial_model_2->updateWithScan(scan_actual, pos_actual_aux);
+      //partial_model_2->updateWithScan(scan_actual, pos_actual_aux);
       pos_actual = data_octomap_acum + tt_octo.str() + ext_oct;
-      partial_model_2->savePartialModel(pos_actual);
+      //partial_model_2->savePartialModel(pos_actual);
       std::cout << "\n\tOctomap acumulado # " << t << "guardado"<< endl;
       
       
@@ -424,14 +460,16 @@ int main(int argc, char **argv) {
       cov_t = compareClouds(nube_acumulada,mono,gap,0, img, t);
       
       max_increment = 0;
-      for (int j = 0; j<=1312; j+=5){
+      for (int j = 0; j<=1312; j+=jumps){
+	int indice_3 = j;
 	std::stringstream jj;
 	jj << j;
 	std::cout << "\n\t\t\tVista " << img << " Planificación # " << t <<" Comparando imagen #" << j << endl;
 	std::cout << "\n\t\t\t Covertura " << cov_t << endl;
 
-	pos_actual = direccion_modelo + jj.str() + extension;
-	reader.readDoubleCoordinates(pos_actual,posible_z);
+	pos_actual = direccion_modelo + jj.str() + extension_xyz;
+	//reader.readDoubleCoordinates(pos_actual,posible_z);
+	posible_z = all_z[indice_3];
 	
 	traslape = compareClouds(posible_z,nube_acumulada,gap,1, img, t);
 	if (traslape >= 50)
@@ -459,6 +497,7 @@ int main(int argc, char **argv) {
       }
       
       indice = max_intertoise;
+      indice_2 = max_intertoise;
       ///guarda el numero de la posicion que mas incrementó
       pos_actual = data_num_poses + tt.str() + extension;
       reader.saveData2Text<int>(indice,pos_actual);
@@ -473,7 +512,7 @@ int main(int argc, char **argv) {
       pos_actual = direccion_orientacion + indice_pose.str() + extension;
       reader.readDoubleCoordinates(pos_actual, orn_);
       pose_.insert(pose_.end(), orn_.begin(), orn_.end());
-      pos_actual = dir_nbv_i + oss.str() + "/poses/pose_orientacion/pose_orn" + tt.str() + extension;
+      pos_actual = dir_nbv_i + oss.str() + "/poses/pose_orientation/pose_orn" + tt.str() + extension;
       reader.saveDoubleCoordinates(pos_actual, pose_);
       
       t++;
@@ -492,5 +531,6 @@ int main(int argc, char **argv) {
   }
   delete partial_model_2;
   delete partial_model;
+  
   return 0;
 }

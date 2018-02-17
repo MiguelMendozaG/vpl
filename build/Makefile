@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named icp_narf_one_file_output
+
+# Build rule for target.
+icp_narf_one_file_output: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 icp_narf_one_file_output
+.PHONY : icp_narf_one_file_output
+
+# fast build rule for target.
+icp_narf_one_file_output/fast:
+	$(MAKE) -f pcl/CMakeFiles/icp_narf_one_file_output.dir/build.make pcl/CMakeFiles/icp_narf_one_file_output.dir/build
+.PHONY : icp_narf_one_file_output/fast
+
+#=============================================================================
+# Target rules for targets named icp_narf
+
+# Build rule for target.
+icp_narf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 icp_narf
+.PHONY : icp_narf
+
+# fast build rule for target.
+icp_narf/fast:
+	$(MAKE) -f pcl/CMakeFiles/icp_narf.dir/build.make pcl/CMakeFiles/icp_narf.dir/build
+.PHONY : icp_narf/fast
+
+#=============================================================================
 # Target rules for targets named PartialModel
 
 # Build rule for target.
@@ -235,6 +261,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... icp_narf_one_file_output"
+	@echo "... icp_narf"
 	@echo "... PartialModel"
 	@echo "... ViewPlanning"
 	@echo "... RangeSimulator"
