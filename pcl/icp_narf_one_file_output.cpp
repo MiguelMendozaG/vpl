@@ -139,7 +139,7 @@ int
 main (int argc, char** argv)
 {
   pcl::PointCloud<pcl::PointXYZ>::Ptr NARF1 (new pcl::PointCloud<pcl::PointXYZ>);
-  pcl::PointCloud<pcl::PointXYZ>::Ptr NARF2 (new pcl::PointCloud<pcl::PointXYZ>);
+  //pcl::PointCloud<pcl::PointXYZ>::Ptr NARF2 (new pcl::PointCloud<pcl::PointXYZ>);
   // --------------------------------------
   // -----Parse Command Line Arguments-----
   // --------------------------------------
@@ -151,7 +151,7 @@ main (int argc, char** argv)
   if (pcl::console::find_argument (argc, argv, "-m") >= 0)
   {
     setUnseenToMaxRange = true;
-    cout << "Setting unseen values in range image to maximum range readings.\n";
+    //cout << "Setting unseen values in range image to maximum range readings.\n";
   }
   if (pcl::console::parse (argc, argv, "-o", rotation_invariant) >= 0)
     cout << "Switching rotation invariant feature version "<< (rotation_invariant ? "on" : "off")<<".\n";
@@ -168,33 +168,13 @@ main (int argc, char** argv)
   angular_resolution = pcl::deg2rad (angular_resolution);
   
   
-  // ------------------------------------------------------------------
-  // -----Read pcd file or create example point cloud if not given-----
-  // ------------------------------------------------------------------
-  pcl::PointCloud<PointType>::Ptr point_cloud_ptr (new pcl::PointCloud<PointType>);
-  pcl::PointCloud<PointType>& point_cloud = *point_cloud_ptr;
-  pcl::PointCloud<pcl::PointWithViewpoint> far_ranges;
-  Eigen::Affine3f scene_sensor_pose (Eigen::Affine3f::Identity ());
-  //std::vector<int> pcd_filename_indices = pcl::console::parse_file_extension_argument (argc, argv, "pcd");
-  //std::string file_cloud("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/pcl test/nubes/imagen-0.pcd");
-  
   std::string filename2;
   
   std::vector<int> pcd_filename_indices = pcl::console::parse_file_extension_argument (argc, argv, "pcd");
-  //std::vector<int> pcd_filename_output =  pcl::console::parse_file_extension_argument (argc, argv, "pcd");
   int output = pcl::console::parse_argument (argc, argv, "-out", filename2);
   std::string filename = argv[pcd_filename_indices[0]];
-  
-  
   NARF1 = narf_points(filename);
-  //cout << " point " << NARF1->points.size() << endl;
-  //cout << " point x(0) " << NARF1->points[0].x << endl;
-  //cout << "narf points " << NARF1 << endl;
-  std::cout << "input: " << filename << endl;
-  std::cout << "output: " << filename2 << endl;
-  
-  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud1 (new pcl::PointCloud<pcl::PointXYZ>);
-
+  //pcl::PointCloud<pcl::PointXYZ>::Ptr cloud1 (new pcl::PointCloud<pcl::PointXYZ>);
   pcl::io::savePCDFile(filename2 + "narf_points.pcd", *NARF1);
 
 }

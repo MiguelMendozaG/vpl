@@ -449,9 +449,9 @@ int main(int argc, char **argv) {
       reader.saveDoubleCoordinates(pos_actual_nubes, nube_acumulada_aux); //guarda nube de puntos acumulada incluyendo plano
       std::cout << "\n\tnube acumulada #"<< t << " guardada" << endl;
       //partial_model_2->updateWithScan(pos_actual_nubes, pos_actual_aux);
-      //partial_model_2->updateWithScan(scan_actual, pos_actual_aux);
+      partial_model_2->updateWithScan(scan_actual, pos_actual_aux);
       pos_actual = data_octomap_acum + tt_octo.str() + ext_oct;
-      //partial_model_2->savePartialModel(pos_actual);
+      partial_model_2->savePartialModel(pos_actual);
       std::cout << "\n\tOctomap acumulado # " << t << "guardado"<< endl;
       
       

@@ -37,6 +37,9 @@ if(BUILD_PARTIAL_MODEL)
   add_executable(training_main training_main.cpp ${SRC_ALL})
   target_link_libraries(training_main ${PCL_LIBRARIES} ${LIB_PARTIAL_MODEL} ${LIBS_OCTOMAP})
   
+  add_executable(trainning_main_changes trainning_main_changes.cpp ${SRC_ALL})
+  target_link_libraries(trainning_main_changes ${PCL_LIBRARIES} ${LIB_PARTIAL_MODEL})
+  
   
   if(BUILD_VIEW_PLANNING)
     include_directories(${VPL_SOURCE_DIR}/viewplanning)

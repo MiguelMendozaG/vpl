@@ -130,6 +130,7 @@ protected:
   //octomap::ColorOcTree *map;
   COctreeVPL *map;
   
+  bool flag;
   
   /**
    * Performs a ray tracing to gather how much voxels ware touched. It uses the translation of the HTM like origin of the ray tracing.

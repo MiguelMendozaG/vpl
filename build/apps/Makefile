@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+apps/CMakeFiles/trainning_main_changes.dir/rule:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/trainning_main_changes.dir/rule
+.PHONY : apps/CMakeFiles/trainning_main_changes.dir/rule
+
+# Convenience name for target.
+trainning_main_changes: apps/CMakeFiles/trainning_main_changes.dir/rule
+
+.PHONY : trainning_main_changes
+
+# fast build rule for target.
+trainning_main_changes/fast:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/trainning_main_changes.dir/build.make apps/CMakeFiles/trainning_main_changes.dir/build
+.PHONY : trainning_main_changes/fast
+
+# Convenience name for target.
 apps/CMakeFiles/test_trainer.dir/rule:
 	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/test_trainer.dir/rule
 .PHONY : apps/CMakeFiles/test_trainer.dir/rule
@@ -362,6 +377,33 @@ training_main.cpp.s:
 	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/training_main.dir/build.make apps/CMakeFiles/training_main.dir/training_main.cpp.s
 .PHONY : training_main.cpp.s
 
+trainning_main_changes.o: trainning_main_changes.cpp.o
+
+.PHONY : trainning_main_changes.o
+
+# target to build an object file
+trainning_main_changes.cpp.o:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/trainning_main_changes.dir/build.make apps/CMakeFiles/trainning_main_changes.dir/trainning_main_changes.cpp.o
+.PHONY : trainning_main_changes.cpp.o
+
+trainning_main_changes.i: trainning_main_changes.cpp.i
+
+.PHONY : trainning_main_changes.i
+
+# target to preprocess a source file
+trainning_main_changes.cpp.i:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/trainning_main_changes.dir/build.make apps/CMakeFiles/trainning_main_changes.dir/trainning_main_changes.cpp.i
+.PHONY : trainning_main_changes.cpp.i
+
+trainning_main_changes.s: trainning_main_changes.cpp.s
+
+.PHONY : trainning_main_changes.s
+
+# target to generate assembly for a file
+trainning_main_changes.cpp.s:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/trainning_main_changes.dir/build.make apps/CMakeFiles/trainning_main_changes.dir/trainning_main_changes.cpp.s
+.PHONY : trainning_main_changes.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -369,6 +411,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... trainning_main_changes"
 	@echo "... test_trainer"
 	@echo "... update_partial_model"
 	@echo "... view_sphere_generator"
@@ -394,6 +437,9 @@ help:
 	@echo "... training_main.o"
 	@echo "... training_main.i"
 	@echo "... training_main.s"
+	@echo "... trainning_main_changes.o"
+	@echo "... trainning_main_changes.i"
+	@echo "... trainning_main_changes.s"
 .PHONY : help
 
 

@@ -176,6 +176,19 @@ RangeSimulator/fast:
 .PHONY : RangeSimulator/fast
 
 #=============================================================================
+# Target rules for targets named trainning_main_changes
+
+# Build rule for target.
+trainning_main_changes: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trainning_main_changes
+.PHONY : trainning_main_changes
+
+# fast build rule for target.
+trainning_main_changes/fast:
+	$(MAKE) -f apps/CMakeFiles/trainning_main_changes.dir/build.make apps/CMakeFiles/trainning_main_changes.dir/build
+.PHONY : trainning_main_changes/fast
+
+#=============================================================================
 # Target rules for targets named test_trainer
 
 # Build rule for target.
@@ -266,6 +279,7 @@ help:
 	@echo "... PartialModel"
 	@echo "... ViewPlanning"
 	@echo "... RangeSimulator"
+	@echo "... trainning_main_changes"
 	@echo "... test_trainer"
 	@echo "... update_partial_model"
 	@echo "... view_sphere_generator"

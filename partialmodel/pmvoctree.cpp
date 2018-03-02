@@ -38,7 +38,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PMVOctree::PMVOctree() : PMVolumetric()
 {
-
+  flag = false;
 }
 
 bool PMVOctree::init()
@@ -48,6 +48,11 @@ bool PMVOctree::init()
   std::cout << "---------------- Octree -------------------" << std::endl;
   
   //map = new octomap::ColorOcTree(voxelResolution);
+  if(flag){
+    std::cout << "\n entro " << std::endl;
+    delete map;
+  }
+  flag = true;
   map = new COctreeVPL(voxelResolution);
   
   map->colorOccupied = colorOccupied;
