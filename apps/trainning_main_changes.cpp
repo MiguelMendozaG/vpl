@@ -251,9 +251,9 @@ int main (int argc, char** argv)
   // Check the following parameters
   
   // downsampling res
-  float voxel_res = 0.0005;
+  float voxel_res = 0.0008;
   // correspond thres
-  double corres_thres = 0.001;
+  double corres_thres = 0.005;
   
   //Read the groundtruth
   pointCloudTypePtr ground_truth(new pcl::PointCloud<pointType>);
@@ -268,7 +268,7 @@ int main (int argc, char** argv)
   //start loop for the reconstruction of all the poses
   read_all_z(direction_all_z,1);
   read_all_z(direction_all_background,0);
-  double coverage_stop_threshold = 0.9;
+  double coverage_stop_threshold = 0.95;
   
     float alphaOcc = 0.2, alphaUnk = 0.8;
   
@@ -285,7 +285,7 @@ int main (int argc, char** argv)
     
     vpFileReader reader;
   
-  for (int i_reconstrucion = 60 ; i_reconstrucion < total_images ; i_reconstrucion+=jumps){
+  for (int i_reconstrucion = 5 ; i_reconstrucion < total_images ; i_reconstrucion+=jumps){
     partial_model_2->init();
     *ground_truth = *ground_truth_saved;
     int i_reconstrucion_mod = i_reconstrucion;
@@ -363,10 +363,10 @@ int main (int argc, char** argv)
       ///save M_acu
       file_name_scan = direction_all_z_with_background + w_iter.str() + ".xyz";
       file_name_origin = direccion_posicion + w_iter.str() + ".dat";
-      partial_model->updateWithScan(file_name_scan,file_name_origin);
+      //partial_model->updateWithScan(file_name_scan,file_name_origin);
       partial_model_2->updateWithScan(file_name_scan,file_name_origin);
-      octomaps = pos_actual_octo + iter_while.str() + ".ot";
-      partial_model->savePartialModel(octomaps);
+      //octomaps = pos_actual_octo + iter_while.str() + ".ot";
+      //partial_model->savePartialModel(octomaps);
       octomaps = pos_acum_octo + iter_while.str() + ".ot";
       partial_model_2->savePartialModel(octomaps);
       
@@ -481,8 +481,8 @@ int main (int argc, char** argv)
 	      viewer.addLine<pointType>(w_pos, w_pos_end, 255, 255 , 255,"w_star_prev");
 	      
 	      viewer.spin();
-	      */
 	      
+	      */
 	    }
 	  }
 	}
