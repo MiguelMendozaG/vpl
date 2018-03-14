@@ -37,8 +37,8 @@ pointCloudTypePtr global_narf_points (new pointCloudType());
 const int total_images = 1312;
 const int jumps = 5;
 const int iteration_stop = 20;
-const double w_escala_ini = 0.3;
-const double w_escala_fin = 0.2;
+const double w_escala_ini = 0.6;
+const double w_escala_fin = 0.4;
 
 
 
@@ -271,12 +271,12 @@ int main (int argc, char** argv)
   double coverage_stop_threshold = 0.95;
   
     float alphaOcc = 0.2, alphaUnk = 0.8;
-  
+  /*
     PartialModelBase *partial_model = new PMVOctreeVasquez09(alphaOcc, alphaUnk); //actual octree
       partial_model->setConfigFolder(config_folder);
       partial_model->setDataFolder(data_folder);
       partial_model->init();
-      
+   */   
     
     PartialModelBase *partial_model_2 = new PMVOctreeVasquez09(alphaOcc, alphaUnk); //acumulated octree
     partial_model_2->setConfigFolder(config_folder);
@@ -285,7 +285,7 @@ int main (int argc, char** argv)
     
     vpFileReader reader;
   
-  for (int i_reconstrucion = 5 ; i_reconstrucion < total_images ; i_reconstrucion+=jumps){
+  for (int i_reconstrucion = 0; i_reconstrucion < 5 ; i_reconstrucion+=jumps){
     partial_model_2->init();
     *ground_truth = *ground_truth_saved;
     int i_reconstrucion_mod = i_reconstrucion;
@@ -324,6 +324,8 @@ int main (int argc, char** argv)
     w_star_index /=jumps;
     pointType w_pos;
     pointType w_pos_end;
+    pointType w_ast;
+    pointType w_ast_end;
     double overlap=0;
     bool NARF_points = 0;
     pointCloudTypePtr z_ptr;
@@ -336,9 +338,10 @@ int main (int argc, char** argv)
     //w_star_iter = w_star_index;
     
     while (coverage < coverage_stop_threshold && iteration < iteration_stop) {
-      partial_model->init();
+      //partial_model->init();
       pointCloudTypePtr P_acu_background (new pointCloudType());
       pointCloudTypePtr W_pos (new pointCloudType());
+      pointCloudTypePtr W_ast (new pointCloudType());
       cout << "Reconstruction " << i_reconstrucion << " - Iteration: " << iteration << endl;
       counter = iteration;
       stringstream w_iter;
@@ -404,6 +407,7 @@ int main (int argc, char** argv)
       size_t positives;
       *ground_truth = *ground_truth_saved;
       size_t total = ground_truth->size();
+      P_overlap->clear();
       positives = correspondentPoints(ground_truth, P_acu, P_overlap, corres_thres,0);
       coverage = (double)positives/total;
       //cout << "Correspondent points: " << (long)positives << endl;
@@ -420,6 +424,7 @@ int main (int argc, char** argv)
 	cout << "\t\t  Actual coverage: "<< coverage << endl;
 	  //Compute the overlap of the NBV 
 	total = P_acu->size();
+	P_overlap ->clear();
 	positives = correspondentPoints(P_acu, all_z[i_iterative], P_overlap, corres_thres, 1);
 	overlap = (double)positives/total;
 	//cout << "NBV overlap: " << (double)positives/total << endl;
@@ -437,6 +442,7 @@ int main (int argc, char** argv)
 	    *ground_truth = *ground_truth_saved;
 	    pointCloudTypePtr Pos_P_acu (new pointCloudType());
 	    *Pos_P_acu = *P_acu_saved + *all_z[i_iterative];
+	    P_overlap->clear();
 	    total = ground_truth->size();
 	    positives = correspondentPoints(ground_truth, Pos_P_acu, P_overlap, corres_thres,0);
 	    increment = (double) positives/total;
@@ -448,6 +454,7 @@ int main (int argc, char** argv)
 	      max_intertoise = i;
 	      max_increment = increment;
 	      /*
+	      
 	      pcl::PointCloud<pcl::PointXYZRGB>::Ptr colorAcu(new pcl::PointCloud<pcl::PointXYZRGB>);
 	      pcl::PointCloud<pcl::PointXYZRGB>::Ptr colorOver(new pcl::PointCloud<pcl::PointXYZRGB>);
 	      pcl::PointCloud<pcl::PointXYZRGB>::Ptr colorZ(new pcl::PointCloud<pcl::PointXYZRGB>);
@@ -460,6 +467,7 @@ int main (int argc, char** argv)
 	      
 	      // Visualización
 	      pcl::visualization::PCLVisualizer viewer("Cloud Viewer");
+	      viewer.setBackgroundColor(255,255,255);
 	      viewer.addCoordinateSystem(0.1);
 	      
 	      // Display z
@@ -467,7 +475,7 @@ int main (int argc, char** argv)
 	      //TODO: Add arrow with previous w*
 	      
 	      // Display accumulated point cloud
-	      changeColor(colorAcu, 255, 255, 255);
+	      changeColor(colorAcu, 0, 0, 0);
 	      viewer.addPointCloud(colorAcu, "Accumulated");
 	      //TODO: Add arrow with w*
 	      // Display z*
@@ -478,7 +486,7 @@ int main (int argc, char** argv)
 	      changeColor(colorOver, 255, 0, 0);
 	      viewer.addPointCloud(colorOver, "Overlap");
 	      
-	      viewer.addLine<pointType>(w_pos, w_pos_end, 255, 255 , 255,"w_star_prev");
+	      viewer.addLine<pointType>(w_pos, w_pos_end, 0, 0 , 0,"w_star_prev");
 	      
 	      viewer.spin();
 	      
@@ -496,7 +504,6 @@ int main (int argc, char** argv)
       
       pos_actual = data_num_poses + iter_while.str() + ".dat";
       reader.saveData2Text<int>(i_reconstrucion_mod,pos_actual);
-      
       vector < vector <double>> pose_;
       vector < vector <double>> orn_;
       std:stringstream indice_pose;
@@ -509,18 +516,30 @@ int main (int argc, char** argv)
       pos_actual = dir_nbv_i + i_recons.str() + "/poses/pose_orientation/pose_orn" + iter_while.str() + ".dat";
       reader.saveDoubleCoordinates(pos_actual, pose_);
       iteration ++;
-      /*
+      
+	      pointCloudTypePtr P_overlap_shown (new pointCloudType());
+	      P_overlap_shown->clear();
+	      positives = correspondentPoints(P_acu, all_z[w_star_index], P_overlap_shown, corres_thres,0);
+	      pcl::io::loadPCDFile(direccion_posicion + indice_pose.str() + ".pcd", *W_ast);
+	      w_ast.x = (W_ast->points[0].x) * w_escala_ini ;
+	      w_ast.y = (W_ast->points[0].y) * w_escala_ini ;
+	      w_ast.z = (W_ast->points[0].z) * w_escala_ini;
+	      // nbv orientation
+	      w_ast_end.x = (W_ast->points[0].x) * w_escala_fin;
+	      w_ast_end.y = (W_ast->points[0].y) * w_escala_fin;
+	      w_ast_end.z = (W_ast->points[0].z) * w_escala_fin;
 	      pcl::PointCloud<pcl::PointXYZRGB>::Ptr colorAcu(new pcl::PointCloud<pcl::PointXYZRGB>);
 	      pcl::PointCloud<pcl::PointXYZRGB>::Ptr colorOver(new pcl::PointCloud<pcl::PointXYZRGB>);
 	      pcl::PointCloud<pcl::PointXYZRGB>::Ptr colorZ(new pcl::PointCloud<pcl::PointXYZRGB>);
 	      pcl::PointCloud<pcl::PointXYZRGB>::Ptr colorZstar(new pcl::PointCloud<pcl::PointXYZRGB>);
 	      pcl::copyPointCloud(*z_ptr, *colorZ);
 	      pcl::copyPointCloud(*P_acu, *colorAcu);
-	      pcl::copyPointCloud(*P_overlap, *colorOver);
+	      pcl::copyPointCloud(*P_overlap_shown, *colorOver);
 	      pcl::copyPointCloud(*(all_z[w_star_index]), *colorZstar);
 	      changeColor(colorZ, 0, 255, 0);
       // Visualización
 	      pcl::visualization::PCLVisualizer viewer("Cloud Viewer");
+	      viewer.setBackgroundColor(255,255,255);
 	      viewer.addCoordinateSystem(0.1);
 	      
 	      // Display z
@@ -528,7 +547,7 @@ int main (int argc, char** argv)
 	      //TODO: Add arrow with previous w*
 	      
 	      // Display accumulated point cloud
-	      changeColor(colorAcu, 255, 255, 255); //white
+	      changeColor(colorAcu, 0, 0, 0); //white
 	      viewer.addPointCloud(colorAcu, "Accumulated");
 	      //TODO: Add arrow with w*
 	      // Display z*
@@ -540,10 +559,14 @@ int main (int argc, char** argv)
 	      viewer.addPointCloud(colorOver, "Overlap");
 	      
 	      //viewer.addLine<pointType>(w_pos, w_pos_end, 255, 255 , 255,"w_star_prev");
-	      viewer.addArrow<pointType>(w_pos_end ,w_pos, 255, 255 , 255, 0,"w_star_prev");
+	      viewer.addArrow<pointType>(w_pos_end ,w_pos, 0,0,0, 0,"wprev");
+	      viewer.addArrow<pointType>(w_ast_end ,w_ast, 0,0,255, 0,"w_prev");
 	      
+	      cout << "\n size p_acu: " << P_acu->size() << endl;
+	      cout << "\n  size overlap: " << P_overlap->size() << endl;
+	      cout << "\n   size overlap: " << all_z[w_star_index]->size() << endl;
 	      viewer.spin();
-      */
+      
       
 
     }// end while

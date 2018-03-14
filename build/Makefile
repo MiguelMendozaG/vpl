@@ -176,17 +176,43 @@ RangeSimulator/fast:
 .PHONY : RangeSimulator/fast
 
 #=============================================================================
-# Target rules for targets named trainning_main_changes
+# Target rules for targets named read_octree
 
 # Build rule for target.
-trainning_main_changes: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 trainning_main_changes
-.PHONY : trainning_main_changes
+read_octree: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 read_octree
+.PHONY : read_octree
 
 # fast build rule for target.
-trainning_main_changes/fast:
-	$(MAKE) -f apps/CMakeFiles/trainning_main_changes.dir/build.make apps/CMakeFiles/trainning_main_changes.dir/build
-.PHONY : trainning_main_changes/fast
+read_octree/fast:
+	$(MAKE) -f apps/CMakeFiles/read_octree.dir/build.make apps/CMakeFiles/read_octree.dir/build
+.PHONY : read_octree/fast
+
+#=============================================================================
+# Target rules for targets named test_freeflyer_vasquez09
+
+# Build rule for target.
+test_freeflyer_vasquez09: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_freeflyer_vasquez09
+.PHONY : test_freeflyer_vasquez09
+
+# fast build rule for target.
+test_freeflyer_vasquez09/fast:
+	$(MAKE) -f apps/CMakeFiles/test_freeflyer_vasquez09.dir/build.make apps/CMakeFiles/test_freeflyer_vasquez09.dir/build
+.PHONY : test_freeflyer_vasquez09/fast
+
+#=============================================================================
+# Target rules for targets named random_view_generator
+
+# Build rule for target.
+random_view_generator: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 random_view_generator
+.PHONY : random_view_generator
+
+# fast build rule for target.
+random_view_generator/fast:
+	$(MAKE) -f apps/CMakeFiles/random_view_generator.dir/build.make apps/CMakeFiles/random_view_generator.dir/build
+.PHONY : random_view_generator/fast
 
 #=============================================================================
 # Target rules for targets named test_trainer
@@ -228,43 +254,17 @@ view_sphere_generator/fast:
 .PHONY : view_sphere_generator/fast
 
 #=============================================================================
-# Target rules for targets named test_freeflyer_vasquez09
+# Target rules for targets named trainning_main_changes
 
 # Build rule for target.
-test_freeflyer_vasquez09: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_freeflyer_vasquez09
-.PHONY : test_freeflyer_vasquez09
+trainning_main_changes: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trainning_main_changes
+.PHONY : trainning_main_changes
 
 # fast build rule for target.
-test_freeflyer_vasquez09/fast:
-	$(MAKE) -f apps/CMakeFiles/test_freeflyer_vasquez09.dir/build.make apps/CMakeFiles/test_freeflyer_vasquez09.dir/build
-.PHONY : test_freeflyer_vasquez09/fast
-
-#=============================================================================
-# Target rules for targets named random_view_generator
-
-# Build rule for target.
-random_view_generator: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 random_view_generator
-.PHONY : random_view_generator
-
-# fast build rule for target.
-random_view_generator/fast:
-	$(MAKE) -f apps/CMakeFiles/random_view_generator.dir/build.make apps/CMakeFiles/random_view_generator.dir/build
-.PHONY : random_view_generator/fast
-
-#=============================================================================
-# Target rules for targets named training_main
-
-# Build rule for target.
-training_main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 training_main
-.PHONY : training_main
-
-# fast build rule for target.
-training_main/fast:
-	$(MAKE) -f apps/CMakeFiles/training_main.dir/build.make apps/CMakeFiles/training_main.dir/build
-.PHONY : training_main/fast
+trainning_main_changes/fast:
+	$(MAKE) -f apps/CMakeFiles/trainning_main_changes.dir/build.make apps/CMakeFiles/trainning_main_changes.dir/build
+.PHONY : trainning_main_changes/fast
 
 # Help Target
 help:
@@ -279,13 +279,13 @@ help:
 	@echo "... PartialModel"
 	@echo "... ViewPlanning"
 	@echo "... RangeSimulator"
-	@echo "... trainning_main_changes"
+	@echo "... read_octree"
+	@echo "... test_freeflyer_vasquez09"
+	@echo "... random_view_generator"
 	@echo "... test_trainer"
 	@echo "... update_partial_model"
 	@echo "... view_sphere_generator"
-	@echo "... test_freeflyer_vasquez09"
-	@echo "... random_view_generator"
-	@echo "... training_main"
+	@echo "... trainning_main_changes"
 .PHONY : help
 
 

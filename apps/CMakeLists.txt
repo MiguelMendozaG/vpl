@@ -34,11 +34,12 @@ if(BUILD_PARTIAL_MODEL)
   add_executable(update_partial_model test_update_partial_model.cpp ${SRC_ALL})
   target_link_libraries(update_partial_model  ${LIB_PARTIAL_MODEL} ${LIBS_OCTOMAP})
   
-  add_executable(training_main training_main.cpp ${SRC_ALL})
-  target_link_libraries(training_main ${PCL_LIBRARIES} ${LIB_PARTIAL_MODEL} ${LIBS_OCTOMAP})
   
   add_executable(trainning_main_changes trainning_main_changes.cpp ${SRC_ALL})
   target_link_libraries(trainning_main_changes ${PCL_LIBRARIES} ${LIB_PARTIAL_MODEL})
+  
+  add_executable(read_octree read_octree.cpp ${SRC_ALL})
+  target_link_libraries(read_octree ${PCL_LIBRARIES} ${LIB_PARTIAL_MODEL})
   
   
   if(BUILD_VIEW_PLANNING)

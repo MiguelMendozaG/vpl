@@ -111,19 +111,49 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-apps/CMakeFiles/trainning_main_changes.dir/rule:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/trainning_main_changes.dir/rule
-.PHONY : apps/CMakeFiles/trainning_main_changes.dir/rule
+apps/CMakeFiles/read_octree.dir/rule:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/read_octree.dir/rule
+.PHONY : apps/CMakeFiles/read_octree.dir/rule
 
 # Convenience name for target.
-trainning_main_changes: apps/CMakeFiles/trainning_main_changes.dir/rule
+read_octree: apps/CMakeFiles/read_octree.dir/rule
 
-.PHONY : trainning_main_changes
+.PHONY : read_octree
 
 # fast build rule for target.
-trainning_main_changes/fast:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/trainning_main_changes.dir/build.make apps/CMakeFiles/trainning_main_changes.dir/build
-.PHONY : trainning_main_changes/fast
+read_octree/fast:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/read_octree.dir/build.make apps/CMakeFiles/read_octree.dir/build
+.PHONY : read_octree/fast
+
+# Convenience name for target.
+apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule
+.PHONY : apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule
+
+# Convenience name for target.
+test_freeflyer_vasquez09: apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule
+
+.PHONY : test_freeflyer_vasquez09
+
+# fast build rule for target.
+test_freeflyer_vasquez09/fast:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_freeflyer_vasquez09.dir/build.make apps/CMakeFiles/test_freeflyer_vasquez09.dir/build
+.PHONY : test_freeflyer_vasquez09/fast
+
+# Convenience name for target.
+apps/CMakeFiles/random_view_generator.dir/rule:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/random_view_generator.dir/rule
+.PHONY : apps/CMakeFiles/random_view_generator.dir/rule
+
+# Convenience name for target.
+random_view_generator: apps/CMakeFiles/random_view_generator.dir/rule
+
+.PHONY : random_view_generator
+
+# fast build rule for target.
+random_view_generator/fast:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/random_view_generator.dir/build.make apps/CMakeFiles/random_view_generator.dir/build
+.PHONY : random_view_generator/fast
 
 # Convenience name for target.
 apps/CMakeFiles/test_trainer.dir/rule:
@@ -171,49 +201,46 @@ view_sphere_generator/fast:
 .PHONY : view_sphere_generator/fast
 
 # Convenience name for target.
-apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule
-.PHONY : apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule
+apps/CMakeFiles/trainning_main_changes.dir/rule:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/trainning_main_changes.dir/rule
+.PHONY : apps/CMakeFiles/trainning_main_changes.dir/rule
 
 # Convenience name for target.
-test_freeflyer_vasquez09: apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule
+trainning_main_changes: apps/CMakeFiles/trainning_main_changes.dir/rule
 
-.PHONY : test_freeflyer_vasquez09
+.PHONY : trainning_main_changes
 
 # fast build rule for target.
-test_freeflyer_vasquez09/fast:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_freeflyer_vasquez09.dir/build.make apps/CMakeFiles/test_freeflyer_vasquez09.dir/build
-.PHONY : test_freeflyer_vasquez09/fast
+trainning_main_changes/fast:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/trainning_main_changes.dir/build.make apps/CMakeFiles/trainning_main_changes.dir/build
+.PHONY : trainning_main_changes/fast
 
-# Convenience name for target.
-apps/CMakeFiles/random_view_generator.dir/rule:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/random_view_generator.dir/rule
-.PHONY : apps/CMakeFiles/random_view_generator.dir/rule
+read_octree.o: read_octree.cpp.o
 
-# Convenience name for target.
-random_view_generator: apps/CMakeFiles/random_view_generator.dir/rule
+.PHONY : read_octree.o
 
-.PHONY : random_view_generator
+# target to build an object file
+read_octree.cpp.o:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/read_octree.dir/build.make apps/CMakeFiles/read_octree.dir/read_octree.cpp.o
+.PHONY : read_octree.cpp.o
 
-# fast build rule for target.
-random_view_generator/fast:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/random_view_generator.dir/build.make apps/CMakeFiles/random_view_generator.dir/build
-.PHONY : random_view_generator/fast
+read_octree.i: read_octree.cpp.i
 
-# Convenience name for target.
-apps/CMakeFiles/training_main.dir/rule:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/training_main.dir/rule
-.PHONY : apps/CMakeFiles/training_main.dir/rule
+.PHONY : read_octree.i
 
-# Convenience name for target.
-training_main: apps/CMakeFiles/training_main.dir/rule
+# target to preprocess a source file
+read_octree.cpp.i:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/read_octree.dir/build.make apps/CMakeFiles/read_octree.dir/read_octree.cpp.i
+.PHONY : read_octree.cpp.i
 
-.PHONY : training_main
+read_octree.s: read_octree.cpp.s
 
-# fast build rule for target.
-training_main/fast:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/training_main.dir/build.make apps/CMakeFiles/training_main.dir/build
-.PHONY : training_main/fast
+.PHONY : read_octree.s
+
+# target to generate assembly for a file
+read_octree.cpp.s:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/read_octree.dir/build.make apps/CMakeFiles/read_octree.dir/read_octree.cpp.s
+.PHONY : read_octree.cpp.s
 
 test_freeflyer_vasquez09.o: test_freeflyer_vasquez09.cpp.o
 
@@ -350,33 +377,6 @@ test_view_sphere.cpp.s:
 	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/view_sphere_generator.dir/build.make apps/CMakeFiles/view_sphere_generator.dir/test_view_sphere.cpp.s
 .PHONY : test_view_sphere.cpp.s
 
-training_main.o: training_main.cpp.o
-
-.PHONY : training_main.o
-
-# target to build an object file
-training_main.cpp.o:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/training_main.dir/build.make apps/CMakeFiles/training_main.dir/training_main.cpp.o
-.PHONY : training_main.cpp.o
-
-training_main.i: training_main.cpp.i
-
-.PHONY : training_main.i
-
-# target to preprocess a source file
-training_main.cpp.i:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/training_main.dir/build.make apps/CMakeFiles/training_main.dir/training_main.cpp.i
-.PHONY : training_main.cpp.i
-
-training_main.s: training_main.cpp.s
-
-.PHONY : training_main.s
-
-# target to generate assembly for a file
-training_main.cpp.s:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/training_main.dir/build.make apps/CMakeFiles/training_main.dir/training_main.cpp.s
-.PHONY : training_main.cpp.s
-
 trainning_main_changes.o: trainning_main_changes.cpp.o
 
 .PHONY : trainning_main_changes.o
@@ -411,14 +411,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... trainning_main_changes"
-	@echo "... test_trainer"
-	@echo "... update_partial_model"
-	@echo "... view_sphere_generator"
+	@echo "... read_octree"
 	@echo "... rebuild_cache"
 	@echo "... test_freeflyer_vasquez09"
 	@echo "... random_view_generator"
-	@echo "... training_main"
+	@echo "... test_trainer"
+	@echo "... update_partial_model"
+	@echo "... view_sphere_generator"
+	@echo "... trainning_main_changes"
+	@echo "... read_octree.o"
+	@echo "... read_octree.i"
+	@echo "... read_octree.s"
 	@echo "... test_freeflyer_vasquez09.o"
 	@echo "... test_freeflyer_vasquez09.i"
 	@echo "... test_freeflyer_vasquez09.s"
@@ -434,9 +437,6 @@ help:
 	@echo "... test_view_sphere.o"
 	@echo "... test_view_sphere.i"
 	@echo "... test_view_sphere.s"
-	@echo "... training_main.o"
-	@echo "... training_main.i"
-	@echo "... training_main.s"
 	@echo "... trainning_main_changes.o"
 	@echo "... trainning_main_changes.i"
 	@echo "... trainning_main_changes.s"
