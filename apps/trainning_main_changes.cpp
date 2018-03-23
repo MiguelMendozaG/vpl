@@ -34,12 +34,15 @@ typedef pcl::PointXYZ PointType;
 
 pointCloudTypePtr global_narf_points (new pointCloudType());
 
+//////////////////////////////////////////
+//////Global variables////////////
 const int total_images = 1312;
 const int jumps = 5;
 const int iteration_stop = 20;
 const double w_escala_ini = 0.6;
 const double w_escala_fin = 0.4;
-
+octomap::point3d x_min = {-0.11,-0.11,-0.11};  /// this values are set according eith the partialmodel file, it is refered to the bounding box
+octomap::point3d x_max = {0.11,0.11,0.11};
 
 
 //location folders
@@ -63,6 +66,7 @@ string pos_actual;
 string file_name_scan;
 string file_name_origin;
 string octomaps;
+string octomap_txt;
 
 //pcl::PCLPointCloud2::Ptr z (new pcl::PCLPointCloud2 ());
 vector <pointCloudTypePtr> all_z;
@@ -215,6 +219,46 @@ bool narf_points(){
   
 }
 
+void file_octomap(string octo_input, string octo_file_output){
+  octomap::AbstractOcTree* tree = octomap::AbstractOcTree::read (octo_input);
+  double occu_voxels = 0, free_voxels = 0;
+  octomap::point3d p;
+  int m=0;
+  //if (tree){
+    octomap::ColorOcTree* ot = dynamic_cast<octomap::ColorOcTree*>(tree);
+    //cout << "\n octree " << ot << endl;
+    if (ot){
+      ofstream output_file(octo_file_output, ios::app);
+      cout << "\n octomap read... creating file" << endl;
+      ot->setBBXMax(x_max);
+      ot->setBBXMin(x_min);
+      ot->expand();
+      cout << "\n bouning box " << ot->getBBXBounds() << endl;
+      cout << "\n resolution " << ot->getResolution() << endl;
+      for (octomap::ColorOcTree::leaf_iterator it = ot->begin_leafs(), end = ot->end_leafs(); it!=end; ++it){
+	p = it.getCoordinate();
+	if (ot->inBBX(p)){
+	  //cout << "\n coord: " << p << endl;
+	  if (ot->isNodeOccupied(*it)){
+	    occu_voxels++;
+	    output_file << p(0) <<" " << p(1) << " " << p(2) << " " << (it->getOccupancy()) <<endl;
+	  }
+	  else{
+	    free_voxels++;
+	    output_file <<p(0) <<" " << p(1) << " " << p(2) << " " << (it->getOccupancy()) << endl;
+	  }
+	}
+      m++;
+      }
+   }
+   else
+     cout << "\n not read" << endl;
+    
+   cout << "\n\t occupied voxels = " << occu_voxels << endl;
+   cout << "\n\t free voxels = " << free_voxels << endl;
+  
+}
+
  /*
   * 
   * Algorith that computes the "NBV" from a set of views and already taken point clouds
@@ -350,6 +394,8 @@ int main (int argc, char** argv)
       iter_while << iteration;
       z_ptr = all_z[w_star_index];
       z_ptr_background = all_background[w_star_index];
+      
+      
       // nbv position
       pcl::io::loadPCDFile(direccion_posicion + w_iter.str() + ".pcd", *W_pos);
       w_pos.x = (W_pos->points[0].x) * w_escala_ini ;
@@ -373,6 +419,8 @@ int main (int argc, char** argv)
       octomaps = pos_acum_octo + iter_while.str() + ".ot";
       partial_model_2->savePartialModel(octomaps);
       
+      octomap_txt = pos_acum_octo + iter_while.str() + ".txt";
+      file_octomap(octomaps, octomap_txt);
       
       // segment the object from z;
       
@@ -517,7 +565,9 @@ int main (int argc, char** argv)
       reader.saveDoubleCoordinates(pos_actual, pose_);
       iteration ++;
       
-	      pointCloudTypePtr P_overlap_shown (new pointCloudType());
+      
+      
+	      /*pointCloudTypePtr P_overlap_shown (new pointCloudType());
 	      P_overlap_shown->clear();
 	      positives = correspondentPoints(P_acu, all_z[w_star_index], P_overlap_shown, corres_thres,0);
 	      pcl::io::loadPCDFile(direccion_posicion + indice_pose.str() + ".pcd", *W_ast);
@@ -569,7 +619,7 @@ int main (int argc, char** argv)
 	      cout << "\n size p_acu: " << P_acu->size() << endl;
 	      cout << "\n  size overlap: " << P_overlap->size() << endl;
 	      cout << "\n   size overlap: " << all_z[w_star_index]->size() << endl;
-	      viewer.spin();
+	      viewer.spin();*/
       
       
 

@@ -14,23 +14,20 @@
 using namespace std;
 
 int main(){
-  //string filename ("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/ot files/fr_079.ot");
-  string filename ("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/nbv_i/5/octomap_acumulado/octomap_1.ot.unk.ot");
+  string filename ("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/modelo2/nbv/0/octo_acum/octomap_acum_1.ot");
+  string filename_output ("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/modelo2/nbv/0/octo_acum/octomap_txt.txt");
   octomap::AbstractOcTree* tree = octomap::AbstractOcTree::read (filename);
   double occu_voxels = 0, free_voxels = 0;
-  vector<octomap::point3d> node_centers;
-  vector<double> sizes;
-  octomap::point3d coord;
   octomap::point3d p;
   int m=0;
   //if (tree){
     octomap::ColorOcTree* ot = dynamic_cast<octomap::ColorOcTree*>(tree);
     //cout << "\n octree " << ot << endl;
     if (ot){
-      ofstream output_file("output_file.txt", ios::app);
+      ofstream output_file(filename_output, ios::app);
       cout << "\n octomap read" << endl;
-      octomap::point3d x_min = {-0.05,-0.05,-0.05};
-      octomap::point3d x_max = {0.05,0.05,0.05};
+      octomap::point3d x_min = {-0.11,-0.11,-0.11};
+      octomap::point3d x_max = {0.11,0.11,0.11};
       ot->setBBXMax(x_max);
       ot->setBBXMin(x_min);
       ot->expand();
