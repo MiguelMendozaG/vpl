@@ -20,7 +20,7 @@ Path=gcc
 Type=GCC
 
 [Launch]
-Launch Configurations=Launch Configuration 0
+Launch Configurations=Launch Configuration 0,Launch Configuration 1
 
 [Launch][Launch Configuration 0]
 Configured Launch Modes=execute
@@ -36,6 +36,24 @@ EnvironmentGroup=
 Executable=file:///home/miguelmg/repositorios/vpl/
 External Terminal=konsole --noclose --workdir %workdir -e %exe
 Project Target=vpl,apps,training_main
+Use External Terminal=false
+Working Directory=
+isExecutable=false
+
+[Launch][Launch Configuration 1]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=read_octree
+Type=Native Application
+
+[Launch][Launch Configuration 1][Data]
+Arguments=
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x03\x00\x00\x00\x06\x00v\x00p\x00l\x00\x00\x00\x08\x00a\x00p\x00p\x00s\x00\x00\x00\x16\x00r\x00e\x00a\x00d\x00_\x00o\x00c\x00t\x00r\x00e\x00e)
+Dependency Action=Build
+EnvironmentGroup=
+Executable=file:///home/miguelmg/repositorios/vpl/
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=vpl,apps,read_octree
 Use External Terminal=false
 Working Directory=
 isExecutable=false

@@ -205,6 +205,12 @@ stdio.h
 -
 string.h
 -
+vector
+-
+iostream
+-
+fstream
+-
 octomap/AbstractOcTree.h
 -
 octomap/OcTree.h
@@ -212,5 +218,7 @@ octomap/OcTree.h
 octomap/ColorOcTree.h
 -
 octomap/OcTreeBaseImpl.h
+-
+octomap/OccupancyOcTreeBase.h
 -
 

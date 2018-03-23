@@ -539,8 +539,12 @@ int main (int argc, char** argv)
 	      changeColor(colorZ, 0, 255, 0);
       // Visualización
 	      pcl::visualization::PCLVisualizer viewer("Cloud Viewer");
+	      pcl::visualization::PCLVisualizer viewer2("Cloud Viewer");
 	      viewer.setBackgroundColor(255,255,255);
 	      viewer.addCoordinateSystem(0.1);
+	      
+	      viewer2.setBackgroundColor(255,255,255);
+	      viewer2.addCoordinateSystem(0.1);
 	      
 	      // Display z
 	      //viewer.addPointCloud(colorZ, "Z");
@@ -551,16 +555,16 @@ int main (int argc, char** argv)
 	      viewer.addPointCloud(colorAcu, "Accumulated");
 	      //TODO: Add arrow with w*
 	      // Display z*
-	      changeColor(colorZstar, 0,0,255); //blue
-	      viewer.addPointCloud(colorZstar, "Z star");
+	      changeColor(colorZstar, 0,0,0); //blue
+	      viewer2.addPointCloud(colorZstar, "Z star");
 	      
 	      // Display overlap
 	      changeColor(colorOver, 255, 0, 0); //red
-	      viewer.addPointCloud(colorOver, "Overlap");
+	      //------viewer.addPointCloud(colorOver, "Overlap");
 	      
 	      //viewer.addLine<pointType>(w_pos, w_pos_end, 255, 255 , 255,"w_star_prev");
-	      viewer.addArrow<pointType>(w_pos_end ,w_pos, 0,0,0, 0,"wprev");
-	      viewer.addArrow<pointType>(w_ast_end ,w_ast, 0,0,255, 0,"w_prev");
+	      //------viewer.addArrow<pointType>(w_pos_end ,w_pos, 0,0,0, 0,"wprev");
+	      viewer2.addArrow<pointType>(w_ast_end ,w_ast, 0,0,0, 0,"w_prev");
 	      
 	      cout << "\n size p_acu: " << P_acu->size() << endl;
 	      cout << "\n  size overlap: " << P_overlap->size() << endl;
