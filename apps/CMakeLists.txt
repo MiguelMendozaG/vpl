@@ -27,6 +27,9 @@ if(BUILD_PARTIAL_MODEL)
   # Programs
   add_executable(random_view_generator test_view_generator.cpp ${SRC_ALL})
   target_link_libraries(random_view_generator ${LIB_PARTIAL_MODEL} ${LIBS_OCTOMAP})
+  
+  add_executable(octo2file_in_folders octo2file_in_folders.cpp ${SRC_ALL})
+  target_link_libraries(octo2file_in_folders ${LIB_PARTIAL_MODEL} ${LIBS_OCTOMAP})
 
   add_executable(view_sphere_generator test_view_sphere.cpp ${SRC_ALL})
   target_link_libraries(view_sphere_generator  ${LIB_PARTIAL_MODEL} ${LIBS_OCTOMAP})
@@ -37,6 +40,9 @@ if(BUILD_PARTIAL_MODEL)
   
   add_executable(trainning_main_changes trainning_main_changes.cpp ${SRC_ALL})
   target_link_libraries(trainning_main_changes ${PCL_LIBRARIES} ${LIB_PARTIAL_MODEL})
+  
+  add_executable(test_ram test_ram.cpp ${SRC_ALL})
+  target_link_libraries(test_ram ${PCL_LIBRARIES} ${LIB_PARTIAL_MODEL})
   
   add_executable(read_octree read_octree.cpp ${SRC_ALL})
   target_link_libraries(read_octree ${PCL_LIBRARIES} ${LIB_PARTIAL_MODEL})

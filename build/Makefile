@@ -176,56 +176,17 @@ RangeSimulator/fast:
 .PHONY : RangeSimulator/fast
 
 #=============================================================================
-# Target rules for targets named read_octree
+# Target rules for targets named view_sphere_generator
 
 # Build rule for target.
-read_octree: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 read_octree
-.PHONY : read_octree
+view_sphere_generator: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 view_sphere_generator
+.PHONY : view_sphere_generator
 
 # fast build rule for target.
-read_octree/fast:
-	$(MAKE) -f apps/CMakeFiles/read_octree.dir/build.make apps/CMakeFiles/read_octree.dir/build
-.PHONY : read_octree/fast
-
-#=============================================================================
-# Target rules for targets named test_freeflyer_vasquez09
-
-# Build rule for target.
-test_freeflyer_vasquez09: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_freeflyer_vasquez09
-.PHONY : test_freeflyer_vasquez09
-
-# fast build rule for target.
-test_freeflyer_vasquez09/fast:
-	$(MAKE) -f apps/CMakeFiles/test_freeflyer_vasquez09.dir/build.make apps/CMakeFiles/test_freeflyer_vasquez09.dir/build
-.PHONY : test_freeflyer_vasquez09/fast
-
-#=============================================================================
-# Target rules for targets named random_view_generator
-
-# Build rule for target.
-random_view_generator: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 random_view_generator
-.PHONY : random_view_generator
-
-# fast build rule for target.
-random_view_generator/fast:
-	$(MAKE) -f apps/CMakeFiles/random_view_generator.dir/build.make apps/CMakeFiles/random_view_generator.dir/build
-.PHONY : random_view_generator/fast
-
-#=============================================================================
-# Target rules for targets named test_trainer
-
-# Build rule for target.
-test_trainer: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_trainer
-.PHONY : test_trainer
-
-# fast build rule for target.
-test_trainer/fast:
-	$(MAKE) -f apps/CMakeFiles/test_trainer.dir/build.make apps/CMakeFiles/test_trainer.dir/build
-.PHONY : test_trainer/fast
+view_sphere_generator/fast:
+	$(MAKE) -f apps/CMakeFiles/view_sphere_generator.dir/build.make apps/CMakeFiles/view_sphere_generator.dir/build
+.PHONY : view_sphere_generator/fast
 
 #=============================================================================
 # Target rules for targets named update_partial_model
@@ -241,17 +202,56 @@ update_partial_model/fast:
 .PHONY : update_partial_model/fast
 
 #=============================================================================
-# Target rules for targets named view_sphere_generator
+# Target rules for targets named octo2file_in_folders
 
 # Build rule for target.
-view_sphere_generator: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 view_sphere_generator
-.PHONY : view_sphere_generator
+octo2file_in_folders: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 octo2file_in_folders
+.PHONY : octo2file_in_folders
 
 # fast build rule for target.
-view_sphere_generator/fast:
-	$(MAKE) -f apps/CMakeFiles/view_sphere_generator.dir/build.make apps/CMakeFiles/view_sphere_generator.dir/build
-.PHONY : view_sphere_generator/fast
+octo2file_in_folders/fast:
+	$(MAKE) -f apps/CMakeFiles/octo2file_in_folders.dir/build.make apps/CMakeFiles/octo2file_in_folders.dir/build
+.PHONY : octo2file_in_folders/fast
+
+#=============================================================================
+# Target rules for targets named random_view_generator
+
+# Build rule for target.
+random_view_generator: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 random_view_generator
+.PHONY : random_view_generator
+
+# fast build rule for target.
+random_view_generator/fast:
+	$(MAKE) -f apps/CMakeFiles/random_view_generator.dir/build.make apps/CMakeFiles/random_view_generator.dir/build
+.PHONY : random_view_generator/fast
+
+#=============================================================================
+# Target rules for targets named test_freeflyer_vasquez09
+
+# Build rule for target.
+test_freeflyer_vasquez09: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_freeflyer_vasquez09
+.PHONY : test_freeflyer_vasquez09
+
+# fast build rule for target.
+test_freeflyer_vasquez09/fast:
+	$(MAKE) -f apps/CMakeFiles/test_freeflyer_vasquez09.dir/build.make apps/CMakeFiles/test_freeflyer_vasquez09.dir/build
+.PHONY : test_freeflyer_vasquez09/fast
+
+#=============================================================================
+# Target rules for targets named test_trainer
+
+# Build rule for target.
+test_trainer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_trainer
+.PHONY : test_trainer
+
+# fast build rule for target.
+test_trainer/fast:
+	$(MAKE) -f apps/CMakeFiles/test_trainer.dir/build.make apps/CMakeFiles/test_trainer.dir/build
+.PHONY : test_trainer/fast
 
 #=============================================================================
 # Target rules for targets named trainning_main_changes
@@ -266,6 +266,32 @@ trainning_main_changes/fast:
 	$(MAKE) -f apps/CMakeFiles/trainning_main_changes.dir/build.make apps/CMakeFiles/trainning_main_changes.dir/build
 .PHONY : trainning_main_changes/fast
 
+#=============================================================================
+# Target rules for targets named test_ram
+
+# Build rule for target.
+test_ram: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_ram
+.PHONY : test_ram
+
+# fast build rule for target.
+test_ram/fast:
+	$(MAKE) -f apps/CMakeFiles/test_ram.dir/build.make apps/CMakeFiles/test_ram.dir/build
+.PHONY : test_ram/fast
+
+#=============================================================================
+# Target rules for targets named read_octree
+
+# Build rule for target.
+read_octree: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 read_octree
+.PHONY : read_octree
+
+# fast build rule for target.
+read_octree/fast:
+	$(MAKE) -f apps/CMakeFiles/read_octree.dir/build.make apps/CMakeFiles/read_octree.dir/build
+.PHONY : read_octree/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -279,13 +305,15 @@ help:
 	@echo "... PartialModel"
 	@echo "... ViewPlanning"
 	@echo "... RangeSimulator"
-	@echo "... read_octree"
-	@echo "... test_freeflyer_vasquez09"
-	@echo "... random_view_generator"
-	@echo "... test_trainer"
-	@echo "... update_partial_model"
 	@echo "... view_sphere_generator"
+	@echo "... update_partial_model"
+	@echo "... octo2file_in_folders"
+	@echo "... random_view_generator"
+	@echo "... test_freeflyer_vasquez09"
+	@echo "... test_trainer"
 	@echo "... trainning_main_changes"
+	@echo "... test_ram"
+	@echo "... read_octree"
 .PHONY : help
 
 

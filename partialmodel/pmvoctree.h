@@ -59,6 +59,7 @@ class PMVOctree :  public PMVolumetric
 
 public:
 PMVOctree();
+virtual ~PMVOctree();
 
   virtual float updateWithScan(std::string file_name_scan, std::string file_name_origin);
   

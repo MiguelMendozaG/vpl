@@ -81,6 +81,13 @@ bool PMVOctree::init()
   std::cout << "-------------------------------------------" << std::endl;
 }
 
+PMVOctree::~PMVOctree()
+{
+  std::cout << "~PMVOctree" << std::endl;
+  delete map;
+}
+
+
 
 void PMVOctree::insertFreeSpace(double x1, double y1, double z1, double x2, double y2, double z2)
 {

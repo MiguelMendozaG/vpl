@@ -111,64 +111,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-apps/CMakeFiles/read_octree.dir/rule:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/read_octree.dir/rule
-.PHONY : apps/CMakeFiles/read_octree.dir/rule
+apps/CMakeFiles/view_sphere_generator.dir/rule:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/view_sphere_generator.dir/rule
+.PHONY : apps/CMakeFiles/view_sphere_generator.dir/rule
 
 # Convenience name for target.
-read_octree: apps/CMakeFiles/read_octree.dir/rule
+view_sphere_generator: apps/CMakeFiles/view_sphere_generator.dir/rule
 
-.PHONY : read_octree
+.PHONY : view_sphere_generator
 
 # fast build rule for target.
-read_octree/fast:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/read_octree.dir/build.make apps/CMakeFiles/read_octree.dir/build
-.PHONY : read_octree/fast
-
-# Convenience name for target.
-apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule
-.PHONY : apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule
-
-# Convenience name for target.
-test_freeflyer_vasquez09: apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule
-
-.PHONY : test_freeflyer_vasquez09
-
-# fast build rule for target.
-test_freeflyer_vasquez09/fast:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_freeflyer_vasquez09.dir/build.make apps/CMakeFiles/test_freeflyer_vasquez09.dir/build
-.PHONY : test_freeflyer_vasquez09/fast
-
-# Convenience name for target.
-apps/CMakeFiles/random_view_generator.dir/rule:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/random_view_generator.dir/rule
-.PHONY : apps/CMakeFiles/random_view_generator.dir/rule
-
-# Convenience name for target.
-random_view_generator: apps/CMakeFiles/random_view_generator.dir/rule
-
-.PHONY : random_view_generator
-
-# fast build rule for target.
-random_view_generator/fast:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/random_view_generator.dir/build.make apps/CMakeFiles/random_view_generator.dir/build
-.PHONY : random_view_generator/fast
-
-# Convenience name for target.
-apps/CMakeFiles/test_trainer.dir/rule:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/test_trainer.dir/rule
-.PHONY : apps/CMakeFiles/test_trainer.dir/rule
-
-# Convenience name for target.
-test_trainer: apps/CMakeFiles/test_trainer.dir/rule
-
-.PHONY : test_trainer
-
-# fast build rule for target.
-test_trainer/fast:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_trainer.dir/build.make apps/CMakeFiles/test_trainer.dir/build
-.PHONY : test_trainer/fast
+view_sphere_generator/fast:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/view_sphere_generator.dir/build.make apps/CMakeFiles/view_sphere_generator.dir/build
+.PHONY : view_sphere_generator/fast
 
 # Convenience name for target.
 apps/CMakeFiles/update_partial_model.dir/rule:
@@ -186,19 +141,64 @@ update_partial_model/fast:
 .PHONY : update_partial_model/fast
 
 # Convenience name for target.
-apps/CMakeFiles/view_sphere_generator.dir/rule:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/view_sphere_generator.dir/rule
-.PHONY : apps/CMakeFiles/view_sphere_generator.dir/rule
+apps/CMakeFiles/octo2file_in_folders.dir/rule:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/octo2file_in_folders.dir/rule
+.PHONY : apps/CMakeFiles/octo2file_in_folders.dir/rule
 
 # Convenience name for target.
-view_sphere_generator: apps/CMakeFiles/view_sphere_generator.dir/rule
+octo2file_in_folders: apps/CMakeFiles/octo2file_in_folders.dir/rule
 
-.PHONY : view_sphere_generator
+.PHONY : octo2file_in_folders
 
 # fast build rule for target.
-view_sphere_generator/fast:
-	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/view_sphere_generator.dir/build.make apps/CMakeFiles/view_sphere_generator.dir/build
-.PHONY : view_sphere_generator/fast
+octo2file_in_folders/fast:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/octo2file_in_folders.dir/build.make apps/CMakeFiles/octo2file_in_folders.dir/build
+.PHONY : octo2file_in_folders/fast
+
+# Convenience name for target.
+apps/CMakeFiles/random_view_generator.dir/rule:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/random_view_generator.dir/rule
+.PHONY : apps/CMakeFiles/random_view_generator.dir/rule
+
+# Convenience name for target.
+random_view_generator: apps/CMakeFiles/random_view_generator.dir/rule
+
+.PHONY : random_view_generator
+
+# fast build rule for target.
+random_view_generator/fast:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/random_view_generator.dir/build.make apps/CMakeFiles/random_view_generator.dir/build
+.PHONY : random_view_generator/fast
+
+# Convenience name for target.
+apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule
+.PHONY : apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule
+
+# Convenience name for target.
+test_freeflyer_vasquez09: apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule
+
+.PHONY : test_freeflyer_vasquez09
+
+# fast build rule for target.
+test_freeflyer_vasquez09/fast:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_freeflyer_vasquez09.dir/build.make apps/CMakeFiles/test_freeflyer_vasquez09.dir/build
+.PHONY : test_freeflyer_vasquez09/fast
+
+# Convenience name for target.
+apps/CMakeFiles/test_trainer.dir/rule:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/test_trainer.dir/rule
+.PHONY : apps/CMakeFiles/test_trainer.dir/rule
+
+# Convenience name for target.
+test_trainer: apps/CMakeFiles/test_trainer.dir/rule
+
+.PHONY : test_trainer
+
+# fast build rule for target.
+test_trainer/fast:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_trainer.dir/build.make apps/CMakeFiles/test_trainer.dir/build
+.PHONY : test_trainer/fast
 
 # Convenience name for target.
 apps/CMakeFiles/trainning_main_changes.dir/rule:
@@ -214,6 +214,63 @@ trainning_main_changes: apps/CMakeFiles/trainning_main_changes.dir/rule
 trainning_main_changes/fast:
 	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/trainning_main_changes.dir/build.make apps/CMakeFiles/trainning_main_changes.dir/build
 .PHONY : trainning_main_changes/fast
+
+# Convenience name for target.
+apps/CMakeFiles/test_ram.dir/rule:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/test_ram.dir/rule
+.PHONY : apps/CMakeFiles/test_ram.dir/rule
+
+# Convenience name for target.
+test_ram: apps/CMakeFiles/test_ram.dir/rule
+
+.PHONY : test_ram
+
+# fast build rule for target.
+test_ram/fast:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_ram.dir/build.make apps/CMakeFiles/test_ram.dir/build
+.PHONY : test_ram/fast
+
+# Convenience name for target.
+apps/CMakeFiles/read_octree.dir/rule:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/read_octree.dir/rule
+.PHONY : apps/CMakeFiles/read_octree.dir/rule
+
+# Convenience name for target.
+read_octree: apps/CMakeFiles/read_octree.dir/rule
+
+.PHONY : read_octree
+
+# fast build rule for target.
+read_octree/fast:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/read_octree.dir/build.make apps/CMakeFiles/read_octree.dir/build
+.PHONY : read_octree/fast
+
+octo2file_in_folders.o: octo2file_in_folders.cpp.o
+
+.PHONY : octo2file_in_folders.o
+
+# target to build an object file
+octo2file_in_folders.cpp.o:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/octo2file_in_folders.dir/build.make apps/CMakeFiles/octo2file_in_folders.dir/octo2file_in_folders.cpp.o
+.PHONY : octo2file_in_folders.cpp.o
+
+octo2file_in_folders.i: octo2file_in_folders.cpp.i
+
+.PHONY : octo2file_in_folders.i
+
+# target to preprocess a source file
+octo2file_in_folders.cpp.i:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/octo2file_in_folders.dir/build.make apps/CMakeFiles/octo2file_in_folders.dir/octo2file_in_folders.cpp.i
+.PHONY : octo2file_in_folders.cpp.i
+
+octo2file_in_folders.s: octo2file_in_folders.cpp.s
+
+.PHONY : octo2file_in_folders.s
+
+# target to generate assembly for a file
+octo2file_in_folders.cpp.s:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/octo2file_in_folders.dir/build.make apps/CMakeFiles/octo2file_in_folders.dir/octo2file_in_folders.cpp.s
+.PHONY : octo2file_in_folders.cpp.s
 
 read_octree.o: read_octree.cpp.o
 
@@ -268,6 +325,33 @@ test_freeflyer_vasquez09.s: test_freeflyer_vasquez09.cpp.s
 test_freeflyer_vasquez09.cpp.s:
 	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_freeflyer_vasquez09.dir/build.make apps/CMakeFiles/test_freeflyer_vasquez09.dir/test_freeflyer_vasquez09.cpp.s
 .PHONY : test_freeflyer_vasquez09.cpp.s
+
+test_ram.o: test_ram.cpp.o
+
+.PHONY : test_ram.o
+
+# target to build an object file
+test_ram.cpp.o:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_ram.dir/build.make apps/CMakeFiles/test_ram.dir/test_ram.cpp.o
+.PHONY : test_ram.cpp.o
+
+test_ram.i: test_ram.cpp.i
+
+.PHONY : test_ram.i
+
+# target to preprocess a source file
+test_ram.cpp.i:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_ram.dir/build.make apps/CMakeFiles/test_ram.dir/test_ram.cpp.i
+.PHONY : test_ram.cpp.i
+
+test_ram.s: test_ram.cpp.s
+
+.PHONY : test_ram.s
+
+# target to generate assembly for a file
+test_ram.cpp.s:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_ram.dir/build.make apps/CMakeFiles/test_ram.dir/test_ram.cpp.s
+.PHONY : test_ram.cpp.s
 
 test_trainer.o: test_trainer.cpp.o
 
@@ -411,20 +495,28 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... read_octree"
-	@echo "... rebuild_cache"
-	@echo "... test_freeflyer_vasquez09"
-	@echo "... random_view_generator"
-	@echo "... test_trainer"
-	@echo "... update_partial_model"
 	@echo "... view_sphere_generator"
+	@echo "... update_partial_model"
+	@echo "... octo2file_in_folders"
+	@echo "... random_view_generator"
+	@echo "... test_freeflyer_vasquez09"
+	@echo "... test_trainer"
+	@echo "... rebuild_cache"
 	@echo "... trainning_main_changes"
+	@echo "... test_ram"
+	@echo "... read_octree"
+	@echo "... octo2file_in_folders.o"
+	@echo "... octo2file_in_folders.i"
+	@echo "... octo2file_in_folders.s"
 	@echo "... read_octree.o"
 	@echo "... read_octree.i"
 	@echo "... read_octree.s"
 	@echo "... test_freeflyer_vasquez09.o"
 	@echo "... test_freeflyer_vasquez09.i"
 	@echo "... test_freeflyer_vasquez09.s"
+	@echo "... test_ram.o"
+	@echo "... test_ram.i"
+	@echo "... test_ram.s"
 	@echo "... test_trainer.o"
 	@echo "... test_trainer.i"
 	@echo "... test_trainer.s"

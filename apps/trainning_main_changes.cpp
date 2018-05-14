@@ -37,22 +37,25 @@ pointCloudTypePtr global_narf_points (new pointCloudType());
 //////////////////////////////////////////
 //////Global variables////////////
 const int total_images = 1312;
+const double coverage_stop_threshold = 0.80;
 const int jumps = 5;
-const int iteration_stop = 20;
+const int iteration_stop = 10;
 const double w_escala_ini = 0.6;
 const double w_escala_fin = 0.4;
-octomap::point3d x_min = {-0.11,-0.11,-0.11};  /// this values are set according eith the partialmodel file, it is refered to the bounding box
-octomap::point3d x_max = {0.11,0.11,0.11};
+const int n_end = 500;
+double valor_octree = 0.0750925;
+octomap::point3d x_min = {-valor_octree,-valor_octree,-valor_octree};  /// this values are set according eith the partialmodel file, it is refered to the bounding box
+octomap::point3d x_max = {valor_octree, valor_octree, valor_octree};
 
 
 //location folders
-string my_direction("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/modelo2/"); //location of the input dataset folder
-string dir_nbv_narf ("/home/miguelmg/Documents/CIDETEC/'semestre 2'/'vision 3d'/proyecto/'6d pose'/hinterstoisser/nubes/modelo2/nbv/"); //in case your folder names contains space, you must specify it and add /nbv/ (e.g. ~/../'my foder'/nbv/)
+string my_direction("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/modelo10/"); //location of the input dataset folder
+string dir_nbv_narf ("/home/miguelmg/Documents/CIDETEC/'semestre 2'/'vision 3d'/proyecto/'6d pose'/hinterstoisser/nubes/modelo10/nbv/"); //in case your folder names contains space, you must specify it and add /nbv/ (e.g. ~/../'my foder'/nbv/)
 string lectura_narf("./icp_narf_one_file_output " + dir_nbv_narf + "traslape.pcd" + " -m " + "-out " + dir_nbv_narf); //./executable input_point_cloud_dir -m -out output_narf_point_cloud_folder 
 string direction_all_z (my_direction + "absolute/model/");
 string direction_all_background (my_direction + "absolute/background/");
 string direction_all_z_with_background (my_direction + "absolute/model_background/imagen-");
-string direction_ground_truth ("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/ground_truth_models/model2.pcd"); //ground truth point cloud location
+string direction_ground_truth ("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/ground_truth_models/model10.pcd"); //ground truth point cloud location
 string dir_nbv_i( my_direction + "nbv/");
 string nub("/clouds");  // nubes
 string num_poses("/num_pose");
@@ -92,7 +95,7 @@ void read_all_z(std::string input_folder, bool z_or_bg){
     else
       all_background.push_back(cloud);
     
-  }  
+  }
 }
 
 void changeColor(pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud, int R, int G, int B)
@@ -149,7 +152,7 @@ bool narf_points(){
   pcl::RangeImage::CoordinateFrame coordinate_frame = pcl::RangeImage::CAMERA_FRAME;
   bool setUnseenToMaxRange = true;
   bool rotation_invariant = true;
-  pcl::PointCloud<PointType>::Ptr point_cloud_ptr (new pcl::PointCloud<PointType>);
+  //pcl::PointCloud<PointType>::Ptr point_cloud_ptr (new pcl::PointCloud<PointType>);
   pcl::PointCloud<PointType>& point_cloud = *global_narf_points;
   pcl::PointCloud<pcl::PointWithViewpoint> far_ranges;
   Eigen::Affine3f scene_sensor_pose (Eigen::Affine3f::Identity ());
@@ -212,6 +215,7 @@ bool narf_points(){
   //cout << " todos " << cloud_one->points[0].x << endl;
   cout << " points size: " << cloud_one->points.size() << endl;
   */
+  range_image.reset();
   if (keypoint_indices.points.size() > 3)
     return true;
   else
@@ -254,6 +258,9 @@ void file_octomap(string octo_input, string octo_file_output){
    else
      cout << "\n not read" << endl;
     
+   delete tree;
+   //delete ot;
+   //delete p;
    cout << "\n\t occupied voxels = " << occu_voxels << endl;
    cout << "\n\t free voxels = " << free_voxels << endl;
   
@@ -302,6 +309,7 @@ int main (int argc, char** argv)
   //Read the groundtruth
   pointCloudTypePtr ground_truth(new pcl::PointCloud<pointType>);
   pointCloudTypePtr ground_truth_saved(new pcl::PointCloud<pointType>);
+  cout << "\n aqui" << endl;
   pcl::io::loadPCDFile(direction_ground_truth,*ground_truth);
   if (ground_truth->size()>0)
     cout << "\n Size of ground truth model: " << ground_truth->size() << endl;
@@ -309,10 +317,10 @@ int main (int argc, char** argv)
     cout <<"\n Ground truth model not loaded" << endl;
     return 0;}
   *ground_truth_saved = *ground_truth;
+  cin.get();
   //start loop for the reconstruction of all the poses
   read_all_z(direction_all_z,1);
-  read_all_z(direction_all_background,0);
-  double coverage_stop_threshold = 0.95;
+  //read_all_z(direction_all_background,0);
   
     float alphaOcc = 0.2, alphaUnk = 0.8;
   /*
@@ -322,14 +330,31 @@ int main (int argc, char** argv)
       partial_model->init();
    */   
     
-    PartialModelBase *partial_model_2 = new PMVOctreeVasquez09(alphaOcc, alphaUnk); //acumulated octree
-    partial_model_2->setConfigFolder(config_folder);
-    partial_model_2->setDataFolder(data_folder);
-    partial_model_2->init();
+    
     
     vpFileReader reader;
-  
-  for (int i_reconstrucion = 0; i_reconstrucion < 5 ; i_reconstrucion+=jumps){
+ 
+    pointCloudTypePtr W_pos (new pointCloudType());
+      pointCloudTypePtr W_ast (new pointCloudType());
+      pointCloudTypePtr z_ptr;
+    pointCloudTypePtr z_ptr_background;
+    pointCloudTypePtr P_acu (new pointCloudType());
+    pointCloudTypePtr P_acu_saved (new pointCloudType());
+    pointCloudTypePtr P_overlap(new pointCloudType());
+    pointCloudTypePtr Pos_P_acu (new pointCloudType());
+    vector < vector <double>> pose_;
+    vector < vector <double>> orn_;
+    pointType w_pos;
+    pointType w_pos_end;
+    pointType w_ast;
+    pointType w_ast_end;
+    int i_iterative =0;
+  //partial_model_2->init();
+  for (int i_reconstrucion = 575; i_reconstrucion < total_images ; i_reconstrucion+=jumps){
+    //PartialModelBase *partial_model_2 = new PMVOctreeVasquez09(alphaOcc, alphaUnk); //acumulated octree
+     PMVOctree* partial_model_2 = new PMVOctree();
+    partial_model_2->setConfigFolder(config_folder);
+    partial_model_2->setDataFolder(data_folder);
     partial_model_2->init();
     *ground_truth = *ground_truth_saved;
     int i_reconstrucion_mod = i_reconstrucion;
@@ -366,26 +391,38 @@ int main (int argc, char** argv)
     int w_star_index , w_star_iter ;
     w_star_index = w_star_iter = i_reconstrucion;
     w_star_index /=jumps;
-    pointType w_pos;
+    /*pointType w_pos;
     pointType w_pos_end;
     pointType w_ast;
-    pointType w_ast_end;
+    pointType w_ast_end;*/
     double overlap=0;
     bool NARF_points = 0;
+    cout << "\n ref" << endl;
+    //cin.get();
+    //z_ptr->clear();
+    //z_ptr_background->clear();
+    P_acu->clear();
+    //cout << "\n P_acu clear " << endl;
+    //cin.get();
+    P_acu_saved->clear();
+    P_overlap->clear();
+    
+    /*
     pointCloudTypePtr z_ptr;
     pointCloudTypePtr z_ptr_background;
     pointCloudTypePtr P_acu (new pointCloudType());
     pointCloudTypePtr P_acu_saved (new pointCloudType());
-    pointCloudTypePtr P_overlap(new pointCloudType());
+    pointCloudTypePtr P_overlap(new pointCloudType());*/
     
     cout << "\n"<<i_reconstrucion << "\t Iteration: " << iteration << endl;
     //w_star_iter = w_star_index;
     
     while (coverage < coverage_stop_threshold && iteration < iteration_stop) {
-      //partial_model->init();
-      pointCloudTypePtr P_acu_background (new pointCloudType());
-      pointCloudTypePtr W_pos (new pointCloudType());
-      pointCloudTypePtr W_ast (new pointCloudType());
+      //W_pos->clear();
+      //W_ast->clear();
+      ////pointCloudTypePtr P_acu_background (new pointCloudType());
+      //pointCloudTypePtr W_pos (new pointCloudType());
+      //pointCloudTypePtr W_ast (new pointCloudType());
       cout << "Reconstruction " << i_reconstrucion << " - Iteration: " << iteration << endl;
       counter = iteration;
       stringstream w_iter;
@@ -393,11 +430,11 @@ int main (int argc, char** argv)
       w_iter << w_star_iter;
       iter_while << iteration;
       z_ptr = all_z[w_star_index];
-      z_ptr_background = all_background[w_star_index];
+      //z_ptr_background = all_background[w_star_index];
       
       
-      // nbv position
-      pcl::io::loadPCDFile(direccion_posicion + w_iter.str() + ".pcd", *W_pos);
+      // nbv position  uncomment when the pcl with arrows is shown
+      /*pcl::io::loadPCDFile(direccion_posicion + w_iter.str() + ".pcd", *W_pos);
       w_pos.x = (W_pos->points[0].x) * w_escala_ini ;
       w_pos.y = (W_pos->points[0].y) * w_escala_ini ;
       w_pos.z = (W_pos->points[0].z) * w_escala_ini;
@@ -408,11 +445,15 @@ int main (int argc, char** argv)
       
       cout << "\n w pos ini " << w_iter.str() << " " << W_pos->points[0].x << " " << W_pos->points[0].y << " " << W_pos->points[0].z << endl;
       //cout << "\n w pos fin " << w_pos_end.x << " " << w_pos_end.y << " " << w_pos_end.z << endl;
+      //////////////////////////// finishes uncomment section for pcl arrows
+      */
       
       ///save M_acu
       file_name_scan = direction_all_z_with_background + w_iter.str() + ".xyz";
       file_name_origin = direccion_posicion + w_iter.str() + ".dat";
       //partial_model->updateWithScan(file_name_scan,file_name_origin);
+      //cout << "\n Before octomap creation " << endl;
+      //cin.get();
       partial_model_2->updateWithScan(file_name_scan,file_name_origin);
       //octomaps = pos_actual_octo + iter_while.str() + ".ot";
       //partial_model->savePartialModel(octomaps);
@@ -420,7 +461,11 @@ int main (int argc, char** argv)
       partial_model_2->savePartialModel(octomaps);
       
       octomap_txt = pos_acum_octo + iter_while.str() + ".txt";
+      //cout << "\n After octomap creation " << endl;
+      //cin.get();
       file_octomap(octomaps, octomap_txt);
+      //cout << "\n After file of octomap creation " << endl;
+      //cin.get();
       
       // segment the object from z;
       
@@ -429,6 +474,8 @@ int main (int argc, char** argv)
       
       
       *P_acu = *P_acu + *z_ptr;   // join both pc
+      //cout << "\n After P_acu + z_ptr " << endl;
+      //cin.get();
       
       //filtering
             // Create the filtering object
@@ -436,6 +483,8 @@ int main (int argc, char** argv)
       voxel_filter.setLeafSize(voxel_res, voxel_res, voxel_res);
       voxel_filter.setInputCloud(P_acu);
       voxel_filter.filter(*P_acu);
+      //cout << "\n After filter" << endl;
+      //cin.get();
       
       /*
       //cout << "\n Saving cloud" << endl;
@@ -461,11 +510,13 @@ int main (int argc, char** argv)
       //cout << "Correspondent points: " << (long)positives << endl;
       cout << "Current coverage: " << (double)positives/total << endl;
       *P_acu_saved = *P_acu;
+      //cout << "\n Before iterations" << endl;
+      //cin.get();
       
       
       // Select the NBV
       //TODO:
-      int i_iterative = 0;
+      i_iterative = 0;
       max_increment = 0;
       for (int i=0; i < total_images ; i+=jumps){
 	cout << "\n" << i_reconstrucion << "\t\t Iteration:" << iteration << "\n\t  Image: " << i  << " Actual pos_z: " << max_intertoise << " increases " << max_increment <<endl;
@@ -488,7 +539,7 @@ int main (int argc, char** argv)
 	  if (NARF_points){
 	    //cout << "\t\t\t Narf points in image " << i << endl;
 	    *ground_truth = *ground_truth_saved;
-	    pointCloudTypePtr Pos_P_acu (new pointCloudType());
+	    //pointCloudTypePtr Pos_P_acu (new pointCloudType());
 	    *Pos_P_acu = *P_acu_saved + *all_z[i_iterative];
 	    P_overlap->clear();
 	    total = ground_truth->size();
@@ -552,8 +603,8 @@ int main (int argc, char** argv)
       
       pos_actual = data_num_poses + iter_while.str() + ".dat";
       reader.saveData2Text<int>(i_reconstrucion_mod,pos_actual);
-      vector < vector <double>> pose_;
-      vector < vector <double>> orn_;
+      //vector < vector <double>> pose_;
+      //vector < vector <double>> orn_;
       std:stringstream indice_pose;
       indice_pose << max_intertoise;
       pos_actual = direccion_posicion + indice_pose.str() + ".dat";
@@ -620,12 +671,15 @@ int main (int argc, char** argv)
 	      cout << "\n  size overlap: " << P_overlap->size() << endl;
 	      cout << "\n   size overlap: " << all_z[w_star_index]->size() << endl;
 	      viewer.spin();*/
-      
-      
 
     }// end while
+    //cout << "\n Before clear partial_model_2" << endl;
+    //cin.get();
+    delete partial_model_2;
+    //cout << "\n After clear partial_model_2" << endl;
+    //cin.get();
   }
   
-  
+  cout << "\n Finish" << endl;
   return 0;
 }

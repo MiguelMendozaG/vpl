@@ -29,6 +29,10 @@ PMVolumetric::PMVolumetric(): PartialModelBase()
     stopCriteria = false;
 }
 
+PMVolumetric::~PMVolumetric()
+{
+    std::cout << "~PMVolumetric" << std::endl;
+}
 
 
 

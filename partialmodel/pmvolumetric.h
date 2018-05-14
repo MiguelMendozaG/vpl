@@ -77,7 +77,7 @@ public:
   
  //pmVolumetric();
  PMVolumetric();
- 
+virtual ~PMVolumetric(); 
   /**
    * Paints in blue occupied voxels that are inside the object capsule
    */

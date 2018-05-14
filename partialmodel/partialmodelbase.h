@@ -79,6 +79,7 @@ class PartialModelBase
 public:
 
 PartialModelBase();
+virtual ~PartialModelBase();
   
   virtual float updateWithScan(std::string file_name_scan, std::string file_name_origin)=0;
   
