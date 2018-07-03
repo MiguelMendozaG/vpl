@@ -4,6 +4,7 @@
 #include <pcl/filters/voxel_grid.h>
 #include <vector>
 #include <pcl/correspondence.h>
+#include <ctime>
 
 #include <pcl/search/kdtree.h>
 #include <pcl/visualization/cloud_viewer.h>
@@ -37,25 +38,25 @@ pointCloudTypePtr global_narf_points (new pointCloudType());
 //////////////////////////////////////////
 //////Global variables////////////
 const int total_images = 1312;
-const double coverage_stop_threshold = 0.80;
+const double coverage_stop_threshold = 0.9;
 const int jumps = 5;
 const int iteration_stop = 10;
 const double w_escala_ini = 0.6;
 const double w_escala_fin = 0.4;
 const int n_end = 500;
-double valor_octree = 0.0750925;
-octomap::point3d x_min = {-valor_octree,-valor_octree,-valor_octree};  /// this values are set according eith the partialmodel file, it is refered to the bounding box
+double valor_octree = 0.0638165;
+octomap::point3d x_min = {-valor_octree,-valor_octree,-valor_octree};  /// this values are set according with the partialmodel file, it is refered to the bounding box
 octomap::point3d x_max = {valor_octree, valor_octree, valor_octree};
 
 
 //location folders
-string my_direction("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/modelo10/"); //location of the input dataset folder
-string dir_nbv_narf ("/home/miguelmg/Documents/CIDETEC/'semestre 2'/'vision 3d'/proyecto/'6d pose'/hinterstoisser/nubes/modelo10/nbv/"); //in case your folder names contains space, you must specify it and add /nbv/ (e.g. ~/../'my foder'/nbv/)
+string my_direction("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/modelo6/"); //location of the input dataset folder
+string dir_nbv_narf ("/home/miguelmg/Documents/CIDETEC/'semestre 2'/'vision 3d'/proyecto/'6d pose'/hinterstoisser/nubes/modelo6/nbv/"); //in case your folder names contains space, you must specify it and add /nbv/ (e.g. ~/../'my foder'/nbv/)
 string lectura_narf("./icp_narf_one_file_output " + dir_nbv_narf + "traslape.pcd" + " -m " + "-out " + dir_nbv_narf); //./executable input_point_cloud_dir -m -out output_narf_point_cloud_folder 
 string direction_all_z (my_direction + "absolute/model/");
 string direction_all_background (my_direction + "absolute/background/");
 string direction_all_z_with_background (my_direction + "absolute/model_background/imagen-");
-string direction_ground_truth ("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/ground_truth_models/model10.pcd"); //ground truth point cloud location
+string direction_ground_truth ("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/ground_truth_models/model6.pcd"); //ground truth point cloud location
 string dir_nbv_i( my_direction + "nbv/");
 string nub("/clouds");  // nubes
 string num_poses("/num_pose");
@@ -350,8 +351,12 @@ int main (int argc, char** argv)
     pointType w_ast_end;
     int i_iterative =0;
   //partial_model_2->init();
-  for (int i_reconstrucion = 575; i_reconstrucion < total_images ; i_reconstrucion+=jumps){
+    std::ofstream log_file (my_direction + "log_6.txt");
+    clock_t begin = clock();
+  for (int i_reconstrucion = 0; i_reconstrucion < 5 ; i_reconstrucion+=jumps){
     //PartialModelBase *partial_model_2 = new PMVOctreeVasquez09(alphaOcc, alphaUnk); //acumulated octree
+    log_file << "\n" << i_reconstrucion;
+    
      PMVOctree* partial_model_2 = new PMVOctree();
     partial_model_2->setConfigFolder(config_folder);
     partial_model_2->setDataFolder(data_folder);
@@ -418,12 +423,13 @@ int main (int argc, char** argv)
     //w_star_iter = w_star_index;
     
     while (coverage < coverage_stop_threshold && iteration < iteration_stop) {
-      //W_pos->clear();
-      //W_ast->clear();
-      ////pointCloudTypePtr P_acu_background (new pointCloudType());
-      //pointCloudTypePtr W_pos (new pointCloudType());
-      //pointCloudTypePtr W_ast (new pointCloudType());
+      W_pos->clear();
+      W_ast->clear();
+      //pointCloudTypePtr P_acu_background (new pointCloudType());
+      pointCloudTypePtr W_pos (new pointCloudType());
+      pointCloudTypePtr W_ast (new pointCloudType());
       cout << "Reconstruction " << i_reconstrucion << " - Iteration: " << iteration << endl;
+      clock_t begin_iter = clock();
       counter = iteration;
       stringstream w_iter;
       stringstream iter_while;
@@ -434,7 +440,7 @@ int main (int argc, char** argv)
       
       
       // nbv position  uncomment when the pcl with arrows is shown
-      /*pcl::io::loadPCDFile(direccion_posicion + w_iter.str() + ".pcd", *W_pos);
+      pcl::io::loadPCDFile(direccion_posicion + w_iter.str() + ".pcd", *W_pos);
       w_pos.x = (W_pos->points[0].x) * w_escala_ini ;
       w_pos.y = (W_pos->points[0].y) * w_escala_ini ;
       w_pos.z = (W_pos->points[0].z) * w_escala_ini;
@@ -446,7 +452,7 @@ int main (int argc, char** argv)
       cout << "\n w pos ini " << w_iter.str() << " " << W_pos->points[0].x << " " << W_pos->points[0].y << " " << W_pos->points[0].z << endl;
       //cout << "\n w pos fin " << w_pos_end.x << " " << w_pos_end.y << " " << w_pos_end.z << endl;
       //////////////////////////// finishes uncomment section for pcl arrows
-      */
+      
       
       ///save M_acu
       file_name_scan = direction_all_z_with_background + w_iter.str() + ".xyz";
@@ -513,6 +519,10 @@ int main (int argc, char** argv)
       //cout << "\n Before iterations" << endl;
       //cin.get();
       
+      //-----log_file info -----------------
+      
+      log_file << "," << (double)positives/total;
+      
       
       // Select the NBV
       //TODO:
@@ -552,9 +562,8 @@ int main (int argc, char** argv)
 	      cout << "\n\t*******     Image " << i << " increases in " << increment << "   ****** " << endl; 
 	      max_intertoise = i;
 	      max_increment = increment;
-	      /*
 	      
-	      pcl::PointCloud<pcl::PointXYZRGB>::Ptr colorAcu(new pcl::PointCloud<pcl::PointXYZRGB>);
+	      /*pcl::PointCloud<pcl::PointXYZRGB>::Ptr colorAcu(new pcl::PointCloud<pcl::PointXYZRGB>);
 	      pcl::PointCloud<pcl::PointXYZRGB>::Ptr colorOver(new pcl::PointCloud<pcl::PointXYZRGB>);
 	      pcl::PointCloud<pcl::PointXYZRGB>::Ptr colorZ(new pcl::PointCloud<pcl::PointXYZRGB>);
 	      pcl::PointCloud<pcl::PointXYZRGB>::Ptr colorZstar(new pcl::PointCloud<pcl::PointXYZRGB>);
@@ -587,9 +596,9 @@ int main (int argc, char** argv)
 	      
 	      viewer.addLine<pointType>(w_pos, w_pos_end, 0, 0 , 0,"w_star_prev");
 	      
-	      viewer.spin();
+	      viewer.spin();*/
 	      
-	      */
+	      
 	    }
 	  }
 	}
@@ -597,6 +606,7 @@ int main (int argc, char** argv)
 	i_iterative++;
       }//end for
       //w_star_index ++;
+      pcl::io::savePCDFile(my_direction + iter_while.str() + "traslape.pcd", *global_narf_points);
       i_reconstrucion_mod = max_intertoise;
       w_star_index = max_intertoise/jumps;
       w_star_iter = max_intertoise;
@@ -672,14 +682,22 @@ int main (int argc, char** argv)
 	      cout << "\n   size overlap: " << all_z[w_star_index]->size() << endl;
 	      viewer.spin();*/
 
+    
+      clock_t end_iter = clock();
+      double elapsed_secs_iter = double(end_iter - begin_iter) / CLOCKS_PER_SEC;
+      log_file << "," << elapsed_secs_iter << endl;
     }// end while
     //cout << "\n Before clear partial_model_2" << endl;
     //cin.get();
+    clock_t end = clock();
+    cout << "\t\t  Final coverage: "<< coverage << endl;
+    double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+    cout << "\n\t\t Final time: " << elapsed_secs << endl;
     delete partial_model_2;
     //cout << "\n After clear partial_model_2" << endl;
     //cin.get();
   }
-  
+  log_file.close();
   cout << "\n Finish" << endl;
   return 0;
 }
