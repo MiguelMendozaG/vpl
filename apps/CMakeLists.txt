@@ -41,6 +41,12 @@ if(BUILD_PARTIAL_MODEL)
   add_executable(trainning_main_changes trainning_main_changes.cpp ${SRC_ALL})
   target_link_libraries(trainning_main_changes ${PCL_LIBRARIES} ${LIB_PARTIAL_MODEL})
   
+  add_executable(test_DNN test_DNN.cpp ${SRC_ALL})
+  target_link_libraries(test_DNN ${PCL_LIBRARIES} ${LIB_PARTIAL_MODEL})
+  
+  add_executable(test_DNN_regression test_DNN_regression.cpp ${SRC_ALL})
+  target_link_libraries(test_DNN_regression ${PCL_LIBRARIES} ${LIB_PARTIAL_MODEL})
+  
   add_executable(test_ram test_ram.cpp ${SRC_ALL})
   target_link_libraries(test_ram ${PCL_LIBRARIES} ${LIB_PARTIAL_MODEL})
   

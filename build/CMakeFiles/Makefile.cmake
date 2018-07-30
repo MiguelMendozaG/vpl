@@ -192,9 +192,11 @@ set(CMAKE_DEPEND_INFO_FILES
   "apps/CMakeFiles/update_partial_model.dir/DependInfo.cmake"
   "apps/CMakeFiles/octo2file_in_folders.dir/DependInfo.cmake"
   "apps/CMakeFiles/random_view_generator.dir/DependInfo.cmake"
+  "apps/CMakeFiles/test_DNN.dir/DependInfo.cmake"
   "apps/CMakeFiles/test_freeflyer_vasquez09.dir/DependInfo.cmake"
   "apps/CMakeFiles/test_trainer.dir/DependInfo.cmake"
   "apps/CMakeFiles/trainning_main_changes.dir/DependInfo.cmake"
+  "apps/CMakeFiles/test_DNN_regression.dir/DependInfo.cmake"
   "apps/CMakeFiles/test_ram.dir/DependInfo.cmake"
   "apps/CMakeFiles/read_octree.dir/DependInfo.cmake"
   )

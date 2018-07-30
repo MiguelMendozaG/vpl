@@ -171,6 +171,21 @@ random_view_generator/fast:
 .PHONY : random_view_generator/fast
 
 # Convenience name for target.
+apps/CMakeFiles/test_DNN.dir/rule:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/test_DNN.dir/rule
+.PHONY : apps/CMakeFiles/test_DNN.dir/rule
+
+# Convenience name for target.
+test_DNN: apps/CMakeFiles/test_DNN.dir/rule
+
+.PHONY : test_DNN
+
+# fast build rule for target.
+test_DNN/fast:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_DNN.dir/build.make apps/CMakeFiles/test_DNN.dir/build
+.PHONY : test_DNN/fast
+
+# Convenience name for target.
 apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule:
 	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule
 .PHONY : apps/CMakeFiles/test_freeflyer_vasquez09.dir/rule
@@ -214,6 +229,21 @@ trainning_main_changes: apps/CMakeFiles/trainning_main_changes.dir/rule
 trainning_main_changes/fast:
 	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/trainning_main_changes.dir/build.make apps/CMakeFiles/trainning_main_changes.dir/build
 .PHONY : trainning_main_changes/fast
+
+# Convenience name for target.
+apps/CMakeFiles/test_DNN_regression.dir/rule:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/test_DNN_regression.dir/rule
+.PHONY : apps/CMakeFiles/test_DNN_regression.dir/rule
+
+# Convenience name for target.
+test_DNN_regression: apps/CMakeFiles/test_DNN_regression.dir/rule
+
+.PHONY : test_DNN_regression
+
+# fast build rule for target.
+test_DNN_regression/fast:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_DNN_regression.dir/build.make apps/CMakeFiles/test_DNN_regression.dir/build
+.PHONY : test_DNN_regression/fast
 
 # Convenience name for target.
 apps/CMakeFiles/test_ram.dir/rule:
@@ -298,6 +328,60 @@ read_octree.s: read_octree.cpp.s
 read_octree.cpp.s:
 	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/read_octree.dir/build.make apps/CMakeFiles/read_octree.dir/read_octree.cpp.s
 .PHONY : read_octree.cpp.s
+
+test_DNN.o: test_DNN.cpp.o
+
+.PHONY : test_DNN.o
+
+# target to build an object file
+test_DNN.cpp.o:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_DNN.dir/build.make apps/CMakeFiles/test_DNN.dir/test_DNN.cpp.o
+.PHONY : test_DNN.cpp.o
+
+test_DNN.i: test_DNN.cpp.i
+
+.PHONY : test_DNN.i
+
+# target to preprocess a source file
+test_DNN.cpp.i:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_DNN.dir/build.make apps/CMakeFiles/test_DNN.dir/test_DNN.cpp.i
+.PHONY : test_DNN.cpp.i
+
+test_DNN.s: test_DNN.cpp.s
+
+.PHONY : test_DNN.s
+
+# target to generate assembly for a file
+test_DNN.cpp.s:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_DNN.dir/build.make apps/CMakeFiles/test_DNN.dir/test_DNN.cpp.s
+.PHONY : test_DNN.cpp.s
+
+test_DNN_regression.o: test_DNN_regression.cpp.o
+
+.PHONY : test_DNN_regression.o
+
+# target to build an object file
+test_DNN_regression.cpp.o:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_DNN_regression.dir/build.make apps/CMakeFiles/test_DNN_regression.dir/test_DNN_regression.cpp.o
+.PHONY : test_DNN_regression.cpp.o
+
+test_DNN_regression.i: test_DNN_regression.cpp.i
+
+.PHONY : test_DNN_regression.i
+
+# target to preprocess a source file
+test_DNN_regression.cpp.i:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_DNN_regression.dir/build.make apps/CMakeFiles/test_DNN_regression.dir/test_DNN_regression.cpp.i
+.PHONY : test_DNN_regression.cpp.i
+
+test_DNN_regression.s: test_DNN_regression.cpp.s
+
+.PHONY : test_DNN_regression.s
+
+# target to generate assembly for a file
+test_DNN_regression.cpp.s:
+	cd /home/miguelmg/repositorios/vpl/build && $(MAKE) -f apps/CMakeFiles/test_DNN_regression.dir/build.make apps/CMakeFiles/test_DNN_regression.dir/test_DNN_regression.cpp.s
+.PHONY : test_DNN_regression.cpp.s
 
 test_freeflyer_vasquez09.o: test_freeflyer_vasquez09.cpp.o
 
@@ -499,10 +583,12 @@ help:
 	@echo "... update_partial_model"
 	@echo "... octo2file_in_folders"
 	@echo "... random_view_generator"
+	@echo "... test_DNN"
 	@echo "... test_freeflyer_vasquez09"
-	@echo "... test_trainer"
 	@echo "... rebuild_cache"
+	@echo "... test_trainer"
 	@echo "... trainning_main_changes"
+	@echo "... test_DNN_regression"
 	@echo "... test_ram"
 	@echo "... read_octree"
 	@echo "... octo2file_in_folders.o"
@@ -511,6 +597,12 @@ help:
 	@echo "... read_octree.o"
 	@echo "... read_octree.i"
 	@echo "... read_octree.s"
+	@echo "... test_DNN.o"
+	@echo "... test_DNN.i"
+	@echo "... test_DNN.s"
+	@echo "... test_DNN_regression.o"
+	@echo "... test_DNN_regression.i"
+	@echo "... test_DNN_regression.s"
 	@echo "... test_freeflyer_vasquez09.o"
 	@echo "... test_freeflyer_vasquez09.i"
 	@echo "... test_freeflyer_vasquez09.s"

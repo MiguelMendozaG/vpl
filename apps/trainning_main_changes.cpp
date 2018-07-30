@@ -38,25 +38,25 @@ pointCloudTypePtr global_narf_points (new pointCloudType());
 //////////////////////////////////////////
 //////Global variables////////////
 const int total_images = 1312;
-const double coverage_stop_threshold = 0.9;
+const double coverage_stop_threshold = 0.90;
 const int jumps = 5;
 const int iteration_stop = 10;
 const double w_escala_ini = 0.6;
 const double w_escala_fin = 0.4;
 const int n_end = 500;
-double valor_octree = 0.0638165;
+double valor_octree = 0.11;
 octomap::point3d x_min = {-valor_octree,-valor_octree,-valor_octree};  /// this values are set according with the partialmodel file, it is refered to the bounding box
 octomap::point3d x_max = {valor_octree, valor_octree, valor_octree};
 
 
 //location folders
-string my_direction("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/modelo6/"); //location of the input dataset folder
-string dir_nbv_narf ("/home/miguelmg/Documents/CIDETEC/'semestre 2'/'vision 3d'/proyecto/'6d pose'/hinterstoisser/nubes/modelo6/nbv/"); //in case your folder names contains space, you must specify it and add /nbv/ (e.g. ~/../'my foder'/nbv/)
+string my_direction("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/modelo2/"); //location of the input dataset folder
+string dir_nbv_narf ("/home/miguelmg/Documents/CIDETEC/'semestre 2'/'vision 3d'/proyecto/'6d pose'/hinterstoisser/nubes/modelo2/nbv/"); //in case your folder names contains space, you must specify it and add /nbv/ (e.g. ~/../'my foder'/nbv/)
 string lectura_narf("./icp_narf_one_file_output " + dir_nbv_narf + "traslape.pcd" + " -m " + "-out " + dir_nbv_narf); //./executable input_point_cloud_dir -m -out output_narf_point_cloud_folder 
 string direction_all_z (my_direction + "absolute/model/");
 string direction_all_background (my_direction + "absolute/background/");
 string direction_all_z_with_background (my_direction + "absolute/model_background/imagen-");
-string direction_ground_truth ("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/ground_truth_models/model6.pcd"); //ground truth point cloud location
+string direction_ground_truth ("/home/miguelmg/Documents/CIDETEC/semestre 2/vision 3d/proyecto/6d pose/hinterstoisser/nubes/ground_truth_models/model2.pcd"); //ground truth point cloud location
 string dir_nbv_i( my_direction + "nbv/");
 string nub("/clouds");  // nubes
 string num_poses("/num_pose");
@@ -351,9 +351,9 @@ int main (int argc, char** argv)
     pointType w_ast_end;
     int i_iterative =0;
   //partial_model_2->init();
-    std::ofstream log_file (my_direction + "log_6.txt");
+    std::ofstream log_file (my_direction + "log_14.txt");
     clock_t begin = clock();
-  for (int i_reconstrucion = 0; i_reconstrucion < 5 ; i_reconstrucion+=jumps){
+  for (int i_reconstrucion = 260; i_reconstrucion < 265 ; i_reconstrucion+=jumps){
     //PartialModelBase *partial_model_2 = new PMVOctreeVasquez09(alphaOcc, alphaUnk); //acumulated octree
     log_file << "\n" << i_reconstrucion;
     

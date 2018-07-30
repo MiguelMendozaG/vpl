@@ -326,9 +326,11 @@ apps/all: apps/CMakeFiles/view_sphere_generator.dir/all
 apps/all: apps/CMakeFiles/update_partial_model.dir/all
 apps/all: apps/CMakeFiles/octo2file_in_folders.dir/all
 apps/all: apps/CMakeFiles/random_view_generator.dir/all
+apps/all: apps/CMakeFiles/test_DNN.dir/all
 apps/all: apps/CMakeFiles/test_freeflyer_vasquez09.dir/all
 apps/all: apps/CMakeFiles/test_trainer.dir/all
 apps/all: apps/CMakeFiles/trainning_main_changes.dir/all
+apps/all: apps/CMakeFiles/test_DNN_regression.dir/all
 apps/all: apps/CMakeFiles/test_ram.dir/all
 apps/all: apps/CMakeFiles/read_octree.dir/all
 
@@ -339,9 +341,11 @@ apps/clean: apps/CMakeFiles/view_sphere_generator.dir/clean
 apps/clean: apps/CMakeFiles/update_partial_model.dir/clean
 apps/clean: apps/CMakeFiles/octo2file_in_folders.dir/clean
 apps/clean: apps/CMakeFiles/random_view_generator.dir/clean
+apps/clean: apps/CMakeFiles/test_DNN.dir/clean
 apps/clean: apps/CMakeFiles/test_freeflyer_vasquez09.dir/clean
 apps/clean: apps/CMakeFiles/test_trainer.dir/clean
 apps/clean: apps/CMakeFiles/trainning_main_changes.dir/clean
+apps/clean: apps/CMakeFiles/test_DNN_regression.dir/clean
 apps/clean: apps/CMakeFiles/test_ram.dir/clean
 apps/clean: apps/CMakeFiles/read_octree.dir/clean
 
@@ -359,7 +363,7 @@ apps/preinstall:
 apps/CMakeFiles/view_sphere_generator.dir/all: partialmodel/CMakeFiles/PartialModel.dir/all
 	$(MAKE) -f apps/CMakeFiles/view_sphere_generator.dir/build.make apps/CMakeFiles/view_sphere_generator.dir/depend
 	$(MAKE) -f apps/CMakeFiles/view_sphere_generator.dir/build.make apps/CMakeFiles/view_sphere_generator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=55,56 "Built target view_sphere_generator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=59,60 "Built target view_sphere_generator"
 .PHONY : apps/CMakeFiles/view_sphere_generator.dir/all
 
 # Include target in all.
@@ -396,7 +400,7 @@ clean: apps/CMakeFiles/view_sphere_generator.dir/clean
 apps/CMakeFiles/update_partial_model.dir/all: partialmodel/CMakeFiles/PartialModel.dir/all
 	$(MAKE) -f apps/CMakeFiles/update_partial_model.dir/build.make apps/CMakeFiles/update_partial_model.dir/depend
 	$(MAKE) -f apps/CMakeFiles/update_partial_model.dir/build.make apps/CMakeFiles/update_partial_model.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=53,54 "Built target update_partial_model"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=57,58 "Built target update_partial_model"
 .PHONY : apps/CMakeFiles/update_partial_model.dir/all
 
 # Include target in all.
@@ -501,6 +505,43 @@ clean: apps/CMakeFiles/random_view_generator.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target apps/CMakeFiles/test_DNN.dir
+
+# All Build rule for target.
+apps/CMakeFiles/test_DNN.dir/all: partialmodel/CMakeFiles/PartialModel.dir/all
+	$(MAKE) -f apps/CMakeFiles/test_DNN.dir/build.make apps/CMakeFiles/test_DNN.dir/depend
+	$(MAKE) -f apps/CMakeFiles/test_DNN.dir/build.make apps/CMakeFiles/test_DNN.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=45,46 "Built target test_DNN"
+.PHONY : apps/CMakeFiles/test_DNN.dir/all
+
+# Include target in all.
+all: apps/CMakeFiles/test_DNN.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+apps/CMakeFiles/test_DNN.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguelmg/repositorios/vpl/build/CMakeFiles 18
+	$(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/test_DNN.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguelmg/repositorios/vpl/build/CMakeFiles 0
+.PHONY : apps/CMakeFiles/test_DNN.dir/rule
+
+# Convenience name for target.
+test_DNN: apps/CMakeFiles/test_DNN.dir/rule
+
+.PHONY : test_DNN
+
+# clean rule for target.
+apps/CMakeFiles/test_DNN.dir/clean:
+	$(MAKE) -f apps/CMakeFiles/test_DNN.dir/build.make apps/CMakeFiles/test_DNN.dir/clean
+.PHONY : apps/CMakeFiles/test_DNN.dir/clean
+
+# clean rule for target.
+clean: apps/CMakeFiles/test_DNN.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target apps/CMakeFiles/test_freeflyer_vasquez09.dir
 
 # All Build rule for target.
@@ -509,7 +550,7 @@ apps/CMakeFiles/test_freeflyer_vasquez09.dir/all: viewplanning/CMakeFiles/ViewPl
 apps/CMakeFiles/test_freeflyer_vasquez09.dir/all: rangesimulator/CMakeFiles/RangeSimulator.dir/all
 	$(MAKE) -f apps/CMakeFiles/test_freeflyer_vasquez09.dir/build.make apps/CMakeFiles/test_freeflyer_vasquez09.dir/depend
 	$(MAKE) -f apps/CMakeFiles/test_freeflyer_vasquez09.dir/build.make apps/CMakeFiles/test_freeflyer_vasquez09.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=45,46 "Built target test_freeflyer_vasquez09"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=49,50 "Built target test_freeflyer_vasquez09"
 .PHONY : apps/CMakeFiles/test_freeflyer_vasquez09.dir/all
 
 # Include target in all.
@@ -548,7 +589,7 @@ apps/CMakeFiles/test_trainer.dir/all: viewplanning/CMakeFiles/ViewPlanning.dir/a
 apps/CMakeFiles/test_trainer.dir/all: rangesimulator/CMakeFiles/RangeSimulator.dir/all
 	$(MAKE) -f apps/CMakeFiles/test_trainer.dir/build.make apps/CMakeFiles/test_trainer.dir/depend
 	$(MAKE) -f apps/CMakeFiles/test_trainer.dir/build.make apps/CMakeFiles/test_trainer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=49,50 "Built target test_trainer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=53,54 "Built target test_trainer"
 .PHONY : apps/CMakeFiles/test_trainer.dir/all
 
 # Include target in all.
@@ -585,7 +626,7 @@ clean: apps/CMakeFiles/test_trainer.dir/clean
 apps/CMakeFiles/trainning_main_changes.dir/all: partialmodel/CMakeFiles/PartialModel.dir/all
 	$(MAKE) -f apps/CMakeFiles/trainning_main_changes.dir/build.make apps/CMakeFiles/trainning_main_changes.dir/depend
 	$(MAKE) -f apps/CMakeFiles/trainning_main_changes.dir/build.make apps/CMakeFiles/trainning_main_changes.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=51,52 "Built target trainning_main_changes"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=55,56 "Built target trainning_main_changes"
 .PHONY : apps/CMakeFiles/trainning_main_changes.dir/all
 
 # Include target in all.
@@ -616,13 +657,50 @@ clean: apps/CMakeFiles/trainning_main_changes.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target apps/CMakeFiles/test_DNN_regression.dir
+
+# All Build rule for target.
+apps/CMakeFiles/test_DNN_regression.dir/all: partialmodel/CMakeFiles/PartialModel.dir/all
+	$(MAKE) -f apps/CMakeFiles/test_DNN_regression.dir/build.make apps/CMakeFiles/test_DNN_regression.dir/depend
+	$(MAKE) -f apps/CMakeFiles/test_DNN_regression.dir/build.make apps/CMakeFiles/test_DNN_regression.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=47,48 "Built target test_DNN_regression"
+.PHONY : apps/CMakeFiles/test_DNN_regression.dir/all
+
+# Include target in all.
+all: apps/CMakeFiles/test_DNN_regression.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+apps/CMakeFiles/test_DNN_regression.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguelmg/repositorios/vpl/build/CMakeFiles 18
+	$(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/test_DNN_regression.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguelmg/repositorios/vpl/build/CMakeFiles 0
+.PHONY : apps/CMakeFiles/test_DNN_regression.dir/rule
+
+# Convenience name for target.
+test_DNN_regression: apps/CMakeFiles/test_DNN_regression.dir/rule
+
+.PHONY : test_DNN_regression
+
+# clean rule for target.
+apps/CMakeFiles/test_DNN_regression.dir/clean:
+	$(MAKE) -f apps/CMakeFiles/test_DNN_regression.dir/build.make apps/CMakeFiles/test_DNN_regression.dir/clean
+.PHONY : apps/CMakeFiles/test_DNN_regression.dir/clean
+
+# clean rule for target.
+clean: apps/CMakeFiles/test_DNN_regression.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target apps/CMakeFiles/test_ram.dir
 
 # All Build rule for target.
 apps/CMakeFiles/test_ram.dir/all: partialmodel/CMakeFiles/PartialModel.dir/all
 	$(MAKE) -f apps/CMakeFiles/test_ram.dir/build.make apps/CMakeFiles/test_ram.dir/depend
 	$(MAKE) -f apps/CMakeFiles/test_ram.dir/build.make apps/CMakeFiles/test_ram.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=47,48 "Built target test_ram"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/miguelmg/repositorios/vpl/build/CMakeFiles --progress-num=51,52 "Built target test_ram"
 .PHONY : apps/CMakeFiles/test_ram.dir/all
 
 # Include target in all.

@@ -228,6 +228,19 @@ random_view_generator/fast:
 .PHONY : random_view_generator/fast
 
 #=============================================================================
+# Target rules for targets named test_DNN
+
+# Build rule for target.
+test_DNN: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_DNN
+.PHONY : test_DNN
+
+# fast build rule for target.
+test_DNN/fast:
+	$(MAKE) -f apps/CMakeFiles/test_DNN.dir/build.make apps/CMakeFiles/test_DNN.dir/build
+.PHONY : test_DNN/fast
+
+#=============================================================================
 # Target rules for targets named test_freeflyer_vasquez09
 
 # Build rule for target.
@@ -265,6 +278,19 @@ trainning_main_changes: cmake_check_build_system
 trainning_main_changes/fast:
 	$(MAKE) -f apps/CMakeFiles/trainning_main_changes.dir/build.make apps/CMakeFiles/trainning_main_changes.dir/build
 .PHONY : trainning_main_changes/fast
+
+#=============================================================================
+# Target rules for targets named test_DNN_regression
+
+# Build rule for target.
+test_DNN_regression: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_DNN_regression
+.PHONY : test_DNN_regression
+
+# fast build rule for target.
+test_DNN_regression/fast:
+	$(MAKE) -f apps/CMakeFiles/test_DNN_regression.dir/build.make apps/CMakeFiles/test_DNN_regression.dir/build
+.PHONY : test_DNN_regression/fast
 
 #=============================================================================
 # Target rules for targets named test_ram
@@ -309,9 +335,11 @@ help:
 	@echo "... update_partial_model"
 	@echo "... octo2file_in_folders"
 	@echo "... random_view_generator"
+	@echo "... test_DNN"
 	@echo "... test_freeflyer_vasquez09"
 	@echo "... test_trainer"
 	@echo "... trainning_main_changes"
+	@echo "... test_DNN_regression"
 	@echo "... test_ram"
 	@echo "... read_octree"
 .PHONY : help
